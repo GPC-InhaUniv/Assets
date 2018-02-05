@@ -1,2 +1,0 @@
-C:\Users\hrd32105\Documents\Roll a Ball\Temp\UnityVS_obj\Debug\Roll a Ball.csprojResolveAssemblyReference.cache
-C:\Users\hrd32105\Documents\Roll a Ball\Temp\UnityVS_obj\Debug\Roll a Ball.csproj.CoreCompileInputs.cache
