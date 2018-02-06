@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public GameObject player;  //player 참조를 위한 선언 후에 참조값을 public이기때문에 스크립트 종료후 넣어주어야 한다
-    //public  PlayerController mm;
+   
     private Vector3 offset;       //offset value : 현재의 카메라 transform 위치에서 플레이어의 transform
                                     //위치의 차로 구함
 
@@ -15,9 +15,7 @@ public class CameraController : MonoBehaviour
 	void Start ()
     {
         offset = transform.position - player.transform.position; //카메라 위치에서 player위치의 차이 =offset
-       // mm = GameObject.Find("Player").GetComponent<PlayerController>();
-      //  mm.speed = 50;
-      
+     
     }
 	
 	// Update is called once per frame
