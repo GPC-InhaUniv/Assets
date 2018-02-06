@@ -36,21 +36,21 @@ public class PlayerController : MonoBehaviour
                 SetCountText(); //업데이트 된 텍스트를 출력하기 위하여 함수를 다시 호출한다.
             }
         }
-       
+
     }
- 
-  
+
+
     void FixedUpdate()
     {
-        
+
         float moveHorizontal = Input.GetAxis("Horizontal");  //float value for move player  right or left
         float moveVertical = Input.GetAxis("Vertical");      //float value for move player  up   or down
 
-        Vector3 movement = new Vector3(moveHorizontal,JumpForce, moveVertical);   //x,y,z vetor  x: right or left
-                                                                              //y : not use , z: up or down
+        Vector3 movement = new Vector3(moveHorizontal, JumpForce, moveVertical);   //x,y,z vetor  x: right or left ,vector3 를 instance화 시킨다.
+                                                                                   //y : not use , z: up or down
 
-        rb.AddForce(movement*speed);   //물리력은 키보드로 입력받은 방향 * 속도 변수값       
-        if(JumpForce>0)
+        rb.AddForce(movement * speed);   //물리력은 키보드로 입력받은 방향 * 속도 변수값       
+        if (JumpForce > 0)
             JumpForce -= 0.3f;  //object의 y가 무한정 증가하는것을 막기 위한 if문
         if (speed >= 10)
             speed -= 0.1f;
@@ -58,25 +58,25 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Pick Up"))  //만일 충돌한 object가 pick up 이라는 이름을 갖는다면
+        if (other.gameObject.CompareTag("Pick Up"))  //만일 충돌한 object가 pick up 이라는 이름을 갖는다면
         {
             other.gameObject.SetActive(false);  //충돌한 object를 비활성화 시킨다.
             count++;                            //충돌시 점수 획득
             SetCountText();
         }
-        else if(other.gameObject.CompareTag("Jump"))  //만일 jump와 충돌하였다면
+        else if (other.gameObject.CompareTag("Jump"))  //만일 jump와 충돌하였다면
         {
             JumpForce = 5.0f;  //jump값 증가.
             checkGameOver = true; //game 종료를 검사하는 버튼 on
             Debug.Log("점프!"); //debug 체크를 위한 message
-          
+
         }
-        else if(other.gameObject.CompareTag("Speed"))
+        else if (other.gameObject.CompareTag("Speed"))
         {
             speed += 15;  //speed 값 증가
             Debug.Log("스피드 업!"); //debug 체크를 위한 message
         }
-        else if(checkGameOver)
+        else if (checkGameOver)
         {
             checkGameOver = false;  //계속적으로 gameover를 검사하지 않기 위한 if 문
         }
@@ -85,10 +85,10 @@ public class PlayerController : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Count:" + count.ToString();  //text 초기화 예상되는 출력 count: 숫자
-        if (count>=15)
+        if (count >= 15)
         {
             WinText.text = "You Win!!!";
         }
-     
+
     }
 }
