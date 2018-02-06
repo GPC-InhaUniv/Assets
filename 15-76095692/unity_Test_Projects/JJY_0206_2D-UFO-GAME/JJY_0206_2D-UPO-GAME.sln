@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJY_0206_2D-UPO-GAME", "JJY_0206_2D-UPO-GAME.csproj", "{8FF75592-61D5-FFCE-0137-CE74CCF06E26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJY_0206_2D-UPO-GAME.Editor", "JJY_0206_2D-UPO-GAME.Editor.csproj", "{9405978F-5D03-787A-4EE9-EDA35C743856}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FF75592-61D5-FFCE-0137-CE74CCF06E26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FF75592-61D5-FFCE-0137-CE74CCF06E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FF75592-61D5-FFCE-0137-CE74CCF06E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FF75592-61D5-FFCE-0137-CE74CCF06E26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9405978F-5D03-787A-4EE9-EDA35C743856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9405978F-5D03-787A-4EE9-EDA35C743856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9405978F-5D03-787A-4EE9-EDA35C743856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9405978F-5D03-787A-4EE9-EDA35C743856}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
