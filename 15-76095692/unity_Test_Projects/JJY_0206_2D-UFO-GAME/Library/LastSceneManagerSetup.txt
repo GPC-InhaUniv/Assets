@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Scene/JJY_0206_2D-UFO-GAME_Main.unity
+  isLoaded: 1
+  isActive: 1
