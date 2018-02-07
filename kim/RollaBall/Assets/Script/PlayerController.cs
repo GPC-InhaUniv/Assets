@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
-
-    public float speed;
+    public float dfSpeed;
+    private float speed;
     public Text countText;
-    public Text winText;
-
+   
     private Rigidbody rb;
     private int count;
+    public float overTime;
 
     private void Start()
     {
+        speed = dfSpeed;
         rb = GetComponent<Rigidbody>();
         count = 0;
-        SetCountText();
-        winText.text = "";
+       
+       
+        overTime = 0;
     }
 
     // Update is called once per frame
@@ -37,16 +40,24 @@ public class PlayerController : MonoBehaviour {
         {
             other.gameObject.SetActive(false);
             count = count + 1;
-            SetCountText();
+           
+           
         }
     }
 
-    void SetCountText()
+    
+
+    private void Update()
     {
         countText.text = "count: " + count.ToString();
-        if(count>= 10)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            winText.text = "You Win!";
+            speed = dfSpeed * 2;
+        }
+
+        if(Input.GetKeyUp(KeyCode.Space))
+        {
+            speed = dfSpeed;
         }
     }
 }
