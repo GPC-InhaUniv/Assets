@@ -13,8 +13,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 175
+    y: 88
+=======
     x: 178
     y: 59
+>>>>>>> 7c739c7c8a66657138dcdd539068585fa08b266d
     width: 1351
     height: 973
   m_ShowMode: 4
@@ -91,7 +96,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 442}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 96
+  controlID: 71
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,7 +140,11 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
+<<<<<<< HEAD
+  controlID: 12
+=======
   controlID: 24
+>>>>>>> 7c739c7c8a66657138dcdd539068585fa08b266d
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -350,15 +359,24 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 630
+    y: 137
+=======
     x: 633
     y: 108
+>>>>>>> 7c739c7c8a66657138dcdd539068585fa08b266d
     width: 252
     height: 902
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 16250000
     m_LastClickedID: 0
+<<<<<<< HEAD
+    m_ExpandedIDs: e6fbffff00000000
+=======
     m_ExpandedIDs: e4fbffff00000000
+>>>>>>> 7c739c7c8a66657138dcdd539068585fa08b266d
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -403,8 +421,13 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 1178
+    y: 137
+=======
     x: 1181
     y: 108
+>>>>>>> 7c739c7c8a66657138dcdd539068585fa08b266d
     width: 348
     height: 902
   m_ScrollPosition: {x: 0, y: 0}
@@ -436,8 +459,13 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 886
+    y: 137
+=======
     x: 889
     y: 108
+>>>>>>> 7c739c7c8a66657138dcdd539068585fa08b266d
     width: 288
     height: 902
   m_SearchFilter:
@@ -519,7 +547,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -569,8 +597,13 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 175
+    y: 570
+=======
     x: 178
     y: 541
+>>>>>>> 7c739c7c8a66657138dcdd539068585fa08b266d
     width: 451
     height: 469
   m_MaximizeOnPlay: 0
@@ -645,8 +678,13 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 175
+    y: 137
+=======
     x: 178
     y: 108
+>>>>>>> 7c739c7c8a66657138dcdd539068585fa08b266d
     width: 451
     height: 412
   m_SceneLighting: 1

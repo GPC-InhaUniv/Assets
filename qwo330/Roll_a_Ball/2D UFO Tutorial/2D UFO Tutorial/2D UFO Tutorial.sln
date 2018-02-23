@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2D UFO Tutorial", "2D UFO Tutorial.csproj", "{C3A1D49A-74B1-4517-322E-6E0F44FBAA2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2D UFO Tutorial.Editor", "2D UFO Tutorial.Editor.csproj", "{CC8764B0-3042-EF4C-076B-8F8DB2071C9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3A1D49A-74B1-4517-322E-6E0F44FBAA2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3A1D49A-74B1-4517-322E-6E0F44FBAA2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3A1D49A-74B1-4517-322E-6E0F44FBAA2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3A1D49A-74B1-4517-322E-6E0F44FBAA2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC8764B0-3042-EF4C-076B-8F8DB2071C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8764B0-3042-EF4C-076B-8F8DB2071C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8764B0-3042-EF4C-076B-8F8DB2071C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8764B0-3042-EF4C-076B-8F8DB2071C9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
