@@ -45,7 +45,9 @@ namespace WindowsFormsApp3
             //경주 시작위치로 돌아갑니다.
             p.X -= Location;//x좌표에 움직일 거리를 더한다
             MyPictureBox.Location = p;//pictureBox 객체의 위치를 갱신한다
-            //Location = 0;
+            Console.WriteLine("위치 : " +Location);
+            Location = 0;
+            Console.WriteLine("초기화 후 위치 : " + Location);
 
 
         }

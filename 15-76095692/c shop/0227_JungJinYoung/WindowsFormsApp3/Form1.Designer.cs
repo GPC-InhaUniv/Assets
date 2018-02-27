@@ -48,6 +48,8 @@
             this.dog2 = new System.Windows.Forms.PictureBox();
             this.dog3 = new System.Windows.Forms.PictureBox();
             this.dog4 = new System.Windows.Forms.PictureBox();
+            this.RoundLabel = new System.Windows.Forms.Label();
+            this.betUp = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.backGround)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DogUpDown)).BeginInit();
@@ -294,11 +296,30 @@
             this.dog4.TabIndex = 5;
             this.dog4.TabStop = false;
             // 
+            // RoundLabel
+            // 
+            this.RoundLabel.AutoSize = true;
+            this.RoundLabel.Location = new System.Drawing.Point(585, 137);
+            this.RoundLabel.Name = "RoundLabel";
+            this.RoundLabel.Size = new System.Drawing.Size(38, 12);
+            this.RoundLabel.TabIndex = 6;
+            this.RoundLabel.Text = "label1";
+            // 
+            // betUp
+            // 
+            this.betUp.AutoSize = true;
+            this.betUp.Location = new System.Drawing.Point(587, 167);
+            this.betUp.Name = "betUp";
+            this.betUp.Size = new System.Drawing.Size(0, 12);
+            this.betUp.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(694, 472);
+            this.Controls.Add(this.betUp);
+            this.Controls.Add(this.RoundLabel);
             this.Controls.Add(this.dog4);
             this.Controls.Add(this.dog3);
             this.Controls.Add(this.dog2);
@@ -317,6 +338,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dog3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dog4)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -342,6 +364,8 @@
         private System.Windows.Forms.Label AlLabel;
         private System.Windows.Forms.Label BobLabel;
         private System.Windows.Forms.Label JoeLabel;
+        private System.Windows.Forms.Label RoundLabel;
+        private System.Windows.Forms.Label betUp;
     }
 }
 
