@@ -140,8 +140,7 @@ namespace DogRace
                 {
                     for (int i = 0; i < greyhound.Length; i++)
                     {
-                        greyhound[i].Run();
-                        if (greyhound[i].location >= greyhound[i].racetrackLength)
+                        if (greyhound[i].Run())
                         {
                             winner = i;
                             raceFinish = false;
