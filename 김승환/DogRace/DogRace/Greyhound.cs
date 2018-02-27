@@ -37,7 +37,7 @@ namespace DogRace
 
             location += distance;
 
-            if (distance >= racetrackLength - startingPosition)
+            if (location >= (racetrackLength - startingPosition))
             {
                 return true;
             }
