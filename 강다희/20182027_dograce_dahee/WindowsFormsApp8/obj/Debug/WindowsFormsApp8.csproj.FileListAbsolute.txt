@@ -18,3 +18,13 @@ C:\Users\Administrator\source\repos\WindowsFormsApp8\WindowsFormsApp8\obj\Debug\
 C:\Users\Administrator\source\repos\WindowsFormsApp8\WindowsFormsApp8\bin\Debug\WindowsFormsApp8.exe.config
 C:\Users\Administrator\source\repos\WindowsFormsApp8\WindowsFormsApp8\bin\Debug\WindowsFormsApp8.exe
 C:\Users\Administrator\source\repos\WindowsFormsApp8\WindowsFormsApp8\bin\Debug\WindowsFormsApp8.pdb
+C:\0_Test\sourcetree\0_test\강다희\20182027_dograce_dahee\WindowsFormsApp8\bin\Debug\WindowsFormsApp8.exe.config
+C:\0_Test\sourcetree\0_test\강다희\20182027_dograce_dahee\WindowsFormsApp8\bin\Debug\WindowsFormsApp8.exe
+C:\0_Test\sourcetree\0_test\강다희\20182027_dograce_dahee\WindowsFormsApp8\bin\Debug\WindowsFormsApp8.pdb
+C:\0_Test\sourcetree\0_test\강다희\20182027_dograce_dahee\WindowsFormsApp8\obj\Debug\WindowsFormsApp8.csprojResolveAssemblyReference.cache
+C:\0_Test\sourcetree\0_test\강다희\20182027_dograce_dahee\WindowsFormsApp8\obj\Debug\WindowsFormsApp8.Form1.resources
+C:\0_Test\sourcetree\0_test\강다희\20182027_dograce_dahee\WindowsFormsApp8\obj\Debug\WindowsFormsApp8.Properties.Resources.resources
+C:\0_Test\sourcetree\0_test\강다희\20182027_dograce_dahee\WindowsFormsApp8\obj\Debug\WindowsFormsApp8.csproj.GenerateResource.Cache
+C:\0_Test\sourcetree\0_test\강다희\20182027_dograce_dahee\WindowsFormsApp8\obj\Debug\WindowsFormsApp8.csproj.CoreCompileInputs.cache
+C:\0_Test\sourcetree\0_test\강다희\20182027_dograce_dahee\WindowsFormsApp8\obj\Debug\WindowsFormsApp8.exe
+C:\0_Test\sourcetree\0_test\강다희\20182027_dograce_dahee\WindowsFormsApp8\obj\Debug\WindowsFormsApp8.pdb
