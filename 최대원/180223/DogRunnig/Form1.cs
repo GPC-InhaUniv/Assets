@@ -122,10 +122,16 @@ namespace DogRunnig
                 player[ManNum].Mybet = new Bet() { Man = player[ManNum], Amount = int.Parse(udMoney.Text), dog = int.Parse(udDog.Text) };
 
                 //베팅이 가능한지 확인
+                //베팅이 불가능한 경우 아래 내용 이행
                 if (!player[ManNum].PlaceBat(player[ManNum].Mybet.Amount, player[ManNum].Mybet.dog))
                 {
-                    //불가능한 경우 0원 베팅
-                    player[ManNum].Mybet.Amount = 0;
+                    //베팅에 걸 돈이 보유금액보다 모자라면 -1 베팅
+                    if (player[ManNum].Money < udMoney.Value)
+                    {
+                        player[ManNum].Mybet.Amount = -1;
+                    }
+                    //그 외에 배팅이 불가능하면 0 베팅
+                    else player[ManNum].Mybet.Amount = 0;
 
                     //보유 금액이 최소 베팅 금액보다 작으면 해당 라디오 버튼 비활성화
                     if (player[ManNum].Money < udMoney.Minimum)
@@ -134,6 +140,7 @@ namespace DogRunnig
                         maxstart--;
                     }
                 }
+                //베팅에 성공하면 바로 넘어가고 아래의 메세지 출력
             }
             //베팅 여부에 따라 메세지 출력
             player[ManNum].Label.Text = player[ManNum].Mybet.GetDescription();
@@ -234,7 +241,8 @@ namespace DogRunnig
             //플레이어 베팅정보 초기화
             for (int i = 0; i < 3; i++)
             {
-                if (player[i].RadioButton.Enabled) {
+                if (player[i].RadioButton.Enabled)
+                {
                     player[i].Mybet.PayOut(win);
                     player[i].Collect(win);
                     player[i].CleanBat();

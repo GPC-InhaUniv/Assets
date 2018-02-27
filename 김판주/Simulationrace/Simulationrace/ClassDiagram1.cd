@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Simulationrace.Form1">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAhAAACAAABAAAACAQABCAAAYAAACECQAAABAAAI=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Simulationrace.Greyhound">
+    <Position X="3.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAwAAAAAAAAAAAIAAAEAAAAAAAAAAQAAAAAAgAI=</HashCode>
+      <FileName>Greyhound.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Simulationrace.Program">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Simulationrace.Guy">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAgAAiAAAAAAAAQEAAAEAAAAAAAoAAAAAAA=</HashCode>
+      <FileName>Guy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Simulationrace.Bet">
+    <Position X="7.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAEAAAAIAAAAACACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Guy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
