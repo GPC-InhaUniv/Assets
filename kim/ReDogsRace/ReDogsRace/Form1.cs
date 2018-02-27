@@ -69,6 +69,8 @@ namespace ReDogsRace
                 for (int i = 0; i < 4; i++)
                 {
                     FinishRace = Dogs[i].Run();
+                    
+                   
                     if (FinishRace == true)
                     {
                         MessageBox.Show("We have a Winner - Dog #" + (i + 1), "Winner");
@@ -97,8 +99,9 @@ namespace ReDogsRace
                         break;
                     }
                     System.Threading.Thread.Sleep(5);
+                    BackGround.Refresh();
                 }
-
+               
             }
             //Dogs Position Reset
             for (int i = 0; i < 4; i++)
