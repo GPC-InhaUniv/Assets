@@ -234,7 +234,8 @@ namespace DogRunnig
             //플레이어 베팅정보 초기화
             for (int i = 0; i < 3; i++)
             {
-                if (player[i].RadioButton.Enabled) {
+                if (player[i].RadioButton.Enabled)
+                {
                     player[i].Mybet.PayOut(win);
                     player[i].Collect(win);
                     player[i].CleanBat();
