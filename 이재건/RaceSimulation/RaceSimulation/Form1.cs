@@ -196,18 +196,7 @@ namespace RaceSimulation
             //do not use
         }
 
-        private void SetJackPot()   //collect cash that guy's cash loss
-        {
-            if (collectmoney >= JackPotBar.Maximum)
-                JackPotBar.Value = JackPotBar.Maximum;
-            else
-            {
-                if (JackPotBar.Value + collectmoney >= JackPotBar.Maximum)//에러방지
-                    JackPotBar.Value = JackPotBar.Maximum;
-                else
-                    JackPotBar.Value += collectmoney;
-            }
-        }
+     
 
         private void SetJackPotBox()                //jackpot manage function
         {
@@ -224,10 +213,24 @@ namespace RaceSimulation
             else
                 bjackpot = false;
 
-            CurrentCash.Text = "JackPot: $" + collectmoney;
+            CurrentCash.Text = "JackPot: $" + collectmoney;  //Print Current JackPot Money
 
-            SetJackPot();
+            SetJackPot();   //reset jackpot
         }
+
+        private void SetJackPot()   //collect cash that guy's cash loss
+        {
+            if (collectmoney >= JackPotBar.Maximum)
+                JackPotBar.Value = JackPotBar.Maximum;   //for protecting jackpot value over maximum value
+            else
+            {
+                if (JackPotBar.Value + collectmoney >= JackPotBar.Maximum)//에러방지
+                    JackPotBar.Value = JackPotBar.Maximum;
+                else
+                    JackPotBar.Value += collectmoney;  //jackpot value plus collectmoney that lose guys betted the game 
+            }
+        }
+
 
         private void OffJackPot()
         {
@@ -237,6 +240,8 @@ namespace RaceSimulation
             CurrentCash.ForeColor = Color.Black;
             JackPotBar.Value = 0;
             collectmoney = 0;
+            
+            //expect result : check :off fontcolor :black  current cashcolor:black,0 
         }
         private void OnJackPot()
         {

@@ -13,7 +13,7 @@ namespace RaceGame
         public int StartingPosition;    //Greyhound의 시작위치
         public int RacetrackLength;     //경주 트랙길이
         public PictureBox MyPictureBox = null;  //개의 픽처박스 객체 
-        public int Location = 0;    //걍주트랙에서의 위치
+        public int Location = 0;    //경주트랙에서의 위치
         public Random Randomizer;   //랜덤 객체 인스턴스
 
         public bool Run()
