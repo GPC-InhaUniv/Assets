@@ -1,3 +1,3 @@
-Joe, 523
-Ben, 797
-Paul, 479
+Joe, 518
+Ben, 792
+Paul, 474
