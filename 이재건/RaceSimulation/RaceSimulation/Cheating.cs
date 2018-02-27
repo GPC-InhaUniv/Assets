@@ -21,7 +21,7 @@ namespace RaceSimulation
         public void GetCount(int dog)
         {
             if(dog<5)                   //increase value(dognumber) if select dog
-            selectcount[dog-1]++;
+            selectcount[dog-1]++;       //because dog number range 1~4 so we do -1 when select array
         }
         public int MaxSelect()          //calculate func for max selected dog
         {
@@ -31,7 +31,7 @@ namespace RaceSimulation
             {
                 for(int j=0;j<4;j++)
                 {
-                    if (max < selectcount[j])   
+                    if (max < selectcount[j])   //check most selected dognum
                     {
                         max = selectcount[j];
                         dognum = j;
