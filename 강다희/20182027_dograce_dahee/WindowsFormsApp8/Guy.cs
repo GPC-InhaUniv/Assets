@@ -18,7 +18,7 @@ namespace WindowsFormsApp8
 
         public void UpdateLabels()
         {
-            MyLabel.Text = Name + "은" + Cash + "원을 가지고 있다.";
+            MyLabel.Text = Name + "은" + Cash + "원을 걸었다.";
             //레이블에 배팅 내역 표시 : 사람이름(Name) + 갖고 있는 돈(Cash)를 이용해 코드를 짜야하는 거 같은데.. 출력이 안됨.
             //라디오 버튼에 붙일 레이블에 현재 현금 보유액 표시 : 라디오 버튼 우측에 있는 레이블에 대한 내용을 짜야할 거 같은데, 각 이름별로 금액을 지급해줘야하나..
         }
