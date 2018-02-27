@@ -82,7 +82,6 @@ namespace WindowsFormsApp3
         public RadioButton MyRadioButton;
         public Label MyLabel;
          */
-        int roundCount;
         public void GuyArray()
         {
             guys[0] = new Guy("Joe", null, 50, JoeRadioButton, JoeLabel);//bet에는 뭘 넣어야할지 몰라 null로 했다 기억해둘것
@@ -94,13 +93,10 @@ namespace WindowsFormsApp3
         //일단 배팅최소액은 이 컨트롤의 최소값하고 일치시켜야합니다. <- 이걸보니 변동을 줄 수 있게 만들라는 말인듯함
         public void MinimumBetLabelControl()
         {
-            MinimumBetLabel.Text = "Minimum Bet : "+ BetUpDown.Minimum + " bucks";// public Form1()에서 구동되는거 확인함 "it is work!!"
+            MinimumBetLabel.Text = "Minimum Bet:"+ BetUpDown.Minimum + "bucks";// public Form1()에서 구동되는거 확인함 "it is work!!"
             //추후 게임시작전 모드를 만들어서 최소 베팅금액의 제한을 변동시키면 될듯 ex:맛보기 or 멸망전
             //아니면 Race 버튼을 클릭할때마다 count+=1 해서 count>= 5 이상이면 최소 배팅금액이 올라간다던지
             //그런데 하나하나 호출해서 작동시켜야하니 나중에 하나의 메서드로 묶어야할듯
-            RoundLabel.Text = roundCount + 1 + " Round";
-
-
             guys[0].UpdateLabels();
             guys[1].UpdateLabels();
             guys[2].UpdateLabels();
@@ -162,8 +158,6 @@ namespace WindowsFormsApp3
         {
             //greyHound를 써야함.....배열마저 완성 하러가자
             
-            roundCount += 1;
-            
             button2.Enabled = false;
 
             bool winnerDog = false;
@@ -204,17 +198,7 @@ namespace WindowsFormsApp3
                 dog.TackeStartingPosition();
                 
             }
-            if(roundCount >= 5)
-            {
-                BetUpDown.Maximum = 20;
-                BetUpDown.Minimum = 10;
-                MinimumBetLabelControl();
-            }
-            if (roundCount == 5)
-            {
-                betUp.Text = "최소금액 UP";   
-            } else betUp.Text = "";
-            RoundLabel.Text = roundCount + 1 + " Round";
+
             button2.Enabled = true;
             
         }
