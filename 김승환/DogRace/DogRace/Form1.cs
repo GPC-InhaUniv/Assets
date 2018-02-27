@@ -129,7 +129,9 @@ namespace DogRace
                             raceFinish = false;
                         }
                         Thread.Sleep(10);
-                        DoubleBuffered = false; 
+                        DoubleBuffered = false;
+
+                        racePictureBox.Update();
                     }
                 }
 
@@ -175,15 +177,15 @@ namespace DogRace
         {
             if(radioButton1.Checked)
             {
-                guy[0].cash += 50000;
+                guy[0].cash += 500;
             }
             if (radioButton2.Checked)
             {
-                guy[1].cash += 50000;
+                guy[1].cash += 500;
             }
             if (radioButton3.Checked)
             {
-                guy[2].cash += 50000;
+                guy[2].cash += 500;
             }
 
             foreach (Guy g in guy)
