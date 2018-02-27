@@ -16,7 +16,6 @@ namespace DogRunnig
         public void update()
         {
             RadioButton.Text = Name + "의 보유 금액 : " + Money + "원";
-            //Label.Text = Name + "님이 " + Money + "원을 가지고 있습니다.";
         }
 
         //베팅하는 함수
