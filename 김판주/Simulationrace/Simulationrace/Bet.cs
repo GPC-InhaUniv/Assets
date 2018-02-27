@@ -38,5 +38,14 @@ namespace Simulationrace
             else
                 return -Amount; //우승하지 못했다면 베팅액수에 마이너스를 붙여 반환합니다.
         }
+        public int AllpayOut(int WinningDog) //올인입니다.
+        {
+            //우승한 개의 번호가 매개변수로 전달됩니다.
+
+            if (Dog == WinningDog)
+                return Amount*2; //베팅한 개가 우승했으면 베팅 액수를 반환합니다.
+            else
+                return -Amount; //우승하지 못했다면 베팅액수에 마이너스를 붙여 반환합니다.
+        }
     }
 }

@@ -210,5 +210,52 @@ namespace Simulationrace
         {
             MessageBox.Show("4번 트랙을 달리는 개입니다.");
         }
+        private void BtnAll_Click(object sender, EventArgs e)
+
+        {
+            
+
+            int dogNum = 0; //반복문에 이용할 변수 선언
+
+            bool winner = false; // winner의 값을 false로 설정함 // 우승시에 true가 나와야 while문이 종료함
+
+            if (guys[0].Cash == 0 && guys[1].Cash == 0 && guys[2].Cash == 0)
+                MessageBox.Show("돈이 없으십니다...");
+
+            else
+            {
+                MessageBox.Show("가지신 금액을 모두 걸고 성공시 2배, 실패시 모두 잃습니다.");
+                //레이스버튼을 누를 떄 베팅하지 않은 사람이 있다면?
+                for (int i = 0; i < 3; i++)
+                {
+                    guys[i].PlaceBet((int)guys[i].Cash, (int)dogupdown.Value);
+                    guys[i].UpdateLables();// 해당 선수의 라벨을 업데이트함
+                    
+                }
+
+
+            }
+            //경주를 시작합니다.
+            while (!winner) //while문으로 winner의 현재값인 false부터 run의 값으로 true가 나올때까지 반복
+            {
+                for (dogNum = 0; dogNum < 4 && winner == false; dogNum++) // 0~3으로 각각 실행할때 winnerrk false여야 실행함(둘다만족하는 조건)
+                {
+                    winner = Dogs[dogNum].Run(); // flase라면 계속 경주 개는 달림.
+                }
+                System.Threading.Thread.Sleep(10); // 천천히 실행함...
+            }
+
+            //우승견을 알려줍니다.
+
+            MessageBox.Show("우승한 개는" + dogNum + "번 개입니다."); //while문이 끝나면 메시지박스를 출력합니다. 
+
+            //상금을 배당합시다.
+            for (int i = 0; i < 3; i++)  //각각 베팅한 사람들에게 베팅을 처리함 
+
+                guys[i].AllCollect(dogNum); //배팅결과를 처리하도록합니다.
+            ResetForm(); //경기가 끝난 후 폼을 재설정합니다.
+        }
+
     }
 }
+

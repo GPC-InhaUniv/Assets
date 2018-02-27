@@ -56,6 +56,13 @@ namespace Simulationrace
             ClearBet();
            
         }
+        public void AllCollect(int WinningDog)
+        {
+            Cash += MyBet.AllpayOut(WinningDog); //우승한 개의 번호를 맞힌 사람에게는 배팅한 금액만큼을 반환합니다.
+
+            ClearBet();
+
+        }
     }
 
 
