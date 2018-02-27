@@ -15,11 +15,23 @@ namespace DogRunnig
         //누가 얼만큼 개에게 걸었는지 알려줌
         public string GetDescription()
         {
-            if (Amount == 0)
+            if (Man.RadioButton.Enabled)
             {
-                return Man.Name + "님은 배팅이 불가능합니다.";
+                if (Amount == 0) //베팅 금액이 0원인 경우
+                {
+                    return Man.Name + "님은 배팅이 불가능합니다.";
+                    
+                }
+
+                else if (Amount == -1) //베팅 금액이 -1원인 경우(돈 모자를때)
+                {
+                    return Man.Name + "님은 돈이 부족합니다.";
+                }
+
+                //베팅 성공
+                else return Man.Name + "님이 " + Man.Mybet.dog + "번 개에게 " + Man.Mybet.Amount + "원을 걸었습니다.";
             }
-            else return Man.Name + "님이 " + Man.Mybet.dog + "번 개에게 " + Man.Mybet.Amount + "원을 걸었습니다.";
+            else return Man.Name + "님은 알거지입니다.";
         }
 
         //경기 종료 후 베팅 처리
