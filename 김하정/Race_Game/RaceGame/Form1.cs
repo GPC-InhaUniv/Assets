@@ -28,8 +28,8 @@ namespace RaceGame
 
             //배열 초기화
             guys[0] = new Guy() {Name= "Joe", Cash = 50, MyBet = null, Buttons= JoeButton, Labels = JoeLabel };
-            guys[1] = new Guy() { Name = "Bob", Cash = 50, MyBet = null, Buttons = BobButton, Labels = BobLabel };
-            guys[2] = new Guy() { Name = "AI", Cash = 50, MyBet = null, Buttons = AiButton, Labels = AiLabel };
+            guys[1] = new Guy() { Name = "Bob", Cash = 70, MyBet = null, Buttons = BobButton, Labels = BobLabel };
+            guys[2] = new Guy() { Name = "AI", Cash = 45, MyBet = null, Buttons = AiButton, Labels = AiLabel };
 
             dogs[0] = new Greyhound() {StartingPosition = 40, MyPictureBox = PBox0, RacetrackLength = 739 };
             dogs[1] = new Greyhound() {StartingPosition = 40, MyPictureBox = PBox1, RacetrackLength = 739 };
