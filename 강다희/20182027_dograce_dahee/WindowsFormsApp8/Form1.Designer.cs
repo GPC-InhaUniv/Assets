@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.dog01 = new System.Windows.Forms.PictureBox();
+            this.dog02 = new System.Windows.Forms.PictureBox();
+            this.dog03 = new System.Windows.Forms.PictureBox();
+            this.dog04 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,10 +50,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog01)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog02)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog03)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog04)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,45 +68,45 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // dog01
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(29, 27);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 43);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.dog01.BackColor = System.Drawing.Color.Transparent;
+            this.dog01.Image = ((System.Drawing.Image)(resources.GetObject("dog01.Image")));
+            this.dog01.Location = new System.Drawing.Point(29, 27);
+            this.dog01.Name = "dog01";
+            this.dog01.Size = new System.Drawing.Size(43, 43);
+            this.dog01.TabIndex = 1;
+            this.dog01.TabStop = false;
             // 
-            // pictureBox3
+            // dog02
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(29, 102);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 43);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.dog02.BackColor = System.Drawing.Color.Transparent;
+            this.dog02.Image = ((System.Drawing.Image)(resources.GetObject("dog02.Image")));
+            this.dog02.Location = new System.Drawing.Point(29, 102);
+            this.dog02.Name = "dog02";
+            this.dog02.Size = new System.Drawing.Size(43, 43);
+            this.dog02.TabIndex = 1;
+            this.dog02.TabStop = false;
             // 
-            // pictureBox4
+            // dog03
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(29, 178);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(43, 43);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
+            this.dog03.BackColor = System.Drawing.Color.Transparent;
+            this.dog03.Image = ((System.Drawing.Image)(resources.GetObject("dog03.Image")));
+            this.dog03.Location = new System.Drawing.Point(29, 178);
+            this.dog03.Name = "dog03";
+            this.dog03.Size = new System.Drawing.Size(43, 43);
+            this.dog03.TabIndex = 1;
+            this.dog03.TabStop = false;
             // 
-            // pictureBox5
+            // dog04
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(29, 251);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(43, 43);
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
+            this.dog04.BackColor = System.Drawing.Color.Transparent;
+            this.dog04.Image = ((System.Drawing.Image)(resources.GetObject("dog04.Image")));
+            this.dog04.Location = new System.Drawing.Point(29, 251);
+            this.dog04.Name = "dog04";
+            this.dog04.Size = new System.Drawing.Size(43, 43);
+            this.dog04.TabIndex = 1;
+            this.dog04.TabStop = false;
             // 
             // groupBox1
             // 
@@ -272,20 +272,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 496);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.dog04);
+            this.Controls.Add(this.dog03);
+            this.Controls.Add(this.dog02);
+            this.Controls.Add(this.dog01);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "달려라 댕댕이";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog01)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog02)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog03)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog04)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -295,10 +295,10 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox dog01;
+        private System.Windows.Forms.PictureBox dog02;
+        private System.Windows.Forms.PictureBox dog03;
+        private System.Windows.Forms.PictureBox dog04;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

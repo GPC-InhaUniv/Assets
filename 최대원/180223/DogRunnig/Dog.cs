@@ -12,13 +12,13 @@ namespace DogRunnig
         public int Position = 0; //개의 위치
         public Random Random; //랜덤 객체
 
-        //개가 달린드아아아아아ㅏㅏㅏ
+        //가즈아!
         public bool Run()
         {
             //랜덤값만큼 현재 위치좌표에 더함
-            Point p = PictureBox.Location;
-            p.X += Random.Next(2,8);
-            PictureBox.Location = p;
+            Point poi = PictureBox.Location;
+            poi.X += Random.Next(2,8);
+            PictureBox.Location = poi;
 
             //결승선 통과 여부 체크
             if (PictureBox.Location.X + PictureBox.Size.Width >= RaceTrackLength)
