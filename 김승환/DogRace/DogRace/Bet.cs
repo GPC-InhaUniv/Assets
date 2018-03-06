@@ -13,6 +13,7 @@ namespace DogRace
         public int dog;
         public Guy bettor;
 
+        //베팅 생성자 초기화
         public Bet(int amount, int dog, Guy bettor)
         {
             this.amount = amount;
@@ -20,6 +21,7 @@ namespace DogRace
             this.bettor = bettor;
         }
 
+        // 베팅 내역 출력
         public string GetDescription()
         {
             string description = "";
@@ -37,7 +39,8 @@ namespace DogRace
                 return description; 
             }
         }
-
+        
+        // 베팅 승패 여부에 대한 캐쉬 증감 차감 
         public int PayOut(int winner)
         {
             if(dog == winner)
