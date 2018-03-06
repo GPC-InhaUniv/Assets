@@ -56,6 +56,7 @@ namespace DogRace
         {
             cash += myBet.PayOut(winner);
         }
-    }
 
+        
+    }
 }

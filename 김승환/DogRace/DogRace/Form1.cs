@@ -165,7 +165,7 @@ namespace DogRace
                     g.UpdateLabels();
                 }
 
-                MessageBox.Show(string.Format("Race has been finished! Dog {0} is winner", winner), "Notice");
+                MessageBox.Show(string.Format("Race has been finished! Dog {0} is winner", winner+ 1), "Notice");
 
                 // 베팅 정도 초기화
                 for(int i = 0; i < betCount.Length; i++)
