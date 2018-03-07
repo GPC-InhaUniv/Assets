@@ -34,6 +34,7 @@
             this.Dognum3 = new System.Windows.Forms.PictureBox();
             this.Dognum4 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnAll = new System.Windows.Forms.Button();
             this.labAI = new System.Windows.Forms.Label();
             this.labBob = new System.Windows.Forms.Label();
             this.labJoe = new System.Windows.Forms.Label();
@@ -114,6 +115,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.BtnAll);
             this.groupBox1.Controls.Add(this.labAI);
             this.groupBox1.Controls.Add(this.labBob);
             this.groupBox1.Controls.Add(this.labJoe);
@@ -134,6 +136,17 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Betting Parlor";
+            // 
+            // BtnAll
+            // 
+            this.BtnAll.DialogResult = System.Windows.Forms.DialogResult.Abort;
+            this.BtnAll.Location = new System.Drawing.Point(189, 55);
+            this.BtnAll.Name = "BtnAll";
+            this.BtnAll.Size = new System.Drawing.Size(75, 63);
+            this.BtnAll.TabIndex = 9;
+            this.BtnAll.Text = "ALL - IN";
+            this.BtnAll.UseVisualStyleBackColor = true;
+            this.BtnAll.Click += new System.EventHandler(this.BtnAll_Click);
             // 
             // labAI
             // 
@@ -291,9 +304,9 @@
             this.labMbet.AutoSize = true;
             this.labMbet.Location = new System.Drawing.Point(19, 26);
             this.labMbet.Name = "labMbet";
-            this.labMbet.Size = new System.Drawing.Size(97, 12);
+            this.labMbet.Size = new System.Drawing.Size(87, 12);
             this.labMbet.TabIndex = 0;
-            this.labMbet.Text = "Minimum bet : 5";
+            this.labMbet.Text = "Minimum bet :";
             // 
             // Form1
             // 
@@ -347,6 +360,7 @@
         private System.Windows.Forms.Label labJoe;
         private System.Windows.Forms.Label labAI;
         private System.Windows.Forms.Label labBob;
+        private System.Windows.Forms.Button BtnAll;
     }
 }
 

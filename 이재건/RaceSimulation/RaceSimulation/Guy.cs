@@ -59,18 +59,18 @@ namespace RaceSimulation
             }
         }
 
-        public int Collect(int Winner, bool jackpoton, int jackpotmoney)   //winner = dognumber 
+        public int Collect(int Winner, bool bjackpot, int jackpotmoney)   //winner = dognumber 
         {
             if (MyBet.Dog == Winner)    //if dognumber that guy was chosed same winner dognum , Get money!
             {
-                if (jackpoton)
+                if (bjackpot)
                     Cash += MyBet.Amount * 2 + jackpotmoney;
                 else
                     Cash += MyBet.Amount * 2;
 
                 MyBet.Amount = 0;  //reset Betted Cah
                 MyBet.Dog = 0;      //reset Chossed DogNum
-                return 0;   //collect money can not money
+                return 0;   //collect money can not save money
             }
             else
             {
