@@ -41,18 +41,14 @@ namespace DogRace
             {
                 return true;
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
         }
 
         // 댕댕이가 움직이는 메소드
         public void Move(int distance)
         {
-            Point p = myPictureBox.Location;
-            p.X += distance;
-            myPictureBox.Location = p;
+            myPictureBox.Location.Offset(distance, 0);
         }
 
         // 댕댕이의 위치를 시작위치로 초기화
