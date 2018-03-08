@@ -19,7 +19,7 @@ namespace PartyPlanner
             set
             {
                 numberOfPeople = value;
-                //CalculateCostOfDecorations(isFancy);
+                CalculateCostOfDecorations(isFancy);
             }
         }
 
