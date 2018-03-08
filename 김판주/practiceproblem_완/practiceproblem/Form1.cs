@@ -53,7 +53,7 @@ namespace practiceproblem
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e) //팬시박스
         {
-            dinnerParty.CalculateCostDecorations(fancyBox.Checked);
+            dinnerParty.CalculateCostOfDecorations(fancyBox.Checked);
 
             DisplayDinnerPartyCost();
         }
@@ -67,7 +67,7 @@ namespace practiceproblem
 
         private void numberBirthday_ValueChanged(object sender, EventArgs e)
         {
-            birthdayParty.NumberOfPepple = (int)numberBirthday.Value;
+            birthdayParty.NumberOfPeople = (int)numberBirthday.Value;
             DisplayBirthdayPartyCost();
         }
 
