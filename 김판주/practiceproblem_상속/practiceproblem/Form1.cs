@@ -38,6 +38,8 @@ namespace practiceproblem
         }
         private void DisplayBirthdayPartyCost() //자동으로 변경이 일어날 때마다 비용라벨이 갱신, 모든 이벤트 핸들에 들어감!!
         {
+            CakeWriting.Text = birthdayParty.CakeWrithing;
+
             decimal Cost = birthdayParty.CalculateCost();
 
             birthdatCost.Text = Cost.ToString("c");

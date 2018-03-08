@@ -8,33 +8,21 @@ namespace practiceproblem
 {
     class Party
     {
-
         public const int CostOfFoodPerPerson = 25;
 
         public decimal CostOfDecorations = 0;
 
-        private bool fancyDecorations; // 보호수준....
+        private bool fancyDecorations;
 
-       
-
-        public Party(int numberOfPeople, bool fancyDecorations) //초기화
+        public Party(int numberOfPeople, bool fancyDecorations)
         {
             this.NumberOfPeople = numberOfPeople;
             this.fancyDecorations = fancyDecorations;
         }
 
 
-            public void CalculateCostOfDecorations(bool fancy) //생일파티 메소드
-        {
-            fancyDecorations = fancy;
-            if (fancy)
-                CostOfDecorations = (NumberOfPeople * 15.00M) + 50M;
-            else
-                CostOfDecorations = (NumberOfPeople * 7.50M) + 30M;
-        }
 
-
-        private int numberOfPeople; //디너파티 메소드
+        private int numberOfPeople;
         public virtual int NumberOfPeople
         {
             get
@@ -43,14 +31,27 @@ namespace practiceproblem
             }
             set
             {
-                numberOfPeople = value;
+                numberOfPeople = value; 
                 CalculateCostOfDecorations(fancyDecorations);
             }
         }
 
-        public virtual decimal CalculateCost() //12명 이상이면 100달러 더~
+        public void CalculateCostOfDecorations(bool fancy) // 파티 참가자 전체에 대한 장식비 계산
         {
-            decimal totalCost = CostOfDecorations + (CostOfFoodPerPerson * NumberOfPeople);
+            fancyDecorations = fancy;
+            if (fancy)
+            {
+                CostOfDecorations = (NumberOfPeople * 15.00M) + 50M;
+            }
+            else
+            {
+                CostOfDecorations = (NumberOfPeople * 7.50M) + 30M;
+            }
+        }
+
+        public virtual decimal CalculateCost()
+        {
+            decimal totalCost = CostOfDecorations + ( CostOfFoodPerPerson * NumberOfPeople);
 
             if (NumberOfPeople > 12)
             {
@@ -62,6 +63,7 @@ namespace practiceproblem
             }
 
         }
-    }
 
+
+    }
 }
