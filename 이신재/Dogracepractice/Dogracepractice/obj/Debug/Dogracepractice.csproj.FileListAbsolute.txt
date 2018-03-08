@@ -16,3 +16,12 @@ C:\Users\hrd32125\Downloads\Dogracepractice-20180226T235347Z-001\Dogracepractice
 C:\Users\hrd32125\Downloads\Dogracepractice-20180226T235347Z-001\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.csproj.CoreCompileInputs.cache
 C:\Users\hrd32125\Downloads\Dogracepractice-20180226T235347Z-001\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.exe
 C:\Users\hrd32125\Downloads\Dogracepractice-20180226T235347Z-001\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.pdb
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\bin\Debug\Dogracepractice.exe
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\bin\Debug\Dogracepractice.pdb
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.csprojResolveAssemblyReference.cache
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.Form1.resources
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.Properties.Resources.resources
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.csproj.GenerateResource.Cache
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.csproj.CoreCompileInputs.cache
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.exe
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.pdb
