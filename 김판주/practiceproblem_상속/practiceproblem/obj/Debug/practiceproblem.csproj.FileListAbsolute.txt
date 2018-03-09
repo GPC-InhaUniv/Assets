@@ -1,0 +1,10 @@
+C:\Users\hrd32122\Desktop\practiceproblem\practiceproblem\bin\Debug\practiceproblem.exe.config
+C:\Users\hrd32122\Desktop\practiceproblem\practiceproblem\bin\Debug\practiceproblem.exe
+C:\Users\hrd32122\Desktop\practiceproblem\practiceproblem\bin\Debug\practiceproblem.pdb
+C:\Users\hrd32122\Desktop\practiceproblem\practiceproblem\obj\Debug\practiceproblem.csprojResolveAssemblyReference.cache
+C:\Users\hrd32122\Desktop\practiceproblem\practiceproblem\obj\Debug\practiceproblem.Form1.resources
+C:\Users\hrd32122\Desktop\practiceproblem\practiceproblem\obj\Debug\practiceproblem.Properties.Resources.resources
+C:\Users\hrd32122\Desktop\practiceproblem\practiceproblem\obj\Debug\practiceproblem.csproj.GenerateResource.Cache
+C:\Users\hrd32122\Desktop\practiceproblem\practiceproblem\obj\Debug\practiceproblem.csproj.CoreCompileInputs.cache
+C:\Users\hrd32122\Desktop\practiceproblem\practiceproblem\obj\Debug\practiceproblem.exe
+C:\Users\hrd32122\Desktop\practiceproblem\practiceproblem\obj\Debug\practiceproblem.pdb

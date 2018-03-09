@@ -10,7 +10,7 @@ namespace RaceSimulation
     {
         public int Amount;  //save betting money variable
         public int Dog;     //save betting Dog variable
-        public Guy Bettor;
+       // public Guy Bettor;
 
         public Bet()
         {

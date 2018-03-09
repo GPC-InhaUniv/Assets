@@ -1,0 +1,10 @@
+C:\Users\HRD32115\Desktop\Visual\교재\Party\Party\bin\Debug\Party.exe.config
+C:\Users\HRD32115\Desktop\Visual\교재\Party\Party\bin\Debug\Party.exe
+C:\Users\HRD32115\Desktop\Visual\교재\Party\Party\bin\Debug\Party.pdb
+C:\Users\HRD32115\Desktop\Visual\교재\Party\Party\obj\Debug\Party.csprojResolveAssemblyReference.cache
+C:\Users\HRD32115\Desktop\Visual\교재\Party\Party\obj\Debug\Party.Form1.resources
+C:\Users\HRD32115\Desktop\Visual\교재\Party\Party\obj\Debug\Party.Properties.Resources.resources
+C:\Users\HRD32115\Desktop\Visual\교재\Party\Party\obj\Debug\Party.csproj.GenerateResource.Cache
+C:\Users\HRD32115\Desktop\Visual\교재\Party\Party\obj\Debug\Party.csproj.CoreCompileInputs.cache
+C:\Users\HRD32115\Desktop\Visual\교재\Party\Party\obj\Debug\Party.exe
+C:\Users\HRD32115\Desktop\Visual\교재\Party\Party\obj\Debug\Party.pdb

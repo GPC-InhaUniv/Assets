@@ -16,6 +16,17 @@ C:\Users\hrd32125\Downloads\Dogracepractice-20180226T235347Z-001\Dogracepractice
 C:\Users\hrd32125\Downloads\Dogracepractice-20180226T235347Z-001\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.csproj.CoreCompileInputs.cache
 C:\Users\hrd32125\Downloads\Dogracepractice-20180226T235347Z-001\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.exe
 C:\Users\hrd32125\Downloads\Dogracepractice-20180226T235347Z-001\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.pdb
+<<<<<<< HEAD
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\bin\Debug\Dogracepractice.exe
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\bin\Debug\Dogracepractice.pdb
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.csprojResolveAssemblyReference.cache
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.Form1.resources
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.Properties.Resources.resources
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.csproj.GenerateResource.Cache
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.csproj.CoreCompileInputs.cache
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.exe
+C:\0_work\GithubLast\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.pdb
+=======
 C:\Users\HRD32122\Documents\github\Test\이신재\Dogracepractice\Dogracepractice\bin\Debug\Dogracepractice.exe
 C:\Users\HRD32122\Documents\github\Test\이신재\Dogracepractice\Dogracepractice\bin\Debug\Dogracepractice.pdb
 C:\Users\HRD32122\Documents\github\Test\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.csprojResolveAssemblyReference.cache
@@ -25,3 +36,4 @@ C:\Users\HRD32122\Documents\github\Test\이신재\Dogracepractice\Dogracepractic
 C:\Users\HRD32122\Documents\github\Test\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.csproj.CoreCompileInputs.cache
 C:\Users\HRD32122\Documents\github\Test\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.exe
 C:\Users\HRD32122\Documents\github\Test\이신재\Dogracepractice\Dogracepractice\obj\Debug\Dogracepractice.pdb
+>>>>>>> 915e7e3476395609d1f7f3e398dfff9064476b8d
