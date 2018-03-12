@@ -1,0 +1,9 @@
+C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\bin\Debug\RaceSimulation.exe.config
+C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\bin\Debug\RaceSimulation.exe
+C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\bin\Debug\RaceSimulation.pdb
+C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.csprojResolveAssemblyReference.cache
+C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.Form1.resources
+C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.Properties.Resources.resources
+C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.csproj.GenerateResource.Cache
+C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.exe
+C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.pdb
