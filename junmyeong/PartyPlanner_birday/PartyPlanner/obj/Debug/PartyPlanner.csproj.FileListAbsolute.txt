@@ -1,0 +1,10 @@
+c:\users\hrd32110\source\repos\PartyPlanner\PartyPlanner\bin\Debug\PartyPlanner.exe.config
+c:\users\hrd32110\source\repos\PartyPlanner\PartyPlanner\bin\Debug\PartyPlanner.exe
+c:\users\hrd32110\source\repos\PartyPlanner\PartyPlanner\bin\Debug\PartyPlanner.pdb
+c:\users\hrd32110\source\repos\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.csprojResolveAssemblyReference.cache
+c:\users\hrd32110\source\repos\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.Form1.resources
+c:\users\hrd32110\source\repos\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.Properties.Resources.resources
+c:\users\hrd32110\source\repos\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.csproj.GenerateResource.Cache
+c:\users\hrd32110\source\repos\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.csproj.CoreCompileInputs.cache
+c:\users\hrd32110\source\repos\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.exe
+c:\users\hrd32110\source\repos\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.pdb

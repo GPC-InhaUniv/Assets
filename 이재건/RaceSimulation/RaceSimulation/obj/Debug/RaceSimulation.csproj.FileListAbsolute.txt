@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\bin\Debug\RaceSimulation.exe.config
 C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\bin\Debug\RaceSimulation.exe
 C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\bin\Debug\RaceSimulation.pdb
@@ -7,3 +8,15 @@ C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\obj\Debu
 C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.csproj.GenerateResource.Cache
 C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.exe
 C:\Users\Gaeguri\Documents\Work\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.pdb
+=======
+C:\0_Work\github\Test\이재건\RaceSimulation\RaceSimulation\bin\Debug\RaceSimulation.exe.config
+C:\0_Work\github\Test\이재건\RaceSimulation\RaceSimulation\bin\Debug\RaceSimulation.exe
+C:\0_Work\github\Test\이재건\RaceSimulation\RaceSimulation\bin\Debug\RaceSimulation.pdb
+C:\0_Work\github\Test\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.csprojResolveAssemblyReference.cache
+C:\0_Work\github\Test\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.Form1.resources
+C:\0_Work\github\Test\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.Properties.Resources.resources
+C:\0_Work\github\Test\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.csproj.GenerateResource.Cache
+C:\0_Work\github\Test\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.csproj.CoreCompileInputs.cache
+C:\0_Work\github\Test\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.exe
+C:\0_Work\github\Test\이재건\RaceSimulation\RaceSimulation\obj\Debug\RaceSimulation.pdb
+>>>>>>> 1ad203a1affd8fdeeede24ca733f61412e7bdab0

@@ -8,14 +8,17 @@ using System.Threading.Tasks;
 
 namespace DogRace
 {
+    // 멍멍이들 클래스
     public class Greyhound
     {
+        // 변수 필드
         public int startingPosition;
         public int racetrackLength;
         public PictureBox myPictureBox = null;
         public int location = 0;
         public Random randomizer;
 
+        // 생성자 초기화
         public Greyhound(int startingPosition, int racetrackLength, PictureBox myPictureBox)
         {
             this.startingPosition = startingPosition;
@@ -23,6 +26,7 @@ namespace DogRace
             this.myPictureBox = myPictureBox;
         }
 
+        // 댕댕이이가 경주하는 메소드 
         public bool Run()
         {
             randomizer = new Random();
@@ -33,23 +37,21 @@ namespace DogRace
 
             location += distance;
 
-            if (distance >= racetrackLength - startingPosition)
+            if (location >= (racetrackLength - startingPosition))
             {
                 return true;
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
         }
 
+        // 댕댕이가 움직이는 메소드
         public void Move(int distance)
         {
-            Point p = myPictureBox.Location;
-            p.X += distance;
-            myPictureBox.Location = p;
+            myPictureBox.Location.Offset(distance, 0);
         }
 
+        // 댕댕이의 위치를 시작위치로 초기화
         public void TakeStartingPostion()
         {
             Move(-location);

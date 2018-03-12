@@ -1,0 +1,7 @@
+C:\Users\hrd32104\source\repos\PracticeOfPrivate\CableBill_Practice\bin\Debug\CableBill_Practice.exe.config
+C:\Users\hrd32104\source\repos\PracticeOfPrivate\CableBill_Practice\bin\Debug\CableBill_Practice.exe
+C:\Users\hrd32104\source\repos\PracticeOfPrivate\CableBill_Practice\bin\Debug\CableBill_Practice.pdb
+C:\Users\hrd32104\source\repos\PracticeOfPrivate\CableBill_Practice\obj\Debug\CableBill_Practice.csprojResolveAssemblyReference.cache
+C:\Users\hrd32104\source\repos\PracticeOfPrivate\CableBill_Practice\obj\Debug\CableBill_Practice.csproj.CoreCompileInputs.cache
+C:\Users\hrd32104\source\repos\PracticeOfPrivate\CableBill_Practice\obj\Debug\CableBill_Practice.exe
+C:\Users\hrd32104\source\repos\PracticeOfPrivate\CableBill_Practice\obj\Debug\CableBill_Practice.pdb
