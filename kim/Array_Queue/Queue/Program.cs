@@ -51,7 +51,7 @@ namespace Queue
                         Console.Write("들어갈 데이터를 입력하세요 :");
                         Data = Console.ReadLine();
                         Enqueue(Convert.ToInt32(Data));
-                        Console.Clear();
+                       
                         break;
                     case "2":
                         Dequeue();
@@ -87,7 +87,7 @@ namespace Queue
                
                 QueueArr[nextpos] = data;
                 nextpos = (nextpos + 1) % arrsize;
-
+                Console.Clear();
             }
         }
 
