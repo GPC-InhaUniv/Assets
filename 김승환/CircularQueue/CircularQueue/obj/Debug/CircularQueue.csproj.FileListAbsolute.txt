@@ -1,7 +1,0 @@
-C:\Users\DulgiKim\source\repos\CircularQueue\CircularQueue\bin\Debug\CircularQueue.exe.config
-C:\Users\DulgiKim\source\repos\CircularQueue\CircularQueue\bin\Debug\CircularQueue.exe
-C:\Users\DulgiKim\source\repos\CircularQueue\CircularQueue\bin\Debug\CircularQueue.pdb
-C:\Users\DulgiKim\source\repos\CircularQueue\CircularQueue\obj\Debug\CircularQueue.csproj.CoreCompileInputs.cache
-C:\Users\DulgiKim\source\repos\CircularQueue\CircularQueue\obj\Debug\CircularQueue.exe
-C:\Users\DulgiKim\source\repos\CircularQueue\CircularQueue\obj\Debug\CircularQueue.pdb
-C:\Users\DulgiKim\source\repos\CircularQueue\CircularQueue\obj\Debug\CircularQueue.csprojResolveAssemblyReference.cache
