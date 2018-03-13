@@ -55,7 +55,7 @@ namespace Queue
                         break;
                     case "2":
                         Dequeue();
-                        Console.Clear();
+                        
                         break;
                     case "3":
                         Console.WriteLine("Front의 Data :" + getFront());
