@@ -1,0 +1,10 @@
+C:\Users\HRD32122\source\repos\Clown\Clown\bin\Debug\Clown.exe.config
+C:\Users\HRD32122\source\repos\Clown\Clown\bin\Debug\Clown.exe
+C:\Users\HRD32122\source\repos\Clown\Clown\bin\Debug\Clown.pdb
+C:\Users\HRD32122\source\repos\Clown\Clown\obj\Debug\Clown.csprojResolveAssemblyReference.cache
+C:\Users\HRD32122\source\repos\Clown\Clown\obj\Debug\Clown.Form1.resources
+C:\Users\HRD32122\source\repos\Clown\Clown\obj\Debug\Clown.Properties.Resources.resources
+C:\Users\HRD32122\source\repos\Clown\Clown\obj\Debug\Clown.csproj.GenerateResource.Cache
+C:\Users\HRD32122\source\repos\Clown\Clown\obj\Debug\Clown.csproj.CoreCompileInputs.cache
+C:\Users\HRD32122\source\repos\Clown\Clown\obj\Debug\Clown.exe
+C:\Users\HRD32122\source\repos\Clown\Clown\obj\Debug\Clown.pdb

@@ -1,0 +1,9 @@
+c:\users\gaeguri\documents\visual studio 2015\Projects\CircleQueue\bin\Debug\CircleQueue.exe.config
+c:\users\gaeguri\documents\visual studio 2015\Projects\CircleQueue\bin\Debug\CircleQueue.exe
+c:\users\gaeguri\documents\visual studio 2015\Projects\CircleQueue\bin\Debug\CircleQueue.pdb
+c:\users\gaeguri\documents\visual studio 2015\Projects\CircleQueue\obj\Debug\CircleQueue.csprojResolveAssemblyReference.cache
+c:\users\gaeguri\documents\visual studio 2015\Projects\CircleQueue\obj\Debug\CircleQueue.Form1.resources
+c:\users\gaeguri\documents\visual studio 2015\Projects\CircleQueue\obj\Debug\CircleQueue.Properties.Resources.resources
+c:\users\gaeguri\documents\visual studio 2015\Projects\CircleQueue\obj\Debug\CircleQueue.csproj.GenerateResource.Cache
+c:\users\gaeguri\documents\visual studio 2015\Projects\CircleQueue\obj\Debug\CircleQueue.exe
+c:\users\gaeguri\documents\visual studio 2015\Projects\CircleQueue\obj\Debug\CircleQueue.pdb

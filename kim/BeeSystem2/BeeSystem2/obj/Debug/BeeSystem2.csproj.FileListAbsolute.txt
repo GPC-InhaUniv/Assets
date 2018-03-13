@@ -1,0 +1,10 @@
+C:\Users\HRD32115\Desktop\Visual\교재\BeeSystem2\BeeSystem2\bin\Debug\BeeSystem2.exe.config
+C:\Users\HRD32115\Desktop\Visual\교재\BeeSystem2\BeeSystem2\bin\Debug\BeeSystem2.exe
+C:\Users\HRD32115\Desktop\Visual\교재\BeeSystem2\BeeSystem2\bin\Debug\BeeSystem2.pdb
+C:\Users\HRD32115\Desktop\Visual\교재\BeeSystem2\BeeSystem2\obj\Debug\BeeSystem2.Form1.resources
+C:\Users\HRD32115\Desktop\Visual\교재\BeeSystem2\BeeSystem2\obj\Debug\BeeSystem2.Properties.Resources.resources
+C:\Users\HRD32115\Desktop\Visual\교재\BeeSystem2\BeeSystem2\obj\Debug\BeeSystem2.csproj.GenerateResource.Cache
+C:\Users\HRD32115\Desktop\Visual\교재\BeeSystem2\BeeSystem2\obj\Debug\BeeSystem2.csproj.CoreCompileInputs.cache
+C:\Users\HRD32115\Desktop\Visual\교재\BeeSystem2\BeeSystem2\obj\Debug\BeeSystem2.exe
+C:\Users\HRD32115\Desktop\Visual\교재\BeeSystem2\BeeSystem2\obj\Debug\BeeSystem2.pdb
+C:\Users\HRD32115\Desktop\Visual\교재\BeeSystem2\BeeSystem2\obj\Debug\BeeSystem2.csprojResolveAssemblyReference.cache
