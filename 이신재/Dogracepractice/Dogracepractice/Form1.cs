@@ -79,12 +79,12 @@ namespace Dogracepractice
         public void ResetForm() //1회 경주가 끝나면 각각의 guy인스턴스와 dog인스턴스를 for문으로 초기화한다.
         {
             // 개 위치 시작 위치로 이동
-            for (int i = 0; i < 4; i++)
-                dog[i].TakeStartingPosition(); //Greyhound 클래스의 TakeStartingPosition메소드
+            for (int dognum = 0; dognum < 4; dognum++)
+                dog[dognum].TakeStartingPosition(); //Greyhound 클래스의 TakeStartingPosition메소드
 
             // 현금 보유액 갱신 및 베팅 상황 보이기
-            for (int i = 0; i < 3; i++)
-                guy[i].UpdateLabels(); //Guy 클래스의 UpdateLabels메소드
+            for (int guynum = 0; guynum < 3; guynum++)
+                guy[guynum].UpdateLabels(); //Guy 클래스의 UpdateLabels메소드
 
         }
 
@@ -138,12 +138,10 @@ namespace Dogracepractice
 
         private void btnrace_Click(object sender, EventArgs e)
         {
-            bool Winner = false; 
+            bool Winner = false;
             //게임이 끝나기 전까지 winner가 없는 상태이므로
             int DogNum = 0;
-
-           
-
+            
             while(!Winner)
             {
                 for(DogNum=0; DogNum<4 && Winner==false; DogNum++)
@@ -157,9 +155,9 @@ namespace Dogracepractice
             MessageBox.Show("We have a Winner = Dog #" + DogNum);
             //winner가 나왔을 경우 승리한 dog를 메시지창에 출력한다.
 
-            for(int i=0; i<3; i++)
+            for(int guynum=0; guynum<3; guynum++)
             {
-                guy[i].Collect(DogNum);
+                guy[guynum].Collect(DogNum);
             }
             ResetForm();
             

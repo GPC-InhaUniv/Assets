@@ -1,0 +1,6 @@
+c:\users\magic\source\repos\CircularQueue\CircularQueue\obj\Debug\CircularQueue.csprojResolveAssemblyReference.cache
+c:\users\magic\source\repos\CircularQueue\CircularQueue\obj\Debug\CircularQueue.csproj.CoreCompileInputs.cache
+c:\users\magic\source\repos\CircularQueue\CircularQueue\bin\Debug\CircularQueue.exe
+c:\users\magic\source\repos\CircularQueue\CircularQueue\bin\Debug\CircularQueue.pdb
+c:\users\magic\source\repos\CircularQueue\CircularQueue\obj\Debug\CircularQueue.exe
+c:\users\magic\source\repos\CircularQueue\CircularQueue\obj\Debug\CircularQueue.pdb
