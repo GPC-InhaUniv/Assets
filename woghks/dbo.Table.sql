@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Table]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [Name] NCHAR(10) NULL DEFAULT 이재환, 
+    [Tel] NCHAR(10) NULL DEFAULT 010, 
+    [Age] NCHAR(10) NULL DEFAULT 24
+)
