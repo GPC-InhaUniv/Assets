@@ -12,6 +12,7 @@
        
         public int NumberOfPeople//numberOfPeople 프로퍼티
         {
+
             get
             {
                 return numberOfPeople;

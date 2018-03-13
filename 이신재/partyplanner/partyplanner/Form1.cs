@@ -21,7 +21,8 @@ namespace partyplanner
                                                  checkhelthy.Checked,
                                                  checkfancy.Checked);
             
-            DisplayDinnerPartyCost();
+            
+
 
             mybirthdayParty = new BirthdayParty((int)numericPeople.Value,
                                                 checkbfancy.Checked,
@@ -29,6 +30,9 @@ namespace partyplanner
             DisplayBirthdayPartyCost();
             
         }
+
+
+
         private void DisplayBirthdayPartyCost()
         {
             textcakedeco.Text = mybirthdayParty.CakeWriting;
@@ -39,7 +43,7 @@ namespace partyplanner
         private void DisplayDinnerPartyCost()
         {
             decimal Cost = mydinnerparty.CalculateCost(checkhelthy.Checked);
-            txtcost.Text = Cost.ToString("c");
+           textBox1.Text = Cost.ToString("c");
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -85,6 +89,23 @@ namespace partyplanner
         {
             mybirthdayParty.CakeWriting = textcakedeco.Text;
             DisplayBirthdayPartyCost();
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            mydinnerparty.CalculateCostOfDecorations(checkBox2.Checked);
+            DisplayDinnerPartyCost();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            mydinnerparty.SetHealtyOption(checkBox1.Checked);
+            DisplayDinnerPartyCost();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
