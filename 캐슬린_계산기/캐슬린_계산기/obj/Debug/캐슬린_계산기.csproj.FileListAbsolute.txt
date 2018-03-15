@@ -1,0 +1,9 @@
+C:\Users\hrd32103\Desktop\캐슬린_계산기\캐슬린_계산기\bin\Debug\캐슬린_계산기.exe.config
+C:\Users\hrd32103\Desktop\캐슬린_계산기\캐슬린_계산기\bin\Debug\캐슬린_계산기.exe
+C:\Users\hrd32103\Desktop\캐슬린_계산기\캐슬린_계산기\bin\Debug\캐슬린_계산기.pdb
+C:\Users\hrd32103\Desktop\캐슬린_계산기\캐슬린_계산기\obj\Debug\캐슬린_계산기.Form1.resources
+C:\Users\hrd32103\Desktop\캐슬린_계산기\캐슬린_계산기\obj\Debug\캐슬린_계산기.Properties.Resources.resources
+C:\Users\hrd32103\Desktop\캐슬린_계산기\캐슬린_계산기\obj\Debug\캐슬린_계산기.csproj.GenerateResource.Cache
+C:\Users\hrd32103\Desktop\캐슬린_계산기\캐슬린_계산기\obj\Debug\캐슬린_계산기.csproj.CoreCompileInputs.cache
+C:\Users\hrd32103\Desktop\캐슬린_계산기\캐슬린_계산기\obj\Debug\캐슬린_계산기.exe
+C:\Users\hrd32103\Desktop\캐슬린_계산기\캐슬린_계산기\obj\Debug\캐슬린_계산기.pdb

@@ -1,0 +1,7 @@
+C:\Users\hrd32103\source\repos\원형큐\원형큐\bin\Debug\원형큐.exe.config
+C:\Users\hrd32103\source\repos\원형큐\원형큐\bin\Debug\원형큐.exe
+C:\Users\hrd32103\source\repos\원형큐\원형큐\bin\Debug\원형큐.pdb
+C:\Users\hrd32103\source\repos\원형큐\원형큐\obj\Debug\원형큐.csprojResolveAssemblyReference.cache
+C:\Users\hrd32103\source\repos\원형큐\원형큐\obj\Debug\원형큐.csproj.CoreCompileInputs.cache
+C:\Users\hrd32103\source\repos\원형큐\원형큐\obj\Debug\원형큐.exe
+C:\Users\hrd32103\source\repos\원형큐\원형큐\obj\Debug\원형큐.pdb

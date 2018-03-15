@@ -1,0 +1,10 @@
+c:\users\1111\source\repos\0306_PartyPlanner_test\0306_PartyPlanner_test\bin\Debug\0306_PartyPlanner_test.exe.config
+c:\users\1111\source\repos\0306_PartyPlanner_test\0306_PartyPlanner_test\bin\Debug\0306_PartyPlanner_test.exe
+c:\users\1111\source\repos\0306_PartyPlanner_test\0306_PartyPlanner_test\bin\Debug\0306_PartyPlanner_test.pdb
+c:\users\1111\source\repos\0306_PartyPlanner_test\0306_PartyPlanner_test\obj\Debug\0306_PartyPlanner_test.csprojResolveAssemblyReference.cache
+c:\users\1111\source\repos\0306_PartyPlanner_test\0306_PartyPlanner_test\obj\Debug\_0306_PartyPlanner_test.Form1.resources
+c:\users\1111\source\repos\0306_PartyPlanner_test\0306_PartyPlanner_test\obj\Debug\_0306_PartyPlanner_test.Properties.Resources.resources
+c:\users\1111\source\repos\0306_PartyPlanner_test\0306_PartyPlanner_test\obj\Debug\0306_PartyPlanner_test.csproj.GenerateResource.Cache
+c:\users\1111\source\repos\0306_PartyPlanner_test\0306_PartyPlanner_test\obj\Debug\0306_PartyPlanner_test.csproj.CoreCompileInputs.cache
+c:\users\1111\source\repos\0306_PartyPlanner_test\0306_PartyPlanner_test\obj\Debug\0306_PartyPlanner_test.exe
+c:\users\1111\source\repos\0306_PartyPlanner_test\0306_PartyPlanner_test\obj\Debug\0306_PartyPlanner_test.pdb

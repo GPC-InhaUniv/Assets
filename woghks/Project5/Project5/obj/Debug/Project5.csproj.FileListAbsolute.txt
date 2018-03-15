@@ -1,0 +1,4 @@
+C:\Users\DELL\source\repos\Project5\Project5\obj\Debug\Project5.csprojResolveAssemblyReference.cache
+C:\Users\DELL\source\repos\Project5\Project5\obj\Debug\Project5.csproj.CoreCompileInputs.cache
+C:\Users\hrd32116\Desktop\Project5\Project5\obj\Debug\Project5.csprojResolveAssemblyReference.cache
+C:\Users\hrd32116\Desktop\Project5\Project5\obj\Debug\Project5.csproj.CoreCompileInputs.cache
