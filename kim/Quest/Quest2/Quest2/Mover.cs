@@ -8,7 +8,7 @@ namespace Quest2
 {
     abstract class Mover
     {
-        private const int MoveInterval = 10;
+        protected const int MoveInterval = 10;
         protected Point location;
         public Point Location { get { return location; } }
         protected Game game;

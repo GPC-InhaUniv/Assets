@@ -35,15 +35,17 @@
             this.Right_move = new System.Windows.Forms.Button();
             this.Down_move = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Bat_Pic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player_Pic)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Bat_Pic)).BeginInit();
             this.SuspendLayout();
             // 
             // Player_Pic
             // 
             this.Player_Pic.BackColor = System.Drawing.Color.Transparent;
             this.Player_Pic.Image = ((System.Drawing.Image)(resources.GetObject("Player_Pic.Image")));
-            this.Player_Pic.Location = new System.Drawing.Point(74, 56);
+            this.Player_Pic.Location = new System.Drawing.Point(73, 54);
             this.Player_Pic.Name = "Player_Pic";
             this.Player_Pic.Size = new System.Drawing.Size(30, 30);
             this.Player_Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,6 +105,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Move";
             // 
+            // Bat_Pic
+            // 
+            this.Bat_Pic.BackColor = System.Drawing.Color.Transparent;
+            this.Bat_Pic.Image = ((System.Drawing.Image)(resources.GetObject("Bat_Pic.Image")));
+            this.Bat_Pic.Location = new System.Drawing.Point(373, 92);
+            this.Bat_Pic.Name = "Bat_Pic";
+            this.Bat_Pic.Size = new System.Drawing.Size(30, 30);
+            this.Bat_Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Bat_Pic.TabIndex = 6;
+            this.Bat_Pic.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -110,13 +123,15 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(990, 399);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Player_Pic);
+            this.Controls.Add(this.Bat_Pic);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "The Quest";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Player_Pic)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Bat_Pic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -129,6 +144,7 @@
         private System.Windows.Forms.Button Right_move;
         private System.Windows.Forms.Button Down_move;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox Bat_Pic;
     }
 }
 

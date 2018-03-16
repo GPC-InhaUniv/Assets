@@ -8,8 +8,12 @@ namespace Quest2
 {
     class Game
     {
+
         private Player Player;
-       
+
+        public List<Enemy> Enemies;
+
+
         public Point PlayerLocation { get { return Player.Location; } }
 
         private Rectangle boundaries;
@@ -21,11 +25,35 @@ namespace Quest2
             Player = new Player(this, new Point(boundaries.Left + 10, boundaries.Top + 10));
         }
 
-        public void Move(Direction direction)
+        public void Move(Direction direction,Random random)
         {
            
             Player.Move(direction);
-
+            foreach(Enemy enemy in Enemies)
+            {
+                enemy.Move(random);
+            }
+            
         }
+
+
+        // --------- Level -------------
+
+        private int level = 0;
+        public int Level { get { return level; } }
+
+        public void NewLevel()
+        {
+            level++;
+            switch(level)
+            {
+                case 1:
+                    Enemies = new List<Enemy>();
+                    Enemies.Add(new Bat(this, new Point(300, 76)));
+
+                    break;
+            }
+        }
+
     }
 }
