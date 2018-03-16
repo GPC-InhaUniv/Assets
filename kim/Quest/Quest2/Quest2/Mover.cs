@@ -18,9 +18,7 @@ namespace Quest2
         {
             this.game = game;
             this.location = location;
-
             
-
         }
 
         public Point Move(Direction direction, Rectangle boundaries)
@@ -63,5 +61,60 @@ namespace Quest2
             return newLocation;
         }
 
+        public bool Nearby(Point locationToCheck, int distance)
+        {
+            if (Math.Abs(location.X - locationToCheck.X) < distance && Math.Abs(location.Y - locationToCheck.Y) < distance)
+                return true;
+            else
+                return false;
+        }
+        public bool Nearby(Point Enemylocation, Point target, int radius)
+        {
+            if (Math.Abs(target.X - Enemylocation.X) < radius && Math.Abs(target.Y - Enemylocation.Y) <radius)
+                return true;
+            else
+                return false;
+        }
+        public bool Nearby(Point Enemylocation, Direction direction, int radius)
+        {
+            switch(direction)
+            {
+                case Direction.Up:
+                    if (location.Y - Enemylocation.Y > 0 && location.Y - Enemylocation.Y < radius)
+                    {
+                        return true;
+                    }
+                    return false;
+
+                 
+                case Direction.Down:
+                    if (location.Y - Enemylocation.Y < 0 && location.Y - Enemylocation.Y > - radius)
+                    {
+                        return true;
+                    }
+                    return false;
+                  
+                  
+                case Direction.Left:
+                    if(location.X -Enemylocation.X > 0 && location.X - Enemylocation.X <radius)
+                    {
+                        return true;
+                    }
+                    return false;
+                   
+                case Direction.Right:
+                    if(location.X - Enemylocation.X < 0 && location.X - Enemylocation.X > -radius)
+                    {
+                        return true;
+                    }
+                    return false;
+                   
+
+                default:
+                    return false;
+                  
+            }
+          
+        }
     }
 }

@@ -11,42 +11,32 @@ namespace Quest2
         Rectangle boundaries;
         public Bat(Game game, Point location) : base(game, location, 6)
         {
-            
+
             boundaries = game.Boundaries;
         }
-       
+
 
         public override void Move(Random random)
         {
-            Direction NewDirection = (Direction)random.Next(4);
+            Direction NewDirection;
+            Console.WriteLine(NearPlayer());
+
+            int AI = random.Next(4);
+
             
-
-
-            /*
+            if (AI % 2 == 0)
+            {
+             
+                NewDirection = FindPlayerDirection();
+            }
+            else
+            {
+                NewDirection = (Direction)random.Next(4);
+            }
             switch (NewDirection)
             {
                 case Direction.Up:
-                    location.Y -= MoveInterval;
-
-                    break;
-                case Direction.Down:
-                    location.Y += MoveInterval;
-                    break;
-                case Direction.Left:
-                    location.X -= MoveInterval;
-                    break;
-                case Direction.Right:
-                    location.Y += MoveInterval;
-                    break;
-                default:
-                    break;
-
-            }*/
-
-            switch(NewDirection)
-            {
-                case Direction.Up:
-                    if(location.Y - MoveInterval >= boundaries.Top)
+                    if (location.Y - MoveInterval >= boundaries.Top)
                     {
                         location.Y -= MoveInterval;
                     }
@@ -72,11 +62,13 @@ namespace Quest2
                     break;
                 default:
                     break;
-
-
             }
 
 
+            if(NearPlayer())
+            {
+                game.GiveDamageToPlayer(6, random);
+            }
 
         }
 
