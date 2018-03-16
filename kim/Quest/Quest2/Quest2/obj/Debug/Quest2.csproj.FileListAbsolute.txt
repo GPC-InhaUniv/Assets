@@ -1,0 +1,10 @@
+C:\Users\HRD32115\Desktop\Visual\교재\Quest2\Quest2\obj\Debug\Quest2.csprojResolveAssemblyReference.cache
+C:\Users\HRD32115\Desktop\Visual\교재\Quest2\Quest2\obj\Debug\Quest2.Form1.resources
+C:\Users\HRD32115\Desktop\Visual\교재\Quest2\Quest2\obj\Debug\Quest2.Properties.Resources.resources
+C:\Users\HRD32115\Desktop\Visual\교재\Quest2\Quest2\obj\Debug\Quest2.csproj.GenerateResource.Cache
+C:\Users\HRD32115\Desktop\Visual\교재\Quest2\Quest2\obj\Debug\Quest2.csproj.CoreCompileInputs.cache
+C:\Users\HRD32115\Desktop\Visual\교재\Quest2\Quest2\bin\Debug\Quest2.exe.config
+C:\Users\HRD32115\Desktop\Visual\교재\Quest2\Quest2\bin\Debug\Quest2.exe
+C:\Users\HRD32115\Desktop\Visual\교재\Quest2\Quest2\bin\Debug\Quest2.pdb
+C:\Users\HRD32115\Desktop\Visual\교재\Quest2\Quest2\obj\Debug\Quest2.exe
+C:\Users\HRD32115\Desktop\Visual\교재\Quest2\Quest2\obj\Debug\Quest2.pdb
