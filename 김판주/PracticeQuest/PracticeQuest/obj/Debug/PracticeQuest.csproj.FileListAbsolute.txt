@@ -1,0 +1,10 @@
+C:\Users\hrd32122\source\repos\PracticeQuest\PracticeQuest\bin\Debug\PracticeQuest.exe.config
+C:\Users\hrd32122\source\repos\PracticeQuest\PracticeQuest\bin\Debug\PracticeQuest.exe
+C:\Users\hrd32122\source\repos\PracticeQuest\PracticeQuest\bin\Debug\PracticeQuest.pdb
+C:\Users\hrd32122\source\repos\PracticeQuest\PracticeQuest\obj\Debug\PracticeQuest.csprojResolveAssemblyReference.cache
+C:\Users\hrd32122\source\repos\PracticeQuest\PracticeQuest\obj\Debug\PracticeQuest.Form1.resources
+C:\Users\hrd32122\source\repos\PracticeQuest\PracticeQuest\obj\Debug\PracticeQuest.Properties.Resources.resources
+C:\Users\hrd32122\source\repos\PracticeQuest\PracticeQuest\obj\Debug\PracticeQuest.csproj.GenerateResource.Cache
+C:\Users\hrd32122\source\repos\PracticeQuest\PracticeQuest\obj\Debug\PracticeQuest.csproj.CoreCompileInputs.cache
+C:\Users\hrd32122\source\repos\PracticeQuest\PracticeQuest\obj\Debug\PracticeQuest.exe
+C:\Users\hrd32122\source\repos\PracticeQuest\PracticeQuest\obj\Debug\PracticeQuest.pdb
