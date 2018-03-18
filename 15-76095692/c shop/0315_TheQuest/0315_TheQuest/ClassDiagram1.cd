@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="_0315_TheQuest.Form1">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAABIgCEQFBAAABCQBhACBEKAQABIADQAAAAgACA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_0315_TheQuest.Game">
+    <Position X="2.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAAIAACAIAAAgAAAAIAIEABAEhCABAABAAAAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_0315_TheQuest.Weapon">
+    <Position X="9.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAQAAIEAAAAAAAAAAAABAAE=</HashCode>
+      <FileName>Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_0315_TheQuest.Enemy">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgKAAAAAAAAIABgAAAAAAAAAAAAAADAAAAAA=</HashCode>
+      <FileName>Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_0315_TheQuest.Mover">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgABIAAAAAAAAIAAAACAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Mover.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_0315_TheQuest.Ghoul">
+    <Position X="7" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ghoul.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_0315_TheQuest.Ghost">
+    <Position X="5.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ghost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_0315_TheQuest.Bet">
+    <Position X="4" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_0315_TheQuest.Sword">
+    <Position X="9.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sword.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_0315_TheQuest.Bow">
+    <Position X="12.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_0315_TheQuest.Mace">
+    <Position X="11" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_0315_TheQuest.Player">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAIAAAAAAAAIABAAAAIBAAAAiAAAABAAAABA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
