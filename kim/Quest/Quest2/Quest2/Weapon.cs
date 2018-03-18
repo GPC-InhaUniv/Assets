@@ -11,7 +11,8 @@ namespace Quest2
     {
         private bool pickedUp;
         public bool PickedUp { get { return pickedUp; } }
-
+        protected int radius;
+        public int Radius { get { return radius; } }
 
         public Weapon(Game game, Point location) : base(game, location)
         {
@@ -24,17 +25,14 @@ namespace Quest2
 
         protected bool DamageEnemy(Direction direction, int radius, int damage, Random random)
         {
+          
             Point target = game.PlayerLocation;
             foreach(Enemy enemy in game.Enemies)
             {
-                /*
-                if(Nearby(enemy.Location, target, radius))
-                {
-                    enemy.Hit(damage, random);
-                    return true;
-                }*/
+               
                 if(Nearby(enemy.Location,direction,radius))
                 {
+                    
                     enemy.Hit(damage, random);
                     return true;
                 }
@@ -42,6 +40,11 @@ namespace Quest2
             }
 
             return false;
+        }
+       
+        public void PickUpWeapon()
+        {
+            pickedUp = true;
         }
 
     }

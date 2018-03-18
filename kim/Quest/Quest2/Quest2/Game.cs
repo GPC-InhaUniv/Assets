@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
+
 namespace Quest2
 {
     class Game
@@ -26,6 +28,7 @@ namespace Quest2
         {
             this.boundaries = boundaries;
             Player = new Player(this, new Point(boundaries.Left + 10, boundaries.Top + 10));
+            Enemies = new List<Enemy>();
         }
 
         public void Move(Direction direction,Random random)
@@ -48,13 +51,91 @@ namespace Quest2
         public void NewLevel(Random random)
         {
             level++;
+
+            bool CheckedHaveWeapon = false;
+           
             switch(level)
             {
                 case 1:
-                    Enemies = new List<Enemy>();
-                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
-                    WeaponInRoom = new Sword(this, GetRandomLocation(random));
+                   
+                     Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                     WeaponInRoom = new Sword(this, GetRandomLocation(random));
+                   
                     break;
+                case 2:
+                    Enemies.Clear();
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
+                    break;
+                case 3:
+                    Enemies.Clear();
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    WeaponInRoom = new Bow(this, GetRandomLocation(random));
+
+                    break;
+                case 4:
+                    Enemies.Clear();
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    foreach (string haveItem in PlayerWeapons)
+                    {
+                        if (haveItem == "Bow")
+                            CheckedHaveWeapon = true;
+
+                    }
+                    if (CheckedHaveWeapon == true)
+                    {
+                        WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
+                    }
+                    else
+                        WeaponInRoom = new Bow(this, GetRandomLocation(random));
+
+                    break;
+                case 5:
+                    Enemies.Clear();
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
+                    break;
+                case 6:
+                    Enemies.Clear();
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    WeaponInRoom = new Mace(this, GetRandomLocation(random));
+
+                    break;
+                case 7:
+                    Enemies.Clear();
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    foreach (string haveItem in PlayerWeapons)
+                    {
+                        if (haveItem == "Mace")
+                            CheckedHaveWeapon = true;
+
+                    }
+                    if (CheckedHaveWeapon == true)
+                    {
+                        WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
+                    }
+                    else
+                        WeaponInRoom = new Mace(this, GetRandomLocation(random));
+
+                    
+                    break;
+                case 8:
+                    Enemies.Clear();
+                    Enemies.Add(new SkeletonMage(this, GetRandomLocation(random)));
+                    WeaponInRoom = new Mace(this, GetRandomLocation(random));
+                    WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
+                    break;
+
+                default:
+                    
+                    break;
+                    
             }
         }
         //---------------랜덤 스폰---------------
@@ -73,7 +154,24 @@ namespace Quest2
         public void Attack(Direction direction, Random random)
         {
             Player.Attack(direction, random);
+            foreach (Enemy enemy in Enemies)
+            {
+                enemy.Move(random);
+            }
 
+        }
+       
+
+
+        //--------------- 장비-----------
+        public List<string> PlayerWeapons { get { return Player.Weapons; } }
+        public bool CheckPlayerInventory(string weaponName)
+        {
+            return Player.Weapons.Contains(weaponName);
+        }
+        public void Equip(string weaponName)
+        {
+            Player.Equip(weaponName);
         }
 
 

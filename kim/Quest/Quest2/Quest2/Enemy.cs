@@ -16,6 +16,7 @@ namespace Quest2
 
         //전투-------------------------------
         private int hitPoints;
+        protected int maxDamage;
         public int HitPoints { get { return hitPoints; } }
 
         public void Hit(int maxDamage, Random random)

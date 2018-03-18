@@ -7,13 +7,20 @@ using System.Drawing;
 
 namespace Quest2
 {
-    class Sword : Weapon
+    class Mace : Weapon
     {
-        public Sword(Game game, Point location) : base(game, location)
+
+        public Mace(Game game, Point location) : base(game, location)
         {
-            this.radius = 40;
+            this.radius = 30;
         }
-        public override string Name { get { return "Sword"; } }
+        public override string Name
+        {
+            get
+            {
+                return "Mace";
+            }
+        }
 
         public override void Attack(Direction direction, Random random)
         {
@@ -22,12 +29,13 @@ namespace Quest2
             if (SuccessAttack == false)
             {
                 SuccessAttack = DamageEnemy((Direction)(IntegerDirection % 4), radius, 3, random);
-
                 SuccessAttack = DamageEnemy((Direction)((IntegerDirection + 1) % 4), radius, 3, random);
+                SuccessAttack = DamageEnemy((Direction)((IntegerDirection + 2) % 4), radius, 3, random);
                 SuccessAttack = DamageEnemy((Direction)((IntegerDirection + 3) % 4), radius, 3, random);
 
             }
 
         }
+
     }
 }

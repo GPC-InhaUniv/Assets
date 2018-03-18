@@ -5,14 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
+
 namespace Quest2
 {
-    class Bat : Enemy
+    class Ghoul : Enemy
     {
         Rectangle boundaries;
-        public Bat(Game game, Point location) : base(game, location, 6)
+        public Ghoul(Game game, Point location) : base(game, location, 10)
         {
-            maxDamage = 2;
+            maxDamage = 4;
             boundaries = game.Boundaries;
         }
 
@@ -20,20 +21,19 @@ namespace Quest2
         public override void Move(Random random)
         {
             Direction NewDirection;
-           // 
-          // Console.WriteLine(NearPlayer());
+           
 
-            int AI = random.Next(4);
+            int AI = random.Next(3);
 
-            
-            if (AI % 2 == 0)
+
+            if (AI % 3 != 0)
             {
-             
+
                 NewDirection = FindPlayerDirection();
             }
             else
             {
-                NewDirection = (Direction)random.Next(4);
+                NewDirection = Direction.Stop;
             }
             switch (NewDirection)
             {
@@ -67,13 +67,11 @@ namespace Quest2
             }
 
 
-            if(NearPlayer())
+            if (NearPlayer())
             {
                 game.GiveDamageToPlayer(maxDamage, random);
             }
 
         }
-
     }
 }
-

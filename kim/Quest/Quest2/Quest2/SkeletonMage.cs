@@ -4,31 +4,76 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Quest2
 {
-    class Bat : Enemy
+    class SkeletonMage : Enemy
     {
         Rectangle boundaries;
-        public Bat(Game game, Point location) : base(game, location, 6)
-        {
-            maxDamage = 2;
-            boundaries = game.Boundaries;
-        }
+             
 
+
+        public SkeletonMage(Game game, Point location) : base (game,location, 30)
+        {
+            boundaries = game.Boundaries;
+            maxDamage = 4;
+           
+        }
+        
+        Direction NewDirection;
 
         public override void Move(Random random)
         {
-            Direction NewDirection;
-           // 
-          // Console.WriteLine(NearPlayer());
+            int bosspattern = random.Next(10);
 
-            int AI = random.Next(4);
+
+
+            if (HitPoints > 20)
+            {
+                moving(random);
+                if (NearPlayer())
+                {
+                    game.GiveDamageToPlayer(maxDamage, random);
+                }
+            }
+
+            else if (HitPoints > 10)
+            {
+                
+                moving(random);
+                if (base.Nearby(game.PlayerLocation, 50))
+                {
+                    game.GiveDamageToPlayer(maxDamage, random);
+                }
+                    
+                
+
+            }
+            else
+            {
+                moving(random);  
+
+                maxDamage = game.PlayerHitPoints / 2;
+                if (base.Nearby(game.PlayerLocation, 15))
+                {
+                    game.GiveDamageToPlayer(maxDamage, random);
+                }
+
+
+            }
+            
+            
 
             
-            if (AI % 2 == 0)
+        }
+
+        public void moving(Random random)
+        {
+            int bosspattern = random.Next(4);
+            if (bosspattern % 2 == 0)
             {
-             
+
                 NewDirection = FindPlayerDirection();
             }
             else
@@ -65,15 +110,7 @@ namespace Quest2
                 default:
                     break;
             }
-
-
-            if(NearPlayer())
-            {
-                game.GiveDamageToPlayer(maxDamage, random);
-            }
-
         }
 
     }
 }
-
