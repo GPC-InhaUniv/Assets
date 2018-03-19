@@ -22,7 +22,6 @@ namespace Quest2
             if (SuccessAttack == false)
             {
                 SuccessAttack = DamageEnemy((Direction)(IntegerDirection % 4), radius, 3, random);
-
                 SuccessAttack = DamageEnemy((Direction)((IntegerDirection + 1) % 4), radius, 3, random);
                 SuccessAttack = DamageEnemy((Direction)((IntegerDirection + 3) % 4), radius, 3, random);
 

@@ -10,14 +10,12 @@ namespace Quest2
 {
     class SkeletonMage : Enemy
     {
-        Rectangle boundaries;
-             
-
+       
 
         public SkeletonMage(Game game, Point location) : base (game,location, 30)
         {
             boundaries = game.Boundaries;
-            maxDamage = 4;
+            maxDamage = 3;
            
         }
         
@@ -25,23 +23,37 @@ namespace Quest2
 
         public override void Move(Random random)
         {
-            int bosspattern = random.Next(10);
-
+            int AI = random.Next(10);
 
 
             if (HitPoints > 20)
             {
-                moving(random);
-                if (NearPlayer())
+
+
+                if (AI % 3 == 0)
                 {
-                    game.GiveDamageToPlayer(maxDamage, random);
+
+                    MoveControl(FindPlayerDirection(), random);
+                }
+                else
+                {
+                    MoveControl(Direction.Stop, random);
                 }
             }
 
             else if (HitPoints > 10)
             {
-                
-                moving(random);
+
+                if (AI % 2 == 0)
+                {
+
+                    MoveControl(FindPlayerDirection(), random);
+                }
+                else
+                {
+                    MoveControl(Direction.Stop, random);
+                }
+
                 if (base.Nearby(game.PlayerLocation, 50))
                 {
                     game.GiveDamageToPlayer(maxDamage, random);
@@ -52,7 +64,7 @@ namespace Quest2
             }
             else
             {
-                moving(random);  
+                MoveControl(FindPlayerDirection(), random);
 
                 maxDamage = game.PlayerHitPoints / 2;
                 if (base.Nearby(game.PlayerLocation, 15))
@@ -68,49 +80,7 @@ namespace Quest2
             
         }
 
-        public void moving(Random random)
-        {
-            int bosspattern = random.Next(4);
-            if (bosspattern % 2 == 0)
-            {
-
-                NewDirection = FindPlayerDirection();
-            }
-            else
-            {
-                NewDirection = (Direction)random.Next(4);
-            }
-            switch (NewDirection)
-            {
-                case Direction.Up:
-                    if (location.Y - MoveInterval >= boundaries.Top)
-                    {
-                        location.Y -= MoveInterval;
-                    }
-
-                    break;
-                case Direction.Down:
-                    if (location.Y + MoveInterval <= boundaries.Bottom)
-                    {
-                        location.Y += MoveInterval;
-                    }
-                    break;
-                case Direction.Left:
-                    if (location.X - MoveInterval >= boundaries.Left)
-                    {
-                        location.X -= MoveInterval;
-                    }
-                    break;
-                case Direction.Right:
-                    if (location.X + MoveInterval <= boundaries.Right)
-                    {
-                        location.X += MoveInterval;
-                    }
-                    break;
-                default:
-                    break;
-            }
-        }
+       
 
     }
 }
