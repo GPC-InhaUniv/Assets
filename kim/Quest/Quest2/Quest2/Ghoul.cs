@@ -10,7 +10,7 @@ namespace Quest2
 {
     class Ghoul : Enemy
     {
-        Rectangle boundaries;
+        
         public Ghoul(Game game, Point location) : base(game, location, 10)
         {
             maxDamage = 4;
@@ -20,8 +20,7 @@ namespace Quest2
 
         public override void Move(Random random)
         {
-            Direction NewDirection;
-           
+
 
             int AI = random.Next(3);
 
@@ -29,48 +28,14 @@ namespace Quest2
             if (AI % 3 != 0)
             {
 
-                NewDirection = FindPlayerDirection();
+                MoveControl(FindPlayerDirection(),random);
             }
             else
             {
-                NewDirection = Direction.Stop;
+               MoveControl(Direction.Stop,random);
             }
-            switch (NewDirection)
-            {
-                case Direction.Up:
-                    if (location.Y - MoveInterval >= boundaries.Top)
-                    {
-                        location.Y -= MoveInterval;
-                    }
-
-                    break;
-                case Direction.Down:
-                    if (location.Y + MoveInterval <= boundaries.Bottom)
-                    {
-                        location.Y += MoveInterval;
-                    }
-                    break;
-                case Direction.Left:
-                    if (location.X - MoveInterval >= boundaries.Left)
-                    {
-                        location.X -= MoveInterval;
-                    }
-                    break;
-                case Direction.Right:
-                    if (location.X + MoveInterval <= boundaries.Right)
-                    {
-                        location.X += MoveInterval;
-                    }
-                    break;
-                default:
-                    break;
-            }
-
-
-            if (NearPlayer())
-            {
-                game.GiveDamageToPlayer(maxDamage, random);
-            }
+            
+           
 
         }
     }

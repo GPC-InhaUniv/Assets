@@ -16,16 +16,10 @@ namespace Quest2
         Down = 2,
         Left = 3,
         Right = 1,
-
         Stop = 4,
 
     }
-    public enum WeaponNames
-    {
-        Sword,
-        Bow,
-        Mace,
-    }
+    
     public partial class Form1 : Form
     {
         Game game;

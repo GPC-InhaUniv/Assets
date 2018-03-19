@@ -8,10 +8,12 @@ namespace Quest2
 {
     abstract class Enemy : Mover , IHitable
     {
-       
+        protected Rectangle boundaries;
         public Enemy(Game game, Point location, int hitPoints) : base(game, location)
         {
             this.hitPoints = hitPoints;
+            boundaries = game.Boundaries;
+            
         }
 
         //전투-------------------------------
@@ -25,6 +27,48 @@ namespace Quest2
         }
         //이동-------------------------------
         public abstract void Move(Random random);
+
+        protected virtual void MoveControl(Direction NewDirection,Random random)
+        {
+             switch (NewDirection)
+            {
+                case Direction.Up:
+                    if (location.Y - MoveInterval >= boundaries.Top)
+                    {
+                        location.Y -= MoveInterval;
+                    }
+
+                    break;
+                case Direction.Down:
+                    if (location.Y + MoveInterval <= boundaries.Bottom)
+                    {
+                        location.Y += MoveInterval;
+                    }
+                    break;
+                case Direction.Left:
+                    if (location.X - MoveInterval >= boundaries.Left)
+                    {
+                        location.X -= MoveInterval;
+                    }
+                    break;
+                case Direction.Right:
+                    if (location.X + MoveInterval <= boundaries.Right)
+                    {
+                        location.X += MoveInterval;
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+            if (NearPlayer())
+            {
+                game.GiveDamageToPlayer(maxDamage, random);
+            }
+
+
+        }
+
 
         //인접 체크---------------------------------
         private const int NearPlayerDistance = 25;

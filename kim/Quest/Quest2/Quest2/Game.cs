@@ -27,7 +27,8 @@ namespace Quest2
         public Game (Rectangle boundaries)
         {
             this.boundaries = boundaries;
-            Player = new Player(this, new Point(boundaries.Left + 10, boundaries.Top + 10));
+            
+            Player = new Player(this, new Point(boundaries.Left + 10, boundaries.Top + 10)); // 플레이어 생성위치
             Enemies = new List<Enemy>();
         }
 
@@ -169,6 +170,7 @@ namespace Quest2
         {
             return Player.Weapons.Contains(weaponName);
         }
+
         public void Equip(string weaponName)
         {
             Player.Equip(weaponName);
