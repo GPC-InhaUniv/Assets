@@ -13,7 +13,10 @@ namespace _0315_TheQuest
 
         public override void Attack(Direction direction, Random random)
         {
-            throw new NotImplementedException();
+            DamageEnemy(Direction.Left, 6, 6, random);
+            DamageEnemy(Direction.Right, 6, 6, random);
+            DamageEnemy(Direction.Up, 6, 6, random);
+            DamageEnemy(Direction.Down, 6, 6, random);
         }
     }
 }

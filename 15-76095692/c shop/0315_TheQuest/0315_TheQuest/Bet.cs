@@ -16,71 +16,15 @@ namespace _0315_TheQuest
 
         public override void Move(Random random)
         {
-            if (HitPoints > 0 && random.Next(10) > 5)
+            Direction direction = FindPlayerDirection(game.PlayerLocation);
+            if (random.Next(1, 3) == 1)
             {
-                if (game.PlayerLocation.X < location.X && game.PlayerLocation.Y < location.Y)
-                {
-                    location.X -= (int)FindPlayerDirection(game.PlayerLocation);
-                    location.Y -= (int)FindPlayerDirection(game.PlayerLocation);
-                }
-                else if (game.PlayerLocation.X > location.X && game.PlayerLocation.Y > location.Y)
-                {
-                    location.X += (int)FindPlayerDirection(game.PlayerLocation);
-                    location.Y += (int)FindPlayerDirection(game.PlayerLocation);
-                }
-                else if (game.PlayerLocation.X > location.X && game.PlayerLocation.Y < location.Y)
-                {
-                    location.X += (int)FindPlayerDirection(game.PlayerLocation);
-                    location.Y -= (int)FindPlayerDirection(game.PlayerLocation);
-                }
-                else if (game.PlayerLocation.X < location.X && game.PlayerLocation.Y > location.Y)
-                {
-                    location.X -= (int)FindPlayerDirection(game.PlayerLocation);
-                    location.Y += (int)FindPlayerDirection(game.PlayerLocation);
-                }
-                else if (game.PlayerLocation.X > location.X && game.PlayerLocation.Y > location.Y)
-                {
-                    location.X += (int)FindPlayerDirection(game.PlayerLocation);
-                    location.Y += (int)FindPlayerDirection(game.PlayerLocation);
-                }
-                else if (game.PlayerLocation.X == location.X && game.PlayerLocation.Y == location.Y)
-                {
-                    location.X += (int)FindPlayerDirection(game.PlayerLocation) - (int)FindPlayerDirection(game.PlayerLocation);
-                    location.Y += (int)FindPlayerDirection(game.PlayerLocation) - (int)FindPlayerDirection(game.PlayerLocation);
-                }
-                else if (game.PlayerLocation.X > location.X)
-                {
-                    location.X += (int)FindPlayerDirection(game.PlayerLocation);
-                }
-                else if (game.PlayerLocation.Y > location.Y)
-                {
-                    location.Y += (int)FindPlayerDirection(game.PlayerLocation);
-                }
-                else if (game.PlayerLocation.X < location.X)
-                {
-                    location.X -= (int)FindPlayerDirection(game.PlayerLocation);
-                }
-                else if (game.PlayerLocation.Y < location.Y)
-                {
-                    location.Y -= (int)FindPlayerDirection(game.PlayerLocation);
-                }
+                location = Move(direction, game.Boundaries);
             }
             else
-                switch (random.Next(1, 4))
-                {
-                    case 1:
-                        location.Y -= (int)Direction.Up;
-                        break;
-                    case 2:
-                        location.Y += (int)Direction.Down;
-                        break;
-                    case 3:
-                        location.X -= (int)Direction.Left;
-                        break;
-                    case 4:
-                        location.X -= (int)Direction.Right;
-                        break;
-                }
+            {
+                location = Move((Direction)random.Next(0, 4), game.Boundaries);
+            }
             if (NearPlayer())
             {
                 game.HitPlayer(2, random);
