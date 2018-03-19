@@ -33,13 +33,59 @@ namespace Quest
         {
             pctplayer.Location = game.PlayerLocation;
             txtplayerhp.Text = game.PlayerHitPoints.ToString();
-
-
-           
            
         }
+        private void UpdateMonsters()
+        {
+            bool showTeemo;
+            bool showYasuo;
+            bool showMasgerei;
+            int monstersShown = 0;
 
-        
+            foreach (Monster monster in game.Monsters)
+            {
+                if (monster is Teemo)
+                {
+                    pctteemo.Location = monster.Location;
+                    txtteemohp.Text = monster.HitPoints.ToString();
+                    if (monster.HitPoints > 0)
+                    {
+                        showTeemo = true;
+                        monstersShown++;
+                    }
+                }
+            }
+
+            foreach (Monster monster in game.Monsters)
+            {
+                if (monster is Yasuo)
+                {
+                    pctyasuo.Location = monster.Location;
+                    txtyasuohp.Text = monster.HitPoints.ToString();
+                    if (monster.HitPoints > 0)
+                    {
+                        showYasuo = true;
+                        monstersShown++;
+                    }
+                }
+
+            }
+            foreach (Monster monster in game.Monsters)
+            {
+                if (monster is Masterei)
+                {
+                    pctmasterei.Location = monster.Location;
+                    txtmastereihp.Text = monster.HitPoints.ToString();
+                    if (monster.HitPoints > 0)
+                    {
+                        showMasgerei = true;
+                        monstersShown++;
+
+                    }
+                }
+            }
+        }
+
 
         private void btnmoveup_Click(object sender, EventArgs e)
         {

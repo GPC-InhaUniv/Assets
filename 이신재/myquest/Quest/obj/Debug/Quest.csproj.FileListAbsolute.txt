@@ -1,0 +1,10 @@
+E:\프로그래밍\이신재\myquest\Quest\bin\Debug\Quest.exe.config
+E:\프로그래밍\이신재\myquest\Quest\bin\Debug\Quest.exe
+E:\프로그래밍\이신재\myquest\Quest\bin\Debug\Quest.pdb
+E:\프로그래밍\이신재\myquest\Quest\obj\Debug\Quest.csprojResolveAssemblyReference.cache
+E:\프로그래밍\이신재\myquest\Quest\obj\Debug\Quest.Form1.resources
+E:\프로그래밍\이신재\myquest\Quest\obj\Debug\Quest.Properties.Resources.resources
+E:\프로그래밍\이신재\myquest\Quest\obj\Debug\Quest.csproj.GenerateResource.Cache
+E:\프로그래밍\이신재\myquest\Quest\obj\Debug\Quest.csproj.CoreCompileInputs.cache
+E:\프로그래밍\이신재\myquest\Quest\obj\Debug\Quest.exe
+E:\프로그래밍\이신재\myquest\Quest\obj\Debug\Quest.pdb
