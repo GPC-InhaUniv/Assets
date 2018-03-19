@@ -51,7 +51,9 @@ namespace Quest
         {
             return player.Items.Contains(ItemName);
         }
-        
+
+      
+
 
         public void HitPlayer(int maxDamage, Random random)
         {
@@ -66,7 +68,7 @@ namespace Quest
         public void Attack(enumDirection direction, Random random)
         {
             player.Attack(direction, random);
-            foreach (Monster monster in Monsters)
+            foreach (Monster monster in Monsters) //Monsters 에 Null걸림
             {
                 if (!monster.Dead)
                 monster.Move(random);
@@ -92,6 +94,7 @@ namespace Quest
                     ItemInRoom = new Sword(this, GetRandomLocation(random));
                     break;
                 case 2:
+                    
                     Monsters = new List<Monster>();
                     Monsters.Add(new Yasuo(this, GetRandomLocation(random)));
                     ItemInRoom = new BluePotion(this, GetRandomLocation(random));
@@ -106,6 +109,7 @@ namespace Quest
                     Monsters = new List<Monster>();
                     Monsters.Add(new Teemo(this, GetRandomLocation(random)));
                     Monsters.Add(new Yasuo(this, GetRandomLocation(random)));
+                    
                     ItemInRoom = new Bow(this, GetRandomLocation(random)); //bow이거나 blue potion이거나 ..... 수정
                     break;
                 case 5:

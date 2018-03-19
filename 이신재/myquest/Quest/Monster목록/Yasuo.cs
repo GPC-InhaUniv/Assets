@@ -25,7 +25,7 @@ namespace Quest
            
             if (NearPlayer())
             {
-                game.HitPlayer((int)random.Next(1,3), random);
+                game.HitPlayer(3, random);
             }
         }
     }

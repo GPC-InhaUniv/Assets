@@ -17,3 +17,12 @@ C:\Users\Gaeguri\Desktop\TheQuest\TheQuest\TheQuest\obj\Debug\TheQuest.csprojRes
 C:\Users\Gaeguri\Desktop\TheQuest\TheQuest\TheQuest\obj\Debug\TheQuest.MainForm.resources
 C:\Users\Gaeguri\Desktop\TheQuest\TheQuest\TheQuest\obj\Debug\TheQuest.Properties.Resources.resources
 C:\Users\Gaeguri\Desktop\TheQuest\TheQuest\TheQuest\obj\Debug\TheQuest.csproj.GenerateResource.Cache
+E:\프로그래밍\이재건\TheQuest\TheQuest\TheQuest\bin\Debug\TheQuest.exe.config
+E:\프로그래밍\이재건\TheQuest\TheQuest\TheQuest\bin\Debug\TheQuest.exe
+E:\프로그래밍\이재건\TheQuest\TheQuest\TheQuest\bin\Debug\TheQuest.pdb
+E:\프로그래밍\이재건\TheQuest\TheQuest\TheQuest\obj\Debug\TheQuest.MainForm.resources
+E:\프로그래밍\이재건\TheQuest\TheQuest\TheQuest\obj\Debug\TheQuest.Properties.Resources.resources
+E:\프로그래밍\이재건\TheQuest\TheQuest\TheQuest\obj\Debug\TheQuest.csproj.GenerateResource.Cache
+E:\프로그래밍\이재건\TheQuest\TheQuest\TheQuest\obj\Debug\TheQuest.csproj.CoreCompileInputs.cache
+E:\프로그래밍\이재건\TheQuest\TheQuest\TheQuest\obj\Debug\TheQuest.exe
+E:\프로그래밍\이재건\TheQuest\TheQuest\TheQuest\obj\Debug\TheQuest.pdb

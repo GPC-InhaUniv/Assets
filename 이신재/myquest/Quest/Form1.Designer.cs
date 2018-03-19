@@ -155,6 +155,7 @@
             this.btnattackdown.TabIndex = 7;
             this.btnattackdown.Text = "Down";
             this.btnattackdown.UseVisualStyleBackColor = true;
+            this.btnattackdown.Click += new System.EventHandler(this.btnattackdown_Click);
             // 
             // btnattackright
             // 
@@ -164,6 +165,7 @@
             this.btnattackright.TabIndex = 6;
             this.btnattackright.Text = "Right";
             this.btnattackright.UseVisualStyleBackColor = true;
+            this.btnattackright.Click += new System.EventHandler(this.btnattackright_Click);
             // 
             // btnattackup
             // 
@@ -173,6 +175,7 @@
             this.btnattackup.TabIndex = 4;
             this.btnattackup.Text = "Up";
             this.btnattackup.UseVisualStyleBackColor = true;
+            this.btnattackup.Click += new System.EventHandler(this.btnattackup_Click);
             // 
             // btnattackleft
             // 
@@ -182,6 +185,7 @@
             this.btnattackleft.TabIndex = 5;
             this.btnattackleft.Text = "Left";
             this.btnattackleft.UseVisualStyleBackColor = true;
+            this.btnattackleft.Click += new System.EventHandler(this.btnattackleft_Click);
             // 
             // groupBox3
             // 

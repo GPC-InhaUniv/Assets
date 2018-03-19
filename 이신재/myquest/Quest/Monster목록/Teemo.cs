@@ -26,6 +26,7 @@ namespace Quest
             {
                 game.HitPlayer(2, random);
             }
+            
         }
     }
 }

@@ -16,8 +16,8 @@ namespace Quest
             if ((random.Next(1, 3) == 2) || (random.Next(1, 3) == 1))
             {
                 location = Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
-
             }
+
             else
             {
                 location = Move(0, game.Boundaries);
@@ -25,11 +25,8 @@ namespace Quest
 
             if (NearPlayer())
             {
-                game.HitPlayer((int)random.Next(1, 3), random);
+                game.HitPlayer(3, random);
             }
-
         }
-            
-
     }
 }

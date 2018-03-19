@@ -12,19 +12,36 @@ namespace Quest
 {
     public partial class Form1 : Form
     {
-        Game game = new Game(new Rectangle(120, 20, 675, 320));
-
+        Game game = new Game(new Rectangle(120, 20, 675, 280));
+       
         private Random random = new Random();
-
+        
         public Form1()
         {
             InitializeComponent();
+
+            pctsword.Visible = false;
+            pctbow.Visible = false;
+            pctaxe.Visible = false;
+            pctredpotion.Visible = false;
+            pctbluepotion.Visible = false;
+
+            pctinvenaxe.Visible = false;
+            pctinvensword.Visible = false;
+            pctinvenbow.Visible = false;
+            pctinvenbluepotion.Visible = false;
+            pctinvenredpotion.Visible = false;
+
+
+            
+
+
         }
         
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+           
             game.NewLevel(random);
             UpdateCharacters();
         }
@@ -33,16 +50,11 @@ namespace Quest
         {
             pctplayer.Location = game.PlayerLocation;
             txtplayerhp.Text = game.PlayerHitPoints.ToString();
-           
-        }
-        private void UpdateMonsters()
-        {
-            bool showTeemo;
-            bool showYasuo;
-            bool showMasgerei;
+
             int monstersShown = 0;
 
-            foreach (Monster monster in game.Monsters)
+
+            foreach (Monster monster in game.Monsters) //Monsters에 null걸림
             {
                 if (monster is Teemo)
                 {
@@ -50,7 +62,7 @@ namespace Quest
                     txtteemohp.Text = monster.HitPoints.ToString();
                     if (monster.HitPoints > 0)
                     {
-                        showTeemo = true;
+                        pctteemo.Visible = true;
                         monstersShown++;
                     }
                 }
@@ -64,7 +76,7 @@ namespace Quest
                     txtyasuohp.Text = monster.HitPoints.ToString();
                     if (monster.HitPoints > 0)
                     {
-                        showYasuo = true;
+                        pctyasuo.Visible = true;
                         monstersShown++;
                     }
                 }
@@ -78,14 +90,16 @@ namespace Quest
                     txtmastereihp.Text = monster.HitPoints.ToString();
                     if (monster.HitPoints > 0)
                     {
-                        showMasgerei = true;
+                        pctmasterei.Visible = true;
                         monstersShown++;
 
                     }
                 }
             }
         }
+       
 
+        
 
         private void btnmoveup_Click(object sender, EventArgs e)
         {
@@ -115,7 +129,31 @@ namespace Quest
 
         private void pctbluepotion_Click(object sender, EventArgs e)
         {
+           
+        }
 
+        private void btnattackup_Click(object sender, EventArgs e)
+        {
+            game.Attack(enumDirection.Up, random);
+            UpdateCharacters();
+        }
+
+        private void btnattackleft_Click(object sender, EventArgs e)
+        {
+            game.Attack(enumDirection.Left, random);
+            UpdateCharacters();
+        }
+
+        private void btnattackright_Click(object sender, EventArgs e)
+        {
+            game.Attack(enumDirection.Right, random);
+            UpdateCharacters();
+        }
+
+        private void btnattackdown_Click(object sender, EventArgs e)
+        {
+            game.Attack(enumDirection.Down, random);
+            UpdateCharacters();
         }
     }
 }
