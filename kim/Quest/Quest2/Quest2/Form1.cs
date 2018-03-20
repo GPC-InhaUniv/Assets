@@ -14,6 +14,15 @@ namespace Quest2
 
     }
 
+    public enum WeaponName
+    {
+        Sword,
+        Bow,
+        Mace,
+        RedPotion,
+        BluePotion,
+    }
+
     public partial class Form1 : Form
     {
         Game game;
@@ -157,28 +166,28 @@ namespace Quest2
 
         private void InventoryCheck()
         {
-            foreach (string weapon in game.PlayerWeapons)
+            foreach (WeaponName weapon in game.PlayerWeapons)
             {
-                if (weapon.Equals("Sword"))
+                if (weapon.Equals(WeaponName.Sword))
                 {
                     Sword_Inven_Pic.Visible = true;
 
                 }
-                if (weapon.Equals("Bow"))
+                if (weapon.Equals(WeaponName.Bow))
                 {
                     Bow_Inven_Pic.Visible = true;
                 }
 
-                if (weapon.Equals("Mace"))
+                if (weapon.Equals(WeaponName.Mace))
                 {
                     Mace_Inven_Pic.Visible = true;
                 }
 
-                if (weapon.Equals("RedPotion"))
+                if (weapon.Equals(WeaponName.RedPotion))
                 {
                     RedPotion_Inven_Pic.Visible = true;
                 }
-                if (weapon.Equals("BluePotion"))
+                if (weapon.Equals(WeaponName.BluePotion))
                 {
                     BluePotion_Inven_Pic.Visible = true;
                 }
@@ -191,19 +200,19 @@ namespace Quest2
             Control weaponControl = null;
             switch (game.WeaponInRoom.Name)
             {
-                case "Sword":
+                case WeaponName.Sword:
                     weaponControl = Sword_Drop_Pic;
                     break;
-                case "Bow":
+                case WeaponName.Bow:
                     weaponControl = Bow_Drop_Pic;
                     break;
-                case "Mace":
+                case WeaponName.Mace:
                     weaponControl = Mace_Drop_Pic;
                     break;
-                case "RedPotion":
+                case WeaponName.RedPotion:
                     weaponControl = RedPotion_Drop_Pic;
                     break;
-                case "BluePotion":
+                case WeaponName.BluePotion:
                     weaponControl = BluePotion_Drop_Pic;
                     break;
 
@@ -244,7 +253,7 @@ namespace Quest2
 
         private void Sword_Inven_Pic_Click(object sender, EventArgs e)
         {
-            game.Equip("Sword");
+            game.Equip(WeaponName.Sword);
             imageBorderStyle();
             Sword_Inven_Pic.BorderStyle = BorderStyle.Fixed3D;
 
@@ -252,21 +261,21 @@ namespace Quest2
 
         private void Inven_RedPotion_Pic_Click(object sender, EventArgs e)
         {
-            game.Equip("RedPotion");
+            game.Equip(WeaponName.RedPotion);
             imageBorderStyle();
             RedPotion_Inven_Pic.BorderStyle = BorderStyle.Fixed3D;
         }
 
         private void Mace_Inven_Pic_Click(object sender, EventArgs e)
         {
-            game.Equip("Mace");
+            game.Equip(WeaponName.Mace);
             imageBorderStyle();
             Mace_Inven_Pic.BorderStyle = BorderStyle.Fixed3D;
         }
 
         private void Bow_Inven_Pic_Click(object sender, EventArgs e)
         {
-            game.Equip("Bow");
+            game.Equip(WeaponName.Bow);
             imageBorderStyle();
             Bow_Inven_Pic.BorderStyle = BorderStyle.Fixed3D;
 
@@ -274,7 +283,7 @@ namespace Quest2
 
         private void BluePotion_Inven_Pic_Click(object sender, EventArgs e)
         {
-            game.Equip("BluePotion");
+            game.Equip(WeaponName.BluePotion);
             imageBorderStyle();
             BluePotion_Inven_Pic.BorderStyle = BorderStyle.Fixed3D;
         }
