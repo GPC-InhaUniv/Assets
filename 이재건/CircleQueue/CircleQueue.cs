@@ -34,6 +34,8 @@ namespace CircleQueue
             Console.WriteLine("다시 설정할 사이즈를 입력해 주세요: (정수값만)");
             string readline = Console.ReadLine();
             MAXQUEUESIZE = Convert.ToInt32(readline);
+
+
             InitQueue();
 
         }

@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace TheQuest
 {
     class Weapon:Mover
     {
         public bool UsePostion=false;
+
         public Weapon(Game game,Point location,string name):base(game,location)
         {
             this.name = name;
@@ -22,9 +18,9 @@ namespace TheQuest
         private bool pickedUp;
         public bool PickedUp { get { return pickedUp; } }
 
-        public void WeaponPickup(string name)
+        public void WeaponPickup(Weapon weapon)
         {
-            if (MoveToInventory(name))
+            if (MoveToInventory(weapon))
                 pickedUp = true;
 
         }

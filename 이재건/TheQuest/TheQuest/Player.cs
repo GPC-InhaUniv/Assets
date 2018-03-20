@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
-using System.Windows.Forms;
 
 namespace TheQuest
 {
@@ -59,10 +55,10 @@ namespace TheQuest
             hitPoints += random.Next(1, health);
         }
 
-        public void EquipWeapon(string weaponName)
+        public void EquipWeapon(Weapon weapon)
         {
             foreach (Weapon weapons in inventory)
-                if (weapons.Name == weaponName)
+                if (weapons.GetType() == weapon.GetType())
                     equippedWeapon = weapons;
         }
 
@@ -89,7 +85,7 @@ namespace TheQuest
                             checkAttack = true;
                         }
                     }
-                    else if (equippedWeapon.Name == "sword")
+                    else if (equippedWeapon is Sword)
                     {
 
                         if (NearbyObject(game.Enemies[i].Location, 60, direction))
@@ -98,7 +94,7 @@ namespace TheQuest
                             checkAttack = true;
                         }
                     }
-                    else if (equippedWeapon.Name == "mace")
+                    else if (equippedWeapon is Mace)
                     {
 
                         if (NearbyObject(game.Enemies[i].Location, 60, direction))
@@ -108,7 +104,7 @@ namespace TheQuest
                         }
                     }
 
-                    else if (equippedWeapon.Name == "bow")
+                    else if (equippedWeapon is Bow)
                     {
 
                         if (NearbyObject(game.Enemies[i].Location, 200, direction))
@@ -118,16 +114,18 @@ namespace TheQuest
 
                         }
                     }
-                    else if (equippedWeapon.Name == "bluePortion")
+                    else if (equippedWeapon is BluePotion)
                     {
-                        hitPoints += 5;
+                        IPositionAble blueportion=(BluePotion)equippedWeapon;
+                        blueportion.Used(random);
                         inventory.Remove(equippedWeapon);
                         equippedWeapon.UsePostion = true;
                         equippedWeapon = null;
                     }
-                    else if (equippedWeapon.Name == "redPortion")
+                    else if (equippedWeapon is RedPotion)
                     {
-                        hitPoints += 10;
+                        IPositionAble blueportion = (RedPotion)equippedWeapon;
+                        blueportion.Used(random);
                         inventory.Remove(equippedWeapon);
                         equippedWeapon.UsePostion = true;
                         equippedWeapon = null;

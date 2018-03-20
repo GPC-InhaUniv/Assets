@@ -3,9 +3,9 @@ using System.Drawing;
 
 namespace TheQuest
 {
-    class BluePotion : Weapon, IPositionAble
+    class RedPotion : Weapon, IPositionAble
     {
-        private int increaseHealthPoint = 5;
+        private int increaseHealthPoint = 10;
         private int IncreasehealthPoint
         {
             get
@@ -14,17 +14,17 @@ namespace TheQuest
             }
         }
 
-        public BluePotion(Game game,Point location):base(game,location,"bluePortion")
+        public RedPotion(Game game, Point location) : base(game, location, "redPortion")
         {
 
         }
 
         public void Used(Random random)
         {
-            game.UsePotion(increaseHealthPoint,random);
-                    
+            game.UsePotion(increaseHealthPoint, random);
+
         }
 
-       
+
     }
 }

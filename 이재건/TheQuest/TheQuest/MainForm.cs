@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TheQuest
@@ -32,25 +26,22 @@ namespace TheQuest
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.SetStyle(ControlStyles.DoubleBuffer, true);
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            // this.SetStyle(ControlStyles.UserPaint, true);
 
             SetImages();
             UpdateCharaters();
         }
 
-        private void UpdateCharaters()
+        private void UpdateLabels()
         {
-            bool checkClear = false;
-
-            playerImage.Location = gameManager.PlayerLocation;
-
             PlayerHpLabel.Text = gameManager.PlayerHitPoints.ToString();
 
             for (int i = 0; i < gameManager.Enemies.Count; i++)
             {
-               
-                if (gameManager.Enemies[i].GetType() == typeof(Bat))
+                if (gameManager.Enemies[i] is Bat)
                 {
-                    
                     BatHpLabel.Text = gameManager.Enemies[i].Hitpoints.ToString();
 
                     BatImage1.Location = gameManager.Enemies[i].Location;
@@ -58,52 +49,65 @@ namespace TheQuest
                     if (gameManager.Enemies[i].Dead)
                         BatImage1.Visible = false;
                 }
-                else if (gameManager.Enemies[i].GetType() == typeof(Ghost))
+
+                else if (gameManager.Enemies[i] is Ghost)
                 {
                     GhostHpLabel.Text = gameManager.Enemies[i].Hitpoints.ToString();
+
                     GhostImage1.Location = gameManager.Enemies[i].Location;
+
                     if (gameManager.Enemies[i].Dead)
                         GhostImage1.Visible = false;
                 }
-                else if (gameManager.Enemies[i].GetType() == typeof(Ghoul))
+
+                else if (gameManager.Enemies[i] is Ghoul)
                 {
                     GhoulHpLabel.Text = gameManager.Enemies[i].Hitpoints.ToString();
+
                     GhoulImage1.Location = gameManager.Enemies[i].Location;
+
                     if (gameManager.Enemies[i].Dead)
                         GhoulImage1.Visible = false;
                 }
 
 
-
-
             }
+        }
 
-            if (!(gameManager.WeaponInRoom.PickedUp))
+        private void UpdateLocation()
+        {
+            playerImage.Location = gameManager.PlayerLocation;
+
+            if (gameManager.WeaponInRoom != null)
             {
-                if (gameManager.WeaponInRoom.NearbyObject(gameManager.PlayerLocation, 30))  //can pickup distance 30;
+                if (!(gameManager.WeaponInRoom.PickedUp))
                 {
-                    gameManager.WeaponInRoom.WeaponPickup(gameManager.WeaponInRoom.Name);
-
-
-                    if (gameManager.WeaponInRoom.Name == "mace")
+                    if (gameManager.WeaponInRoom.NearbyObject(gameManager.PlayerLocation, 30))  //can pickup distance 30;
                     {
-                        WeaponImage3.Location = gameManager.WeaponInRoom.Location;
-                        gameManager.AddWeaponToInventory(gameManager.WeaponInRoom);
+                        gameManager.WeaponInRoom.WeaponPickup(gameManager.WeaponInRoom);
+
+                        if (gameManager.WeaponInRoom is Mace)
+                        {
+                            WeaponImage3.Location = gameManager.WeaponInRoom.Location;
+                            gameManager.AddWeaponToInventory(gameManager.WeaponInRoom);
+
+                        }
+
+                        else if (gameManager.WeaponInRoom is Sword)
+                        {
+                            WeaponImage1.Location = gameManager.WeaponInRoom.Location;
+                            gameManager.AddWeaponToInventory(gameManager.WeaponInRoom);
+
+                        }
+
+                        else if (gameManager.WeaponInRoom is Bow)
+                        {
+                            WeaponImage2.Location = gameManager.WeaponInRoom.Location;
+                            gameManager.AddWeaponToInventory(gameManager.WeaponInRoom);
+
+                        }
 
                     }
-                    else if (gameManager.WeaponInRoom.Name == "sword")
-                    {
-                        WeaponImage1.Location = gameManager.WeaponInRoom.Location;
-                        gameManager.AddWeaponToInventory(gameManager.WeaponInRoom);
-
-                    }
-                    else if (gameManager.WeaponInRoom.Name == "bow")
-                    {
-                        WeaponImage2.Location = gameManager.WeaponInRoom.Location;
-                        gameManager.AddWeaponToInventory(gameManager.WeaponInRoom);
-
-                    }
-
                 }
             }
 
@@ -115,25 +119,23 @@ namespace TheQuest
                     {
                         if (gameManager.portion[i].NearbyObject(gameManager.PlayerLocation, 30))  //can pickup distance 30;
                         {
-                            gameManager.portion[i].WeaponPickup(gameManager.portion[i].Name);
+                            gameManager.portion[i].WeaponPickup(gameManager.portion[i]);
 
-                            if (gameManager.portion[i].Name == "bluePortion")
+                            if (gameManager.portion[i] is BluePotion)
                             {
                                 PostionImage1.Location = gameManager.portion[i].Location;
                                 gameManager.AddWeaponToInventory(gameManager.portion[i]);
                             }
 
-                            else if (gameManager.portion[i].Name == "redPortion")
+                            else if (gameManager.portion[i] is RedPotion)
                             {
                                 PostionImage2.Location = gameManager.portion[i].Location;
                                 gameManager.AddWeaponToInventory(gameManager.portion[i]);
                             }
 
                         }
-
-
-
                     }
+
                     else if (gameManager.portion[i].UsePostion)
                     {
                         if (i == 0)
@@ -145,6 +147,14 @@ namespace TheQuest
 
                 }
             }
+        }
+
+        private void UpdateCharaters()
+        {
+            bool checkClear = false;
+
+            UpdateLabels();
+            UpdateLocation();
 
             if (gameManager.GameOver())
             {
@@ -154,7 +164,6 @@ namespace TheQuest
                 SetImages();
                 UpdateCharaters();
             }
-
 
             for (int i = 0; i < gameManager.Enemies.Count; i++)
             {
@@ -190,6 +199,7 @@ namespace TheQuest
         {
             gameManager.MoveObject(Direction.Up, random);
             UpdateCharaters();
+
         }
 
         private void MoveRight_Click(object sender, EventArgs e)
@@ -244,43 +254,39 @@ namespace TheQuest
 
             }
 
-
             if (gameManager.WeaponInRoom != null)
             {
-                if (gameManager.WeaponInRoom.Name == "sword")
+                if (gameManager.WeaponInRoom is Sword)
                 {
                     WeaponImage1.Location = gameManager.WeaponInRoom.Location;
                     WeaponImage1.Image = gameManager.WeaponImageList[0];
                     WeaponImage1.Visible = true;
                 }
-                else if (gameManager.WeaponInRoom.Name == "bow")
+                else if (gameManager.WeaponInRoom is Bow)
                 {
                     WeaponImage2.Location = gameManager.WeaponInRoom.Location;
                     WeaponImage2.Image = gameManager.WeaponImageList[1];
                     WeaponImage2.Visible = true;
                 }
-                else if (gameManager.WeaponInRoom.Name == "mace")
+                else if (gameManager.WeaponInRoom is Mace)
                 {
                     WeaponImage3.Location = gameManager.WeaponInRoom.Location;
                     WeaponImage3.Image = gameManager.WeaponImageList[2];
                     WeaponImage3.Visible = true;
                 }
-
-                
-
             }
 
             for (int i = 0; i < gameManager.portion.Length; i++)
             {
                 if (gameManager.portion[i] != null)
                 {
-                    if (gameManager.portion[i].Name == "bluePortion")
+                    if (gameManager.portion[i] is BluePotion)
                     {
                         PostionImage1.Location = gameManager.portion[i].Location;
                         PostionImage1.Image = gameManager.WeaponImageList[3];
                         PostionImage1.Visible = true;
                     }
-                    else if (gameManager.portion[i].Name == "redPortion")
+                    else if (gameManager.portion[i] is RedPotion)
                     {
                         PostionImage2.Location = gameManager.portion[i].Location;
                         PostionImage2.Image = gameManager.WeaponImageList[4];
@@ -289,6 +295,39 @@ namespace TheQuest
 
                 }
             }
+            CheckUnVisible();
+
+        }
+
+        private void CheckUnVisible()
+        {
+
+            if (gameManager.Level == 2)
+            {
+                if (!(gameManager.CheckPlayerInventory(WeaponList.Sword.ToString())))
+                {
+                    WeaponImage1.Visible = false;
+
+                }
+                if (!(gameManager.CheckPlayerInventory(PortionList.bluePortion.ToString())))
+                {
+                    PostionImage1.Visible = false;
+                }
+            }
+
+            if (gameManager.Level == 3)
+            {
+                if (!(gameManager.CheckPlayerInventory(WeaponList.Bow.ToString())))
+                {
+                    WeaponImage2.Visible = false;
+
+                }
+                if (!(gameManager.CheckPlayerInventory(PortionList.redPortion.ToString())))
+                {
+                    PostionImage2.Visible = false;
+                }
+            }
+            PopImage.Visible = false;
 
         }
 
@@ -296,6 +335,7 @@ namespace TheQuest
         {
             gameManager.Attack(Direction.Up, random);
             UpdateCharaters();
+
         }
 
         private void AttackLeft_Click(object sender, EventArgs e)
@@ -320,7 +360,7 @@ namespace TheQuest
 
         private void WeaponImage1_Click(object sender, EventArgs e)
         {
-            if (gameManager.CheckPlayerInventory("sword"))
+            if (gameManager.CheckPlayerInventory(WeaponList.Sword.ToString()))
             {
                 WeaponImage1.BorderStyle = BorderStyle.FixedSingle;
 
@@ -328,7 +368,7 @@ namespace TheQuest
                 WeaponImage2.BorderStyle = BorderStyle.None;
                 WeaponImage3.BorderStyle = BorderStyle.None;
 
-                gameManager.EquipWeapon("sword");
+                gameManager.EquipWeapon(new Sword(gameManager, new Point(0, 0)));
                 playerImage.Image = gameManager.PlayerImageList[0];
 
             }
@@ -336,14 +376,14 @@ namespace TheQuest
 
         private void WeaponImage2_Click(object sender, EventArgs e)
         {
-            if (gameManager.CheckPlayerInventory("bow"))
+            if (gameManager.CheckPlayerInventory(WeaponList.Bow.ToString()))
             {
                 WeaponImage2.BorderStyle = BorderStyle.FixedSingle;
 
                 WeaponImage3.BorderStyle = BorderStyle.None;
                 PostionImage1.BorderStyle = BorderStyle.None;
                 WeaponImage1.BorderStyle = BorderStyle.None;
-                gameManager.EquipWeapon("bow");
+                gameManager.EquipWeapon(new Bow(gameManager, new Point(0, 0)));
                 playerImage.Image = gameManager.PlayerImageList[1];
             }
         }
@@ -356,35 +396,35 @@ namespace TheQuest
 
         private void PostionImage1_Click(object sender, EventArgs e)
         {
-            if (gameManager.CheckPlayerInventory("bluePortion"))
+            if (gameManager.CheckPlayerInventory(PortionList.bluePortion.ToString()))
             {
                 PostionImage1.BorderStyle = BorderStyle.FixedSingle;
 
                 WeaponImage2.BorderStyle = BorderStyle.None;
                 WeaponImage1.BorderStyle = BorderStyle.None;
                 WeaponImage3.BorderStyle = BorderStyle.None;
-                gameManager.EquipWeapon("bluePortion");
+                gameManager.EquipWeapon(new BluePotion(gameManager, new Point(0, 0)));
                 playerImage.Image = gameManager.PlayerImageList[3];
             }
         }
 
         private void WeaponImage3_Click(object sender, EventArgs e)
         {
-            if (gameManager.CheckPlayerInventory("mace"))
+            if (gameManager.CheckPlayerInventory(WeaponList.Mace.ToString()))
             {
                 WeaponImage3.BorderStyle = BorderStyle.FixedSingle;
 
                 PostionImage1.BorderStyle = BorderStyle.None;
                 WeaponImage1.BorderStyle = BorderStyle.None;
                 WeaponImage2.BorderStyle = BorderStyle.None;
-                gameManager.EquipWeapon("mace");
+                gameManager.EquipWeapon(new Mace(gameManager, new Point(0, 0)));
                 playerImage.Image = gameManager.PlayerImageList[2];
             }
         }
 
         private void PostionImage2_Click(object sender, EventArgs e)
         {
-            if (gameManager.CheckPlayerInventory("redPortion"))
+            if (gameManager.CheckPlayerInventory(PortionList.redPortion.ToString()))
             {
                 PostionImage2.BorderStyle = BorderStyle.FixedSingle;
 
@@ -392,7 +432,7 @@ namespace TheQuest
                 WeaponImage1.BorderStyle = BorderStyle.None;
                 WeaponImage3.BorderStyle = BorderStyle.None;
                 PostionImage1.BorderStyle = BorderStyle.None;
-                gameManager.EquipWeapon("redPortion");
+                gameManager.EquipWeapon(new RedPotion(gameManager, new Point(0, 0)));
                 playerImage.Image = gameManager.PlayerImageList[3];
             }
         }
