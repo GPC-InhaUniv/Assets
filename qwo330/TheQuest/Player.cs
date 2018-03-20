@@ -64,10 +64,10 @@ namespace TheQuest
             }
         }
 
-        public void Attack(Direction dir,Random random, Form1 form)
+        public void Attack(Direction dir, Random random)
         {
             if (myWeapon == null) return;
-            myWeapon.Attack(dir, random, form);
+            myWeapon.Attack(dir, random);
 
             if (myWeapon is IDrinkable)
             {

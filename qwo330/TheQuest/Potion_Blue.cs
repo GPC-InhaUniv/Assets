@@ -14,13 +14,12 @@ namespace TheQuest
             : base(game, location) { }
 
         public override string Name { get { return "BluePotion"; } }
-        public override void Attack(Direction dir, Random random, Form1 form)
+        public override void Attack(Direction dir, Random random)
         {
             game.IncreasePlayerHealth(5, random);
         }
 
-        public override void showAttackRange(Direction dir, Form1 form) { }
-
+        public override DrawInfo SendAttackRange(Direction dir) { return new DrawInfo(); }
         public bool Used { get { return true; } }
     }
 }

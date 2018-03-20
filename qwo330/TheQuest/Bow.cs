@@ -21,17 +21,15 @@ namespace TheQuest
             : base(game, location) { }
 
         public override string Name { get { return "Bow"; } }
-        public override void Attack(Direction dir, Random random, Form1 form)
+        public override void Attack(Direction dir, Random random)
         {
-            showAttackRange(dir, form);
             DamageEnemy(dir, attackRange, damage, random);
         }
 
-        public override void showAttackRange(Direction dir, Form1 form)
+        public override DrawInfo SendAttackRange(Direction dir)
         {
-            drawAttackRange(dir, attackRange, form);
-            System.Threading.Thread.Sleep(150);
-            form.Refresh();
+            DrawInfo info = new DrawInfo(dir, Name, attackRange);
+            return info;
         }
     }
 }
