@@ -28,7 +28,7 @@ namespace PartyPlanner
 
         private bool isFancy;
 
-        public DinnerParty(int numberOfPeople, bool isFancy, bool isHealthy)
+        public DinnerParty(int numberOfPeople, bool isHealthy, bool isFancy)
         {
             NumberOfPeople = numberOfPeople;
             this.isFancy = isFancy;

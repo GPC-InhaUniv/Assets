@@ -19,7 +19,7 @@ namespace PartyPlanner
         {
             InitializeComponent();
 
-            dinnerParty = new DinnerParty(5, true, false);
+            dinnerParty = new DinnerParty((int)numericNumOfPeople.Value, cbHealthyOpt.Checked, cbFancyDeco.Checked);
 
             dinnerParty.SetHealthyOption(cbHealthyOpt.Checked);
             dinnerParty.CalculateCostOfDecorations(cbHealthyOpt.Checked);

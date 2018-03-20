@@ -1,0 +1,10 @@
+C:\0_work\gitHub\Test\PS\PartyPlanner\PartyPlanner\PartyPlanner\bin\Debug\PartyPlanner.exe.config
+C:\0_work\gitHub\Test\PS\PartyPlanner\PartyPlanner\PartyPlanner\bin\Debug\PartyPlanner.exe
+C:\0_work\gitHub\Test\PS\PartyPlanner\PartyPlanner\PartyPlanner\bin\Debug\PartyPlanner.pdb
+C:\0_work\gitHub\Test\PS\PartyPlanner\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.csprojResolveAssemblyReference.cache
+C:\0_work\gitHub\Test\PS\PartyPlanner\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.Form1.resources
+C:\0_work\gitHub\Test\PS\PartyPlanner\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.Properties.Resources.resources
+C:\0_work\gitHub\Test\PS\PartyPlanner\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.csproj.GenerateResource.Cache
+C:\0_work\gitHub\Test\PS\PartyPlanner\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.csproj.CoreCompileInputs.cache
+C:\0_work\gitHub\Test\PS\PartyPlanner\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.exe
+C:\0_work\gitHub\Test\PS\PartyPlanner\PartyPlanner\PartyPlanner\obj\Debug\PartyPlanner.pdb

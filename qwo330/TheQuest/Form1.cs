@@ -174,36 +174,6 @@ namespace TheQuest
             bg.BackgroundImage = Properties.Resources.dungeon600x400;
         }
 
-        private void DrawHitRange(Direction dir, int attackRange)
-        {
-            Rectangle rec;
-            Color hiteffect = Color.FromArgb(0x30, 0x00, 0x00, 0xff);
-            Graphics graphics = this.CreateGraphics();
-            Pen pen = new Pen(hiteffect, 10.0f);
-            
-            switch(dir)
-            {
-                case Direction.Up:
-                    rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y, 15, attackRange);
-                    graphics.DrawRectangle(pen, rec);
-                    break;
-                case Direction.Right:
-                    rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y, attackRange, 15);
-                    graphics.DrawRectangle(pen, rec);
-                    break;
-                case Direction.Down:
-                    rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y, 15, attackRange);
-                    graphics.DrawRectangle(pen, rec);
-                    break;
-                case Direction.Left:
-                    rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y, attackRange, 15);
-                    graphics.DrawRectangle(pen, rec);
-                    break;
-            }
-            System.Threading.Thread.Sleep(150);
-            this.Refresh();
-        }
-
         // 키보드 입력 처리
         private void InputKeyboard(object sender, KeyEventArgs e)
         {
