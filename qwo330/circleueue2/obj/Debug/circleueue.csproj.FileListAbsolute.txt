@@ -1,7 +1,0 @@
-C:\Users\hrd32111\Desktop\circleueue\bin\Debug\circleueue.exe.config
-C:\Users\hrd32111\Desktop\circleueue\bin\Debug\circleueue.exe
-C:\Users\hrd32111\Desktop\circleueue\bin\Debug\circleueue.pdb
-C:\Users\hrd32111\Desktop\circleueue\obj\Debug\circleueue.csprojResolveAssemblyReference.cache
-C:\Users\hrd32111\Desktop\circleueue\obj\Debug\circleueue.csproj.CoreCompileInputs.cache
-C:\Users\hrd32111\Desktop\circleueue\obj\Debug\circleueue.exe
-C:\Users\hrd32111\Desktop\circleueue\obj\Debug\circleueue.pdb

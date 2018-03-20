@@ -8,15 +8,43 @@ using System.Windows.Forms;
 
 namespace TheQuest
 {
-    enum Direction
+    //public enum WeaponName
+    //{
+    //    Sword,
+    //    BluePotion,
+    //    Bow,
+    //    RedPotion,
+    //    Mace
+    //}
+
+    public enum Direction
     {
-        left, // sword용
+        extendedLeft, // sword용
         Up,
         Right,
         Down,
         Left,
-        up, // sword용
-        right // mace용
+        extendedUp, // sword용
+        extendedRight // mace용
+    }
+
+    struct DrawInfo
+    {
+        private Direction dir;
+        public Direction Dir { get { return dir; } }
+
+        private string name;
+        public string Name { get { return name; } }
+
+        private int attackRange;
+        public int AttackRange { get { return attackRange; } }
+
+        public DrawInfo(Direction dir, string name, int attackRange)
+        {
+            this.dir = dir;
+            this.name = name;
+            this.attackRange = attackRange;
+        }
     }
 
     class Game
@@ -27,6 +55,7 @@ namespace TheQuest
         private Player player;
         public Point PlayerLocation { get { return player.Location; } }
         public int PlayerHitPoints { get { return player.HitPoints; } }
+        public Weapon PlayerEquipedWeapon { get { return player.MyWeapon; } }
         public List<string> PlayerWeapons { get { return player.Weapons; } }
 
         private int level = 0;
@@ -42,19 +71,19 @@ namespace TheQuest
         }
 
         public bool Move(Direction dir, Random randomDirection)
-        {
+        {  
             player.Move(dir);
             bool hitEffect = false;
             foreach (Enemy enemy in Enemies)
             {
-                if(enemy.Move(randomDirection)) hitEffect = true;
+                if(enemy.Move(randomDirection)) hitEffect = true; 
             }
             return hitEffect;
         }
 
-        public bool Attack(Direction dir, Random randomDirection, Form1 form)
+        public bool Attack(Direction dir, Random randomDirection)
         {
-            player.Attack(dir,randomDirection, form);
+            player.Attack(dir,randomDirection);
             bool hitEffect = false;
             foreach (Enemy enemy in Enemies)
             {
@@ -92,10 +121,9 @@ namespace TheQuest
                 boundaries.Top + random.Next(boundaries.Bottom - boundaries.Top));
         }
         
-        public void NewLevel(Random random, Label stageLevel) // randomLocation
+        public int NewLevel(Random random) // randomLocation
         {
             level++;
-            stageLevel.Text = "Stage " + level.ToString();
             switch(level)
             {
                 case 1:
@@ -152,6 +180,7 @@ namespace TheQuest
                     Application.Exit();
                     break;
             }
+            return level;
         }
     }
 }

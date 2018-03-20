@@ -7,6 +7,8 @@ using System.Drawing;
 
 namespace TheQuest
 {
+
+
     abstract class Weapon : Mover
     {
         private bool pickedUp;
@@ -19,49 +21,16 @@ namespace TheQuest
 
         public void PickUpWeapon() { pickedUp = true; }
 
-        public abstract void Attack(Direction dir, Random random, Form1 form);
+        public abstract void Attack(Direction dir, Random random);
 
-        public abstract void showAttackRange(Direction dir, Form1 form);
-
-        public void drawAttackRange(Direction dir, int attackRange, Form1 form)
-        {
-            Color hiteffect = Color.FromArgb(0x30, 0x00, 0x00, 0xff);
-            Graphics graphics = form.CreateGraphics();
-            Pen pen = new Pen(hiteffect, 1.0f);
-            Rectangle rec;
-
-            int size = 30;
-
-            switch (dir)
-            {
-                case Direction.up:
-                case Direction.Up:
-                    rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y - attackRange + size, size, attackRange);
-                    graphics.DrawRectangle(pen, rec);
-                    break;
-                case Direction.right:
-                case Direction.Right:
-                    rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y, attackRange, size);
-                    graphics.DrawRectangle(pen, rec);
-                    break;
-                case Direction.Down:
-                    rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y, size, attackRange);
-                    graphics.DrawRectangle(pen, rec);
-                    break;
-                case Direction.left:
-                case Direction.Left:
-                    rec = new Rectangle(game.PlayerLocation.X - attackRange + size, game.PlayerLocation.Y, attackRange, size);
-                    graphics.DrawRectangle(pen, rec);
-                    break;
-            }
-        }
+        public abstract DrawInfo SendAttackRange(Direction dir);
 
         public bool Nearby(Direction dir, Point targetLocation, Point playerLocation, int attackRange)
         {
             int size = 30; // Abs값
             switch (dir)
             {
-                case Direction.up:
+                case Direction.extendedUp:
                 case Direction.Up:
                     if (
                         (playerLocation.Y - targetLocation.Y) < attackRange
@@ -70,7 +39,7 @@ namespace TheQuest
                         )
                         return true;
                     break;
-                case Direction.right:
+                case Direction.extendedRight:
                 case Direction.Right:
                     if ((playerLocation.X - targetLocation.X) > -attackRange
                         && 0 > (playerLocation.X - targetLocation.X)
@@ -85,7 +54,7 @@ namespace TheQuest
                         )
                         return true;
                     break;
-                case Direction.left:
+                case Direction.extendedLeft:
                 case Direction.Left:
                     if ((playerLocation.X - targetLocation.X) < attackRange
                         && 0 < (playerLocation.X - targetLocation.X)

@@ -15,8 +15,11 @@ namespace TheQuest
     {
         Game game;
         Random randomDirection;
-        PictureBox previous;
         int enemiesShown;
+
+        int level;
+        DrawInfo info;
+        PictureBox previous;
 
         public Form1()
         {
@@ -25,8 +28,8 @@ namespace TheQuest
             randomDirection = new Random();
            
             game = new Game(new Rectangle(78, 57, 420, 155));
-            game.NewLevel(randomDirection, StageLevel);
-
+            level = game.NewLevel(randomDirection);
+            StageLevel.Text = "Stage " + level.ToString();
             UpdateGame();
         }
 
@@ -89,9 +92,9 @@ namespace TheQuest
                 }
             }
             // 조건문 ? 참 : 거짓
-            Bat.Visible = showBat ? true : false;
-            Ghost.Visible = showGhost ? true : false;
-            Ghoul.Visible = showGhoul ? true : false;
+            Bat.Visible = showBat;
+            Ghost.Visible = showGhost;
+            Ghoul.Visible = showGhoul;
         }
         public void UpdateSystem()
         {
@@ -104,8 +107,8 @@ namespace TheQuest
             if (enemiesShown < 1)
             {
                 MessageBox.Show("You have defeated the enemies on this level!");
-                game.NewLevel(randomDirection, StageLevel); // randomObjectLoation
-
+                level = game.NewLevel(randomDirection); // randomObjectLoation
+                StageLevel.Text = "Stage " + level.ToString();
                 // 업데이트 해주지 않으면 pictureBox가 그려지지 않음
                 UpdateCharacters();
                 UpdateWeapons();
@@ -146,13 +149,13 @@ namespace TheQuest
             Inven6.Visible = false;
             Inven7.Visible = false;
 
-            InvenSword.Visible = game.CheckPlayerInventory("Sword") ? true : false;
-            InvenBluePotion.Visible = game.CheckPlayerInventory("BluePotion") ? true : false;
-            InvenBow.Visible = game.CheckPlayerInventory("Bow") ? true : false;
-            InvenRedPotion.Visible = game.CheckPlayerInventory("RedPotion") ? true : false;
-            InvenMace.Visible = game.CheckPlayerInventory("Mace") ? true : false;
-            Inven6.Visible = game.CheckPlayerInventory("inven6") ? true : false;
-            Inven7.Visible = game.CheckPlayerInventory("inven7") ? true : false;
+            InvenSword.Visible = game.CheckPlayerInventory("Sword");
+            InvenBluePotion.Visible = game.CheckPlayerInventory("BluePotion");
+            InvenBow.Visible = game.CheckPlayerInventory("Bow");
+            InvenRedPotion.Visible = game.CheckPlayerInventory("RedPotion");
+            InvenMace.Visible = game.CheckPlayerInventory("Mace");
+            Inven6.Visible = game.CheckPlayerInventory("inven6");
+            Inven7.Visible = game.CheckPlayerInventory("inven7");
             /* */
             weaponCtrl.Location = game.WeaponInRoom.Location;
 
@@ -174,34 +177,63 @@ namespace TheQuest
             bg.BackgroundImage = Properties.Resources.dungeon600x400;
         }
 
-        private void DrawHitRange(Direction dir, int attackRange)
+        void ShowAttackRange(DrawInfo info)
         {
-            Rectangle rec;
-            Color hiteffect = Color.FromArgb(0x30, 0x00, 0x00, 0xff);
-            Graphics graphics = this.CreateGraphics();
-            Pen pen = new Pen(hiteffect, 10.0f);
-            
-            switch(dir)
+            switch (info.Name)
             {
+                case "Sword":
+                    DrawAttackRange(info.Dir, info.AttackRange);
+                    DrawAttackRange(info.Dir + 1, info.AttackRange);
+                    DrawAttackRange(info.Dir - 1, info.AttackRange);
+                    break;
+
+                case "Bow":
+                    DrawAttackRange(info.Dir, info.AttackRange);
+                    break;
+
+                case "Mace":
+                    DrawAttackRange(info.Dir, info.AttackRange);
+                    DrawAttackRange(info.Dir + 1, info.AttackRange);
+                    DrawAttackRange(info.Dir + 2, info.AttackRange);
+                    DrawAttackRange(info.Dir - 2, info.AttackRange);
+                    break;
+                default: break;
+            }
+            Thread.Sleep(150);
+            Refresh();
+        }
+
+        public void DrawAttackRange(Direction dir, int attackRange)
+        {
+            Color hiteffect = Color.FromArgb(0x30, 0x00, 0x00, 0xff);
+            Graphics graphics = CreateGraphics();
+            Pen pen = new Pen(hiteffect, 1.0f);
+            Rectangle rec;
+
+            int size = 30;
+
+            switch (dir)
+            {
+                case Direction.extendedUp:
                 case Direction.Up:
-                    rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y, 15, attackRange);
+                    rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y - attackRange + size, size, attackRange);
                     graphics.DrawRectangle(pen, rec);
                     break;
+                case Direction.extendedRight:
                 case Direction.Right:
-                    rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y, attackRange, 15);
+                    rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y, attackRange, size);
                     graphics.DrawRectangle(pen, rec);
                     break;
                 case Direction.Down:
-                    rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y, 15, attackRange);
+                    rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y, size, attackRange);
                     graphics.DrawRectangle(pen, rec);
                     break;
+                case Direction.extendedLeft:
                 case Direction.Left:
-                    rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y, attackRange, 15);
+                    rec = new Rectangle(game.PlayerLocation.X - attackRange + size, game.PlayerLocation.Y, attackRange, size);
                     graphics.DrawRectangle(pen, rec);
                     break;
             }
-            System.Threading.Thread.Sleep(150);
-            this.Refresh();
         }
 
         // 키보드 입력 처리
@@ -259,22 +291,30 @@ namespace TheQuest
 
             if (e.Control && e.KeyCode == Keys.W)
             {
-                if (game.Attack(Direction.Up, randomDirection, this)) EffectThread();
+                info = game.PlayerEquipedWeapon.SendAttackRange(Direction.Up);
+                ShowAttackRange(info);
+                if (game.Attack(Direction.Up, randomDirection)) EffectThread();
                 UpdateGame();
             }
             else if (e.Control && e.KeyCode == Keys.A)
             {
-                if (game.Attack(Direction.Left, randomDirection, this)) EffectThread();
+                info = game.PlayerEquipedWeapon.SendAttackRange(Direction.Left);
+                ShowAttackRange(info);
+                if (game.Attack(Direction.Left, randomDirection)) EffectThread();
                 UpdateGame();
             }
             else if (e.Control && e.KeyCode == Keys.S)
             {
-                if (game.Attack(Direction.Down, randomDirection, this)) EffectThread();
+                info = game.PlayerEquipedWeapon.SendAttackRange(Direction.Down);
+                ShowAttackRange(info);
+                if (game.Attack(Direction.Down, randomDirection)) EffectThread();
                 UpdateGame();
             }
             else if (e.Control && e.KeyCode == Keys.D)
             {
-                if (game.Attack(Direction.Right, randomDirection, this)) EffectThread();
+                info = game.PlayerEquipedWeapon.SendAttackRange(Direction.Right);
+                ShowAttackRange(info);
+                if (game.Attack(Direction.Right, randomDirection)) EffectThread();
                 UpdateGame();
             }
             else if(e.KeyCode == Keys.W)
