@@ -32,6 +32,8 @@ namespace TheQuest
         public int PlayerHitPoints { get { return player.HitPoint; } }
         public List<string> PlayerWeapons { get { return player.Weapons; } }
 
+        public bool PlayerPotionUsed { get { return player.PotionUsedCheck; } }
+
         private int level = 0;
         public int Level { get { return level; } }
 
@@ -100,19 +102,29 @@ namespace TheQuest
                 case 2:
                     Enemies = new List<Enemy>();
                     Enemies.Add(new Ghost(this,GetRandomLocation(random)));
+
                     WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
+                    
 
                     break;
                 case 3:
                     Enemies = new List<Enemy>();
                     Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
-                    WeaponInRoom = new Bow(this, GetRandomLocation(random));
+                    WeaponInRoom = new Sword(this, GetRandomLocation(random));
                     break;
                 case 4:
                     Enemies = new List<Enemy>();
                     Enemies.Add(new Bat(this, GetRandomLocation(random)));
                     Enemies.Add(new Ghost(this, GetRandomLocation(random)));
-                    WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
+                    if (!CheckPlayerInventory("Bow"))
+                    {
+                        WeaponInRoom = new Bow(this, GetRandomLocation(random));
+                    }
+                    else
+                    {
+                        WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
+
+                    }
 
                     break;
                 case 5:
@@ -120,6 +132,42 @@ namespace TheQuest
                     Enemies.Add(new Bat(this, GetRandomLocation(random)));
                     Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
                     WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
+
+                    break;
+
+                case 6:
+                    Enemies = new List<Enemy>();
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    WeaponInRoom = new Mace(this, GetRandomLocation(random));
+
+                    break;
+
+                case 7:
+                    Enemies = new List<Enemy>();
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    if (!CheckPlayerInventory("Mace"))
+                    {
+                        WeaponInRoom = new Mace(this, GetRandomLocation(random));
+                    }
+                    else
+                    {
+                        WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
+
+                    }
+                    break;
+
+
+                case 8:
+                    Enemies = new List<Enemy>();
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    WeaponInRoom = new Bomb(this, GetRandomLocation(random));
+
 
                     break;
             }
