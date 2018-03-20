@@ -9,11 +9,11 @@ namespace _0315_TheQuest
 {
     public abstract class Weapon : Mover
     {
-        //protected Game game;
+        protected Game game;
         private bool pickedUp;
         public bool PickedUp { get { return pickedUp; } }
-        //private Point location;
-        //public Point Location { get { return location; } }
+        private Point location;
+        public Point Location { get { return location; } }
 
         public Weapon(Game game, Point location) : base(game,location)
         {

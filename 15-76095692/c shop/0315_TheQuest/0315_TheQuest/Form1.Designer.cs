@@ -156,6 +156,7 @@
             this.AttackLeftButton.TabIndex = 3;
             this.AttackLeftButton.Text = "Left";
             this.AttackLeftButton.UseVisualStyleBackColor = true;
+            this.AttackLeftButton.Click += new System.EventHandler(this.AttackLeftButton_Click);
             // 
             // AttackRightButton
             // 
@@ -165,6 +166,7 @@
             this.AttackRightButton.TabIndex = 2;
             this.AttackRightButton.Text = "Right";
             this.AttackRightButton.UseVisualStyleBackColor = true;
+            this.AttackRightButton.Click += new System.EventHandler(this.AttackRightButton_Click);
             // 
             // AttackDownButton
             // 
@@ -174,6 +176,7 @@
             this.AttackDownButton.TabIndex = 1;
             this.AttackDownButton.Text = "Down";
             this.AttackDownButton.UseVisualStyleBackColor = true;
+            this.AttackDownButton.Click += new System.EventHandler(this.AttackDownButton_Click);
             // 
             // AttackUpButton
             // 
@@ -183,6 +186,7 @@
             this.AttackUpButton.TabIndex = 0;
             this.AttackUpButton.Text = "Up";
             this.AttackUpButton.UseVisualStyleBackColor = true;
+            this.AttackUpButton.Click += new System.EventHandler(this.AttackUpButton_Click);
             // 
             // tableLayoutPanel1
             // 

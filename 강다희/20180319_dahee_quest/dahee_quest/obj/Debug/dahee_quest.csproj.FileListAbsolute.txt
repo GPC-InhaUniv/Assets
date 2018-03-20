@@ -1,0 +1,30 @@
+C:\Users\hrd\source\repos\dahee_quest\dahee_quest\bin\Debug\dahee_quest.exe.config
+C:\Users\hrd\source\repos\dahee_quest\dahee_quest\bin\Debug\dahee_quest.exe
+C:\Users\hrd\source\repos\dahee_quest\dahee_quest\bin\Debug\dahee_quest.pdb
+C:\Users\hrd\source\repos\dahee_quest\dahee_quest\obj\Debug\dahee_quest.csprojResolveAssemblyReference.cache
+C:\Users\hrd\source\repos\dahee_quest\dahee_quest\obj\Debug\dahee_quest.Form1.resources
+C:\Users\hrd\source\repos\dahee_quest\dahee_quest\obj\Debug\dahee_quest.Properties.Resources.resources
+C:\Users\hrd\source\repos\dahee_quest\dahee_quest\obj\Debug\dahee_quest.csproj.GenerateResource.Cache
+C:\Users\hrd\source\repos\dahee_quest\dahee_quest\obj\Debug\dahee_quest.csproj.CoreCompileInputs.cache
+C:\Users\hrd\source\repos\dahee_quest\dahee_quest\obj\Debug\dahee_quest.exe
+C:\Users\hrd\source\repos\dahee_quest\dahee_quest\obj\Debug\dahee_quest.pdb
+C:\Users\Administrator\source\repos\dahee_quest\dahee_quest\obj\Debug\dahee_quest.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\source\repos\dahee_quest\dahee_quest\obj\Debug\dahee_quest.Form1.resources
+C:\Users\Administrator\source\repos\dahee_quest\dahee_quest\obj\Debug\dahee_quest.Properties.Resources.resources
+C:\Users\Administrator\source\repos\dahee_quest\dahee_quest\obj\Debug\dahee_quest.csproj.GenerateResource.Cache
+C:\Users\Administrator\source\repos\dahee_quest\dahee_quest\obj\Debug\dahee_quest.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\dahee_quest\dahee_quest\obj\Debug\dahee_quest.exe
+C:\Users\Administrator\source\repos\dahee_quest\dahee_quest\obj\Debug\dahee_quest.pdb
+C:\Users\Administrator\source\repos\dahee_quest\dahee_quest\bin\Debug\dahee_quest.exe.config
+C:\Users\Administrator\source\repos\dahee_quest\dahee_quest\bin\Debug\dahee_quest.exe
+C:\Users\Administrator\source\repos\dahee_quest\dahee_quest\bin\Debug\dahee_quest.pdb
+I:\수업자료\3.c# first head\20180319_dahee_quest\dahee_quest\bin\Debug\dahee_quest.exe.config
+I:\수업자료\3.c# first head\20180319_dahee_quest\dahee_quest\bin\Debug\dahee_quest.exe
+I:\수업자료\3.c# first head\20180319_dahee_quest\dahee_quest\bin\Debug\dahee_quest.pdb
+I:\수업자료\3.c# first head\20180319_dahee_quest\dahee_quest\obj\Debug\dahee_quest.csprojResolveAssemblyReference.cache
+I:\수업자료\3.c# first head\20180319_dahee_quest\dahee_quest\obj\Debug\dahee_quest.Form1.resources
+I:\수업자료\3.c# first head\20180319_dahee_quest\dahee_quest\obj\Debug\dahee_quest.Properties.Resources.resources
+I:\수업자료\3.c# first head\20180319_dahee_quest\dahee_quest\obj\Debug\dahee_quest.csproj.GenerateResource.Cache
+I:\수업자료\3.c# first head\20180319_dahee_quest\dahee_quest\obj\Debug\dahee_quest.csproj.CoreCompileInputs.cache
+I:\수업자료\3.c# first head\20180319_dahee_quest\dahee_quest\obj\Debug\dahee_quest.exe
+I:\수업자료\3.c# first head\20180319_dahee_quest\dahee_quest\obj\Debug\dahee_quest.pdb

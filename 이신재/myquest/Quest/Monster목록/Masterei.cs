@@ -13,22 +13,20 @@ namespace Quest
 
         public override void Move(Random random)
         {
-            if (random.Next(1, 2) == 2)
+            if ((random.Next(1, 3) == 2) || (random.Next(1, 3) == 1))
             {
-                location = Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries));
-
+                location = Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
             }
+
             else
             {
-                location = Move((enumDirection)random.Next(1, 4), game.Boundaries);
+                location = Move(0, game.Boundaries);
             }
+
             if (NearPlayer())
             {
-                game.HitPlayer(1, maxDamage); //여기부터
+                game.HitPlayer(3, random);
             }
-            
         }
-            
-
     }
 }

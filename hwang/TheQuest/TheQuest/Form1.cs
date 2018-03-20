@@ -61,12 +61,12 @@ namespace TheQuest
         private void AttackUP_Click(object sender, EventArgs e)
         {
             game.Attack(MoveDirection.MoveUP, random);
-            MessageBox.Show(game.PlayerWeapons.ToString());
+            Inventory2.Visible = false;
+            Inventory4.Visible = false;
 
 
-            if (game.PlayerWeapons is IDrinkable)
+            if (game.PlayerPotionUsed )
             {
-                MessageBox.Show("hi");
 
                 Inventory2.Visible = false;
                 Inventory4.Visible = false;
@@ -80,7 +80,7 @@ namespace TheQuest
         {
             game.Attack(MoveDirection.MoveDown, random);
 
-            if (game.WeaponInRoom is IDrinkable)
+            if (game.PlayerPotionUsed)
             {
                 Inventory2.Visible = false;
                 Inventory4.Visible = false;
@@ -92,9 +92,8 @@ namespace TheQuest
         {
             game.Attack(MoveDirection.MoveLeft, random);
 
-            if (game.WeaponInRoom is IDrinkable)
+            if (game.PlayerPotionUsed)
             {
-                MessageBox.Show("hi");
                 Inventory2.Visible = false;
                 Inventory4.Visible = false;
             }
@@ -105,7 +104,7 @@ namespace TheQuest
         {
             game.Attack(MoveDirection.MoveRight, random);
 
-            if (game.WeaponInRoom is IDrinkable)
+            if (game.PlayerPotionUsed)
             {
                 Inventory2.Visible = false;
                 Inventory4.Visible = false;
@@ -121,7 +120,7 @@ namespace TheQuest
 
             bool showBat = false;
             bool showGhost = false;
-            bool showGhoul = false;   
+            bool showGhoul = false;
             int enemiesShown = 0;
 
             foreach (Enemy enemy in game.Enemies)
@@ -138,7 +137,7 @@ namespace TheQuest
                     else
                     {
                         showBat = false;
-            
+
                     }
                     if (showBat)
                     {
@@ -161,7 +160,7 @@ namespace TheQuest
                     else
                     {
                         showGhost = false;
-                        
+
                     }
                     if (showGhost)
                     {
@@ -175,7 +174,7 @@ namespace TheQuest
                 if (enemy is Ghoul)
                 {
                     Ghoul1.Location = enemy.Location;
-                    GhostHitPoint.Text = enemy.EnemiesLife.ToString();
+                    GhoulHitPoint.Text = enemy.EnemiesLife.ToString();
                     if (enemy.EnemiesLife > 0)
                     {
                         showGhoul = true;
@@ -207,12 +206,14 @@ namespace TheQuest
             RedPotion1.Visible = false;
             BluePotion1.Visible = false;
             Mace1.Visible = false;
+            Bomb1.Visible = false;
 
             Inventory1.Visible = false;
             Inventory2.Visible = false;
             Inventory3.Visible = false;
             Inventory4.Visible = false;
             Inventory5.Visible = false;
+            Inventory6.Visible = false;
 
 
 
@@ -229,6 +230,8 @@ namespace TheQuest
                     weaponControl = RedPotion1; break;
                 case "BluePotion":
                     weaponControl = BluePotion1; break;
+                case "Bomb":
+                    weaponControl = Bomb1; break;
 
             }
 
@@ -237,24 +240,31 @@ namespace TheQuest
                 Inventory1.Visible = true;
 
             }
-            if (game.CheckPlayerInventory("BluePotion"))
-            {
-                Inventory2.Visible = true;
 
-            }
             if (game.CheckPlayerInventory("Bow"))
             {
                 Inventory3.Visible = true;
 
             }
-            if (game.CheckPlayerInventory("RedPotion"))
-            {
-                Inventory4.Visible = true;
+            if (!game.PlayerPotionUsed) {
+                if (game.CheckPlayerInventory("BluePotion"))
+                {
+                    Inventory2.Visible = true;
 
-            }
+                }
+                if (game.CheckPlayerInventory("RedPotion"))
+                {
+                    Inventory4.Visible = true; }
+
+            } 
             if (game.CheckPlayerInventory("Mace"))
             {
                 Inventory5.Visible = true;
+
+            }
+            if (game.CheckPlayerInventory("Bomb"))
+            {
+                Inventory6.Visible = true;
 
             }
 
@@ -296,6 +306,8 @@ namespace TheQuest
             Inventory3.BorderStyle = BorderStyle.None;
             Inventory4.BorderStyle = BorderStyle.None;
             Inventory5.BorderStyle = BorderStyle.None;
+            Inventory6.BorderStyle = BorderStyle.None;
+
 
 
             game.Equip("Sword");
@@ -309,6 +321,8 @@ namespace TheQuest
             Inventory3.BorderStyle = BorderStyle.FixedSingle;
             Inventory4.BorderStyle = BorderStyle.None;
             Inventory5.BorderStyle = BorderStyle.None;
+            Inventory6.BorderStyle = BorderStyle.None;
+
             game.Equip("Bow");
 
         }
@@ -320,6 +334,8 @@ namespace TheQuest
             Inventory3.BorderStyle = BorderStyle.None;
             Inventory4.BorderStyle = BorderStyle.None;
             Inventory5.BorderStyle = BorderStyle.FixedSingle;
+            Inventory6.BorderStyle = BorderStyle.None;
+
             game.Equip("Mace");
 
         }
@@ -331,6 +347,8 @@ namespace TheQuest
             Inventory3.BorderStyle = BorderStyle.None;
             Inventory4.BorderStyle = BorderStyle.FixedSingle;
             Inventory5.BorderStyle = BorderStyle.None;
+            Inventory6.BorderStyle = BorderStyle.None;
+
             game.Equip("RedPotion");
 
         }
@@ -342,8 +360,22 @@ namespace TheQuest
             Inventory3.BorderStyle = BorderStyle.None;
             Inventory4.BorderStyle = BorderStyle.None;
             Inventory5.BorderStyle = BorderStyle.None;
+            Inventory6.BorderStyle = BorderStyle.None;
+
             game.Equip("BluePotion");
 
+        }
+
+        private void Inventory6_Click(object sender, EventArgs e)
+        {
+            Inventory1.BorderStyle = BorderStyle.None;
+            Inventory2.BorderStyle = BorderStyle.None;
+            Inventory3.BorderStyle = BorderStyle.None;
+            Inventory4.BorderStyle = BorderStyle.None;
+            Inventory5.BorderStyle = BorderStyle.None;
+            Inventory6.BorderStyle = BorderStyle.FixedSingle;
+
+            game.Equip("Bomb");
         }
     }
 }

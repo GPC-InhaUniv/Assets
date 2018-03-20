@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace TheQuest
 {
-    class RedPotion : Weapon, IDrinkable
-    {
+    class RedPotion : Weapon
+        {
 
         private bool potionUsed = false;
         public bool PotionUsed { get { return potionUsed; } }

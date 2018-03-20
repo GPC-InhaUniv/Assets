@@ -36,7 +36,8 @@ namespace _0315_TheQuest
             if (!game.WeaponInRoom.PickedUp)
             {
                 //근처에 무기가 있는지 확인하고 가능하면 그 무기를 줍습니다.
-
+                inventory.Add(game.WeaponInRoom);
+                game.WeaponInRoom.PickUpWeapon();
             }
         }
         
@@ -52,15 +53,33 @@ namespace _0315_TheQuest
         }
         public void Hit(int maxDamage,Random random)
         {
-
+            hitPoints -= random.Next(1, maxDamage);
         }
         public void IncreaseHealth(int health, Random random)
         {
-
+            hitPoints += random.Next(1, health);
         }
         public void Attack(Direction direction, Random random)
         {
-
+            if (equippedWeapon == null)
+            {
+                return;
+            }
+            //else
+            //{
+            //    if (equippedWeapon is IPotion)
+            //    {
+            //        IPotion myPotion = equippedWeapon as IPotion;
+            //        if (myPotion.Used == false)
+            //        {
+            //            equippedWeapon.Attack(direction, random);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        equippedWeapon.Attack(direction, random);
+            //    }
+            //}
         }
     }
 }

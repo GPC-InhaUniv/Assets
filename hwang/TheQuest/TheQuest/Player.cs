@@ -13,6 +13,8 @@ namespace TheQuest
         private Weapon equippedWeapon;
         private int hitPoint;
         public int HitPoint { get { return hitPoint; } }
+        private bool potionUsedCheck;
+        public bool PotionUsedCheck { get { return potionUsedCheck; } }
         private List<Weapon> inventory = new List<Weapon>();
         public List<string> Weapons
         {
@@ -31,6 +33,7 @@ namespace TheQuest
             : base(game, location)
         {
             hitPoint = 10;
+            potionUsedCheck = false;
         }
         public void Damaged(int maxDamage , Random random)
         {
@@ -60,9 +63,21 @@ namespace TheQuest
                 {
                     equippedWeapon.Attack(direction, random);
 
+                    if(equippedWeapon is IDrinkable)
+                    {
+                        potionUsedCheck = true;
+                        
+                    }
+                    else
+                    {
+                        potionUsedCheck = false;
+
+
+                    }
 
                 }
             }
+
         }
         public void Move(MoveDirection direction)
         {
@@ -78,7 +93,6 @@ namespace TheQuest
                 {
                     game.WeaponInRoom.PickUpWeapon();
 
-                    MessageBox.Show(game.WeaponInRoom.PickedUp.ToString());
                     inventory.Add(game.WeaponInRoom);
                     
                 }

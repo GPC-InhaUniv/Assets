@@ -31,19 +31,11 @@ namespace Quest
         protected bool DamageMonster(enumDirection direction, int radius, int damage, Random random)
         {
             Point target = game.PlayerLocation;
-            for(int distance = 0; distance<radius;distance++)
-            {
-               
-            }
+            
             return false;
         }
-        
 
-        
-
-        
-
-
+       
     }
     
 }

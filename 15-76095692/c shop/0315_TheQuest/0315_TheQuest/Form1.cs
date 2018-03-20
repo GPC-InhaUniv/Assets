@@ -117,6 +117,37 @@ namespace _0315_TheQuest
             UpdateCharacters();
         }
 
+        //공격버튼 4종
+        private void AttackUpButton_Click(object sender, EventArgs e)
+        {
+            int currentHP = game.PlayerHitPoints;
+            game.Attack(Direction.Up, random);
+            UpdateCharacters();
+        }
+
+        private void AttackDownButton_Click(object sender, EventArgs e)
+        {
+            int currentHP = game.PlayerHitPoints;
+            game.Attack(Direction.Down, random);
+            UpdateCharacters();
+        }
+
+        private void AttackLeftButton_Click(object sender, EventArgs e)
+        {
+            int currentHP = game.PlayerHitPoints;
+            game.Attack(Direction.Left, random);
+            UpdateCharacters();
+        }
+
+        private void AttackRightButton_Click(object sender, EventArgs e)
+        {
+            int currentHP = game.PlayerHitPoints;
+            game.Attack(Direction.Right, random);
+            UpdateCharacters();
+        }
+
+        
+
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();

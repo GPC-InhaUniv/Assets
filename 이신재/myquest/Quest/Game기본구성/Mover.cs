@@ -22,8 +22,9 @@ namespace Quest
             this.game = game;
             this.location = location;
         }
-       
+
         
+
         public bool Nearby(Point LocationToCheck, int distance)
         {
             if (Math.Abs(location.X - LocationToCheck.X) < distance &&
@@ -32,7 +33,9 @@ namespace Quest
             else
                 return false;
         }
+
         
+       
 
         public Point Move(enumDirection direction, Rectangle boundaries)
         {
