@@ -30,20 +30,15 @@ namespace TheQuest
 
     struct DrawInfo
     {
-        private Direction dir;
-        public Direction Dir { get { return dir; } }
-
-        private string name;
-        public string Name { get { return name; } }
-
-        private int attackRange;
-        public int AttackRange { get { return attackRange; } }
-
-        public DrawInfo(Direction dir, string name, int attackRange)
+        public Direction Dir;
+        public string Name;
+        public int AttackRange;
+        
+        public DrawInfo(Direction Dir, string Name, int AttackRange)
         {
-            this.dir = dir;
-            this.name = name;
-            this.attackRange = attackRange;
+            this.Dir = Dir;
+            this.Name = Name;
+            this.AttackRange = AttackRange;
         }
     }
 
