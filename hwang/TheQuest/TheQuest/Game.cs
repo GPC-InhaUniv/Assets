@@ -32,7 +32,6 @@ namespace TheQuest
         public int PlayerHitPoints { get { return player.HitPoint; } }
         public List<string> PlayerWeapons { get { return player.Weapons; } }
 
-        public bool PlayerPotionUsed { get { return player.PotionUsedCheck; } }
 
         private int level = 0;
         public int Level { get { return level; } }
@@ -110,7 +109,7 @@ namespace TheQuest
                 case 3:
                     Enemies = new List<Enemy>();
                     Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
-                    WeaponInRoom = new Sword(this, GetRandomLocation(random));
+                    WeaponInRoom = new Bow(this, GetRandomLocation(random));
                     break;
                 case 4:
                     Enemies = new List<Enemy>();

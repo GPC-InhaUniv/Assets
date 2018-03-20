@@ -12,14 +12,10 @@ namespace Quest2
     {
         public BluePotion(Game game, Point location) : base(game, location)
         {
-
         }
-
         private bool usedItem = false;
-        public override string Name { get { return "BluePotion"; } }
-
+        public override WeaponName Name { get { return WeaponName.BluePotion; } }
         public bool Used { get { return usedItem; } }
-
         public override void Attack(Direction direction, Random random)
         {
             usedItem = true;

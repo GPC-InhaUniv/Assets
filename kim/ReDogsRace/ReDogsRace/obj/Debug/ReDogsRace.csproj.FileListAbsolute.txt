@@ -51,3 +51,14 @@ C:\Users\HRD32122\Documents\github\Test\kim\ReDogsRace\ReDogsRace\obj\Debug\ReDo
 C:\Users\HRD32122\Documents\github\Test\kim\ReDogsRace\ReDogsRace\obj\Debug\ReDogsRace.csproj.CoreCompileInputs.cache
 C:\Users\HRD32122\Documents\github\Test\kim\ReDogsRace\ReDogsRace\obj\Debug\ReDogsRace.exe
 C:\Users\HRD32122\Documents\github\Test\kim\ReDogsRace\ReDogsRace\obj\Debug\ReDogsRace.pdb
+C:\32115\Github\kim\ReDogsRace\ReDogsRace\bin\Debug\ReDogsRace.exe.config
+C:\32115\Github\kim\ReDogsRace\ReDogsRace\bin\Debug\ReDogsRace.exe
+C:\32115\Github\kim\ReDogsRace\ReDogsRace\bin\Debug\ReDogsRace.pdb
+C:\32115\Github\kim\ReDogsRace\ReDogsRace\obj\Debug\ReDogsRace.csprojResolveAssemblyReference.cache
+C:\32115\Github\kim\ReDogsRace\ReDogsRace\obj\Debug\ReDogsRace.Form1.resources
+C:\32115\Github\kim\ReDogsRace\ReDogsRace\obj\Debug\ReDogsRace.Form2.resources
+C:\32115\Github\kim\ReDogsRace\ReDogsRace\obj\Debug\ReDogsRace.Properties.Resources.resources
+C:\32115\Github\kim\ReDogsRace\ReDogsRace\obj\Debug\ReDogsRace.csproj.GenerateResource.Cache
+C:\32115\Github\kim\ReDogsRace\ReDogsRace\obj\Debug\ReDogsRace.csproj.CoreCompileInputs.cache
+C:\32115\Github\kim\ReDogsRace\ReDogsRace\obj\Debug\ReDogsRace.exe
+C:\32115\Github\kim\ReDogsRace\ReDogsRace\obj\Debug\ReDogsRace.pdb
