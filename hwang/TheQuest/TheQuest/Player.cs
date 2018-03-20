@@ -13,8 +13,6 @@ namespace TheQuest
         private Weapon equippedWeapon;
         private int hitPoint;
         public int HitPoint { get { return hitPoint; } }
-        private bool potionUsedCheck;
-        public bool PotionUsedCheck { get { return potionUsedCheck; } }
         private List<Weapon> inventory = new List<Weapon>();
         public List<string> Weapons
         {
@@ -33,7 +31,6 @@ namespace TheQuest
             : base(game, location)
         {
             hitPoint = 10;
-            potionUsedCheck = false;
         }
         public void Damaged(int maxDamage , Random random)
         {
@@ -55,30 +52,19 @@ namespace TheQuest
             }
         }
 
-        public void AttackEnemies(MoveDirection direction , Random random)
+        public void AttackEnemies(MoveDirection direction, Random random)
         {
-            foreach(Weapon weapon in inventory)
+
+            if (equippedWeapon!=null)
             {
-                if (equippedWeapon == weapon)
+                equippedWeapon.Attack(direction, random);
+
+                if (equippedWeapon is IDrinkable)
                 {
-                    equippedWeapon.Attack(direction, random);
-
-                    if(equippedWeapon is IDrinkable)
-                    {
-                        potionUsedCheck = true;
-                        
-                    }
-                    else
-                    {
-                        potionUsedCheck = false;
-
-
-                    }
-
+                    inventory.Remove(equippedWeapon);
                 }
             }
-
-        }
+        }    
         public void Move(MoveDirection direction)
         {
             base.location = Move(direction, game.Boundaries);
@@ -86,7 +72,6 @@ namespace TheQuest
             //웨폰인룸 픽업이 false일때
             if (!game.WeaponInRoom.PickedUp)
             {
-
                 Point weaponLocation   = game.WeaponInRoom.Location;
                 //근처에 무기가 있는지 확인하고 가능하다면 무기를 줍는다.
                 if (NearBy(weaponLocation,5))
