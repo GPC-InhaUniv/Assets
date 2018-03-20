@@ -1,18 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 namespace Quest2
 {
     class Player : Mover, IHitable
     {
-
-
         public Player(Game game, Point location) : base(game, location)
         {
-            hitPoints = 10;
+            hitPoints = 100;
         }
         //전투-------------------------------
         private int hitPoints;
@@ -24,8 +19,6 @@ namespace Quest2
         }
         public void Attack(Direction direction, Random random)
         {
-            
-
             if(equippedWeapon is RedPotion)
             {
                 RedPotion item = equippedWeapon as RedPotion;
@@ -69,7 +62,6 @@ namespace Quest2
                 foreach (Weapon weapon in inventory)
                 {
                     names.Add(weapon.Name);
-                    Console.WriteLine(weapon);
                 }
                 return names;
             }
@@ -100,6 +92,7 @@ namespace Quest2
                 {
                     if (inventory.Contains(game.WeaponInRoom) == false)
                     {
+                        Console.WriteLine(inventory.Contains(game.WeaponInRoom));
                         inventory.Add(game.WeaponInRoom);
                         game.WeaponInRoom.PickUpWeapon();
                     }

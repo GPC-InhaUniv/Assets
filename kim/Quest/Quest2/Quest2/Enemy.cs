@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 namespace Quest2
 {
@@ -20,6 +16,8 @@ namespace Quest2
         private int hitPoints;
         protected int maxDamage;
         public int HitPoints { get { return hitPoints; } }
+        private bool death;
+        public bool Death { get { return death; } }
 
         public void Hit(int maxDamage, Random random)
         {
@@ -61,7 +59,7 @@ namespace Quest2
                     break;
             }
 
-            if (NearPlayer())
+            if (NearPlayer() && death == false)
             {
                 game.GiveDamageToPlayer(maxDamage, random);
             }
@@ -69,6 +67,13 @@ namespace Quest2
 
         }
 
+        public void Die()
+        {
+            if (hitPoints <= 0)
+            {
+                death = true;
+            }
+        }
 
         //인접 체크---------------------------------
         private const int NearPlayerDistance = 25;

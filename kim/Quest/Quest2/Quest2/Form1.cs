@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Quest2
@@ -19,7 +13,7 @@ namespace Quest2
         Stop = 4,
 
     }
-    
+
     public partial class Form1 : Form
     {
         Game game;
@@ -68,13 +62,10 @@ namespace Quest2
         {
             Player_Pic.Location = game.PlayerLocation;
             PlayerHP.Text = game.PlayerHitPoints.ToString();
-            imageInvisble();
-            enemyCheck();
-            inventoryCheck();
-            pickUpItem();
-
-
-
+            ImageInvisble();
+            EnemyCheck();
+            InventoryCheck();
+            PickUpItem();
 
             if (game.PlayerHitPoints <= 0)
             {
@@ -83,7 +74,7 @@ namespace Quest2
             }
         }
 
-        private void imageInvisble()
+        private void ImageInvisble()
         {
             //Enemy
             Bat_Pic.Visible = false;
@@ -108,11 +99,12 @@ namespace Quest2
             BluePotion_Inven_Pic.Visible = false;
         }
 
-        private void enemyCheck()
+        private void EnemyCheck()
         {
             int enemiesShown = 0;
             foreach (Enemy enemy in game.Enemies)
             {
+
                 if (enemy is Bat)
                 {
                     Bat_Pic.Location = enemy.Location;
@@ -122,11 +114,7 @@ namespace Quest2
                         Bat_Pic.Visible = true;
                         enemiesShown++;
                     }
-                    else
-                    {
-                        enemiesShown--;
 
-                    }
                 }
                 if (enemy is Ghost)
                 {
@@ -137,12 +125,8 @@ namespace Quest2
                         Ghost_Pic.Visible = true;
                         enemiesShown++;
                     }
-                    else
-                    {
-                        enemiesShown--;
-                    }
                 }
-                if(enemy is Ghoul)
+                if (enemy is Ghoul)
                 {
                     Ghoul_Pic.Location = enemy.Location;
                     GhoulHP.Text = enemy.HitPoints.ToString();
@@ -151,72 +135,58 @@ namespace Quest2
                         Ghoul_Pic.Visible = true;
                         enemiesShown++;
                     }
-                    else
-                    {
-                        enemiesShown--;
-                    }
-
                 }
-                if(enemy is SkeletonMage)
+                if (enemy is SkeletonMage)
                 {
                     Skeleton_Pic.Location = enemy.Location;
                     BossHP.Text = enemy.HitPoints.ToString();
-                    if(enemy.HitPoints >0)
+                    if (enemy.HitPoints > 0)
                     {
                         Skeleton_Pic.Visible = true;
                         enemiesShown++;
                     }
-                    else
-                    {
-                        enemiesShown--;
-                    }
                 }
 
             }
-            if (enemiesShown < 0)
+            if (enemiesShown == 0)
             {
                 game.NewLevel(random);
                 UpdateCharacter();
             }
-
         }
 
-        private void inventoryCheck()
+        private void InventoryCheck()
         {
             foreach (string weapon in game.PlayerWeapons)
             {
-
-                if (weapon == "Sword")
+                if (weapon.Equals("Sword"))
                 {
                     Sword_Inven_Pic.Visible = true;
 
                 }
-                if (weapon == "Bow")
+                if (weapon.Equals("Bow"))
                 {
                     Bow_Inven_Pic.Visible = true;
                 }
 
-                if( weapon == "Mace")
+                if (weapon.Equals("Mace"))
                 {
                     Mace_Inven_Pic.Visible = true;
                 }
 
-                if (weapon == "RedPotion")
+                if (weapon.Equals("RedPotion"))
                 {
                     RedPotion_Inven_Pic.Visible = true;
-
                 }
-                if(weapon == "BluePotion")
+                if (weapon.Equals("BluePotion"))
                 {
                     BluePotion_Inven_Pic.Visible = true;
                 }
-
-
             }
 
         }
 
-        private void pickUpItem()
+        private void PickUpItem()
         {
             Control weaponControl = null;
             switch (game.WeaponInRoom.Name)
@@ -277,7 +247,7 @@ namespace Quest2
             game.Equip("Sword");
             imageBorderStyle();
             Sword_Inven_Pic.BorderStyle = BorderStyle.Fixed3D;
-           
+
         }
 
         private void Inven_RedPotion_Pic_Click(object sender, EventArgs e)

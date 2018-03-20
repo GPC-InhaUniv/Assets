@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
-using System.Windows.Forms;
+
 
 namespace Quest2
 {
@@ -39,6 +36,7 @@ namespace Quest2
             foreach(Enemy enemy in Enemies)
             {
                 enemy.Move(random);
+                enemy.Die();
             }
             
         }
@@ -61,12 +59,13 @@ namespace Quest2
                    
                      Enemies.Add(new Bat(this, GetRandomLocation(random)));
                      WeaponInRoom = new Sword(this, GetRandomLocation(random));
-                   
+                      
                     break;
                 case 2:
                     Enemies.Clear();
                     Enemies.Add(new Ghost(this, GetRandomLocation(random)));
                     WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
+                    
                     break;
                 case 3:
                     Enemies.Clear();
@@ -104,7 +103,6 @@ namespace Quest2
                     Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
                     Enemies.Add(new Ghost(this, GetRandomLocation(random)));
                     WeaponInRoom = new Mace(this, GetRandomLocation(random));
-
                     break;
                 case 7:
                     Enemies.Clear();
@@ -123,8 +121,6 @@ namespace Quest2
                     }
                     else
                         WeaponInRoom = new Mace(this, GetRandomLocation(random));
-
-                    
                     break;
                 case 8:
                     Enemies.Clear();
@@ -158,9 +154,12 @@ namespace Quest2
             foreach (Enemy enemy in Enemies)
             {
                 enemy.Move(random);
+                enemy.Die();
             }
 
         }
+
+        
        
 
 

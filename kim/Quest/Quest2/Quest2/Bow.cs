@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Drawing;
 
 namespace Quest2
@@ -12,7 +9,8 @@ namespace Quest2
 
         public Bow(Game game, Point location) : base(game, location)
         {
-            this.radius = 60;
+            this.radius = 75;
+            maxDamage = 1;
         }
         public override string Name { get { return "Bow"; } }
 
@@ -22,7 +20,7 @@ namespace Quest2
             int IntegerDirection = (int)direction;
             if (SuccessAttack == false)
             {
-                SuccessAttack = DamageEnemy((Direction)(IntegerDirection % 4), radius, 3, random);
+                SuccessAttack = DamageEnemy((Direction)(IntegerDirection % 4), radius, random);
               
 
             }

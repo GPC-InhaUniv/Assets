@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace Quest2
@@ -16,28 +12,18 @@ namespace Quest2
             boundaries = game.Boundaries;
         }
 
-
         public override void Move(Random random)
         {
-
             int AI = random.Next(4);
-
-            
             if (AI % 2 == 0)
             {
-
-                MoveControl(FindPlayerDirection(),random);
-               
+                MoveControl(FindPlayerDirection(),random); 
             }
             else
             {
                 MoveControl((Direction)random.Next(4),random);
-                
             }
-         
-
         }
-
     }
 }
 
