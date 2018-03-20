@@ -16,29 +16,27 @@ namespace Quest2
         public Point PlayerLocation { get { return Player.Location; } }
         public int PlayerHitPoints { get { return Player.HitPoints; } }
 
-
-
         private Rectangle boundaries;
         public Rectangle Boundaries { get { return boundaries; } }
 
-        public Game (Rectangle boundaries)
+        public Game(Rectangle boundaries)
         {
             this.boundaries = boundaries;
-            
+
             Player = new Player(this, new Point(boundaries.Left + 10, boundaries.Top + 10)); // 플레이어 생성위치
             Enemies = new List<Enemy>();
         }
 
-        public void Move(Direction direction,Random random)
+        public void Move(Direction direction, Random random)
         {
-           
+
             Player.Move(direction);
-            foreach(Enemy enemy in Enemies)
+            foreach (Enemy enemy in Enemies)
             {
                 enemy.Move(random);
                 enemy.Die();
             }
-            
+
         }
 
 
@@ -52,20 +50,20 @@ namespace Quest2
             level++;
 
             bool CheckedHaveWeapon = false;
-           
-            switch(level)
+
+            switch (level)
             {
                 case 1:
-                   
-                     Enemies.Add(new Bat(this, GetRandomLocation(random)));
-                     WeaponInRoom = new Sword(this, GetRandomLocation(random));
-                      
+
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    WeaponInRoom = new Sword(this, GetRandomLocation(random));
+
                     break;
                 case 2:
                     Enemies.Clear();
                     Enemies.Add(new Ghost(this, GetRandomLocation(random)));
                     WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
-                    
+
                     break;
                 case 3:
                     Enemies.Clear();
@@ -130,9 +128,9 @@ namespace Quest2
                     break;
 
                 default:
-                    
+
                     break;
-                    
+
             }
         }
         //---------------랜덤 스폰---------------
@@ -141,9 +139,9 @@ namespace Quest2
             return new Point(boundaries.Left + random.Next(boundaries.Right / 10 - boundaries.Left / 10) * 10, boundaries.Top + random.Next(boundaries.Bottom / 10 - boundaries.Top / 10) * 10);
         }
 
-       // -------------- 전투 --------------
+        // -------------- 전투 --------------
 
-        public void GiveDamageToPlayer(int maxDamage,Random random)
+        public void GiveDamageToPlayer(int maxDamage, Random random)
         {
             Player.Hit(maxDamage, random);
         }
@@ -159,8 +157,8 @@ namespace Quest2
 
         }
 
-        
-       
+
+
 
 
         //--------------- 장비-----------

@@ -7,7 +7,7 @@ namespace Quest2
     {
         public Player(Game game, Point location) : base(game, location)
         {
-            hitPoints = 100;
+            hitPoints = 20;
         }
         //전투-------------------------------
         private int hitPoints;

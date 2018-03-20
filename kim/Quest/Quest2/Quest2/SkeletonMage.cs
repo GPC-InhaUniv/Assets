@@ -53,6 +53,7 @@ namespace Quest2
                 {
                     game.GiveDamageToPlayer(maxDamage, random);
                 }
+               
             }            
         }
     }

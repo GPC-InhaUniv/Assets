@@ -52,10 +52,10 @@ namespace Quest2
         private void Form1_Load(object sender, EventArgs e)
         {
             game = new Game(new Rectangle(78, 57, 420, 155));
-
             random = new Random();
             game.NewLevel(random);
-            UpdateCharacter();
+            UpdateCharacter();         
+
         }
 
         public void UpdateCharacter()
@@ -66,7 +66,8 @@ namespace Quest2
             EnemyCheck();
             InventoryCheck();
             PickUpItem();
-
+            BackGround.Refresh();
+           
             if (game.PlayerHitPoints <= 0)
             {
                 MessageBox.Show("게임 오버!");
@@ -104,7 +105,6 @@ namespace Quest2
             int enemiesShown = 0;
             foreach (Enemy enemy in game.Enemies)
             {
-
                 if (enemy is Bat)
                 {
                     Bat_Pic.Location = enemy.Location;
