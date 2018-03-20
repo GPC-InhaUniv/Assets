@@ -9,7 +9,7 @@ namespace TheQuest
 {
     public interface IPotion
     {
-        bool Used { get; }
+        bool Used { get;}
     }
 
     public class RedPotion : Weapon, IPotion
@@ -39,7 +39,6 @@ namespace TheQuest
                 used = true;
             }
         }
-       
     }
 
     public class BluePotion : Weapon, IPotion
