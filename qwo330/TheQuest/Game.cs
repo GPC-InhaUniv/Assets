@@ -42,12 +42,12 @@ namespace TheQuest
         }
 
         public bool Move(Direction dir, Random randomDirection)
-        {
+        {  
             player.Move(dir);
             bool hitEffect = false;
             foreach (Enemy enemy in Enemies)
             {
-                if(enemy.Move(randomDirection)) hitEffect = true;
+                if(enemy.Move(randomDirection)) hitEffect = true; 
             }
             return hitEffect;
         }

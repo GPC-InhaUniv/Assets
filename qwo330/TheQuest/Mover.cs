@@ -27,13 +27,6 @@ namespace TheQuest
             return false;
         }
 
-        public bool Nearby(Point targetLocation, Point playerLocation, int distance)
-        {
-            if (Math.Abs(playerLocation.X - targetLocation.X) < distance
-                && Math.Abs(playerLocation.Y - targetLocation.Y) < distance) return true;
-            return false;
-        }
-
         public Point Move(Direction dir, Rectangle boundaries)
         {
             switch (dir)
