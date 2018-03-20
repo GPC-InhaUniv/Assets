@@ -195,7 +195,7 @@ namespace TheQuest
                     DrawAttackRange(info.Dir, info.AttackRange);
                     DrawAttackRange(info.Dir + 1, info.AttackRange);
                     DrawAttackRange(info.Dir + 2, info.AttackRange);
-                    DrawAttackRange(info.Dir - 2, info.AttackRange);
+                    DrawAttackRange(info.Dir - 1, info.AttackRange);
                     break;
                 default: break;
             }
@@ -207,7 +207,7 @@ namespace TheQuest
         {
             Color hiteffect = Color.FromArgb(0x30, 0x00, 0x00, 0xff);
             Graphics graphics = CreateGraphics();
-            Pen pen = new Pen(hiteffect, 1.0f);
+            SolidBrush brush = new SolidBrush(hiteffect);
             Rectangle rec;
 
             int size = 30;
@@ -217,21 +217,21 @@ namespace TheQuest
                 case Direction.extendedUp:
                 case Direction.Up:
                     rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y - attackRange + size, size, attackRange);
-                    graphics.DrawRectangle(pen, rec);
+                    graphics.FillRectangle(brush, rec);
                     break;
                 case Direction.extendedRight:
                 case Direction.Right:
                     rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y, attackRange, size);
-                    graphics.DrawRectangle(pen, rec);
+                    graphics.FillRectangle(brush, rec);
                     break;
                 case Direction.Down:
                     rec = new Rectangle(game.PlayerLocation.X, game.PlayerLocation.Y, size, attackRange);
-                    graphics.DrawRectangle(pen, rec);
+                    graphics.FillRectangle(brush, rec);
                     break;
                 case Direction.extendedLeft:
                 case Direction.Left:
                     rec = new Rectangle(game.PlayerLocation.X - attackRange + size, game.PlayerLocation.Y, attackRange, size);
-                    graphics.DrawRectangle(pen, rec);
+                    graphics.FillRectangle(brush, rec);
                     break;
             }
         }
@@ -291,29 +291,45 @@ namespace TheQuest
 
             if (e.Control && e.KeyCode == Keys.W)
             {
-                info = game.PlayerEquipedWeapon.SendAttackRange(Direction.Up);
-                ShowAttackRange(info);
+                if (game.PlayerEquipedWeapon != null)
+                {
+                    info = game.PlayerEquipedWeapon.SendAttackRange(Direction.Up);
+                    ShowAttackRange(info);
+                }
+
                 if (game.Attack(Direction.Up, randomDirection)) EffectThread();
                 UpdateGame();
             }
             else if (e.Control && e.KeyCode == Keys.A)
             {
-                info = game.PlayerEquipedWeapon.SendAttackRange(Direction.Left);
-                ShowAttackRange(info);
+                if (game.PlayerEquipedWeapon != null)
+                {
+                    info = game.PlayerEquipedWeapon.SendAttackRange(Direction.Left);
+                    ShowAttackRange(info);
+                }
+
                 if (game.Attack(Direction.Left, randomDirection)) EffectThread();
                 UpdateGame();
             }
             else if (e.Control && e.KeyCode == Keys.S)
             {
-                info = game.PlayerEquipedWeapon.SendAttackRange(Direction.Down);
-                ShowAttackRange(info);
+                if (game.PlayerEquipedWeapon != null)
+                {
+                    info = game.PlayerEquipedWeapon.SendAttackRange(Direction.Down);
+                    ShowAttackRange(info);
+                }
+
                 if (game.Attack(Direction.Down, randomDirection)) EffectThread();
                 UpdateGame();
             }
             else if (e.Control && e.KeyCode == Keys.D)
             {
-                info = game.PlayerEquipedWeapon.SendAttackRange(Direction.Right);
-                ShowAttackRange(info);
+                if (game.PlayerEquipedWeapon != null)
+                {
+                    info = game.PlayerEquipedWeapon.SendAttackRange(Direction.Right);
+                    ShowAttackRange(info);
+                }
+                
                 if (game.Attack(Direction.Right, randomDirection)) EffectThread();
                 UpdateGame();
             }

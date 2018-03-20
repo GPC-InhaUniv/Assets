@@ -13,12 +13,15 @@ namespace TheQuest
 {
     public partial class Form1 : Form
     {
+        
+
         private Game game;
         private Random random = new Random();
 
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -60,16 +63,9 @@ namespace TheQuest
 
         private void AttackUP_Click(object sender, EventArgs e)
         {
-            game.Attack(MoveDirection.MoveUP, random);
-            Inventory2.Visible = false;
-            Inventory4.Visible = false;
-
-
-            if (game.PlayerPotionUsed )
+            if (Bat1.Visible || Ghost1.Visible || Ghoul1.Visible)
             {
-
-                Inventory2.Visible = false;
-                Inventory4.Visible = false;
+                game.Attack(MoveDirection.MoveUP, random);
             }
 
             UpdateCharacters();
@@ -78,36 +74,27 @@ namespace TheQuest
 
         private void AttackDown_Click(object sender, EventArgs e)
         {
-            game.Attack(MoveDirection.MoveDown, random);
-
-            if (game.PlayerPotionUsed)
+            if (Bat1.Visible || Ghost1.Visible || Ghoul1.Visible)
             {
-                Inventory2.Visible = false;
-                Inventory4.Visible = false;
+                game.Attack(MoveDirection.MoveDown, random);
             }
             UpdateCharacters();
         }
 
         private void AttackLeft_Click(object sender, EventArgs e)
         {
-            game.Attack(MoveDirection.MoveLeft, random);
-
-            if (game.PlayerPotionUsed)
+            if (Bat1.Visible || Ghost1.Visible || Ghoul1.Visible)
             {
-                Inventory2.Visible = false;
-                Inventory4.Visible = false;
+                game.Attack(MoveDirection.MoveLeft, random);
             }
             UpdateCharacters();
         }
 
         private void AttackRight_Click(object sender, EventArgs e)
         {
-            game.Attack(MoveDirection.MoveRight, random);
-
-            if (game.PlayerPotionUsed)
+            if (Bat1.Visible && Ghost1.Visible && Ghoul1.Visible)
             {
-                Inventory2.Visible = false;
-                Inventory4.Visible = false;
+                game.Attack(MoveDirection.MoveRight, random);
             }
             UpdateCharacters();
         }
@@ -246,7 +233,7 @@ namespace TheQuest
                 Inventory3.Visible = true;
 
             }
-            if (!game.PlayerPotionUsed) {
+            //if (!game.PlayerPotionUsed) {
                 if (game.CheckPlayerInventory("BluePotion"))
                 {
                     Inventory2.Visible = true;
@@ -254,9 +241,10 @@ namespace TheQuest
                 }
                 if (game.CheckPlayerInventory("RedPotion"))
                 {
-                    Inventory4.Visible = true; }
+                    Inventory4.Visible = true;
+                }
 
-            } 
+            
             if (game.CheckPlayerInventory("Mace"))
             {
                 Inventory5.Visible = true;
@@ -377,5 +365,7 @@ namespace TheQuest
 
             game.Equip("Bomb");
         }
+
+
     }
 }

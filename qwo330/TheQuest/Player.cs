@@ -35,7 +35,7 @@ namespace TheQuest
         }
 
         public Player(Game game, Point location)
-            : base(game, location) { hitPoints = 10; }
+            : base(game, location) { hitPoints = 100; }
 
         public void Hit(int maxDamage, Random random)
         { hitPoints -= random.Next(1, maxDamage); }
