@@ -24,13 +24,38 @@ namespace Quest2
         }
         public void Attack(Direction direction, Random random)
         {
-            inventory.Add(game.WeaponInRoom);
             
-            if(game.WeaponInRoom is Sword)
+
+            if(equippedWeapon is RedPotion)
             {
-                game.WeaponInRoom.Attack(direction,random);
+                RedPotion item = equippedWeapon as RedPotion;
+                if(item.Used == false)
+                {
+                    IncreaseHealth(10, random);
+                    item.Attack(direction, random);
+                    inventory.Remove(item);
+                    Weapons.Remove(item.Name);
+                }
+                
             }
+            else if (equippedWeapon is BluePotion)
+            {
+                BluePotion item = equippedWeapon as BluePotion;
+                if (item.Used == false)
+                {
+                    IncreaseHealth(10, random);
+                    item.Attack(direction, random);
+                    inventory.Remove(item);
+                    Weapons.Remove(item.Name);
+                }
+
+            }
+
+            else if(equippedWeapon !=null)
+                equippedWeapon.Attack(direction, random);
+
         }
+
         //장비-------------------------------
         private Weapon equippedWeapon;
         public List<Weapon> inventory = new List<Weapon>();
@@ -44,6 +69,7 @@ namespace Quest2
                 foreach (Weapon weapon in inventory)
                 {
                     names.Add(weapon.Name);
+                    Console.WriteLine(weapon);
                 }
                 return names;
             }
@@ -67,6 +93,30 @@ namespace Quest2
 
             location = Move(direction, game.Boundaries);
 
+            //장비 줍기
+            if(!game.WeaponInRoom.PickedUp)
+            {
+                if(Nearby(game.WeaponInRoom.Location, 30))
+                {
+                    if (inventory.Contains(game.WeaponInRoom) == false)
+                    {
+                        inventory.Add(game.WeaponInRoom);
+                        game.WeaponInRoom.PickUpWeapon();
+                    }
+                   
+                }
+            }
+
+            
+
         }
+        // 회복
+
+        public void IncreaseHealth(int health,Random random)
+        {
+            hitPoints += random.Next(1, health);
+        }
+        
+        
     }
 }

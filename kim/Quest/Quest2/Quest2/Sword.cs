@@ -11,7 +11,7 @@ namespace Quest2
     {
         public Sword(Game game, Point location) : base(game, location)
         {
-
+            this.radius = 40;
         }
         public override string Name { get { return "Sword"; } }
 
@@ -21,9 +21,9 @@ namespace Quest2
             int IntegerDirection = (int)direction;
             if (SuccessAttack == false)
             {
-                SuccessAttack = DamageEnemy((Direction)(IntegerDirection % 4), 100, 3, random);
-                SuccessAttack = DamageEnemy((Direction)((IntegerDirection + 1) % 4), 100, 3, random);
-                SuccessAttack = DamageEnemy((Direction)((IntegerDirection + 3) % 4) + 2, 100, 3, random);
+                SuccessAttack = DamageEnemy((Direction)(IntegerDirection % 4), radius, 3, random);
+                SuccessAttack = DamageEnemy((Direction)((IntegerDirection + 1) % 4), radius, 3, random);
+                SuccessAttack = DamageEnemy((Direction)((IntegerDirection + 3) % 4), radius, 3, random);
 
             }
 

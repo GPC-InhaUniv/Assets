@@ -77,10 +77,12 @@ namespace Quest2
         }
         public bool Nearby(Point Enemylocation, Direction direction, int radius)
         {
+              Console.WriteLine(direction);
+            
             switch(direction)
             {
                 case Direction.Up:
-                    if (location.Y - Enemylocation.Y > 0 && location.Y - Enemylocation.Y < radius)
+                    if (game.PlayerLocation.Y - Enemylocation.Y > 0  && Math.Abs(game.PlayerLocation.X - Enemylocation.X) < radius)
                     {
                         return true;
                     }
@@ -88,7 +90,7 @@ namespace Quest2
 
                  
                 case Direction.Down:
-                    if (location.Y - Enemylocation.Y < 0 && location.Y - Enemylocation.Y > - radius)
+                    if (game.PlayerLocation.Y - Enemylocation.Y < 0 && game.PlayerLocation.Y - Enemylocation.Y > - radius && Math.Abs(game.PlayerLocation.X - Enemylocation.X) < radius)
                     {
                         return true;
                     }
@@ -96,14 +98,14 @@ namespace Quest2
                   
                   
                 case Direction.Left:
-                    if(location.X -Enemylocation.X > 0 && location.X - Enemylocation.X <radius)
+                    if(game.PlayerLocation.X -Enemylocation.X > 0 && game.PlayerLocation.X - Enemylocation.X < radius && Math.Abs(game.PlayerLocation.Y - Enemylocation.Y) < radius)
                     {
                         return true;
                     }
                     return false;
                    
                 case Direction.Right:
-                    if(location.X - Enemylocation.X < 0 && location.X - Enemylocation.X > -radius)
+                    if(game.PlayerLocation.X - Enemylocation.X < 0 && game.PlayerLocation.X - Enemylocation.X > -radius && Math.Abs(game.PlayerLocation.Y - Enemylocation.Y) < radius)
                     {
                         return true;
                     }
