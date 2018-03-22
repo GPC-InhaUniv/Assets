@@ -117,6 +117,12 @@ namespace LinkedList
                 temp = temp.Prev;
             }
         }
+
+        public void Remove()
+        {
+            current.Prev.Next = null;
+
+        }
     }
 
     class CircleSingleLinked
@@ -220,7 +226,7 @@ namespace LinkedList
             link.Add(1);
             link.Add(2);
             link.Show();
-
+            Console.WriteLine("삭제");
             link.Remove();
             link.Show();
 
@@ -230,8 +236,12 @@ namespace LinkedList
 
             link2.Add(1);
             link2.Add(2);
+            link2.Add(3);
             link2.Show();
             link2.ReverseShow();
+            Console.WriteLine("삭제");
+            link2.Remove();
+            link2.Show();
 
             Console.WriteLine("원형 단일 연결 리스트");
 
