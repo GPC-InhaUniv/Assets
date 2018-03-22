@@ -1,0 +1,7 @@
+C:\Users\정진영\source\repos\0322_LinkedList_test\0322_LinkedList_test\bin\Debug\0322_LinkedList_test.exe.config
+C:\Users\정진영\source\repos\0322_LinkedList_test\0322_LinkedList_test\bin\Debug\0322_LinkedList_test.exe
+C:\Users\정진영\source\repos\0322_LinkedList_test\0322_LinkedList_test\bin\Debug\0322_LinkedList_test.pdb
+C:\Users\정진영\source\repos\0322_LinkedList_test\0322_LinkedList_test\obj\Debug\0322_LinkedList_test.csprojResolveAssemblyReference.cache
+C:\Users\정진영\source\repos\0322_LinkedList_test\0322_LinkedList_test\obj\Debug\0322_LinkedList_test.csproj.CoreCompileInputs.cache
+C:\Users\정진영\source\repos\0322_LinkedList_test\0322_LinkedList_test\obj\Debug\0322_LinkedList_test.exe
+C:\Users\정진영\source\repos\0322_LinkedList_test\0322_LinkedList_test\obj\Debug\0322_LinkedList_test.pdb
