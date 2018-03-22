@@ -1,0 +1,6 @@
+c:\users\magic\source\repos\LinkedList1\LinkedList1\bin\Debug\LinkedList1.exe
+c:\users\magic\source\repos\LinkedList1\LinkedList1\bin\Debug\LinkedList1.pdb
+c:\users\magic\source\repos\LinkedList1\LinkedList1\obj\Debug\LinkedList1.csprojResolveAssemblyReference.cache
+c:\users\magic\source\repos\LinkedList1\LinkedList1\obj\Debug\LinkedList1.csproj.CoreCompileInputs.cache
+c:\users\magic\source\repos\LinkedList1\LinkedList1\obj\Debug\LinkedList1.exe
+c:\users\magic\source\repos\LinkedList1\LinkedList1\obj\Debug\LinkedList1.pdb
