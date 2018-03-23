@@ -43,7 +43,7 @@ namespace LinkedList
 
         public void PushBack(string elem)
         {
-            Node node = new Node();
+            Node node = new Node(elem);
             Node currentNode = Front;
 
             if (IsEmpty())
@@ -84,6 +84,22 @@ namespace LinkedList
 
         }
 
+        public void Push(string elem, int index)
+        {
+            Node node = new Node(elem);
+            Node currentNode = Front.Next;
+            int count = 0;
+
+            while (count != index - 1)
+            {
+                currentNode = currentNode.Next;
+                count++;
+            }
+            
+            node.Next = currentNode.Next;
+            currentNode.Next = node;
+        }
+
         public void Pop(string targetElem)
         {
             Node currentNode = Front.Next;
@@ -95,6 +111,30 @@ namespace LinkedList
             }
 
             currentNode.Next = currentNode.Next.Next;
+        }
+
+        public void Pop(int index)
+        {
+            Node currentNode = Front.Next;
+            int count = 0;
+
+            while (count != index - 1)
+            {
+                currentNode = currentNode.Next;
+                count++;
+            }
+
+            currentNode.Next = currentNode.Next.Next;
+        }
+
+        public void ShowAll()
+        {
+            Node node = Front.Next;
+            while (node != Back)
+            {
+                Console.WriteLine(node.Elem);
+                node = node.Next;
+            }
         }
     }
 }

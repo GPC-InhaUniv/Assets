@@ -146,5 +146,14 @@ namespace LinkedList
             currentNode.Next.Previous = currentNode.Previous;
         }
         
+        public void ShowAll()
+        {
+            Node node = Front.Next;
+            while(node != Back)
+            {
+                Console.WriteLine(node.Elem);
+                node = node.Next;
+            }
+        }
     }
 }
