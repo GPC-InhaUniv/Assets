@@ -8,6 +8,6 @@ namespace TheQuest
 {
     interface IDrinkable
     {
-        bool Used();
+        bool Used { get; }
     }
 }

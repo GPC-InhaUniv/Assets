@@ -35,8 +35,18 @@ namespace TheQuest
             }
         }
 
-        public bool isUsedBP = false;
-        public bool isUsedRP = false;
+        public bool IsUsed(string weaponName)
+        {            
+            foreach(Weapon weapon in inventory)
+            {
+                if(weapon is IPotion && weapon.Name.Equals(weaponName))
+                {
+                    IPotion potion = weapon as IPotion;
+                    return potion.Used;
+                }
+            }
+            return true;
+        }
 
         public Player(Game game, Point location) : base(game, location)
         {
@@ -85,17 +95,10 @@ namespace TheQuest
             }
             else
             {
-                if(equippedWeapon is IPotion)
+                equippedWeapon.Attack(direction, random);
+                if(equippedWeapon is BluePotion || equippedWeapon is RedPotion)
                 {
-                    IPotion myPotion = equippedWeapon as IPotion;
-                    if(myPotion.Used == false)
-                    {
-                        equippedWeapon.Attack(direction, random);
-                    }
-                }
-                else
-                {
-                    equippedWeapon.Attack(direction, random);
+                    inventory.Remove(equippedWeapon);
                 }
             }
         }

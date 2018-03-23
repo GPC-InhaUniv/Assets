@@ -35,7 +35,7 @@ namespace TheQuest
         }
 
         public Player(Game game, Point location)
-            : base(game, location) { hitPoints = 10; }
+            : base(game, location) { hitPoints = 100; }
 
         public void Hit(int maxDamage, Random random)
         { hitPoints -= random.Next(1, maxDamage); }
@@ -64,10 +64,10 @@ namespace TheQuest
             }
         }
 
-        public void Attack(Direction dir,Random random, Form1 form)
+        public void Attack(Direction dir, Random random)
         {
             if (myWeapon == null) return;
-            myWeapon.Attack(dir, random, form);
+            myWeapon.Attack(dir, random);
 
             if (myWeapon is IDrinkable)
             {

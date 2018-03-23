@@ -43,6 +43,7 @@ namespace TheQuest
         public void PickUpWeapon()
         {
             pickedUp = true;
+
         }
         public abstract string Name { get; }
 

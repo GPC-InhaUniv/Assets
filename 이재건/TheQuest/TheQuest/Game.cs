@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace TheQuest
 {
@@ -73,9 +69,9 @@ namespace TheQuest
                     enemy.Move(random);
         }
 
-        public void EquipWeapon(string weaponName)
+        public void EquipWeapon(Weapon weapon)
         {
-            player.EquipWeapon(weaponName);
+            player.EquipWeapon(weapon);
         }
         
       
@@ -135,23 +131,31 @@ namespace TheQuest
                     Enemies.Add(new Bat(this, GetRandomLocation(random)));
                     //Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
                     //add weapons;
-                    WeaponInRoom = new Weapon(this, GetRandomLocation(random), "sword");
-                    portion[0] = new Weapon(this, GetRandomLocation(random),"bluePortion");
-                    
+                    WeaponInRoom = new Sword(this, GetRandomLocation(random));
+                    portion[0] = new BluePotion(this, GetRandomLocation(random));
                     break;
                 case 2:
                     Enemies = new List<Enemy>();
                     Enemies.Add(new Bat(this, GetRandomLocation(random)));
                     Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
-                    portion[1] = new Weapon(this, GetRandomLocation(random), "redPortion");
-                    WeaponInRoom = new Weapon(this, GetRandomLocation(random), "bow");
+                    portion[1] = new RedPotion(this, GetRandomLocation(random));          
+                    WeaponInRoom = new Bow(this, GetRandomLocation(random));
                     break;
                 case 3:
                     Enemies = new List<Enemy>();
                     Enemies.Add(new Bat(this, GetRandomLocation(random)));
                     Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));  
+                    WeaponInRoom = new Mace(this, GetRandomLocation(random));
+                    break;
+                case 4:
+                    Enemies = new List<Enemy>();
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
                     Enemies.Add(new Ghost(this, GetRandomLocation(random)));
-                    WeaponInRoom = new Weapon(this, GetRandomLocation(random), "mace");
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    portion[0] = new BluePotion(this, GetRandomLocation(random));
                     break;
             }
             player.ResetPlayerPosition();
@@ -165,10 +169,7 @@ namespace TheQuest
                 case 1:
                     Enemies = new List<Enemy>();
                     Enemies.Add(new Bat(this, GetRandomLocation(random)));
-                    //Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
-                    //add weapons;
-                   // WeaponInRoom = new Weapon(this, GetRandomLocation(random), "sword");
-              
+                   
                     break;
                 case 2:
                     Enemies = new List<Enemy>();

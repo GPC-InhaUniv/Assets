@@ -1,0 +1,7 @@
+C:\Users\Administrator\source\repos\LinkedListPractice_pan\LinkedListPractice_pan\bin\Debug\LinkedListPractice_pan.exe.config
+C:\Users\Administrator\source\repos\LinkedListPractice_pan\LinkedListPractice_pan\bin\Debug\LinkedListPractice_pan.exe
+C:\Users\Administrator\source\repos\LinkedListPractice_pan\LinkedListPractice_pan\bin\Debug\LinkedListPractice_pan.pdb
+C:\Users\Administrator\source\repos\LinkedListPractice_pan\LinkedListPractice_pan\obj\Debug\LinkedListPractice_pan.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\source\repos\LinkedListPractice_pan\LinkedListPractice_pan\obj\Debug\LinkedListPractice_pan.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\LinkedListPractice_pan\LinkedListPractice_pan\obj\Debug\LinkedListPractice_pan.exe
+C:\Users\Administrator\source\repos\LinkedListPractice_pan\LinkedListPractice_pan\obj\Debug\LinkedListPractice_pan.pdb

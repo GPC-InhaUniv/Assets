@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 namespace Quest2
 {
@@ -75,6 +71,8 @@ namespace Quest2
             else
                 return false;
         }
+
+
         public bool Nearby(Point Enemylocation, Direction direction, int radius)
         {
               Console.WriteLine(direction);
@@ -82,7 +80,7 @@ namespace Quest2
             switch(direction)
             {
                 case Direction.Up:
-                    if (game.PlayerLocation.Y - Enemylocation.Y > 0  && Math.Abs(game.PlayerLocation.X - Enemylocation.X) < radius)
+                    if (game.PlayerLocation.Y - Enemylocation.Y >= 0  && Math.Abs(game.PlayerLocation.X - Enemylocation.X) < radius)
                     {
                         return true;
                     }
@@ -90,7 +88,7 @@ namespace Quest2
 
                  
                 case Direction.Down:
-                    if (game.PlayerLocation.Y - Enemylocation.Y < 0 && game.PlayerLocation.Y - Enemylocation.Y > - radius && Math.Abs(game.PlayerLocation.X - Enemylocation.X) < radius)
+                    if (game.PlayerLocation.Y - Enemylocation.Y <= 0 && game.PlayerLocation.Y - Enemylocation.Y > - radius && Math.Abs(game.PlayerLocation.X - Enemylocation.X) < radius)
                     {
                         return true;
                     }
@@ -98,14 +96,14 @@ namespace Quest2
                   
                   
                 case Direction.Left:
-                    if(game.PlayerLocation.X -Enemylocation.X > 0 && game.PlayerLocation.X - Enemylocation.X < radius && Math.Abs(game.PlayerLocation.Y - Enemylocation.Y) < radius)
+                    if(game.PlayerLocation.X -Enemylocation.X >= 0 && game.PlayerLocation.X - Enemylocation.X < radius && Math.Abs(game.PlayerLocation.Y - Enemylocation.Y) < radius)
                     {
                         return true;
                     }
                     return false;
                    
                 case Direction.Right:
-                    if(game.PlayerLocation.X - Enemylocation.X < 0 && game.PlayerLocation.X - Enemylocation.X > -radius && Math.Abs(game.PlayerLocation.Y - Enemylocation.Y) < radius)
+                    if(game.PlayerLocation.X - Enemylocation.X <= 0 && game.PlayerLocation.X - Enemylocation.X > -radius && Math.Abs(game.PlayerLocation.Y - Enemylocation.Y) < radius)
                     {
                         return true;
                     }

@@ -15,6 +15,10 @@ namespace TheQuest
         public Weapon WeaponInRoom;
 
         private Player player;
+        public Player Player
+        {
+            get => player;
+        }
 
         public Point PlayerLocation
         {
@@ -138,12 +142,11 @@ namespace TheQuest
                     Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
                     WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
                     break;
-                case 8:
+                default:
+                    Enemies = new List<Enemy>();
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    Application.Exit();
                     break;
-            }
-            if(level == 8)
-            {
-                Application.Exit();
             }
         }
     }

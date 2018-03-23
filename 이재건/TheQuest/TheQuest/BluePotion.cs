@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace TheQuest
@@ -18,21 +14,17 @@ namespace TheQuest
             }
         }
 
-        public BluePotion(Game game,Point location):base(game,location,"bluePotion")
+        public BluePotion(Game game,Point location):base(game,location,"bluePortion")
         {
 
         }
 
-        public void Used()
+        public void Used(Random random)
         {
-            if (game.CheckPlayerInventory("BluePotion"))
-                Console.WriteLine("물약사용");
+            game.UsePotion(increaseHealthPoint,random);
                     
         }
 
-        public void Attack()
-        {
-            Used();
-        }
+       
     }
 }

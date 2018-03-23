@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 
 namespace TheQuest
 {
-    class RedPotion : Weapon
+    class RedPotion : Weapon , IDrinkable
         {
 
-        private bool potionUsed = false;
-        public bool PotionUsed { get { return potionUsed; } }
+
+        private bool used;
+        public bool Used { get { return used; } }
 
         public RedPotion(Game game, Point location)
             : base(game, location)
         {
-            potionUsed = false;
+            used = false;
         }
 
         
@@ -28,42 +29,38 @@ namespace TheQuest
             switch (direction)
             {
                 case MoveDirection.MoveUP:
-                    if (!potionUsed)
+                    if (!used)
                     {
                         game.IncreasePlayerHealth(10, random);
-                        Used();
+                        used = true;
                     }
                     break;
                 case MoveDirection.MoveDown:
-                    if (!potionUsed)
+                    if (!used)
                     {
                         game.IncreasePlayerHealth(10, random);
-                        Used();
-
+                        used = true;
                     }
                     break;
                 case MoveDirection.MoveLeft:
-                    if (!potionUsed)
+                    if (!used)
                     {
                         game.IncreasePlayerHealth(10, random);
-                        Used();
+                        used = true;
                     }
                     break;
                 case MoveDirection.MoveRight:
-                    if (!potionUsed)
+                    if (!used)
                     {
                         game.IncreasePlayerHealth(10, random);
-                        Used();
+                        used = true;
                     }
                     break;
 
             }
 
         }
-        public bool Used()
-        {
-            return potionUsed = true;
-        }
+
     }
     
 }

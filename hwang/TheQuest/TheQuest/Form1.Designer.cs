@@ -63,6 +63,9 @@
             this.GhoulHitPoint = new System.Windows.Forms.Label();
             this.Inventory6 = new System.Windows.Forms.PictureBox();
             this.Bomb1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Shield1 = new System.Windows.Forms.PictureBox();
+            this.Inventory7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sword1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bat1)).BeginInit();
@@ -80,16 +83,18 @@
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Inventory6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bomb1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Shield1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Inventory7)).BeginInit();
             this.SuspendLayout();
             // 
             // Player1
             // 
             this.Player1.BackColor = System.Drawing.Color.Transparent;
             this.Player1.Image = global::TheQuest.Properties.Resources.player;
-            this.Player1.Location = new System.Drawing.Point(161, 109);
-            this.Player1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Player1.Location = new System.Drawing.Point(141, 87);
             this.Player1.Name = "Player1";
-            this.Player1.Size = new System.Drawing.Size(34, 38);
+            this.Player1.Size = new System.Drawing.Size(30, 30);
             this.Player1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Player1.TabIndex = 1;
             this.Player1.TabStop = false;
@@ -98,10 +103,9 @@
             // 
             this.Sword1.BackColor = System.Drawing.Color.Transparent;
             this.Sword1.Image = global::TheQuest.Properties.Resources.sword;
-            this.Sword1.Location = new System.Drawing.Point(202, 109);
-            this.Sword1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Sword1.Location = new System.Drawing.Point(177, 87);
             this.Sword1.Name = "Sword1";
-            this.Sword1.Size = new System.Drawing.Size(34, 38);
+            this.Sword1.Size = new System.Drawing.Size(30, 30);
             this.Sword1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Sword1.TabIndex = 2;
             this.Sword1.TabStop = false;
@@ -110,10 +114,9 @@
             // 
             this.Bat1.BackColor = System.Drawing.Color.Transparent;
             this.Bat1.Image = global::TheQuest.Properties.Resources.bat;
-            this.Bat1.Location = new System.Drawing.Point(243, 109);
-            this.Bat1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Bat1.Location = new System.Drawing.Point(213, 87);
             this.Bat1.Name = "Bat1";
-            this.Bat1.Size = new System.Drawing.Size(34, 38);
+            this.Bat1.Size = new System.Drawing.Size(30, 30);
             this.Bat1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Bat1.TabIndex = 3;
             this.Bat1.TabStop = false;
@@ -122,10 +125,9 @@
             // 
             this.Ghoul1.BackColor = System.Drawing.Color.Transparent;
             this.Ghoul1.Image = global::TheQuest.Properties.Resources.ghoul;
-            this.Ghoul1.Location = new System.Drawing.Point(285, 109);
-            this.Ghoul1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ghoul1.Location = new System.Drawing.Point(249, 87);
             this.Ghoul1.Name = "Ghoul1";
-            this.Ghoul1.Size = new System.Drawing.Size(34, 38);
+            this.Ghoul1.Size = new System.Drawing.Size(30, 30);
             this.Ghoul1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Ghoul1.TabIndex = 4;
             this.Ghoul1.TabStop = false;
@@ -134,10 +136,9 @@
             // 
             this.Ghost1.BackColor = System.Drawing.Color.Transparent;
             this.Ghost1.Image = global::TheQuest.Properties.Resources.ghost;
-            this.Ghost1.Location = new System.Drawing.Point(326, 109);
-            this.Ghost1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Ghost1.Location = new System.Drawing.Point(285, 87);
             this.Ghost1.Name = "Ghost1";
-            this.Ghost1.Size = new System.Drawing.Size(34, 38);
+            this.Ghost1.Size = new System.Drawing.Size(30, 30);
             this.Ghost1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Ghost1.TabIndex = 5;
             this.Ghost1.TabStop = false;
@@ -146,10 +147,9 @@
             // 
             this.Bow1.BackColor = System.Drawing.Color.Transparent;
             this.Bow1.Image = global::TheQuest.Properties.Resources.bow;
-            this.Bow1.Location = new System.Drawing.Point(367, 109);
-            this.Bow1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Bow1.Location = new System.Drawing.Point(321, 87);
             this.Bow1.Name = "Bow1";
-            this.Bow1.Size = new System.Drawing.Size(34, 38);
+            this.Bow1.Size = new System.Drawing.Size(30, 30);
             this.Bow1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Bow1.TabIndex = 6;
             this.Bow1.TabStop = false;
@@ -158,10 +158,9 @@
             // 
             this.BluePotion1.BackColor = System.Drawing.Color.Transparent;
             this.BluePotion1.Image = global::TheQuest.Properties.Resources.potion_blue;
-            this.BluePotion1.Location = new System.Drawing.Point(408, 109);
-            this.BluePotion1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BluePotion1.Location = new System.Drawing.Point(357, 87);
             this.BluePotion1.Name = "BluePotion1";
-            this.BluePotion1.Size = new System.Drawing.Size(34, 38);
+            this.BluePotion1.Size = new System.Drawing.Size(30, 30);
             this.BluePotion1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BluePotion1.TabIndex = 7;
             this.BluePotion1.TabStop = false;
@@ -170,10 +169,9 @@
             // 
             this.RedPotion1.BackColor = System.Drawing.Color.Transparent;
             this.RedPotion1.Image = global::TheQuest.Properties.Resources.potion_red;
-            this.RedPotion1.Location = new System.Drawing.Point(449, 109);
-            this.RedPotion1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.RedPotion1.Location = new System.Drawing.Point(393, 87);
             this.RedPotion1.Name = "RedPotion1";
-            this.RedPotion1.Size = new System.Drawing.Size(34, 38);
+            this.RedPotion1.Size = new System.Drawing.Size(30, 30);
             this.RedPotion1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.RedPotion1.TabIndex = 8;
             this.RedPotion1.TabStop = false;
@@ -182,10 +180,9 @@
             // 
             this.Mace1.BackColor = System.Drawing.Color.Transparent;
             this.Mace1.Image = global::TheQuest.Properties.Resources.mace;
-            this.Mace1.Location = new System.Drawing.Point(490, 109);
-            this.Mace1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Mace1.Location = new System.Drawing.Point(429, 87);
             this.Mace1.Name = "Mace1";
-            this.Mace1.Size = new System.Drawing.Size(34, 38);
+            this.Mace1.Size = new System.Drawing.Size(30, 30);
             this.Mace1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Mace1.TabIndex = 9;
             this.Mace1.TabStop = false;
@@ -194,10 +191,9 @@
             // 
             this.Inventory1.BackColor = System.Drawing.Color.Transparent;
             this.Inventory1.Image = global::TheQuest.Properties.Resources.sword;
-            this.Inventory1.Location = new System.Drawing.Point(98, 408);
-            this.Inventory1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Inventory1.Location = new System.Drawing.Point(70, 326);
             this.Inventory1.Name = "Inventory1";
-            this.Inventory1.Size = new System.Drawing.Size(57, 62);
+            this.Inventory1.Size = new System.Drawing.Size(50, 50);
             this.Inventory1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Inventory1.TabIndex = 10;
             this.Inventory1.TabStop = false;
@@ -207,10 +203,9 @@
             // 
             this.Inventory2.BackColor = System.Drawing.Color.Transparent;
             this.Inventory2.Image = global::TheQuest.Properties.Resources.potion_blue;
-            this.Inventory2.Location = new System.Drawing.Point(161, 408);
-            this.Inventory2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Inventory2.Location = new System.Drawing.Point(121, 326);
             this.Inventory2.Name = "Inventory2";
-            this.Inventory2.Size = new System.Drawing.Size(57, 62);
+            this.Inventory2.Size = new System.Drawing.Size(50, 50);
             this.Inventory2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Inventory2.TabIndex = 11;
             this.Inventory2.TabStop = false;
@@ -220,10 +215,9 @@
             // 
             this.Inventory3.BackColor = System.Drawing.Color.Transparent;
             this.Inventory3.Image = global::TheQuest.Properties.Resources.bow;
-            this.Inventory3.Location = new System.Drawing.Point(224, 410);
-            this.Inventory3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Inventory3.Location = new System.Drawing.Point(172, 326);
             this.Inventory3.Name = "Inventory3";
-            this.Inventory3.Size = new System.Drawing.Size(57, 62);
+            this.Inventory3.Size = new System.Drawing.Size(50, 50);
             this.Inventory3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Inventory3.TabIndex = 12;
             this.Inventory3.TabStop = false;
@@ -233,10 +227,9 @@
             // 
             this.Inventory4.BackColor = System.Drawing.Color.Transparent;
             this.Inventory4.Image = global::TheQuest.Properties.Resources.potion_red;
-            this.Inventory4.Location = new System.Drawing.Point(287, 410);
-            this.Inventory4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Inventory4.Location = new System.Drawing.Point(223, 326);
             this.Inventory4.Name = "Inventory4";
-            this.Inventory4.Size = new System.Drawing.Size(57, 62);
+            this.Inventory4.Size = new System.Drawing.Size(50, 50);
             this.Inventory4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Inventory4.TabIndex = 13;
             this.Inventory4.TabStop = false;
@@ -246,10 +239,9 @@
             // 
             this.Inventory5.BackColor = System.Drawing.Color.Transparent;
             this.Inventory5.Image = global::TheQuest.Properties.Resources.mace;
-            this.Inventory5.Location = new System.Drawing.Point(350, 408);
-            this.Inventory5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Inventory5.Location = new System.Drawing.Point(274, 326);
             this.Inventory5.Name = "Inventory5";
-            this.Inventory5.Size = new System.Drawing.Size(57, 62);
+            this.Inventory5.Size = new System.Drawing.Size(50, 50);
             this.Inventory5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Inventory5.TabIndex = 14;
             this.Inventory5.TabStop = false;
@@ -258,18 +250,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(726, 26);
+            this.label1.Location = new System.Drawing.Point(635, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 15);
+            this.label1.Size = new System.Drawing.Size(36, 12);
             this.label1.TabIndex = 15;
             this.label1.Text = "Move";
             // 
             // MoveUp
             // 
-            this.MoveUp.Location = new System.Drawing.Point(773, 60);
-            this.MoveUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MoveUp.Location = new System.Drawing.Point(676, 48);
             this.MoveUp.Name = "MoveUp";
-            this.MoveUp.Size = new System.Drawing.Size(86, 29);
+            this.MoveUp.Size = new System.Drawing.Size(75, 23);
             this.MoveUp.TabIndex = 16;
             this.MoveUp.Text = "Up";
             this.MoveUp.UseVisualStyleBackColor = true;
@@ -277,10 +268,9 @@
             // 
             // MoveLeft
             // 
-            this.MoveLeft.Location = new System.Drawing.Point(722, 96);
-            this.MoveLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MoveLeft.Location = new System.Drawing.Point(632, 77);
             this.MoveLeft.Name = "MoveLeft";
-            this.MoveLeft.Size = new System.Drawing.Size(86, 29);
+            this.MoveLeft.Size = new System.Drawing.Size(75, 23);
             this.MoveLeft.TabIndex = 17;
             this.MoveLeft.Text = "Left";
             this.MoveLeft.UseVisualStyleBackColor = true;
@@ -288,10 +278,9 @@
             // 
             // MoveRight
             // 
-            this.MoveRight.Location = new System.Drawing.Point(815, 96);
-            this.MoveRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MoveRight.Location = new System.Drawing.Point(713, 77);
             this.MoveRight.Name = "MoveRight";
-            this.MoveRight.Size = new System.Drawing.Size(86, 29);
+            this.MoveRight.Size = new System.Drawing.Size(75, 23);
             this.MoveRight.TabIndex = 18;
             this.MoveRight.Text = "Right";
             this.MoveRight.UseVisualStyleBackColor = true;
@@ -299,10 +288,9 @@
             // 
             // MoveDown
             // 
-            this.MoveDown.Location = new System.Drawing.Point(773, 132);
-            this.MoveDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MoveDown.Location = new System.Drawing.Point(676, 106);
             this.MoveDown.Name = "MoveDown";
-            this.MoveDown.Size = new System.Drawing.Size(86, 29);
+            this.MoveDown.Size = new System.Drawing.Size(75, 23);
             this.MoveDown.TabIndex = 19;
             this.MoveDown.Text = "Down";
             this.MoveDown.UseVisualStyleBackColor = true;
@@ -311,18 +299,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(720, 180);
+            this.label2.Location = new System.Drawing.Point(630, 144);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 15);
+            this.label2.Size = new System.Drawing.Size(39, 12);
             this.label2.TabIndex = 20;
             this.label2.Text = "Attack";
             // 
             // AttackUP
             // 
-            this.AttackUP.Location = new System.Drawing.Point(773, 219);
-            this.AttackUP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AttackUP.Location = new System.Drawing.Point(676, 175);
             this.AttackUP.Name = "AttackUP";
-            this.AttackUP.Size = new System.Drawing.Size(86, 29);
+            this.AttackUP.Size = new System.Drawing.Size(75, 23);
             this.AttackUP.TabIndex = 21;
             this.AttackUP.Text = "Up";
             this.AttackUP.UseVisualStyleBackColor = true;
@@ -330,10 +317,9 @@
             // 
             // AttackLeft
             // 
-            this.AttackLeft.Location = new System.Drawing.Point(722, 255);
-            this.AttackLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AttackLeft.Location = new System.Drawing.Point(632, 204);
             this.AttackLeft.Name = "AttackLeft";
-            this.AttackLeft.Size = new System.Drawing.Size(86, 29);
+            this.AttackLeft.Size = new System.Drawing.Size(75, 23);
             this.AttackLeft.TabIndex = 22;
             this.AttackLeft.Text = "Left";
             this.AttackLeft.UseVisualStyleBackColor = true;
@@ -341,10 +327,9 @@
             // 
             // AttackRight
             // 
-            this.AttackRight.Location = new System.Drawing.Point(815, 255);
-            this.AttackRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AttackRight.Location = new System.Drawing.Point(713, 204);
             this.AttackRight.Name = "AttackRight";
-            this.AttackRight.Size = new System.Drawing.Size(86, 29);
+            this.AttackRight.Size = new System.Drawing.Size(75, 23);
             this.AttackRight.TabIndex = 23;
             this.AttackRight.Text = "Right";
             this.AttackRight.UseVisualStyleBackColor = true;
@@ -352,10 +337,9 @@
             // 
             // AttackDown
             // 
-            this.AttackDown.Location = new System.Drawing.Point(773, 291);
-            this.AttackDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AttackDown.Location = new System.Drawing.Point(676, 233);
             this.AttackDown.Name = "AttackDown";
-            this.AttackDown.Size = new System.Drawing.Size(86, 29);
+            this.AttackDown.Size = new System.Drawing.Size(75, 23);
             this.AttackDown.TabIndex = 24;
             this.AttackDown.Text = "Down";
             this.AttackDown.UseVisualStyleBackColor = true;
@@ -374,15 +358,14 @@
             this.tableLayoutPanel1.Controls.Add(this.BatHitPoint, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.GhostHitPoint, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.GhoulHitPoint, 1, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(698, 358);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(611, 286);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(215, 154);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(188, 123);
             this.tableLayoutPanel1.TabIndex = 25;
             // 
             // label3
@@ -393,7 +376,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 38);
+            this.label3.Size = new System.Drawing.Size(88, 30);
             this.label3.TabIndex = 0;
             this.label3.Text = "Player";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -404,9 +387,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 38);
+            this.label4.Location = new System.Drawing.Point(3, 30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 38);
+            this.label4.Size = new System.Drawing.Size(88, 30);
             this.label4.TabIndex = 1;
             this.label4.Text = "Bat";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -417,9 +400,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 76);
+            this.label5.Location = new System.Drawing.Point(3, 60);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 38);
+            this.label5.Size = new System.Drawing.Size(88, 30);
             this.label5.TabIndex = 2;
             this.label5.Text = "Ghost";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -430,9 +413,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 114);
+            this.label6.Location = new System.Drawing.Point(3, 90);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 40);
+            this.label6.Size = new System.Drawing.Size(88, 33);
             this.label6.TabIndex = 3;
             this.label6.Text = "Ghoul";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -443,9 +426,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PlayerHitPoint.AutoSize = true;
-            this.PlayerHitPoint.Location = new System.Drawing.Point(110, 0);
+            this.PlayerHitPoint.Location = new System.Drawing.Point(97, 0);
             this.PlayerHitPoint.Name = "PlayerHitPoint";
-            this.PlayerHitPoint.Size = new System.Drawing.Size(102, 38);
+            this.PlayerHitPoint.Size = new System.Drawing.Size(88, 30);
             this.PlayerHitPoint.TabIndex = 4;
             this.PlayerHitPoint.Text = "PlayerHitPoint";
             this.PlayerHitPoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -456,9 +439,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BatHitPoint.AutoSize = true;
-            this.BatHitPoint.Location = new System.Drawing.Point(110, 38);
+            this.BatHitPoint.Location = new System.Drawing.Point(97, 30);
             this.BatHitPoint.Name = "BatHitPoint";
-            this.BatHitPoint.Size = new System.Drawing.Size(102, 38);
+            this.BatHitPoint.Size = new System.Drawing.Size(88, 30);
             this.BatHitPoint.TabIndex = 5;
             this.BatHitPoint.Text = "BatHitPoint";
             this.BatHitPoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -469,9 +452,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GhostHitPoint.AutoSize = true;
-            this.GhostHitPoint.Location = new System.Drawing.Point(110, 76);
+            this.GhostHitPoint.Location = new System.Drawing.Point(97, 60);
             this.GhostHitPoint.Name = "GhostHitPoint";
-            this.GhostHitPoint.Size = new System.Drawing.Size(102, 38);
+            this.GhostHitPoint.Size = new System.Drawing.Size(88, 30);
             this.GhostHitPoint.TabIndex = 6;
             this.GhostHitPoint.Text = "GhostHitPoint";
             this.GhostHitPoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -482,9 +465,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GhoulHitPoint.AutoSize = true;
-            this.GhoulHitPoint.Location = new System.Drawing.Point(110, 114);
+            this.GhoulHitPoint.Location = new System.Drawing.Point(97, 90);
             this.GhoulHitPoint.Name = "GhoulHitPoint";
-            this.GhoulHitPoint.Size = new System.Drawing.Size(102, 40);
+            this.GhoulHitPoint.Size = new System.Drawing.Size(88, 33);
             this.GhoulHitPoint.TabIndex = 7;
             this.GhoulHitPoint.Text = "GhoulHitPoint";
             this.GhoulHitPoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -493,9 +476,10 @@
             // 
             this.Inventory6.BackColor = System.Drawing.Color.Transparent;
             this.Inventory6.Image = global::TheQuest.Properties.Resources.bomb1;
-            this.Inventory6.Location = new System.Drawing.Point(413, 408);
+            this.Inventory6.Location = new System.Drawing.Point(325, 326);
+            this.Inventory6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Inventory6.Name = "Inventory6";
-            this.Inventory6.Size = new System.Drawing.Size(57, 62);
+            this.Inventory6.Size = new System.Drawing.Size(50, 50);
             this.Inventory6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Inventory6.TabIndex = 26;
             this.Inventory6.TabStop = false;
@@ -505,20 +489,57 @@
             // 
             this.Bomb1.BackColor = System.Drawing.Color.Transparent;
             this.Bomb1.Image = global::TheQuest.Properties.Resources.bomb;
-            this.Bomb1.Location = new System.Drawing.Point(107, 109);
+            this.Bomb1.Location = new System.Drawing.Point(465, 87);
+            this.Bomb1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bomb1.Name = "Bomb1";
-            this.Bomb1.Size = new System.Drawing.Size(34, 38);
+            this.Bomb1.Size = new System.Drawing.Size(30, 30);
             this.Bomb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Bomb1.TabIndex = 27;
             this.Bomb1.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::TheQuest.Properties.Resources.dungeon600x400;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(596, 399);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Shield1
+            // 
+            this.Shield1.BackColor = System.Drawing.Color.Transparent;
+            this.Shield1.Image = global::TheQuest.Properties.Resources.shield;
+            this.Shield1.Location = new System.Drawing.Point(105, 87);
+            this.Shield1.Name = "Shield1";
+            this.Shield1.Size = new System.Drawing.Size(30, 30);
+            this.Shield1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Shield1.TabIndex = 29;
+            this.Shield1.TabStop = false;
+            // 
+            // Inventory7
+            // 
+            this.Inventory7.BackColor = System.Drawing.Color.Transparent;
+            this.Inventory7.Image = global::TheQuest.Properties.Resources.shield;
+            this.Inventory7.Location = new System.Drawing.Point(377, 326);
+            this.Inventory7.Name = "Inventory7";
+            this.Inventory7.Size = new System.Drawing.Size(50, 50);
+            this.Inventory7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Inventory7.TabIndex = 30;
+            this.Inventory7.TabStop = false;
+            this.Inventory7.Click += new System.EventHandler(this.Inventory7_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TheQuest.Properties.Resources.dungeon600x400;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(944, 581);
+            this.ClientSize = new System.Drawing.Size(826, 465);
+            this.Controls.Add(this.Inventory7);
+            this.Controls.Add(this.Shield1);
             this.Controls.Add(this.Player1);
             this.Controls.Add(this.Bomb1);
             this.Controls.Add(this.Inventory6);
@@ -546,7 +567,7 @@
             this.Controls.Add(this.Ghoul1);
             this.Controls.Add(this.Bat1);
             this.Controls.Add(this.Sword1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -568,6 +589,9 @@
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Inventory6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bomb1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Shield1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Inventory7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -609,6 +633,9 @@
         private System.Windows.Forms.Label GhoulHitPoint;
         private System.Windows.Forms.PictureBox Inventory6;
         private System.Windows.Forms.PictureBox Bomb1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Shield1;
+        private System.Windows.Forms.PictureBox Inventory7;
     }
 }
 

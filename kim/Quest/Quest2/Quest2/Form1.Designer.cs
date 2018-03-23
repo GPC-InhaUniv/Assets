@@ -64,6 +64,7 @@
             this.GhoulHP = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.BossHP = new System.Windows.Forms.Label();
+            this.BackGround = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player_Pic)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Bat_Pic)).BeginInit();
@@ -81,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Bow_Inven_Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BluePotion_Inven_Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Skeleton_Pic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackGround)).BeginInit();
             this.SuspendLayout();
             // 
             // Player_Pic
@@ -456,13 +458,23 @@
             this.BossHP.TabIndex = 31;
             this.BossHP.Text = "0";
             // 
+            // BackGround
+            // 
+            this.BackGround.Image = ((System.Drawing.Image)(resources.GetObject("BackGround.Image")));
+            this.BackGround.Location = new System.Drawing.Point(0, 0);
+            this.BackGround.Name = "BackGround";
+            this.BackGround.Size = new System.Drawing.Size(600, 400);
+            this.BackGround.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.BackGround.TabIndex = 32;
+            this.BackGround.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(990, 399);
+            this.ClientSize = new System.Drawing.Size(822, 399);
             this.Controls.Add(this.BossHP);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.GhoulHP);
@@ -490,6 +502,7 @@
             this.Controls.Add(this.Bow_Drop_Pic);
             this.Controls.Add(this.Mace_Drop_Pic);
             this.Controls.Add(this.Sword_Drop_Pic);
+            this.Controls.Add(this.BackGround);
             this.Name = "Form1";
             this.Text = "The Quest";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -510,6 +523,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Bow_Inven_Pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BluePotion_Inven_Pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Skeleton_Pic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackGround)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -552,6 +566,7 @@
         private System.Windows.Forms.Label GhoulHP;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label BossHP;
+        private System.Windows.Forms.PictureBox BackGround;
     }
 }
 

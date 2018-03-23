@@ -27,18 +27,11 @@ namespace TheQuest
             return false;
         }
 
-        public bool Nearby(Point targetLocation, Point playerLocation, int distance)
-        {
-            if (Math.Abs(playerLocation.X - targetLocation.X) < distance
-                && Math.Abs(playerLocation.Y - targetLocation.Y) < distance) return true;
-            return false;
-        }
-
         public Point Move(Direction dir, Rectangle boundaries)
         {
             switch (dir)
             {
-                case Direction.up:
+                case Direction.extendedUp:
                 case Direction.Up:
                     if((location.Y - MovePixel) >= boundaries.Top)
                         location.Y -= MovePixel;
@@ -48,12 +41,13 @@ namespace TheQuest
                     if ((location.Y + MovePixel) <= boundaries.Bottom)
                         location.Y += MovePixel;
                     break;
-                case Direction.left:
+                case Direction.extendedLeft:
                 case Direction.Left:
                     if ((location.X - MovePixel) >= boundaries.Left)
                         location.X -= MovePixel;
                     break;
 
+                case Direction.extendedRight:
                 case Direction.Right:
                     if ((location.X + MovePixel) <= boundaries.Right)
                         location.X += MovePixel;
