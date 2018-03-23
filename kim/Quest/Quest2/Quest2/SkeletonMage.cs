@@ -11,11 +11,9 @@ namespace Quest2
             boundaries = game.Boundaries;
             maxDamage = 3;    
         }
-
         public override void Move(Random random)
         {
             int AI = random.Next(10);
-
             if (HitPoints > 20)
             {
                 if (AI % 3 == 0)
@@ -28,7 +26,6 @@ namespace Quest2
                     MoveControl(Direction.Stop, random);
                 }
             }
-
             else if (HitPoints > 10)
             {
                 if (AI % 2 == 0)
@@ -39,7 +36,6 @@ namespace Quest2
                 {
                     MoveControl(Direction.Stop, random);
                 }
-
                 if (base.Nearby(game.PlayerLocation, 50))
                 {
                     game.GiveDamageToPlayer(maxDamage, random);
@@ -53,6 +49,7 @@ namespace Quest2
                 {
                     game.GiveDamageToPlayer(maxDamage, random);
                 }
+               
             }            
         }
     }

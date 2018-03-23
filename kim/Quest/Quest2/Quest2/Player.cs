@@ -5,14 +5,13 @@ namespace Quest2
 {
     class Player : Mover, IHitable
     {
-        public Player(Game game, Point location) : base(game, location)
-        {
-            hitPoints = 100;
-        }
-        //전투-------------------------------
         private int hitPoints;
         public int HitPoints { get { return hitPoints; } }
-
+        public Player(Game game, Point location) : base(game, location)
+        {
+            hitPoints = 20;
+        }
+        //전투-------------------------------     
         public void Hit(int maxDamage, Random random)
         {
             hitPoints -= random.Next(1, maxDamage);
@@ -29,7 +28,6 @@ namespace Quest2
                     inventory.Remove(item);
                     Weapons.Remove(item.Name);
                 }
-                
             }
             else if (equippedWeapon is BluePotion)
             {
@@ -41,24 +39,18 @@ namespace Quest2
                     inventory.Remove(item);
                     Weapons.Remove(item.Name);
                 }
-
             }
-
             else if(equippedWeapon !=null)
                 equippedWeapon.Attack(direction, random);
-
         }
-
         //장비-------------------------------
         private Weapon equippedWeapon;
         public List<Weapon> inventory = new List<Weapon>();
-        
-
-        public List<string> Weapons
+        public List<WeaponName> Weapons
         {
             get
             {
-                List<string> names = new List<string>();
+                List<WeaponName> names = new List<WeaponName>();
                 foreach (Weapon weapon in inventory)
                 {
                     names.Add(weapon.Name);
@@ -66,25 +58,20 @@ namespace Quest2
                 return names;
             }
         }
-
-        public void Equip(string weaponName)
+        public void Equip(WeaponName weaponName)
         {
             foreach(Weapon weapon in inventory)
             {
-                if(weapon.Name == weaponName)
+                if(weapon.Name.Equals(weaponName))
                 {
                     equippedWeapon = weapon;
                 }
             }
         }
-
-
         // 이동-------------------------------
         public void Move(Direction direction)
         {
-
             location = Move(direction, game.Boundaries);
-
             //장비 줍기
             if(!game.WeaponInRoom.PickedUp)
             {
@@ -95,21 +82,14 @@ namespace Quest2
                         Console.WriteLine(inventory.Contains(game.WeaponInRoom));
                         inventory.Add(game.WeaponInRoom);
                         game.WeaponInRoom.PickUpWeapon();
-                    }
-                   
+                    }                  
                 }
             }
-
-            
-
         }
         // 회복
-
         public void IncreaseHealth(int health,Random random)
         {
             hitPoints += random.Next(1, health);
-        }
-        
-        
+        } 
     }
 }

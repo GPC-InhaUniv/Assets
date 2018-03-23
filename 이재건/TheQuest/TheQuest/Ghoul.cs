@@ -1,21 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace TheQuest
 {
     class Ghoul : Enemy
     {
-        private int attackDamage = 4;
-        public Ghoul(Game game, Point location) : base(game, location, 10)
+        private int attackDamage = Utility.GHOULAD;
+        public Ghoul(Game game, Point location) : base(game, location, Utility.GHOULHP)
         {
 
         }
 
-      
         public override void Move(Random random)
         {
             if (base.NearPlayer())

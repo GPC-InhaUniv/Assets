@@ -12,7 +12,7 @@ namespace Quest2
             this.radius = 75;
             maxDamage = 1;
         }
-        public override string Name { get { return "Bow"; } }
+        public override WeaponName Name { get { return WeaponName.Bow; } }
 
         public override void Attack(Direction direction, Random random)
         {

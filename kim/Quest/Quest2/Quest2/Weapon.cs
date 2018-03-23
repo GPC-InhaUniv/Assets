@@ -14,14 +14,10 @@ namespace Quest2
         {
             pickedUp = false;
         }
-
-        public abstract string Name { get; }
-
+        public abstract WeaponName Name { get; }
         public abstract void Attack(Direction direction, Random random);
-
         protected bool DamageEnemy(Direction direction, int radius, Random random)
         {
-          
             Point target = game.PlayerLocation;
             foreach(Enemy enemy in game.Enemies)
             {
@@ -29,21 +25,16 @@ namespace Quest2
                 {
                     if (Nearby(enemy.Location, direction, radius))
                     {
-
                         enemy.Hit(maxDamage, random);
                         return true;
                     }
                 }
-                
             }
-
             return false;
         }
-       
         public void PickUpWeapon()
         {
             pickedUp = true;
         }
-
     }
 }

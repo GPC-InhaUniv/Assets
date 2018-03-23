@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
-using System.Diagnostics;
+
 namespace TheQuest
 {
 
@@ -47,7 +43,7 @@ namespace TheQuest
             }
             else if (direction == Direction.Down)
             {
-                if (locationToCheck.Y- location.Y >= 0 && location.Y + distance <= locationToCheck.Y && Math.Abs(location.X- locationToCheck.X) < distance)
+                if (locationToCheck.Y- location.Y >= 0 && location.Y + distance >= locationToCheck.Y && Math.Abs(location.X- locationToCheck.X) < distance)
                     return true;
             }
             else if (direction == Direction.Right)
@@ -97,36 +93,31 @@ namespace TheQuest
             return newLocation;
         }
 
-        public bool MoveToInventory(string name)
+        public bool MoveToInventory(Weapon weapon)
         {
-            if (name == "sword")
+            if ( weapon is Sword)
             {
-                location.X = 89;
-                location.Y = 318;
+                location = Utility.SwordInventoryPosition;
                 return true;
             }
-            else if (name == "bow")
+            else if (weapon is Bow)
             {
-                location.X = 164;
-                location.Y = 318;
+                location = Utility.BowInventoryPosition;
                 return true;
             }
-            else if (name == "mace")
+            else if (weapon is Mace)
             {
-                location.X = 237;
-                location.Y = 318;
+                location = Utility.MaceInventoryPosition;
                 return true;
             }
-            else if (name == "bluePortion")
+            else if (weapon is BluePotion)
             {
-                location.X = 317;
-                location.Y = 318;
+                location = Utility.BluePortionInventoryPosition;
                 return true;
             }
-            else if(name=="redPortion")
+            else if (weapon is RedPotion)
             {
-                location.X = 377;
-                location.Y = 318;
+                location = Utility.RedPortionInventoryPosition;
                 return true;
             }
 

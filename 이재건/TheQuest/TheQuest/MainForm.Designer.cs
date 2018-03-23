@@ -252,6 +252,7 @@
             // playerImage
             // 
             this.playerImage.BackColor = System.Drawing.Color.Transparent;
+            this.playerImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.playerImage.ImageLocation = "";
             this.playerImage.Location = new System.Drawing.Point(89, 139);
             this.playerImage.Name = "playerImage";
@@ -357,7 +358,7 @@
             // 
             this.PostionImage2.BackColor = System.Drawing.Color.Transparent;
             this.PostionImage2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PostionImage2.Location = new System.Drawing.Point(206, 175);
+            this.PostionImage2.Location = new System.Drawing.Point(262, 107);
             this.PostionImage2.Name = "PostionImage2";
             this.PostionImage2.Size = new System.Drawing.Size(50, 50);
             this.PostionImage2.TabIndex = 31;
@@ -373,13 +374,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(884, 461);
-            this.Controls.Add(this.PostionImage2);
-            this.Controls.Add(this.PostionImage1);
             this.Controls.Add(this.PopImage);
+            this.Controls.Add(this.playerImage);
             this.Controls.Add(this.GhoulImage1);
             this.Controls.Add(this.GhostImage1);
             this.Controls.Add(this.BatImage1);
-            this.Controls.Add(this.playerImage);
+            this.Controls.Add(this.PostionImage2);
+            this.Controls.Add(this.PostionImage1);
             this.Controls.Add(this.WeaponImage3);
             this.Controls.Add(this.WeaponImage2);
             this.Controls.Add(this.WeaponImage1);

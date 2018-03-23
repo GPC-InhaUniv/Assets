@@ -157,7 +157,7 @@ namespace TheQuest
             {
                 pictureItemMace.Visible = false;
             }
-            if (game.CheckPlayerInventory("Blue Potion"))
+            if (game.CheckPlayerInventory("Blue Potion") && !game.Player.IsUsed("Blue Potion"))
             {
                 pictureItemBP.Visible = true;
             }
@@ -165,7 +165,7 @@ namespace TheQuest
             {
                 pictureItemBP.Visible = false;
             }
-            if (game.CheckPlayerInventory("Red Potion"))
+            if (game.CheckPlayerInventory("Red Potion") && !game.Player.IsUsed("Red Potion"))
             {
                 pictureItemRP.Visible = true;
             }
@@ -186,10 +186,12 @@ namespace TheQuest
                 MessageBox.Show("You died");
                 Application.Exit();
             }
-            if(enemiesShown < 1)
+
+            if (enemiesShown < 1)
             {
                 MessageBox.Show("You have defeated the enemies on this level");
                 game.NewLevel(random);
+                
                 UpdateCharacters();
             }
         }
@@ -220,7 +222,6 @@ namespace TheQuest
 
         private void buttonAttackUp_Click(object sender, EventArgs e)
         {
-            int currentHP = game.PlayerHitPoint;
             game.Attack(Mover.Direction.Up, random);
             UpdateCharacters();
         }
@@ -250,6 +251,11 @@ namespace TheQuest
                 game.Equip("Sword");
                 buttonAttackUp.Text = "Up";
             }
+
+            buttonAttackDown.Enabled = true;
+            buttonAttackLeft.Enabled = true;
+            buttonAttackRight.Enabled = true;
+
             pictureItemSword.BorderStyle = BorderStyle.Fixed3D;
             pictureItemBow.BorderStyle = BorderStyle.None;
             pictureItemMace.BorderStyle = BorderStyle.None;
@@ -265,6 +271,11 @@ namespace TheQuest
                 game.Equip("Bow");
                 buttonAttackUp.Text = "Up";
             }
+
+            buttonAttackDown.Enabled = true;
+            buttonAttackLeft.Enabled = true;
+            buttonAttackRight.Enabled = true;
+
             pictureItemSword.BorderStyle = BorderStyle.None;
             pictureItemBow.BorderStyle = BorderStyle.Fixed3D;
             pictureItemMace.BorderStyle = BorderStyle.None;
@@ -279,6 +290,11 @@ namespace TheQuest
                 game.Equip("Mace");
                 buttonAttackUp.Text = "Up";
             }
+
+            buttonAttackDown.Enabled = true;
+            buttonAttackLeft.Enabled = true;
+            buttonAttackRight.Enabled = true;
+
             pictureItemSword.BorderStyle = BorderStyle.None;
             pictureItemBow.BorderStyle = BorderStyle.None;
             pictureItemMace.BorderStyle = BorderStyle.Fixed3D;
@@ -293,6 +309,11 @@ namespace TheQuest
                 game.Equip("Blue Potion");
                 buttonAttackUp.Text = "Drink";
             }
+
+            buttonAttackDown.Enabled = false;
+            buttonAttackLeft.Enabled = false;
+            buttonAttackRight.Enabled = false;
+
             pictureItemSword.BorderStyle = BorderStyle.None;
             pictureItemBow.BorderStyle = BorderStyle.None;
             pictureItemMace.BorderStyle = BorderStyle.None;
@@ -307,6 +328,11 @@ namespace TheQuest
                 game.Equip("Red Potion");
                 buttonAttackUp.Text = "Drink";
             }
+
+            buttonAttackDown.Enabled = false;
+            buttonAttackLeft.Enabled = false;
+            buttonAttackRight.Enabled = false;
+
             pictureItemSword.BorderStyle = BorderStyle.None;
             pictureItemBow.BorderStyle = BorderStyle.None;
             pictureItemMace.BorderStyle = BorderStyle.None;
@@ -350,23 +376,28 @@ namespace TheQuest
             }
             if (e.KeyCode == Keys.D1)
             {
-                pictureItemSword_Click(sender, e);
+                if (pictureItemSword.Visible == true)
+                    pictureItemSword_Click(sender, e);
             }
             if (e.KeyCode == Keys.D2)
             {
-                pictureItemBow_Click(sender, e);
+                if (pictureItemBow.Visible == true)
+                    pictureItemBow_Click(sender, e);
             }
             if (e.KeyCode == Keys.D3)
             {
-                pictureItemMace_Click(sender, e);
+                if (pictureItemMace.Visible == true)
+                    pictureItemMace_Click(sender, e);
             }
             if (e.KeyCode == Keys.D4)
             {
+                if(pictureItemBP.Visible == true)
                 pictureItemBP_Click(sender, e);
             }
             if (e.KeyCode == Keys.D5)
             {
-                pictureItemRP_Click(sender, e);
+                if (pictureItemRP.Visible == true)
+                    pictureItemRP_Click(sender, e);
             }
         }
     }
