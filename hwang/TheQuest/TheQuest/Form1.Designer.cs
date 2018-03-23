@@ -64,6 +64,8 @@
             this.Inventory6 = new System.Windows.Forms.PictureBox();
             this.Bomb1 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Shield1 = new System.Windows.Forms.PictureBox();
+            this.Inventory7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sword1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bat1)).BeginInit();
@@ -82,6 +84,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Inventory6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bomb1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Shield1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Inventory7)).BeginInit();
             this.SuspendLayout();
             // 
             // Player1
@@ -187,7 +191,7 @@
             // 
             this.Inventory1.BackColor = System.Drawing.Color.Transparent;
             this.Inventory1.Image = global::TheQuest.Properties.Resources.sword;
-            this.Inventory1.Location = new System.Drawing.Point(86, 326);
+            this.Inventory1.Location = new System.Drawing.Point(70, 326);
             this.Inventory1.Name = "Inventory1";
             this.Inventory1.Size = new System.Drawing.Size(50, 50);
             this.Inventory1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -199,7 +203,7 @@
             // 
             this.Inventory2.BackColor = System.Drawing.Color.Transparent;
             this.Inventory2.Image = global::TheQuest.Properties.Resources.potion_blue;
-            this.Inventory2.Location = new System.Drawing.Point(141, 326);
+            this.Inventory2.Location = new System.Drawing.Point(121, 326);
             this.Inventory2.Name = "Inventory2";
             this.Inventory2.Size = new System.Drawing.Size(50, 50);
             this.Inventory2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -211,7 +215,7 @@
             // 
             this.Inventory3.BackColor = System.Drawing.Color.Transparent;
             this.Inventory3.Image = global::TheQuest.Properties.Resources.bow;
-            this.Inventory3.Location = new System.Drawing.Point(196, 328);
+            this.Inventory3.Location = new System.Drawing.Point(172, 326);
             this.Inventory3.Name = "Inventory3";
             this.Inventory3.Size = new System.Drawing.Size(50, 50);
             this.Inventory3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -223,7 +227,7 @@
             // 
             this.Inventory4.BackColor = System.Drawing.Color.Transparent;
             this.Inventory4.Image = global::TheQuest.Properties.Resources.potion_red;
-            this.Inventory4.Location = new System.Drawing.Point(251, 328);
+            this.Inventory4.Location = new System.Drawing.Point(223, 326);
             this.Inventory4.Name = "Inventory4";
             this.Inventory4.Size = new System.Drawing.Size(50, 50);
             this.Inventory4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -235,7 +239,7 @@
             // 
             this.Inventory5.BackColor = System.Drawing.Color.Transparent;
             this.Inventory5.Image = global::TheQuest.Properties.Resources.mace;
-            this.Inventory5.Location = new System.Drawing.Point(306, 326);
+            this.Inventory5.Location = new System.Drawing.Point(274, 326);
             this.Inventory5.Name = "Inventory5";
             this.Inventory5.Size = new System.Drawing.Size(50, 50);
             this.Inventory5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -472,7 +476,7 @@
             // 
             this.Inventory6.BackColor = System.Drawing.Color.Transparent;
             this.Inventory6.Image = global::TheQuest.Properties.Resources.bomb1;
-            this.Inventory6.Location = new System.Drawing.Point(361, 326);
+            this.Inventory6.Location = new System.Drawing.Point(325, 326);
             this.Inventory6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Inventory6.Name = "Inventory6";
             this.Inventory6.Size = new System.Drawing.Size(50, 50);
@@ -485,7 +489,7 @@
             // 
             this.Bomb1.BackColor = System.Drawing.Color.Transparent;
             this.Bomb1.Image = global::TheQuest.Properties.Resources.bomb;
-            this.Bomb1.Location = new System.Drawing.Point(94, 87);
+            this.Bomb1.Location = new System.Drawing.Point(465, 87);
             this.Bomb1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bomb1.Name = "Bomb1";
             this.Bomb1.Size = new System.Drawing.Size(30, 30);
@@ -504,6 +508,29 @@
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             // 
+            // Shield1
+            // 
+            this.Shield1.BackColor = System.Drawing.Color.Transparent;
+            this.Shield1.Image = global::TheQuest.Properties.Resources.shield;
+            this.Shield1.Location = new System.Drawing.Point(105, 87);
+            this.Shield1.Name = "Shield1";
+            this.Shield1.Size = new System.Drawing.Size(30, 30);
+            this.Shield1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Shield1.TabIndex = 29;
+            this.Shield1.TabStop = false;
+            // 
+            // Inventory7
+            // 
+            this.Inventory7.BackColor = System.Drawing.Color.Transparent;
+            this.Inventory7.Image = global::TheQuest.Properties.Resources.shield;
+            this.Inventory7.Location = new System.Drawing.Point(377, 326);
+            this.Inventory7.Name = "Inventory7";
+            this.Inventory7.Size = new System.Drawing.Size(50, 50);
+            this.Inventory7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Inventory7.TabIndex = 30;
+            this.Inventory7.TabStop = false;
+            this.Inventory7.Click += new System.EventHandler(this.Inventory7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -511,6 +538,8 @@
             this.BackgroundImage = global::TheQuest.Properties.Resources.dungeon600x400;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(826, 465);
+            this.Controls.Add(this.Inventory7);
+            this.Controls.Add(this.Shield1);
             this.Controls.Add(this.Player1);
             this.Controls.Add(this.Bomb1);
             this.Controls.Add(this.Inventory6);
@@ -561,6 +590,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Inventory6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bomb1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Shield1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Inventory7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -603,6 +634,8 @@
         private System.Windows.Forms.PictureBox Inventory6;
         private System.Windows.Forms.PictureBox Bomb1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Shield1;
+        private System.Windows.Forms.PictureBox Inventory7;
     }
 }
 
