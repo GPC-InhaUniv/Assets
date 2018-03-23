@@ -1,0 +1,5 @@
+C:\Users\hoha4\Desktop\링크드리스트\링크드리스트\bin\Debug\링크드리스트.exe
+C:\Users\hoha4\Desktop\링크드리스트\링크드리스트\bin\Debug\링크드리스트.pdb
+C:\Users\hoha4\Desktop\링크드리스트\링크드리스트\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\hoha4\Desktop\링크드리스트\링크드리스트\obj\Debug\링크드리스트.exe
+C:\Users\hoha4\Desktop\링크드리스트\링크드리스트\obj\Debug\링크드리스트.pdb
