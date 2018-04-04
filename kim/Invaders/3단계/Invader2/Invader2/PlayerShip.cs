@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using System.Drawing;
 namespace Invader2
 {
     class PlayerShip
@@ -13,30 +8,30 @@ namespace Invader2
         public Point Location { get { return location; } }
         public Rectangle Area;
         public bool Alive { get; private set; }
-        private Bitmap PlayerImage;
+        private Bitmap playerImage;
         private Rectangle boundaries;
         public int Life;
-        public PlayerShip(Rectangle boundaries, int Life)
+        public PlayerShip(Rectangle boundaries, int life)
         {
             this.boundaries = boundaries;
             location.X = boundaries.Width / 2 - 27;
             location.Y = boundaries.Height - 80;
-            PlayerImage = Properties.Resources.player;
-            Area = new Rectangle(location, PlayerImage.Size);
+            playerImage = Properties.Resources.player;
+            Area = new Rectangle(location, playerImage.Size);
             Alive = true;
-            this.Life = Life;
+            this.Life = life;
         }
         public void Draw(Graphics g)
         {
 
             if (Life == 2)
-                g.DrawImage(PlayerImage, new Rectangle(location.X, location.Y, PlayerImage.Width, PlayerImage.Height - 10));
+                g.DrawImage(playerImage, new Rectangle(location.X, location.Y, playerImage.Width, playerImage.Height - 10));
             else if (Life == 1)
-                g.DrawImage(PlayerImage, new Rectangle(location.X, location.Y, PlayerImage.Width, PlayerImage.Height - 20));
+                g.DrawImage(playerImage, new Rectangle(location.X, location.Y, playerImage.Width, playerImage.Height - 20));
             else if( Life == 0)
-                g.DrawImage(PlayerImage, new Rectangle(location.X, location.Y, PlayerImage.Width, PlayerImage.Height - 30));
+                g.DrawImage(playerImage, new Rectangle(location.X, location.Y, playerImage.Width, playerImage.Height - 30));
             else
-                g.DrawImage(PlayerImage, location);
+                g.DrawImage(playerImage, location);
 
         }
 

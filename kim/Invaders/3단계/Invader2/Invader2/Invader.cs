@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace Invader2
 {
@@ -25,29 +20,23 @@ namespace Invader2
         private InvaderType type;
         public InvaderType Type { get { return type; } }
         public Rectangle Area;
-        //private Bitmap Image;
+        
         private Game game;
-        public int AttackFlag=0;
         private int score;
         public int Score { get { return score; } }
 
-        public Invader(Point Location,InvaderType Type ,Game Game,int AttackFlag)
+        public Invader(Point location,InvaderType type ,Game game)
         {
-            location = Location;
-            type = Type;
-            game = Game;
-            this.AttackFlag = AttackFlag;
-           
-            //Image = game.ImageStorage.InvaderImage(0, Type);
-            //Area = new Rectangle(this.Location, Image.Size);
-            Area = new Rectangle(this.Location, game.ImageStorage.InvaderImage(0, Type).Size);
+            this.location = location;
+            this.type = type;
+            this.game = game;
+            Area = new Rectangle(Location, game.ImageStorage.InvaderImage(0, Type).Size);
             MatchingScore();
         }
 
-        public void Draw(Graphics g, int AnimationChell)
-        {
-            //Image = game.ImageStorage.InvaderImage(AnimationChell, this.Type);
-            g.DrawImage(game.ImageStorage.InvaderImage(AnimationChell, Type), Location);
+        public void Draw(Graphics g, int animationCell)
+        {   
+            g.DrawImage(game.ImageStorage.InvaderImage(animationCell, Type), Location);
         }
 
         public void Move(Direction direction)

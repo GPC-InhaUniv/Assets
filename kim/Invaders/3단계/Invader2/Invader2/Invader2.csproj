@@ -54,7 +54,7 @@
     <Compile Include="Game.cs" />
     <Compile Include="GameOver.cs" />
     <Compile Include="Invader.cs" />
-    <Compile Include="InvaderFlyWeight.cs" />
+    <Compile Include="FlyWeight.cs" />
     <Compile Include="PlayerShip.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -152,6 +152,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\star2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bullet2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bullet1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

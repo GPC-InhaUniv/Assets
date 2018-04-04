@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Invader2
@@ -23,14 +18,14 @@ namespace Invader2
         List<Keys> KeysPressed;
         Game game;
         Stars star;
-        int AnimationCount;
+        int animationCount;
         Random random;
         private void MainForm_Load(object sender, EventArgs e)
         {
             // 초기화
             KeysPressed = new List<Keys>();
             game = new Game(new Rectangle(new Point(0,0), this.Size));
-            AnimationCount = 1;
+            animationCount = 1;
             random =new Random();
             star = new Stars(random);
             //타이머 시작
@@ -112,13 +107,13 @@ namespace Invader2
 
         private void AnimationTimer_Tick(object sender, EventArgs e)
         {
-            AnimationCount++;
-            if (AnimationCount > 4)
+            animationCount++;
+            if (animationCount > 4)
             {
-                AnimationCount = 1;
+                animationCount = 1;
                 star.Twinkle(random);
             }
-            game.Animation(AnimationCount);
+            game.Animation(animationCount);
             Invalidate();
 
         }
