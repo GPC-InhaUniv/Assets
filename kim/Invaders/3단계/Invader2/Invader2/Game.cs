@@ -23,6 +23,7 @@ namespace Invader2
 
         int Life = 3;
         private int score;
+        private int wave;
         public Game(Rectangle boundaries)
         {
             this.boundaries = boundaries;
@@ -36,6 +37,7 @@ namespace Invader2
             InvaderBullet = new List<Shot>();
 
             random = new Random();
+            wave = 1;
         }
         private void MakeInvader()
         {
@@ -149,6 +151,8 @@ namespace Invader2
                 }
             }
 
+            LevelUp();
+
         }
 
         private void MoveInader()
@@ -198,7 +202,7 @@ namespace Invader2
 
         public void InvadersShoting(Invader Enemy)
         {
-            if (InvaderBullet.Count < 2)
+            if (InvaderBullet.Count < 2 + wave -1)
             {
                 InvaderBullet.Add(new Shot(new Point(Enemy.Location.X + 20, Enemy.Location.Y), Direction.Down, boundaries));
             }
@@ -297,6 +301,16 @@ namespace Invader2
             }
         }
 
+        public void LevelUp()
+        {
+            if(Invaders.Count == 0)
+            {
+                wave++;
+                Player.Life++;
+                MakeInvader();
+
+            }
+        }
        
 
 

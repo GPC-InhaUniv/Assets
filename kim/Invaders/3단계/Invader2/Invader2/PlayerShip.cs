@@ -10,7 +10,7 @@ namespace Invader2
     {
         private const int MoveLen = 10;
         private Point location;
-        public Point Location {get{return location;}}
+        public Point Location { get { return location; } }
         public Rectangle Area;
         public bool Alive { get; private set; }
         private Bitmap PlayerImage;
@@ -19,7 +19,7 @@ namespace Invader2
         public PlayerShip(Rectangle boundaries, int Life)
         {
             this.boundaries = boundaries;
-            location.X = boundaries.Width / 2 -27;
+            location.X = boundaries.Width / 2 - 27;
             location.Y = boundaries.Height - 80;
             PlayerImage = Properties.Resources.player;
             Area = new Rectangle(location, PlayerImage.Size);
@@ -28,15 +28,18 @@ namespace Invader2
         }
         public void Draw(Graphics g)
         {
-            if (Life == 3)
-                g.DrawImage(PlayerImage, location);
-            else if (Life == 2)
+
+            if (Life == 2)
                 g.DrawImage(PlayerImage, new Rectangle(location.X, location.Y, PlayerImage.Width, PlayerImage.Height - 10));
             else if (Life == 1)
                 g.DrawImage(PlayerImage, new Rectangle(location.X, location.Y, PlayerImage.Width, PlayerImage.Height - 20));
- 
+            else if( Life == 0)
+                g.DrawImage(PlayerImage, new Rectangle(location.X, location.Y, PlayerImage.Width, PlayerImage.Height - 30));
+            else
+                g.DrawImage(PlayerImage, location);
+
         }
-        
+
         public void Move(Direction direction)
         {
             if (Alive)
@@ -44,14 +47,14 @@ namespace Invader2
                 switch (direction)
                 {
                     case Direction.Left:
-                        if (boundaries.Left+50 < this.location.X)
+                        if (boundaries.Left + 50 < this.location.X)
                         {
                             location.X -= MoveLen;
                             Area.Location = location;
                         }
                         break;
                     case Direction.Right:
-                        if (boundaries.Right-120 > this.location.X)
+                        if (boundaries.Right - 120 > this.location.X)
                         {
                             location.X += MoveLen;
                             Area.Location = location;
