@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bat.cs" />
+    <Compile Include="BluePotion.cs" />
     <Compile Include="Bow.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="Enemy.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedPotion.cs" />
     <Compile Include="Sword.cs" />
     <Compile Include="Weapon.cs" />
     <EmbeddedResource Include="Form1.resx">
