@@ -48,8 +48,21 @@ namespace HeadFirst_Invader
 
         public bool ShockWave = false;
         public bool KillInvader = false;
+        
+        public  event EventHandler gameover;
 
-     
+        public void OccurGameoverEvent(GameOverEvent e)
+        {
+            if (gameover != null)
+                gameover(this, e);
+        }
+
+        public void RemoveInvaders()
+        {
+
+            invaders.Clear();
+            
+        }
 
         public Game(Rectangle windowSize)
         {
@@ -65,7 +78,7 @@ namespace HeadFirst_Invader
             playerhp = new PlayerHp(this);
             invaderScoreLabelList = new List<Invader>();
             itemlist = new List<Items>();
-          
+            
 
             playerShots = new List<Shot>();
             invaderShots = new List<Shot>();
@@ -83,7 +96,8 @@ namespace HeadFirst_Invader
 
             itemlist.Add(new Items(ItemType.HpPortion, this));
             itemlist.Add(new Items(ItemType.BulletPortion, this));
-
+            
+           
         }
 
 
@@ -104,7 +118,6 @@ namespace HeadFirst_Invader
             }
             for (int i = 0; i < 5; i++)
             {
-
                 invaders.Add(InvaderFactory.MakeInvader(InvaderType.Bug));
 
             }
@@ -176,7 +189,9 @@ namespace HeadFirst_Invader
                         liveLeft--;
                         ShockWave = true;
                         player.AttackByInvader();
+
                         invaders[i].Alive = false;
+
 
                     }
                 }
@@ -215,8 +230,9 @@ namespace HeadFirst_Invader
                                 if (playerCurrentShotCount < 0)
                                     playerCurrentShotCount = 0;
 
-                                invaderScoreLabelList.Add(invaders[j]);
-                                KillInvader = true;
+                                invaderScoreLabelList.Add(invaders[j]);  //인베이더 점수 시스템 저장 리스트
+
+                                KillInvader = true;             //타격 시 invader 사망 bool 값 true
 
                                 if (itemlist[0].Alive == false)
                                 {
@@ -246,7 +262,7 @@ namespace HeadFirst_Invader
 
         public void InvaderBulletCollsionCheck()
         {
-            //몬스터와 캐릭터 미사일 충돌 이벤트
+            //몬스터 총알과 캐릭터  충돌 이벤트
             for (int i = 0; i < invaderShots.Count; i++)
             {
                 if (invaderShots[i].Alive == true)
@@ -273,9 +289,11 @@ namespace HeadFirst_Invader
                         invaderShots[i].Alive = false;
                         if (invaderCurrentShotCount < 0)
                             invaderCurrentShotCount = 0;
+
                         ShockWave = true;
                         liveLeft--;
                         player.AttackByInvader();
+
 
                     }
                 }

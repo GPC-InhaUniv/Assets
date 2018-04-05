@@ -10,8 +10,8 @@ namespace HeadFirst_Invader
         protected Pen pen = new Pen(Color.Blue);
 
         public bool Alive = true;
-      
-        
+
+
         abstract public void Draw(Graphics g);
         abstract public void Move(Direction direction);
 

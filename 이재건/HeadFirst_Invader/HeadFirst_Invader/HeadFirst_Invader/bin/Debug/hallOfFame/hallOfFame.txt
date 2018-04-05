@@ -1,6 +1,0 @@
-PlayerName		Score
-UnKnown1		#750
-UnKnown2		#370
-UnKnown3		#190
-UnKnown4		#110
-UnKnown5		#0

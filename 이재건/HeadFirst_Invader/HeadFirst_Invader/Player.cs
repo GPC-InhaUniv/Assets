@@ -5,9 +5,9 @@ namespace HeadFirst_Invader
 {
     class Player : Objects
     {
-        List<Image> playerImageList;
+        private List<Image> playerImageList;
         private int currentImageCount = 0;
-        
+
         public Point Location { get { return location; } }
 
         Game game;
@@ -39,11 +39,12 @@ namespace HeadFirst_Invader
 
         public override void Draw(Graphics g)
         {
+
             g.DrawImage(playerImageList[currentImageCount], location);
-//#if DEBUG
-//            g.DrawRectangle(pen, location.X, location.Y, size.Width, size.Height);
-//#endif
-            
+            //#if DEBUG
+            //            g.DrawRectangle(pen, location.X, location.Y, size.Width, size.Height);
+            //#endif
+
         }
 
         public override void Move(Direction direction)
@@ -67,12 +68,12 @@ namespace HeadFirst_Invader
                     location.X += 10;
                 }
             }
-//#if DEBUG
-//            if (direction == Direction.Up)
-//            {
-//                location.Y -= 10;
-//            }
-//#endif
+            //#if DEBUG
+            //            if (direction == Direction.Up)
+            //            {
+            //                location.Y -= 10;
+            //            }
+            //#endif
         }
 
         public void AttackByInvader()

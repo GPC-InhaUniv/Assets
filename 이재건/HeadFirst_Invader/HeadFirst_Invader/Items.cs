@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace HeadFirst_Invader
 {
@@ -14,21 +9,21 @@ namespace HeadFirst_Invader
 
         Bitmap bitmap;
         Game game;
-        public Items(ItemType item,Game game)
+        public Items(ItemType item, Game game)
         {
-            
+
             this.game = game;
             this.itemType = item;
             this.Alive = false;
             string path = "";
-            
+
             if (this.itemType == ItemType.HpPortion)
             {
                 path = @"images\portion.png";
                 bitmap = new Bitmap(path);
             }
 
-            else if(this.itemType==ItemType.BulletPortion)
+            else if (this.itemType == ItemType.BulletPortion)
             {
                 path = @"images\AttackPortion.png";
                 bitmap = new Bitmap(path);
@@ -43,8 +38,8 @@ namespace HeadFirst_Invader
             this.Alive = true;
         }
 
-      
- 
+
+
 
         public void GetItem(Player p)
         {
@@ -61,29 +56,29 @@ namespace HeadFirst_Invader
                 }
                 else if (this.itemType == ItemType.BulletPortion)
                     game.GetBulletItem();
-                    
+
             }
-           
+
         }
 
-   
+
 
 
         public override void Draw(Graphics g)
         {
-            if(this.Alive)
+            if (this.Alive)
             {
-              
-                    g.DrawImage(bitmap, this.location);
-              
-             
+
+                g.DrawImage(bitmap, this.location);
+
+
             }
         }
 
 
         public override void Move(Direction direction)
         {
-            location.Y+=5;
+            location.Y += 5;
             if (location.Y >= game.Boundaries.Bottom - 50)
             {
                 this.Alive = false;

@@ -13,10 +13,10 @@ namespace HeadFirst_Invader
             public Point point;
             public Pen randompen;
 
-            public Star(Point point,Random random)
+            public Star(Point point, Random random)
             {
                 this.point = point;
-                this.randompen=new Pen(Color.FromArgb(random.Next(0, 256), random.Next(0, 256), 0));
+                this.randompen = new Pen(Color.FromArgb(random.Next(0, 256), random.Next(0, 256), 0));
 
 
             }
@@ -31,7 +31,7 @@ namespace HeadFirst_Invader
             {
                 temp.X = random.Next(boundaries.Left, boundaries.Right);
                 temp.Y = random.Next(boundaries.Top, boundaries.Bottom);
-                stars.Add(new Star(temp,random));
+                stars.Add(new Star(temp, random));
             }
         }
 
@@ -46,15 +46,15 @@ namespace HeadFirst_Invader
             throw new System.NotImplementedException();
         }
 
-        public void AddandDelete(Random random,Rectangle boundaries)
+        public void AddandDelete(Random random, Rectangle boundaries)
         {
             Point temp = new Point();
             for (int i = 0; i < 5; i++)
             {
                 temp.X = random.Next(boundaries.Left, boundaries.Right);
                 temp.Y = random.Next(boundaries.Top, boundaries.Bottom);
-                 stars.RemoveAt(i);
-                stars.Add(new Star(temp,random));
+                stars.RemoveAt(i);
+                stars.Add(new Star(temp, random));
             }
 
         }

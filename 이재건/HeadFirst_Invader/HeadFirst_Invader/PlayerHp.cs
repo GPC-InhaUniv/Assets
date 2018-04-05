@@ -17,12 +17,12 @@ namespace HeadFirst_Invader
             this.game = game;
             string path = @"images\player0.png";
             hpImageList = new List<Image>();
-            Location.X = game.Boundaries.Width/2-100;
+            Location.X = game.Boundaries.Width / 2 - 100;
             Location.Y = game.Boundaries.Top;
 
 
             hpImageList.Add(Image.FromFile(path));
-     
+
 
         }
 
@@ -32,12 +32,12 @@ namespace HeadFirst_Invader
             Point temp = Location;
             for (int i = 0; i <= game.LiveLeft; i++)
             {
-              
+
                 g.DrawImage(hpImageList[0], temp);
                 temp.X += interval;
 
             }
-            
+
         }
     }
 }

@@ -24,7 +24,7 @@ namespace HeadFirst_Invader
         public int CurrentImagePostion = 0;
         List<Image> InvaderImageList;
 
-      
+
 
         public Invader(InvaderType invaderType, Point location, int score)
         {
@@ -90,16 +90,16 @@ namespace HeadFirst_Invader
         public override void Draw(Graphics g)
         {
             g.DrawImage(InvaderImageList[CurrentImagePostion], location);
-//#if DEBUG
-//            g.DrawRectangle(pen, location.X, location.Y, size.Width, size.Height);
-//#endif
+            //#if DEBUG
+            //            g.DrawRectangle(pen, location.X, location.Y, size.Width, size.Height);
+            //#endif
         }
 
         public override void Move(Direction direction)
         {
             if (direction == Direction.Left)
             {
-                 location.X -= HorizontalInterval;
+                location.X -= HorizontalInterval;
             }
             else if (direction == Direction.Down)
             {
@@ -107,9 +107,9 @@ namespace HeadFirst_Invader
             }
             else if (direction == Direction.Right)
             {
-                 location.X += HorizontalInterval;
+                location.X += HorizontalInterval;
             }
-           
+
         }
 
         public void ResetInvaderPosition(Point location)
@@ -117,6 +117,6 @@ namespace HeadFirst_Invader
             this.location = location;
         }
 
-     
+
     }
 }

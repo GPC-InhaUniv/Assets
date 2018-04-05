@@ -11,9 +11,11 @@ namespace HeadFirst_Invader
     public partial class MainForm : Form
     {
         Game game;
+        GameOverEvent gameoverevent=new GameOverEvent();
+
         private SoundPlayer backgroundSound;
         private SoundPlayer shotSound;
-       
+
         Dictionary<string, int> gameData;
         List<Keys> keyPressEvent;
 
@@ -33,7 +35,7 @@ namespace HeadFirst_Invader
 
         Label[] invaderscroeLabel = new Label[5];
         int ShowScoreTick = 0;
-     
+
         public MainForm()
         {
             InitializeComponent();
@@ -46,14 +48,15 @@ namespace HeadFirst_Invader
 
             gameData = new Dictionary<string, int>();
             game = new Game(this.ClientRectangle);
-            
+
             leftrightlabel.Location = gamestarpos;
             MainImage.Load(@"images\mainimage.png");
             backgroundSound = new SoundPlayer();
             backgroundSound.SoundLocation = @"bgm\invaderBgm.wav";
             shotSound = new SoundPlayer();
             shotSound.SoundLocation = @"bgm\playerShot.wav";
-            
+
+          
 
         }
 
@@ -69,7 +72,7 @@ namespace HeadFirst_Invader
         {
             game.Draw(e.Graphics);      //evnet handler 사용!
         }
-
+     
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             if (keyPressEvent.Count() >= 1)
@@ -103,48 +106,9 @@ namespace HeadFirst_Invader
                     animationTimer.Interval -= game.FramesSkipped;
             }
 
-            if (game.LiveLeft< 0 && gameOver == false && gameStart == true)
+            if (game.LiveLeft < 0 && gameOver == false && gameStart == true)
             {
-                gameOver = true;
-                string message = "Game Over...\n Your Total Score: " + scoreLabel.Text.ToString();
-                
-                MessageBox.Show(message);
-                string line;
-                string temp = "";
-               
-                List<int> loadScore = new List<int>();
-                using (StreamReader textreader = new StreamReader(@"hallOfFame\hallOfFame.txt"))
-                {
-
-                    while ((line = textreader.ReadLine()) != null)
-                    {
-                        for (int i = 0; i < line.Length; i++)
-                        {
-                            if (line[i] == '#')
-                            {
-                                temp = line.Substring(i + 1, line.Length - (i + 1));
-                                loadScore.Add(Convert.ToInt32(temp));
-                            }
-                        }
-                    }
-                }
-                loadScore.Add(game.Score);
-
-                var sortingScore = from score in loadScore
-                                   orderby score descending
-                                   select score;
-
-                using (StreamWriter streamwriter = new StreamWriter(@"hallOfFame\hallOfFame.txt"))
-                {
-                    streamwriter.WriteLine("PlayerName		Score");
-                    for (int i = 0; i < 5; i++)
-                    {
-                        streamwriter.WriteLine("UnKnown"+(i+1)+"		#" + sortingScore.ElementAt(i).ToString());
-                    }
-
-                }
-
-                Application.Exit();
+                game.OccurGameoverEvent(new GameOverEvent());
             }
 
             this.Refresh();
@@ -216,7 +180,7 @@ namespace HeadFirst_Invader
 
         private void animationTimer_Tick(object sender, EventArgs e)
         {
-            if (gameStart)
+            if (gameStart && !gameOver)
             {
                 game.MoveNextImage();
                 game.MoveInvaders();
@@ -229,6 +193,50 @@ namespace HeadFirst_Invader
 
             this.Refresh();
         }
+        private void GameOverEvnet(object o, EventArgs e)
+        {
+            gameOver = true;
+            string message = "Game Over...\n Your Total Score: " + scoreLabel.Text.ToString();
+
+            MessageBox.Show(message);
+            string line;
+            string temp = "";
+
+            List<int> loadScore = new List<int>();
+            using (StreamReader textreader = new StreamReader(@"hallOfFame\hallOfFame.txt"))
+            {
+
+                while ((line = textreader.ReadLine()) != null)
+                {
+                    for (int i = 0; i < line.Length; i++)
+                    {
+                        if (line[i] == '#')
+                        {
+                            temp = line.Substring(i + 1, line.Length - (i + 1));
+                            loadScore.Add(Convert.ToInt32(temp));
+                        }
+                    }
+                }
+            }
+
+            loadScore.Add(game.Score);
+
+            var sortingScore = from score in loadScore
+                               orderby score descending
+                               select score;
+
+            using (StreamWriter streamwriter = new StreamWriter(@"hallOfFame\hallOfFame.txt"))
+            {
+                streamwriter.WriteLine("PlayerName		Score");
+                for (int i = 0; i < 5; i++)
+                {
+                    streamwriter.WriteLine("UnKnown" + (i + 1) + "		#" + sortingScore.ElementAt(i).ToString());
+                }
+
+            }
+
+            Application.Exit();
+        }
 
         private void KeyDownEvent(object sender, KeyEventArgs e)
         {
@@ -236,12 +244,6 @@ namespace HeadFirst_Invader
             if (e.KeyCode == Keys.Q)
             {
                 Application.Exit();
-            }
-
-            if (gameOver)
-            {
-                if (e.KeyCode == Keys.S)
-                    return;
             }
 
             if (e.KeyCode == Keys.Space && gameStart)
@@ -279,12 +281,15 @@ namespace HeadFirst_Invader
             {
                 if (!gameStart)
                 {
-                        if (leftrightlabel.Location.Y == 307)
+                
+                    if (leftrightlabel.Location.Y == 307)
                     {
+                        game = null;
                         gameStart = true;
                         gameData.Add("Unknown", 0);
+                        
                         game = new Game(this.ClientRectangle);
-
+                        game.gameover += new EventHandler(GameOverEvnet);
                         for (int i = 0; i < 5; i++)
                         {
                             invaderscroeLabel[i] = new System.Windows.Forms.Label();
@@ -305,8 +310,9 @@ namespace HeadFirst_Invader
                             gameStartLabel.Visible = false;
                             HallOfFameLabel.Visible = false;
                             ExitLabel.Visible = false;
-                         
+
                         }
+                        
                     }
                     else if (leftrightlabel.Location.Y == 358)
                     {
@@ -318,10 +324,10 @@ namespace HeadFirst_Invader
                             while ((line = textreader.ReadLine()) != null)
                             {
                                 strarr = line.Split(' ');
-                                temp += line+"\n";
+                                temp += line + "\n";
                             }
                         }
-                        MessageBox.Show(temp,"Hall Of Frame!!");
+                        MessageBox.Show(temp, "Hall Of Frame!!");
 
                         leftrightlabel.Location = gamestarpos;
                     }
@@ -329,7 +335,7 @@ namespace HeadFirst_Invader
                     {
                         Application.Exit();
                     }
-               
+
                 }
             }
 
@@ -369,7 +375,7 @@ namespace HeadFirst_Invader
 
         private void invaderShotTimer_Tick(object sender, EventArgs e)
         {
-            if (gameStart)
+            if (gameStart && !gameOver)
                 game.InvaderShot();
         }
 
