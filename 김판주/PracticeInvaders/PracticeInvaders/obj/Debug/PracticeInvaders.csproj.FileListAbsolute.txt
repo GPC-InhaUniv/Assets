@@ -1,0 +1,10 @@
+C:\Users\hrd32122\Desktop\PracticeInvaders\PracticeInvaders\obj\Debug\PracticeInvaders.csprojResolveAssemblyReference.cache
+C:\Users\hrd32122\Desktop\PracticeInvaders\PracticeInvaders\obj\Debug\PracticeInvaders.Form1.resources
+C:\Users\hrd32122\Desktop\PracticeInvaders\PracticeInvaders\obj\Debug\PracticeInvaders.Properties.Resources.resources
+C:\Users\hrd32122\Desktop\PracticeInvaders\PracticeInvaders\obj\Debug\PracticeInvaders.csproj.GenerateResource.Cache
+C:\Users\hrd32122\Desktop\PracticeInvaders\PracticeInvaders\obj\Debug\PracticeInvaders.csproj.CoreCompileInputs.cache
+C:\Users\hrd32122\Desktop\PracticeInvaders\PracticeInvaders\bin\Debug\PracticeInvaders.exe.config
+C:\Users\hrd32122\Desktop\PracticeInvaders\PracticeInvaders\bin\Debug\PracticeInvaders.exe
+C:\Users\hrd32122\Desktop\PracticeInvaders\PracticeInvaders\bin\Debug\PracticeInvaders.pdb
+C:\Users\hrd32122\Desktop\PracticeInvaders\PracticeInvaders\obj\Debug\PracticeInvaders.exe
+C:\Users\hrd32122\Desktop\PracticeInvaders\PracticeInvaders\obj\Debug\PracticeInvaders.pdb
