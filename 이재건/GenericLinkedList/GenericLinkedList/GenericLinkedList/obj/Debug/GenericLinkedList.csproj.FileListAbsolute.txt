@@ -1,0 +1,9 @@
+C:\0_Work\github\Test\이재건\GenericLinkedList\GenericLinkedList\GenericLinkedList\bin\Debug\GenericLinkedList.exe.config
+C:\0_Work\github\Test\이재건\GenericLinkedList\GenericLinkedList\GenericLinkedList\bin\Debug\GenericLinkedList.exe
+C:\0_Work\github\Test\이재건\GenericLinkedList\GenericLinkedList\GenericLinkedList\bin\Debug\GenericLinkedList.pdb
+C:\0_Work\github\Test\이재건\GenericLinkedList\GenericLinkedList\GenericLinkedList\obj\Debug\GenericLinkedList.Form1.resources
+C:\0_Work\github\Test\이재건\GenericLinkedList\GenericLinkedList\GenericLinkedList\obj\Debug\GenericLinkedList.Properties.Resources.resources
+C:\0_Work\github\Test\이재건\GenericLinkedList\GenericLinkedList\GenericLinkedList\obj\Debug\GenericLinkedList.csproj.GenerateResource.Cache
+C:\0_Work\github\Test\이재건\GenericLinkedList\GenericLinkedList\GenericLinkedList\obj\Debug\GenericLinkedList.csproj.CoreCompileInputs.cache
+C:\0_Work\github\Test\이재건\GenericLinkedList\GenericLinkedList\GenericLinkedList\obj\Debug\GenericLinkedList.exe
+C:\0_Work\github\Test\이재건\GenericLinkedList\GenericLinkedList\GenericLinkedList\obj\Debug\GenericLinkedList.pdb

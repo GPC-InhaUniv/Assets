@@ -1,0 +1,6 @@
+PlayerName		Score
+UnKnown1		#500
+UnKnown2		#400
+UnKnown3		#300
+UnKnown4		#200
+UnKnown5		#100

@@ -16,6 +16,8 @@ namespace TheQuest
         public MainForm()
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.DoubleBuffer, true);
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             gameManager = new Game(gameRectSize);
             gameManager.NextStage(random);
             gameManager.HitImage = PopImage;
@@ -26,10 +28,6 @@ namespace TheQuest
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            this.SetStyle(ControlStyles.DoubleBuffer, true);
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            // this.SetStyle(ControlStyles.UserPaint, true);
-
             SetImages();
             UpdateCharaters();
         }
