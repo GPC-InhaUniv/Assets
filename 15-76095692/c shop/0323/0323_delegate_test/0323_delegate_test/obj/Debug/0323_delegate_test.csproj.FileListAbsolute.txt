@@ -1,0 +1,7 @@
+c:\users\1111\source\repos\0323_delegate_test\0323_delegate_test\bin\Debug\0323_delegate_test.exe.config
+c:\users\1111\source\repos\0323_delegate_test\0323_delegate_test\bin\Debug\0323_delegate_test.exe
+c:\users\1111\source\repos\0323_delegate_test\0323_delegate_test\bin\Debug\0323_delegate_test.pdb
+c:\users\1111\source\repos\0323_delegate_test\0323_delegate_test\obj\Debug\0323_delegate_test.csprojResolveAssemblyReference.cache
+c:\users\1111\source\repos\0323_delegate_test\0323_delegate_test\obj\Debug\0323_delegate_test.csproj.CoreCompileInputs.cache
+c:\users\1111\source\repos\0323_delegate_test\0323_delegate_test\obj\Debug\0323_delegate_test.exe
+c:\users\1111\source\repos\0323_delegate_test\0323_delegate_test\obj\Debug\0323_delegate_test.pdb

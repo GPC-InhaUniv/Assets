@@ -1,0 +1,10 @@
+c:\users\1111\source\repos\0321_strean_test\0321_strean_test\bin\Debug\0321_strean_test.exe.config
+c:\users\1111\source\repos\0321_strean_test\0321_strean_test\bin\Debug\0321_strean_test.exe
+c:\users\1111\source\repos\0321_strean_test\0321_strean_test\bin\Debug\0321_strean_test.pdb
+c:\users\1111\source\repos\0321_strean_test\0321_strean_test\obj\Debug\0321_strean_test.csprojResolveAssemblyReference.cache
+c:\users\1111\source\repos\0321_strean_test\0321_strean_test\obj\Debug\_0321_strean_test.Form1.resources
+c:\users\1111\source\repos\0321_strean_test\0321_strean_test\obj\Debug\_0321_strean_test.Properties.Resources.resources
+c:\users\1111\source\repos\0321_strean_test\0321_strean_test\obj\Debug\0321_strean_test.csproj.GenerateResource.Cache
+c:\users\1111\source\repos\0321_strean_test\0321_strean_test\obj\Debug\0321_strean_test.csproj.CoreCompileInputs.cache
+c:\users\1111\source\repos\0321_strean_test\0321_strean_test\obj\Debug\0321_strean_test.exe
+c:\users\1111\source\repos\0321_strean_test\0321_strean_test\obj\Debug\0321_strean_test.pdb
