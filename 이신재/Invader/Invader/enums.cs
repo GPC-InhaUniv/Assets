@@ -2,16 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
 
-namespace Quest
+namespace Invader
 {
-    public enum enumDirection
+    enum enumDirection
     {
         Up,
         Down,
         Left,
         Right,
     }
+    enum enumShipType
+    {
+        Bug,
+        Saucer,
+        Satellite,
+        Spaceship,
+        Star,
+    }
+
+
 }

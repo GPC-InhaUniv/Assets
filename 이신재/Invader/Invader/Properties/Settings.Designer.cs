@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Quest.Properties
+namespace Invader.Properties
 {
 
 
