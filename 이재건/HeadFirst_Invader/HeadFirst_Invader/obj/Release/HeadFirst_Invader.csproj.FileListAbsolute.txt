@@ -1,0 +1,8 @@
+C:\Users\Gaeguri\Desktop\HeadFirst_Invader\HeadFirst_Invader\HeadFirst_Invader\bin\Release\HeadFirst_Invader.exe.config
+C:\Users\Gaeguri\Desktop\HeadFirst_Invader\HeadFirst_Invader\HeadFirst_Invader\bin\Release\HeadFirst_Invader.exe
+C:\Users\Gaeguri\Desktop\HeadFirst_Invader\HeadFirst_Invader\HeadFirst_Invader\bin\Release\HeadFirst_Invader.pdb
+C:\Users\Gaeguri\Desktop\HeadFirst_Invader\HeadFirst_Invader\HeadFirst_Invader\obj\Release\HeadFirst_Invader.MainForm.resources
+C:\Users\Gaeguri\Desktop\HeadFirst_Invader\HeadFirst_Invader\HeadFirst_Invader\obj\Release\HeadFirst_Invader.Properties.Resources.resources
+C:\Users\Gaeguri\Desktop\HeadFirst_Invader\HeadFirst_Invader\HeadFirst_Invader\obj\Release\HeadFirst_Invader.csproj.GenerateResource.Cache
+C:\Users\Gaeguri\Desktop\HeadFirst_Invader\HeadFirst_Invader\HeadFirst_Invader\obj\Release\HeadFirst_Invader.exe
+C:\Users\Gaeguri\Desktop\HeadFirst_Invader\HeadFirst_Invader\HeadFirst_Invader\obj\Release\HeadFirst_Invader.pdb

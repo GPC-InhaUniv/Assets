@@ -198,7 +198,7 @@ namespace TheQuest
             WeaponImageList.Add(Image.FromFile(@"image\mace.png")); //2 is mace
             WeaponImageList.Add(Image.FromFile(@"image\potion_blue.png"));
             WeaponImageList.Add(Image.FromFile(@"image\potion_red.png"));
-
+            
             PlayerImageList.Add(Image.FromFile(@"image\playerSword.png"));
             PlayerImageList.Add(Image.FromFile(@"image\playerBow.png"));
             PlayerImageList.Add(Image.FromFile(@"image\playerMace.png"));
