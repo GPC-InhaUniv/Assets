@@ -36,6 +36,9 @@ namespace CircularQueue
             Console.WriteLine(ccQueue.IsFull);
             Console.WriteLine(ccQueue.IsEmpty);
 
+            int a = 1;
+            double b = a;
+            Console.WriteLine(b);
         }
     }
 }
