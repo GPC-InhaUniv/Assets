@@ -1,6 +1,6 @@
 PlayerName		Score
-UnKnown1		#90
-UnKnown2		#70
+UnKnown1		#80
+UnKnown2		#0
 UnKnown3		#0
 UnKnown4		#0
 UnKnown5		#0

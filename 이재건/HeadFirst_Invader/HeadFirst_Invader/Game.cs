@@ -48,8 +48,21 @@ namespace HeadFirst_Invader
 
         public bool ShockWave = false;
         public bool KillInvader = false;
+        
+        public  event EventHandler gameover;
 
+        public void OccurGameoverEvent(GameOverEvent e)
+        {
+            if (gameover != null)
+                gameover(this, e);
+        }
 
+        public void RemoveInvaders()
+        {
+
+            invaders.Clear();
+            
+        }
 
         public Game(Rectangle windowSize)
         {
@@ -65,7 +78,7 @@ namespace HeadFirst_Invader
             playerhp = new PlayerHp(this);
             invaderScoreLabelList = new List<Invader>();
             itemlist = new List<Items>();
-
+            
 
             playerShots = new List<Shot>();
             invaderShots = new List<Shot>();
@@ -83,7 +96,8 @@ namespace HeadFirst_Invader
 
             itemlist.Add(new Items(ItemType.HpPortion, this));
             itemlist.Add(new Items(ItemType.BulletPortion, this));
-
+            
+           
         }
 
 
