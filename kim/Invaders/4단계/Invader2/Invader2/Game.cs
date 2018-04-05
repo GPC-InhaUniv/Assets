@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Drawing;
-
+using System.Media;
 namespace Invader2
 {
     class Game
@@ -10,24 +10,25 @@ namespace Invader2
         //필드
         private Rectangle boundaries;
         private PlayerShip Player;
-        
+
         public FlyWeight ImageStorage;
-        private Title title;
+
         List<Invader> Invaders;
+        CommandShip command;
         public int AnimationCount;
         Direction Invaderdirect;
-
+        
         List<Shot> PlayerBullet;
         List<Shot> InvaderBullet;
-
         Random random;
-
+        public int PlayerLife { get { return Player.Life; } }
         private int life;
         private int score;
         private int wave;
         private int ammo;
         private int skipFram;
-        private bool gameStartFlag;
+        public bool gameStartFlag;
+        
 
         //생성자 - 초기화
         public Game(Rectangle boundaries)
@@ -38,9 +39,9 @@ namespace Invader2
             skipFram = 0;
             ammo = 2;
             gameStartFlag = false;
-            title = new Title();
+           
             Player = new PlayerShip(boundaries, life);
-            ImageStorage = new FlyWeight();        
+            ImageStorage = new FlyWeight();
             Invaders = new List<Invader>();
             MakeInvader();
             Invaderdirect = Direction.Right;
@@ -48,13 +49,13 @@ namespace Invader2
             InvaderBullet = new List<Shot>();
 
             random = new Random();
-            
-           
+          
+
         }
 
         public void CheckGameStart()
-        {
-            gameStartFlag = !gameStartFlag;
+        { 
+                gameStartFlag = !gameStartFlag;
         }
 
         //침입자 생성
@@ -91,16 +92,18 @@ namespace Invader2
 
         }
 
-        
+
         public void Draw(Graphics g)
         {
             g.FillRectangle(Brushes.Black, boundaries);
             Player.Draw(g);
+
+
             if (gameStartFlag == false)
             {
-                title.Draw(g);
+                Title.Draw(g);
             }
-            else
+            if (gameStartFlag == true)
             {
                 foreach (Shot Bullet in InvaderBullet)
                 {
@@ -109,8 +112,9 @@ namespace Invader2
                 foreach (Invader Enemy in Invaders)
                 {
                     Enemy.Draw(g, AnimationCount);
-
                 }
+                if (command != null)
+                    command.Draw(g, AnimationCount);
                 using (Font Score = new Font("Arial", 24, FontStyle.Bold))
                 {
                     g.DrawString("SCORE : " + score.ToString(), Score, Brushes.Red, 0, 0);
@@ -141,8 +145,8 @@ namespace Invader2
             }
         }
 
-       
-      
+
+
         public void Go()
         {
             if (gameStartFlag != false)
@@ -155,7 +159,6 @@ namespace Invader2
                     foreach (Invader Enemy in Invaders)
                     {
                         Enemy.Move(Invaderdirect);
-
                     }
                     ReturnFire();
                     MoveInvader();
@@ -164,9 +167,8 @@ namespace Invader2
                 }
                 DamageToPlayer();
                 DamageToInvader();
+                DamageToCommandShip();
 
-
-                
                 if (skipFram % 5 == 0)
                 {
                     for (int idx = 0; idx < InvaderBullet.Count; idx++)
@@ -176,9 +178,16 @@ namespace Invader2
                             InvaderBullet.RemoveAt(idx);
                         }
                     }
+                    
+                       
+                    
+                }
+                if(skipFram % 5 == 0)
+                {
+                    MoveCommand();
                 }
                 LevelUp();
-               
+
             }
             for (int idx = 0; idx < PlayerBullet.Count; idx++)
             {
@@ -200,8 +209,13 @@ namespace Invader2
                 MakeInvader();
                 skipFram = 0;
                 if (wave % 3 == 0)
+                {
                     ammo++;
+                    //command = new CommandShip(this);
+                }
+                command = new CommandShip(this);
             }
+
         }
 
         public void Animation(int count)
@@ -215,7 +229,7 @@ namespace Invader2
             Player.Move(direction);
         }
 
-    
+
         private void MoveInvader()
         {
             var Direct = from v in Invaders
@@ -235,18 +249,30 @@ namespace Invader2
             }
         }
 
+        private void MoveCommand()
+        {
+            if (command != null)
+            {
+                command.Move();
+                if (command.Location.X > boundaries.Right)
+                {
+                    command = null;
+                }
+            }
+        }
         public void EndLine()
         {
             var Direct = from v in Invaders
                          where v.Location.Y > boundaries.Height - 100
                          select v;
 
-           
+
             if (Direct.Count() != 0)
             {
                 Player.Life = 0;
                 EventGenerate();
             }
+            
         }
 
 
@@ -254,16 +280,16 @@ namespace Invader2
         public void PlayerShoting()
         {
             if (PlayerBullet.Count < ammo)
-            {
-                PlayerBullet.Add(new Shot(new Point(Player.Location.X + 27, Player.Location.Y - 20), Direction.Up, boundaries,this));
+            {      
+                PlayerBullet.Add(new Shot(new Point(Player.Location.X + 27, Player.Location.Y - 20), Direction.Up, boundaries, this));
             }
         }
 
         private void InvadersShoting(Invader Enemy)
         {
-            if (InvaderBullet.Count < 2 + wave -1)
+            if (InvaderBullet.Count < 2 + wave - 1)
             {
-                InvaderBullet.Add(new Shot(new Point(Enemy.Location.X + 20, Enemy.Location.Y), Direction.Down, boundaries,this));
+                InvaderBullet.Add(new Shot(new Point(Enemy.Location.X + 20, Enemy.Location.Y), Direction.Down, boundaries, this));
             }
         }
 
@@ -274,42 +300,56 @@ namespace Invader2
             for (int idx = 0; idx < Invaders.Count; idx++)
             {
                 Rectangle Collision = Invaders[idx].Area;
-                if (PlayerBullet.Count > 0)
-                {
+               
                     for (int Bullet = 0; Bullet < PlayerBullet.Count; Bullet++)
                     {
                         if (Collision.Contains(PlayerBullet[Bullet].Location))
                         {
                             score += Invaders[idx].Score;
                             Invaders.RemoveAt(idx);
-                            
+
                             PlayerBullet.RemoveAt(Bullet);
                         }
                     }
-                }
+                
             }
         }
-        
+
         private void DamageToPlayer()
         {
             Rectangle Collision = Player.Area;
-            if (InvaderBullet.Count > 0)
-            {
+           
                 for (int Bullet = 0; Bullet < InvaderBullet.Count; Bullet++)
                 {
                     if (Collision.Contains(InvaderBullet[Bullet].Location))
                     {
                         Player.Life--;
-                        
+                    
                         EventGenerate();
                         InvaderBullet.RemoveAt(Bullet);
-                        
+
                     }
                 }
+            
+        }
+
+        private void DamageToCommandShip()
+        {
+            if (command != null)
+            {
+                Rectangle Collision = command.Area;
+                for(int Bullet = 0; Bullet<PlayerBullet.Count;Bullet++)
+                {
+                    if(Collision.Contains(PlayerBullet[Bullet].Location))
+                    {
+                        score += command.Score;
+                        command = null;
+                    }
+                }
+
             }
         }
-      
-       //최하단 침입자 확인후 공격
+        //최하단 침입자 확인후 공격
 
         private void ReturnFire()
         {
@@ -324,7 +364,7 @@ namespace Invader2
                 {
                     int min = 0;
                     foreach (Invader Invaderslist in GroupX)
-                    {  
+                    {
                         min = Invaderslist.First(min);
                         if (random.Next(10) == 0)
                         {
@@ -357,12 +397,26 @@ namespace Invader2
             }
         }
 
-        
+
+        public void ReStart()
+        {
+            Invaders.Clear();
+            MakeInvader();
+
+            Player.Life = 3;
+            wave = 1;
+            skipFram = 0;
+            ammo = 2;
+            score = 0;
+
+            InvaderBullet.Clear();
+            PlayerBullet.Clear();
+            gameStartFlag = true;
+        }
 
 
 
 
-        
 
 
 

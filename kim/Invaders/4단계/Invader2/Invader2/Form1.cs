@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-
+using System.Media;
 namespace Invader2
 {
     public enum Direction
@@ -12,6 +12,7 @@ namespace Invader2
         Left,
         Right,
     }
+    
     public partial class MainForm : Form
     {
         
@@ -20,20 +21,26 @@ namespace Invader2
         Stars star;
         int animationCount;
         Random random;
+        SoundPlayer backGroundMusic;
+    
         private void MainForm_Load(object sender, EventArgs e)
         {
             // 초기화
             KeysPressed = new List<Keys>();
-            game = new Game(new Rectangle(new Point(0,0), this.Size));
+            game = new Game(new Rectangle(new Point(0, 0), this.Size));
             animationCount = 1;
-            random =new Random();
+            random = new Random();
             star = new Stars(random);
             //타이머 시작
             GameTimer.Start();
             AnimationTimer.Start();
             game.GameOver += new EventHandler(game_GameOver);
-            
+            backGroundMusic = new SoundPlayer(Properties.Resources.MainBGM);
+            backGroundMusic.PlayLooping();
+         
+
         }
+       
         public void game_GameOver(object sender, EventArgs e)
         {
             if (e is GameOver)
@@ -43,7 +50,7 @@ namespace Invader2
                 GameTimer.Stop();
                
             }
-
+            
         }
 
         public MainForm()
@@ -70,7 +77,23 @@ namespace Invader2
             }
             if(e.KeyCode == Keys.Enter)
             {
-                game.CheckGameStart();
+                if (game.PlayerLife > 0)
+                {
+                    game.CheckGameStart();
+                    if (game.gameStartFlag == false)
+                    {
+                        GameTimer.Stop();
+                    }
+                    else
+                        GameTimer.Start();
+                }
+            }
+            if(e.KeyCode == Keys.R)
+            {
+                
+                game.ReStart();
+                GameTimer.Start();
+                
             }
             if (KeysPressed.Contains(e.KeyCode))
             {
@@ -90,26 +113,28 @@ namespace Invader2
         private void GameTimer_Tick(object sender, EventArgs e)
         {
             Invalidate();
-            game.Go();
-            foreach (Keys key in KeysPressed)
-            {
-
-                if (key == Keys.Left)
+            
+                game.Go();
+                foreach (Keys key in KeysPressed)
                 {
-                    game.MovePlayer(Direction.Left);
-                    return;
-                }
-                else if (key == Keys.Right)
-                {
-                    game.MovePlayer(Direction.Right);
-                    return;
-                }
-            }
 
+                    if (key == Keys.Left)
+                    {
+                        game.MovePlayer(Direction.Left);
+                        return;
+                    }
+                    else if (key == Keys.Right)
+                    {
+                        game.MovePlayer(Direction.Right);
+                        return;
+                    }
+                }
+            
         }
 
         private void AnimationTimer_Tick(object sender, EventArgs e)
         {
+            Invalidate();
             animationCount++;
             if (animationCount > 4)
             {
@@ -117,7 +142,7 @@ namespace Invader2
                 star.Twinkle(random);
             }
             game.Animation(animationCount);
-            Invalidate();
+           
 
         }
 
@@ -126,6 +151,7 @@ namespace Invader2
             Graphics g = e.Graphics;
             game.Draw(g);
             star.Draw(g,random);
+
         }
         
        

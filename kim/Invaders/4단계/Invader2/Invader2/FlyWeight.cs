@@ -153,9 +153,23 @@ namespace Invader2
                 default:
                     bitmap = Properties.Resources.Bullet;
                     return bitmap;
-
             }
+        }
 
+        public Bitmap BossImage(int animationCell)
+        {
+            switch(animationCell)
+            {
+                case 1:
+                    bitmap = Properties.Resources.Boss2;
+                    return bitmap;
+                case 2:
+                    bitmap = Properties.Resources.Boss3;
+                    return bitmap;
+                default:
+                    bitmap = Properties.Resources.Boss1;
+                    return bitmap;
+            }
         }
     }
 }

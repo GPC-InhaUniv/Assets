@@ -28,8 +28,11 @@ namespace Invader2
                 g.DrawImage(playerImage, new Rectangle(location.X, location.Y, playerImage.Width, playerImage.Height - 10));
             else if (Life == 1)
                 g.DrawImage(playerImage, new Rectangle(location.X, location.Y, playerImage.Width, playerImage.Height - 20));
-            else if( Life == 0)
+            else if (Life == 0)
+            {
                 g.DrawImage(playerImage, new Rectangle(location.X, location.Y, playerImage.Width, playerImage.Height - 30));
+                g.DrawImage(Properties.Resources.Boom1, new Point(location.X-20,location.Y-50));
+            }
             else
                 g.DrawImage(playerImage, location);
 

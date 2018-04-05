@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandShip.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +163,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sie_logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boom1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boom2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainBGM.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainBGM.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Laser.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
