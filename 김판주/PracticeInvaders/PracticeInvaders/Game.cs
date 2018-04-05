@@ -16,56 +16,70 @@ namespace PracticeInvaders
         private int frameSkipped = 0;
 
         private Rectangle boundaries;
-        private Random random = new Random();
+
+        private Random random;
 
 
-        private Direction invaderDirection;
+        private Direction invaderDirection = new Direction();
+
         private List<Invader> Invaders;
-
+        private Invader invader;
         private PlayerShip playerShip;
         private Stars stars;
         private Shot shot;
 
 
         private List<Shot> playerShots = new List<Shot>();
-        private List<Shot> invaderShots;
+        private List<Shot> invaderShots = new List<Shot>();
 
-        public Game(Rectangle boundaries)
-        {
-            playerShip = new PlayerShip(new Point(boundaries.Width/2 - 50, boundaries.Height - 50), boundaries, false);
-            stars = new Stars(boundaries);
-            stars.CreatStar();
-
-            shot = new Shot(playerShip.Location, Direction.Up, boundaries);
-            //playerShots.Add(new Shot(playerShip.Location, Direction.Up ,boundaries));
-            
-        }
-         
         public event EventHandler GameOver;
 
+        public int animationcell;
+
+        public Game(Rectangle boundaries, int animationcell)
+        {
+            playerShip = new PlayerShip(new Point(boundaries.Width/2 - 50, boundaries.Height - 75), boundaries, true);
+
+            this.animationcell = animationcell;
+
+             //10점 매칭스코어해야함
+             //Invader invader = new Invader(Invader.ShipType.Star, new Point(0, 0), 10, boundaries);
+             Invaders = new List<Invader>();
+              stars = new Stars(boundaries);
+              stars.CreatStar();
+
+
+              random = new Random();
+
+
+            //shot = new Shot(playerShip.Location, Direction.Up, boundaries);
+
+            //invaderShots.Add(new Shot(, Direction.Down, boundaries));
+
+        }
+
+        
 
         public void MovePlayer(Direction direction)
         {
-            //폼의 키보드 타이머 이벤트 핸들러는 게이머의 우주선을 움직이게 만들어야 함
-            // game객체는 direction 열거형을 매개변수로 갖는 두 라인 짜리 메소드를 사용해서 게이머가 살아 있는지 여부를 검사
-            // playership.move()를 호출해서 우주선을 움직이게해야합니다.
-            playerShip.Move(direction);
+            if(playerShip.Alive == true)
+            {
+                playerShip.Move(direction);
+            }
+            
         }
 
         public void FireShot()
         {
             if(playerShots.Count < 2)
-            playerShots.Add(new Shot(playerShip.Location, Direction.Up, boundaries));          
-            //화면에 우주선이 쏜 총알이 두개이하로 남아있는지 검사
-            //그렇다면 이 메소드는 적당한 위치에서 palyerShots 리스트에 새로운 총알 추가해야함
+            playerShots.Add(new Shot(new Point(playerShip.Location.X, playerShip.Location.Y), Direction.Up, boundaries));          
         }
 
         public void Go()
         {
-            //if (playerShip.Alive == false)
-            //    playerShip.Draw(g);
 
-            for(int i=0; i < playerShots.Count; i++)
+
+            for(int i = 0; i < playerShots.Count; i++)
             {
                 Shot shot = playerShots[i]; //리스트에서 하나 씩 꺼냄
                 if (shot.Move())
@@ -76,16 +90,17 @@ namespace PracticeInvaders
                     playerShots.Remove(shot); //폼 끝에 닿으면 삭제
 
             }
-                
-           //alive속성을 사용해 플레이어가 죽었는지 확인
-           //죽었다면 drawimage()를 사용해야함 --> 플레이어쉽에서 할거임...
 
-                //총알을 움직이게 함
+            //alive속성을 사용해 플레이어가 죽었는지 확인
+            //죽었다면 drawimage()를 사용해야함 --> 플레이어쉽에서 할거임...
+            //if (playerShip.Alive == false)
+            //    playerShip.Draw(g);
 
-                //침입자들을 움직이게 함
+            //침입자들을 움직이게 함
 
+            //invader.Move(Direction.Down);
 
-                //명중했는지 검사
+            //명중했는지 검사
         }
 
         public void Twinkle()
@@ -95,17 +110,36 @@ namespace PracticeInvaders
 
         public void Draw(Graphics g,int animationCell)
         {
-
             stars.Draw(g);
-            //foreach (Invader invader in Invaders)
-                //invader.Draw(g, animationCell);
 
             playerShip.Draw(g);
 
             foreach (Shot shot in playerShots)
                 shot.Draw(g);
-            //foreach (Shot shot in invaderShots)
-            //    shot.Draw(g);
+
+            foreach (Invader invader in Invaders)
+                invader.Draw(g, animationCell);
+
+           
+
+            foreach (Shot shot in invaderShots)
+               shot.Draw(g);
+
+            using (Font font = new Font("Arial", 15, FontStyle.Bold))
+            {
+                g.DrawString("Score : " + score.ToString(),font,Brushes.White,new  Point(boundaries.X/2, boundaries.Y/2));
+            }
+            if(livesLeft >= 2)
+            {
+                g.DrawImage(Properties.Resources.Playerspaceship2, new Point(boundaries.X + 750, boundaries.Y));
+                g.DrawImage(Properties.Resources.Playerspaceship2, new Point(boundaries.X + 830, boundaries.Y));
+
+            }
+            else if(livesLeft == 1)
+            {
+                g.DrawImage(Properties.Resources.Playerspaceship2, new Point(boundaries.X + 830, boundaries.Y));
+            }
+
 
             //g.DrawImage(Properties.Resources.satellite1, 7, 30);
             //g.DrawImage(Properties.Resources.bug1, 7, 90);
@@ -143,28 +177,13 @@ namespace PracticeInvaders
             //g.DrawImage(Properties.Resources.spaceship1, 350, 200);
             //g.DrawImage(Properties.Resources.star1, 350, 250);
 
-           
-
             //g.DrawImage(Properties.Resources.player, 846, 12);
             //g.DrawImage(Properties.Resources.player, 917, 12);
-            //g.DrawImage(Properties.Resources.player, 775, 12);
+            //g.DrawImage(Properties.Resources.player, 775, 12);          
 
-
-            
-
-            //배경을 검은색으로 채움 바운더리 이용
-            
-            
-
-            // 그리고 각종객체들을 그림
-
-            // 화면 왼쪽 상다넹는 점수를, 우측상단에는 우주선(목숨)을
+            // 화면 왼쪽 상단에는 점수를, 우측상단에는 우주선(목숨)을
 
             // if gameover = true일시 gameover란 글자 표시
         }
-
-
-
-
     }
 }
