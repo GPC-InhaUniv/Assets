@@ -40,8 +40,9 @@ namespace Invaders
                 if (gameOverEventArgs.PlayerHit() < 0)
                 {
                     soundPlayer.Stop();
-                    soundPlayer = new SoundPlayer(Properties.Resources.gameOver1);     //전투 사운드 삽입
+                    soundPlayer = new SoundPlayer(Properties.Resources.gameOver1);     
                     soundPlayer.Play();
+                    gameOverLogo.Visible = true;
                     gameOver = true;
                     gameTimer.Stop();
                 }
@@ -55,8 +56,9 @@ namespace Invaders
                 game.NextWave();                                              //침입자들 30마리 생성
                 gameTimer.Start();
                 firstScreen = false;
+                invaderLogo.Visible = false;
                 soundPlayer.Stop();
-                soundPlayer = new SoundPlayer(Properties.Resources.survival);
+                soundPlayer = new SoundPlayer(Properties.Resources.survival);     //전투사운드 돌입
                 soundPlayer.Play();
             }
             if (e.KeyCode == Keys.Q)
@@ -66,6 +68,7 @@ namespace Invaders
                 soundPlayer.Stop();
                 soundPlayer = new SoundPlayer(Properties.Resources.survival);
                 soundPlayer.Play();
+                gameOverLogo.Visible = false;
                 game = new Game(ClientRectangle);
                 game.GameOver += game_GameOver;
                 game.NextWave();
@@ -114,20 +117,24 @@ namespace Invaders
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            
             BackColor = Color.Black;
             game.Draw(e.Graphics, animationSell);
-            if(firstScreen)
+
+            if (firstScreen)
             {
-                e.Graphics.DrawImage(Properties.Resources.invaderLogo, ClientRectangle.Width / 8 -65, ClientRectangle.Height / 6);
                 e.Graphics.DrawString("Press Enter Key", new Font("Arial", 35), new SolidBrush(Color.Yellow), ClientRectangle.Width / 2 - 180, ClientRectangle.Height / 2 + 90);
             }
-            if(gameOver)
+
+            if (gameOver)
             {
-                e.Graphics.DrawImage(Properties.Resources.gameOver, ClientRectangle.Width / 8, ClientRectangle.Height / 6);
                 e.Graphics.DrawString("Q : Exit", new Font("Arial", 35), new SolidBrush(Color.Yellow), ClientRectangle.Width/5, ClientRectangle.Height/2);
                 e.Graphics.DrawString("S : ReStart", new Font("Arial", 35), new SolidBrush(Color.Yellow), ClientRectangle.Width /2 + 60, ClientRectangle.Height / 2);
                 e.Graphics.DrawString("Score : "+game.Score, new Font("Arial", 35), new SolidBrush(Color.Yellow), ClientRectangle.Width /2 - 130, ClientRectangle.Height /2 + 90);
             }
         }
+
+
+        
     }
 }
