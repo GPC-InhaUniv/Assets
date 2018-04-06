@@ -1,0 +1,10 @@
+C:\Users\1111\source\repos\0330_JungJinYoung_Lab3_Invader\0330_JungJinYoung_Lab3_Invader\bin\Debug\0330_JungJinYoung_Lab3_Invader.exe.config
+C:\Users\1111\source\repos\0330_JungJinYoung_Lab3_Invader\0330_JungJinYoung_Lab3_Invader\bin\Debug\0330_JungJinYoung_Lab3_Invader.exe
+C:\Users\1111\source\repos\0330_JungJinYoung_Lab3_Invader\0330_JungJinYoung_Lab3_Invader\bin\Debug\0330_JungJinYoung_Lab3_Invader.pdb
+C:\Users\1111\source\repos\0330_JungJinYoung_Lab3_Invader\0330_JungJinYoung_Lab3_Invader\obj\Debug\0330_JungJinYoung_Lab3_Invader.csprojResolveAssemblyReference.cache
+C:\Users\1111\source\repos\0330_JungJinYoung_Lab3_Invader\0330_JungJinYoung_Lab3_Invader\obj\Debug\_0330_JungJinYoung_Lab3_Invader.Form1.resources
+C:\Users\1111\source\repos\0330_JungJinYoung_Lab3_Invader\0330_JungJinYoung_Lab3_Invader\obj\Debug\_0330_JungJinYoung_Lab3_Invader.Properties.Resources.resources
+C:\Users\1111\source\repos\0330_JungJinYoung_Lab3_Invader\0330_JungJinYoung_Lab3_Invader\obj\Debug\0330_JungJinYoung_Lab3_Invader.csproj.GenerateResource.Cache
+C:\Users\1111\source\repos\0330_JungJinYoung_Lab3_Invader\0330_JungJinYoung_Lab3_Invader\obj\Debug\0330_JungJinYoung_Lab3_Invader.csproj.CoreCompileInputs.cache
+C:\Users\1111\source\repos\0330_JungJinYoung_Lab3_Invader\0330_JungJinYoung_Lab3_Invader\obj\Debug\0330_JungJinYoung_Lab3_Invader.exe
+C:\Users\1111\source\repos\0330_JungJinYoung_Lab3_Invader\0330_JungJinYoung_Lab3_Invader\obj\Debug\0330_JungJinYoung_Lab3_Invader.pdb

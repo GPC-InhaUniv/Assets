@@ -1,0 +1,10 @@
+C:\Users\1111\source\repos\0323_BaseBall_test\0323_BaseBall_test\obj\Debug\0323_BaseBall_test.csprojResolveAssemblyReference.cache
+C:\Users\1111\source\repos\0323_BaseBall_test\0323_BaseBall_test\obj\Debug\_0323_BaseBall_test.Form1.resources
+C:\Users\1111\source\repos\0323_BaseBall_test\0323_BaseBall_test\obj\Debug\_0323_BaseBall_test.Properties.Resources.resources
+C:\Users\1111\source\repos\0323_BaseBall_test\0323_BaseBall_test\obj\Debug\0323_BaseBall_test.csproj.GenerateResource.Cache
+C:\Users\1111\source\repos\0323_BaseBall_test\0323_BaseBall_test\obj\Debug\0323_BaseBall_test.csproj.CoreCompileInputs.cache
+C:\Users\1111\source\repos\0323_BaseBall_test\0323_BaseBall_test\bin\Debug\0323_BaseBall_test.exe.config
+C:\Users\1111\source\repos\0323_BaseBall_test\0323_BaseBall_test\bin\Debug\0323_BaseBall_test.exe
+C:\Users\1111\source\repos\0323_BaseBall_test\0323_BaseBall_test\bin\Debug\0323_BaseBall_test.pdb
+C:\Users\1111\source\repos\0323_BaseBall_test\0323_BaseBall_test\obj\Debug\0323_BaseBall_test.exe
+C:\Users\1111\source\repos\0323_BaseBall_test\0323_BaseBall_test\obj\Debug\0323_BaseBall_test.pdb

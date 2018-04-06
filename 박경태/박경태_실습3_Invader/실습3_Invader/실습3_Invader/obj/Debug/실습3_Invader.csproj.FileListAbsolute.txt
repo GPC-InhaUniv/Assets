@@ -1,0 +1,10 @@
+C:\Users\hrd32103\Desktop\실습3_Invader\실습3_Invader\실습3_Invader\obj\Debug\실습3_Invader.csprojResolveAssemblyReference.cache
+C:\Users\hrd32103\Desktop\실습3_Invader\실습3_Invader\실습3_Invader\obj\Debug\실습3_Invader.Form1.resources
+C:\Users\hrd32103\Desktop\실습3_Invader\실습3_Invader\실습3_Invader\obj\Debug\실습3_Invader.Properties.Resources.resources
+C:\Users\hrd32103\Desktop\실습3_Invader\실습3_Invader\실습3_Invader\obj\Debug\실습3_Invader.csproj.GenerateResource.Cache
+C:\Users\hrd32103\Desktop\실습3_Invader\실습3_Invader\실습3_Invader\obj\Debug\실습3_Invader.csproj.CoreCompileInputs.cache
+C:\Users\hrd32103\Desktop\실습3_Invader\실습3_Invader\실습3_Invader\bin\Debug\실습3_Invader.exe.config
+C:\Users\hrd32103\Desktop\실습3_Invader\실습3_Invader\실습3_Invader\bin\Debug\실습3_Invader.exe
+C:\Users\hrd32103\Desktop\실습3_Invader\실습3_Invader\실습3_Invader\bin\Debug\실습3_Invader.pdb
+C:\Users\hrd32103\Desktop\실습3_Invader\실습3_Invader\실습3_Invader\obj\Debug\실습3_Invader.exe
+C:\Users\hrd32103\Desktop\실습3_Invader\실습3_Invader\실습3_Invader\obj\Debug\실습3_Invader.pdb

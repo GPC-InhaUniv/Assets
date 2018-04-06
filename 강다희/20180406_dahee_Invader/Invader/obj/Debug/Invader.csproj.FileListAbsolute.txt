@@ -1,0 +1,10 @@
+C:\Users\hrd\source\repos\Invader\Invader\bin\Debug\Invader.exe.config
+C:\Users\hrd\source\repos\Invader\Invader\bin\Debug\Invader.exe
+C:\Users\hrd\source\repos\Invader\Invader\bin\Debug\Invader.pdb
+C:\Users\hrd\source\repos\Invader\Invader\obj\Debug\Invader.csprojResolveAssemblyReference.cache
+C:\Users\hrd\source\repos\Invader\Invader\obj\Debug\Invader.Invader.resources
+C:\Users\hrd\source\repos\Invader\Invader\obj\Debug\Invader.Properties.Resources.resources
+C:\Users\hrd\source\repos\Invader\Invader\obj\Debug\Invader.csproj.GenerateResource.Cache
+C:\Users\hrd\source\repos\Invader\Invader\obj\Debug\Invader.csproj.CoreCompileInputs.cache
+C:\Users\hrd\source\repos\Invader\Invader\obj\Debug\Invader.exe
+C:\Users\hrd\source\repos\Invader\Invader\obj\Debug\Invader.pdb
