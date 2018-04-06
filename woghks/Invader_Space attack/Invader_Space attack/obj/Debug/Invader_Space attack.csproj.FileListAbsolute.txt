@@ -1,0 +1,10 @@
+c:\users\hrd32116\source\repos\Invader_Space attack\Invader_Space attack\bin\Debug\Invader_Space attack.exe.config
+c:\users\hrd32116\source\repos\Invader_Space attack\Invader_Space attack\bin\Debug\Invader_Space attack.exe
+c:\users\hrd32116\source\repos\Invader_Space attack\Invader_Space attack\bin\Debug\Invader_Space attack.pdb
+c:\users\hrd32116\source\repos\Invader_Space attack\Invader_Space attack\obj\Debug\Invader_Space attack.csprojResolveAssemblyReference.cache
+c:\users\hrd32116\source\repos\Invader_Space attack\Invader_Space attack\obj\Debug\Invader_Space_attack.Form1.resources
+c:\users\hrd32116\source\repos\Invader_Space attack\Invader_Space attack\obj\Debug\Invader_Space_attack.Properties.Resources.resources
+c:\users\hrd32116\source\repos\Invader_Space attack\Invader_Space attack\obj\Debug\Invader_Space attack.csproj.GenerateResource.Cache
+c:\users\hrd32116\source\repos\Invader_Space attack\Invader_Space attack\obj\Debug\Invader_Space attack.csproj.CoreCompileInputs.cache
+c:\users\hrd32116\source\repos\Invader_Space attack\Invader_Space attack\obj\Debug\Invader_Space attack.exe
+c:\users\hrd32116\source\repos\Invader_Space attack\Invader_Space attack\obj\Debug\Invader_Space attack.pdb
