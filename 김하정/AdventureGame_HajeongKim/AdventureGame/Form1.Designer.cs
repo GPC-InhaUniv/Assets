@@ -86,6 +86,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Up";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -95,6 +96,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Right";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -104,6 +106,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Left";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -113,6 +116,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Down";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -122,6 +126,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Up";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -131,6 +136,7 @@
             this.button6.TabIndex = 5;
             this.button6.Text = "Right";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -140,6 +146,7 @@
             this.button7.TabIndex = 6;
             this.button7.Text = "Left";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -149,6 +156,7 @@
             this.button8.TabIndex = 7;
             this.button8.Text = "Down";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label1
             // 
@@ -273,7 +281,6 @@
             this.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Player.TabIndex = 19;
             this.Player.TabStop = false;
-            this.Player.Visible = false;
             // 
             // pictureBox2
             // 
@@ -297,7 +304,6 @@
             this.bat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bat.TabIndex = 21;
             this.bat.TabStop = false;
-            this.bat.Visible = false;
             // 
             // ghost
             // 

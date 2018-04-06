@@ -19,29 +19,26 @@ namespace LinkedList
 
             Node node = doubleLinkedList.Front.Next;
             
-            while(node != doubleLinkedList.Back)
-            {
-                Console.WriteLine(node.Elem);
-                node = node.Next;
-            }
+            doubleLinkedList.ShowAll();
 
             Console.WriteLine(doubleLinkedList.Size);
             Console.WriteLine();
 
             doubleLinkedList.Pop("오우야");
             doubleLinkedList.Pop(2);
-
-            node = doubleLinkedList.Front.Next;
-
-            while (node != doubleLinkedList.Back)
-            {
-                Console.WriteLine(node.Elem);
-                node = node.Next;
-            }
             
+            doubleLinkedList.ShowAll();
+
             Console.WriteLine(doubleLinkedList.Size);
             Console.WriteLine();
 
+            SingleLinkedList singleLinkedList = new SingleLinkedList();
+            singleLinkedList.PushBack("닭둘기");
+            singleLinkedList.PushBack("구구");
+
+            singleLinkedList.ShowAll();
+            Console.WriteLine(singleLinkedList.Size);
+            Console.WriteLine();
         }
     }
 }

@@ -12,3 +12,10 @@ F:\ConsoleApp4\ConsoleApp4\obj\Debug\ConsoleApp4.csprojResolveAssemblyReference.
 F:\ConsoleApp4\ConsoleApp4\obj\Debug\ConsoleApp4.csproj.CoreCompileInputs.cache
 F:\ConsoleApp4\ConsoleApp4\obj\Debug\ConsoleApp4.exe
 F:\ConsoleApp4\ConsoleApp4\obj\Debug\ConsoleApp4.pdb
+C:\0_work\github\test\hwang\linkedlist_hwang_0323\ConsoleApp4\bin\Debug\ConsoleApp4.exe.config
+C:\0_work\github\test\hwang\linkedlist_hwang_0323\ConsoleApp4\bin\Debug\ConsoleApp4.exe
+C:\0_work\github\test\hwang\linkedlist_hwang_0323\ConsoleApp4\bin\Debug\ConsoleApp4.pdb
+C:\0_work\github\test\hwang\linkedlist_hwang_0323\ConsoleApp4\obj\Debug\ConsoleApp4.csprojResolveAssemblyReference.cache
+C:\0_work\github\test\hwang\linkedlist_hwang_0323\ConsoleApp4\obj\Debug\ConsoleApp4.csproj.CoreCompileInputs.cache
+C:\0_work\github\test\hwang\linkedlist_hwang_0323\ConsoleApp4\obj\Debug\ConsoleApp4.exe
+C:\0_work\github\test\hwang\linkedlist_hwang_0323\ConsoleApp4\obj\Debug\ConsoleApp4.pdb

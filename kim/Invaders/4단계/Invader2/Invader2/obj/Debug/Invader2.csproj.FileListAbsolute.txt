@@ -1,0 +1,10 @@
+C:\Users\HRD32115\Desktop\Invader2\Invader2\bin\Debug\Invader2.exe.config
+C:\Users\HRD32115\Desktop\Invader2\Invader2\bin\Debug\Invader2.exe
+C:\Users\HRD32115\Desktop\Invader2\Invader2\bin\Debug\Invader2.pdb
+C:\Users\HRD32115\Desktop\Invader2\Invader2\obj\Debug\Invader2.csprojResolveAssemblyReference.cache
+C:\Users\HRD32115\Desktop\Invader2\Invader2\obj\Debug\Invader2.MainForm.resources
+C:\Users\HRD32115\Desktop\Invader2\Invader2\obj\Debug\Invader2.Properties.Resources.resources
+C:\Users\HRD32115\Desktop\Invader2\Invader2\obj\Debug\Invader2.csproj.GenerateResource.Cache
+C:\Users\HRD32115\Desktop\Invader2\Invader2\obj\Debug\Invader2.csproj.CoreCompileInputs.cache
+C:\Users\HRD32115\Desktop\Invader2\Invader2\obj\Debug\Invader2.exe
+C:\Users\HRD32115\Desktop\Invader2\Invader2\obj\Debug\Invader2.pdb

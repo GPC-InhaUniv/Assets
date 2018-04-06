@@ -5,3 +5,10 @@ C:\Users\Administrator\source\repos\LinkedListPractice_pan\LinkedListPractice_pa
 C:\Users\Administrator\source\repos\LinkedListPractice_pan\LinkedListPractice_pan\obj\Debug\LinkedListPractice_pan.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\LinkedListPractice_pan\LinkedListPractice_pan\obj\Debug\LinkedListPractice_pan.exe
 C:\Users\Administrator\source\repos\LinkedListPractice_pan\LinkedListPractice_pan\obj\Debug\LinkedListPractice_pan.pdb
+C:\work\github\test\김판주\LinkedListPractice_pan\LinkedListPractice_pan\bin\Debug\LinkedListPractice_pan.exe.config
+C:\work\github\test\김판주\LinkedListPractice_pan\LinkedListPractice_pan\bin\Debug\LinkedListPractice_pan.exe
+C:\work\github\test\김판주\LinkedListPractice_pan\LinkedListPractice_pan\bin\Debug\LinkedListPractice_pan.pdb
+C:\work\github\test\김판주\LinkedListPractice_pan\LinkedListPractice_pan\obj\Debug\LinkedListPractice_pan.csprojResolveAssemblyReference.cache
+C:\work\github\test\김판주\LinkedListPractice_pan\LinkedListPractice_pan\obj\Debug\LinkedListPractice_pan.csproj.CoreCompileInputs.cache
+C:\work\github\test\김판주\LinkedListPractice_pan\LinkedListPractice_pan\obj\Debug\LinkedListPractice_pan.exe
+C:\work\github\test\김판주\LinkedListPractice_pan\LinkedListPractice_pan\obj\Debug\LinkedListPractice_pan.pdb
