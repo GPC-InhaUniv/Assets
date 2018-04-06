@@ -42,7 +42,7 @@ namespace ConsoleApp4
             try
             {
                 tempNode.Key = key;
-                tempNode.Next = listHead;
+                tempNode.Next = listHead.Next;
                 listHead = tempNode;
                 return key;
             }
@@ -100,9 +100,10 @@ namespace ConsoleApp4
             Program program = new Program();
 
             program.InitiateLink();
-            program.InsertNode(1);
-            program.InsertNode(1);
+            program.InsertNode(5);
+            program.InsertNode(2);
             program.InsertNode(3);
+            program.InsertNode(4);
             program.InsertNode(5);
 
 
