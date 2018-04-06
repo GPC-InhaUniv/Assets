@@ -1,0 +1,7 @@
+C:\m_work\github\Test\qwo330\circleueue2\bin\Debug\circleueue.exe.config
+C:\m_work\github\Test\qwo330\circleueue2\bin\Debug\circleueue.exe
+C:\m_work\github\Test\qwo330\circleueue2\bin\Debug\circleueue.pdb
+C:\m_work\github\Test\qwo330\circleueue2\obj\Debug\circleueue.csprojResolveAssemblyReference.cache
+C:\m_work\github\Test\qwo330\circleueue2\obj\Debug\circleueue.csproj.CoreCompileInputs.cache
+C:\m_work\github\Test\qwo330\circleueue2\obj\Debug\circleueue.exe
+C:\m_work\github\Test\qwo330\circleueue2\obj\Debug\circleueue.pdb

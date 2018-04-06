@@ -86,7 +86,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\star3.png" />
@@ -165,6 +167,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\star2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d9c710d4c7e1ae6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayerShip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laser2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Playerspaceship2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

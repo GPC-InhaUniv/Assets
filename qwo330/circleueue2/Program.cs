@@ -65,6 +65,7 @@ namespace circleueue
 
             arr[rear++] = data;
             Console.WriteLine("        Push : " + data);
+            rear %= size;
             show();
             return false;
         }
@@ -81,7 +82,7 @@ namespace circleueue
             int data;
             data = arr[front++];
             Console.WriteLine("        Pop : " + data);
-
+            front %= size;
             show();
             return data;
         }
@@ -108,8 +109,8 @@ namespace circleueue
 
         public void show()
         {
-            front %= size; // 원형으로
-            rear %= size; // 원형으로
+            //front %= size; // 원형으로
+            //rear %= size; // 원형으로
             Console.WriteLine("=================================");
             for (int i = 0; i < size; i++)
             {
