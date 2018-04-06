@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Quest
 {
-    public enum enumDirection
+    enum enumDirection
     {
         Up,
         Down,

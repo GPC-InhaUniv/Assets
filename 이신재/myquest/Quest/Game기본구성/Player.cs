@@ -56,7 +56,7 @@ namespace Quest
         public void Move(enumDirection direction)
         {
             base.location = Move(direction, game.Boundaries);
-           //근처에 무기가 있는지 확인하고 줍기
+            
         }
 
 

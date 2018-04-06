@@ -87,7 +87,7 @@
             this.groupBox1.Controls.Add(this.btnmoveright);
             this.groupBox1.Controls.Add(this.btnmoveleft);
             this.groupBox1.Controls.Add(this.btnmoveup);
-            this.groupBox1.Location = new System.Drawing.Point(902, 221);
+            this.groupBox1.Location = new System.Drawing.Point(607, 20);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(211, 108);
             this.groupBox1.TabIndex = 1;
@@ -140,7 +140,7 @@
             this.groupBox2.Controls.Add(this.btnattackright);
             this.groupBox2.Controls.Add(this.btnattackup);
             this.groupBox2.Controls.Add(this.btnattackleft);
-            this.groupBox2.Location = new System.Drawing.Point(902, 335);
+            this.groupBox2.Location = new System.Drawing.Point(607, 134);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(211, 108);
             this.groupBox2.TabIndex = 2;
@@ -197,7 +197,7 @@
             this.groupBox3.Controls.Add(this.txtplayerhp);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Location = new System.Drawing.Point(902, 449);
+            this.groupBox3.Location = new System.Drawing.Point(607, 248);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(211, 151);
             this.groupBox3.TabIndex = 3;
@@ -275,7 +275,7 @@
             // pctinvenredpotion
             // 
             this.pctinvenredpotion.Image = global::Quest.Properties.Resources.빨간포션;
-            this.pctinvenredpotion.Location = new System.Drawing.Point(508, 490);
+            this.pctinvenredpotion.Location = new System.Drawing.Point(447, 318);
             this.pctinvenredpotion.Name = "pctinvenredpotion";
             this.pctinvenredpotion.Size = new System.Drawing.Size(60, 60);
             this.pctinvenredpotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -285,7 +285,7 @@
             // pctinvenbluepotion
             // 
             this.pctinvenbluepotion.Image = global::Quest.Properties.Resources.파란포션;
-            this.pctinvenbluepotion.Location = new System.Drawing.Point(412, 490);
+            this.pctinvenbluepotion.Location = new System.Drawing.Point(351, 318);
             this.pctinvenbluepotion.Name = "pctinvenbluepotion";
             this.pctinvenbluepotion.Size = new System.Drawing.Size(60, 60);
             this.pctinvenbluepotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -295,7 +295,7 @@
             // pctinvenbow
             // 
             this.pctinvenbow.Image = global::Quest.Properties.Resources.활;
-            this.pctinvenbow.Location = new System.Drawing.Point(317, 490);
+            this.pctinvenbow.Location = new System.Drawing.Point(256, 318);
             this.pctinvenbow.Name = "pctinvenbow";
             this.pctinvenbow.Size = new System.Drawing.Size(60, 60);
             this.pctinvenbow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -305,7 +305,7 @@
             // pctinvensword
             // 
             this.pctinvensword.Image = global::Quest.Properties.Resources.무한의대검;
-            this.pctinvensword.Location = new System.Drawing.Point(220, 490);
+            this.pctinvensword.Location = new System.Drawing.Point(159, 318);
             this.pctinvensword.Name = "pctinvensword";
             this.pctinvensword.Size = new System.Drawing.Size(60, 60);
             this.pctinvensword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -315,7 +315,7 @@
             // pctinvenaxe
             // 
             this.pctinvenaxe.Image = global::Quest.Properties.Resources.도끼;
-            this.pctinvenaxe.Location = new System.Drawing.Point(127, 490);
+            this.pctinvenaxe.Location = new System.Drawing.Point(66, 318);
             this.pctinvenaxe.Name = "pctinvenaxe";
             this.pctinvenaxe.Size = new System.Drawing.Size(60, 60);
             this.pctinvenaxe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -326,7 +326,7 @@
             // 
             this.pctplayer.BackColor = System.Drawing.Color.Transparent;
             this.pctplayer.Image = ((System.Drawing.Image)(resources.GetObject("pctplayer.Image")));
-            this.pctplayer.Location = new System.Drawing.Point(127, 98);
+            this.pctplayer.Location = new System.Drawing.Point(79, 61);
             this.pctplayer.Name = "pctplayer";
             this.pctplayer.Size = new System.Drawing.Size(30, 30);
             this.pctplayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -337,7 +337,7 @@
             // 
             this.pctredpotion.BackColor = System.Drawing.Color.Transparent;
             this.pctredpotion.Image = ((System.Drawing.Image)(resources.GetObject("pctredpotion.Image")));
-            this.pctredpotion.Location = new System.Drawing.Point(538, 98);
+            this.pctredpotion.Location = new System.Drawing.Point(490, 61);
             this.pctredpotion.Name = "pctredpotion";
             this.pctredpotion.Size = new System.Drawing.Size(30, 30);
             this.pctredpotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -348,7 +348,7 @@
             // 
             this.pctbluepotion.BackColor = System.Drawing.Color.Transparent;
             this.pctbluepotion.Image = ((System.Drawing.Image)(resources.GetObject("pctbluepotion.Image")));
-            this.pctbluepotion.Location = new System.Drawing.Point(495, 98);
+            this.pctbluepotion.Location = new System.Drawing.Point(447, 61);
             this.pctbluepotion.Name = "pctbluepotion";
             this.pctbluepotion.Size = new System.Drawing.Size(30, 30);
             this.pctbluepotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -359,7 +359,7 @@
             // pctbow
             // 
             this.pctbow.Image = global::Quest.Properties.Resources.활;
-            this.pctbow.Location = new System.Drawing.Point(451, 98);
+            this.pctbow.Location = new System.Drawing.Point(403, 61);
             this.pctbow.Name = "pctbow";
             this.pctbow.Size = new System.Drawing.Size(30, 30);
             this.pctbow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -369,7 +369,7 @@
             // pctsword
             // 
             this.pctsword.Image = global::Quest.Properties.Resources.무한의대검;
-            this.pctsword.Location = new System.Drawing.Point(408, 98);
+            this.pctsword.Location = new System.Drawing.Point(360, 61);
             this.pctsword.Name = "pctsword";
             this.pctsword.Size = new System.Drawing.Size(30, 30);
             this.pctsword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -380,7 +380,7 @@
             // 
             this.pctteemo.BackColor = System.Drawing.Color.Transparent;
             this.pctteemo.Image = ((System.Drawing.Image)(resources.GetObject("pctteemo.Image")));
-            this.pctteemo.Location = new System.Drawing.Point(250, 98);
+            this.pctteemo.Location = new System.Drawing.Point(202, 61);
             this.pctteemo.Name = "pctteemo";
             this.pctteemo.Size = new System.Drawing.Size(30, 30);
             this.pctteemo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -391,7 +391,7 @@
             // 
             this.pctmasterei.BackColor = System.Drawing.Color.Transparent;
             this.pctmasterei.Image = ((System.Drawing.Image)(resources.GetObject("pctmasterei.Image")));
-            this.pctmasterei.Location = new System.Drawing.Point(293, 98);
+            this.pctmasterei.Location = new System.Drawing.Point(245, 61);
             this.pctmasterei.Name = "pctmasterei";
             this.pctmasterei.Size = new System.Drawing.Size(30, 30);
             this.pctmasterei.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -401,7 +401,7 @@
             // pctaxe
             // 
             this.pctaxe.Image = global::Quest.Properties.Resources.도끼;
-            this.pctaxe.Location = new System.Drawing.Point(365, 98);
+            this.pctaxe.Location = new System.Drawing.Point(317, 61);
             this.pctaxe.Name = "pctaxe";
             this.pctaxe.Size = new System.Drawing.Size(30, 30);
             this.pctaxe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -412,7 +412,7 @@
             // 
             this.pctyasuo.BackColor = System.Drawing.Color.Transparent;
             this.pctyasuo.Image = global::Quest.Properties.Resources.과학충11;
-            this.pctyasuo.Location = new System.Drawing.Point(205, 98);
+            this.pctyasuo.Location = new System.Drawing.Point(157, 61);
             this.pctyasuo.Name = "pctyasuo";
             this.pctyasuo.Size = new System.Drawing.Size(30, 30);
             this.pctyasuo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -425,7 +425,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1114, 600);
+            this.ClientSize = new System.Drawing.Size(817, 401);
             this.Controls.Add(this.pctplayer);
             this.Controls.Add(this.pctyasuo);
             this.Controls.Add(this.pctteemo);
