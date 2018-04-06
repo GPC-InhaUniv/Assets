@@ -19,10 +19,8 @@ namespace PracticeInvaders
         private Direction direction;
         private Rectangle boundaries;
 
-        PlayerShip playerShip;
-
         Point moveShot = new Point();
-        Point temp = new Point();
+        
 
         public Shot(Point location, Direction direction, Rectangle boundaries)
         {
@@ -34,12 +32,8 @@ namespace PracticeInvaders
 
         public void Draw(Graphics g)
         {
-
-            Size size = new Size(width, height);
-
-            temp.X = Location.X + 22;
-            temp.Y = Location.Y;
-            g.FillRectangle(Brushes.Blue, new Rectangle(temp,size));
+           
+            g.DrawImage(Properties.Resources.laser2,Location);
 
         }
 
@@ -56,6 +50,6 @@ namespace PracticeInvaders
            
             //총알을 위로 움직이며
             // 총알이 게임 영역 내부에 있다면 true 반환
-        }
+        }   
     }
 }

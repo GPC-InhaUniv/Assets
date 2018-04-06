@@ -1,0 +1,6 @@
+C:\m_work\github\Test\qwo330\sorted LinkedList\bin\Debug\LinkedList.exe.config
+C:\m_work\github\Test\qwo330\sorted LinkedList\bin\Debug\LinkedList.exe
+C:\m_work\github\Test\qwo330\sorted LinkedList\bin\Debug\LinkedList.pdb
+C:\m_work\github\Test\qwo330\sorted LinkedList\obj\Debug\LinkedList.csproj.CoreCompileInputs.cache
+C:\m_work\github\Test\qwo330\sorted LinkedList\obj\Debug\LinkedList.exe
+C:\m_work\github\Test\qwo330\sorted LinkedList\obj\Debug\LinkedList.pdb
