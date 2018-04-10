@@ -1,0 +1,6 @@
+c:\users\magic\source\repos\ObjectPool\ObjectPool\obj\Debug\ObjectPool.csprojResolveAssemblyReference.cache
+c:\users\magic\source\repos\ObjectPool\ObjectPool\obj\Debug\ObjectPool.csproj.CoreCompileInputs.cache
+c:\users\magic\source\repos\ObjectPool\ObjectPool\bin\Debug\ObjectPool.exe
+c:\users\magic\source\repos\ObjectPool\ObjectPool\bin\Debug\ObjectPool.pdb
+c:\users\magic\source\repos\ObjectPool\ObjectPool\obj\Debug\ObjectPool.exe
+c:\users\magic\source\repos\ObjectPool\ObjectPool\obj\Debug\ObjectPool.pdb
