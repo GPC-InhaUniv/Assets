@@ -9,6 +9,13 @@ namespace Quest
 {
     abstract class Item : Mover
     {
+        enum enumItem
+        {
+            Sword,
+            Bow,
+            Axe,
+        }
+
         protected Game game;
         public abstract string Name { get; }
 

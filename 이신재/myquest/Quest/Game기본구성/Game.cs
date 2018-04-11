@@ -15,7 +15,7 @@ namespace Quest
     {
         public List<Monster> Monsters;
         public Item ItemInRoom; //생성되는 아이템?
-        
+       
         private Player player;
        
         public Point PlayerLocation { get { return player.Location; } }
@@ -39,7 +39,13 @@ namespace Quest
         public void Move(enumDirection direction, Random random)
         {
             player.Move(direction);
-           
+
+            foreach (Monster monster in Monsters) //Monsters 에 Null걸림
+            {
+                if (!monster.Dead)
+                    monster.Move(random);
+            }
+
         }
 
         public void Equip(string ItemName)
@@ -53,8 +59,6 @@ namespace Quest
         }
 
       
-
-
         public void HitPlayer(int maxDamage, Random random)
         {
             player.Hit(maxDamage, random);
@@ -94,7 +98,7 @@ namespace Quest
                     ItemInRoom = new Sword(this, GetRandomLocation(random));
                     break;
                 case 2:
-                    
+                    Application.Restart();
                     Monsters = new List<Monster>();
                     Monsters.Add(new Yasuo(this, GetRandomLocation(random)));
                     ItemInRoom = new BluePotion(this, GetRandomLocation(random));
@@ -109,8 +113,14 @@ namespace Quest
                     Monsters = new List<Monster>();
                     Monsters.Add(new Teemo(this, GetRandomLocation(random)));
                     Monsters.Add(new Yasuo(this, GetRandomLocation(random)));
-                    
-                    ItemInRoom = new Bow(this, GetRandomLocation(random)); //bow이거나 blue potion이거나 ..... 수정
+                    if (CheckPlayerInventory("Bow"))
+                    {
+                        ItemInRoom = new BluePotion(this, GetRandomLocation(random)); //bow이거나 blue potion이거나 ..... 수정
+                    }
+                    else
+                    {
+                        ItemInRoom = new Bow(this, GetRandomLocation(random));
+                    }
                     break;
                 case 5:
                     Monsters = new List<Monster>();
@@ -129,12 +139,17 @@ namespace Quest
                     Monsters.Add(new Teemo(this, GetRandomLocation(random)));
                     Monsters.Add(new Yasuo(this, GetRandomLocation(random)));
                     Monsters.Add(new Masterei(this, GetRandomLocation(random)));
-                    ItemInRoom = new RedPotion(this, GetRandomLocation(random)); //메이스를 줍지 않은 경우
+                    if (CheckPlayerInventory("Axe"))
+                    {
+                        ItemInRoom = new RedPotion(this, GetRandomLocation(random)); //메이스를 줍지 않은 경우
+                    }
+                    else
+                    {
+                        ItemInRoom = new Axe(this, GetRandomLocation(random));
+                    }
                     break;
 
-                default:
-                    Application.Exit();
-                    break;
+                default: Application.Exit(); break;
                     
             }
         }
