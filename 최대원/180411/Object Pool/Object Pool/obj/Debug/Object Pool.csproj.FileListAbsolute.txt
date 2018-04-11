@@ -1,0 +1,7 @@
+C:\Users\chdw2\source\repos\Object Pool\Object Pool\bin\Debug\Object Pool.exe.config
+C:\Users\chdw2\source\repos\Object Pool\Object Pool\bin\Debug\Object Pool.exe
+C:\Users\chdw2\source\repos\Object Pool\Object Pool\bin\Debug\Object Pool.pdb
+C:\Users\chdw2\source\repos\Object Pool\Object Pool\obj\Debug\Object Pool.csprojResolveAssemblyReference.cache
+C:\Users\chdw2\source\repos\Object Pool\Object Pool\obj\Debug\Object Pool.csproj.CoreCompileInputs.cache
+C:\Users\chdw2\source\repos\Object Pool\Object Pool\obj\Debug\Object Pool.exe
+C:\Users\chdw2\source\repos\Object Pool\Object Pool\obj\Debug\Object Pool.pdb
