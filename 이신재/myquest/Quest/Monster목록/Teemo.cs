@@ -16,15 +16,14 @@ namespace Quest
             if (random.Next(1, 2) == 2)
             {
                 location = Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
-
             }
             else
             {
                 location = Move((enumDirection)random.Next(1, 4), game.Boundaries);
             }
-            if (NearPlayer())
+            if (NearPlayer() ==true)
             {
-                game.HitPlayer(2, random);
+                
             }
             
         }

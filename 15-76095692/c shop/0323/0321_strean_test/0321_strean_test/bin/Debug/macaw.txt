@@ -1,0 +1,3 @@
+blue yellow01
+green purple2
+red orange3
