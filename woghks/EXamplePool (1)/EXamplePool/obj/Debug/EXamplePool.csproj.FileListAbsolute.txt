@@ -1,0 +1,7 @@
+C:\Users\DELL\source\repos\EXamplePool\EXamplePool\bin\Debug\EXamplePool.exe.config
+C:\Users\DELL\source\repos\EXamplePool\EXamplePool\bin\Debug\EXamplePool.exe
+C:\Users\DELL\source\repos\EXamplePool\EXamplePool\bin\Debug\EXamplePool.pdb
+C:\Users\DELL\source\repos\EXamplePool\EXamplePool\obj\Debug\EXamplePool.csprojResolveAssemblyReference.cache
+C:\Users\DELL\source\repos\EXamplePool\EXamplePool\obj\Debug\EXamplePool.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\EXamplePool\EXamplePool\obj\Debug\EXamplePool.exe
+C:\Users\DELL\source\repos\EXamplePool\EXamplePool\obj\Debug\EXamplePool.pdb
