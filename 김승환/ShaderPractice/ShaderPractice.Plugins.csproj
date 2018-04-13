@@ -105,6 +105,7 @@
     <Compile Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsBase.cs" />
     <Compile Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsHelper.cs" />
     <Compile Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\Quads.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\Rotation.cs" />
     <Compile Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\ScreenOverlay.cs" />
     <Compile Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\ScreenSpaceAmbientObscurance.cs" />
     <Compile Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
@@ -128,11 +129,16 @@
     <None Include="Assets\PACKT_Shaders\Final Shaders\Wind_Final.shader" />
     <None Include="Assets\PACKT_Shaders\Final Shaders\eye_Final.shader" />
     <None Include="Assets\PACKT_Shaders\Final Shaders\m_diffuse_spec_Final.shader" />
+    <None Include="Assets\PACKT_Shaders\Glass.shader" />
     <None Include="Assets\PACKT_Shaders\Moon.shader" />
+    <None Include="Assets\PACKT_Shaders\Planet.shader" />
     <None Include="Assets\PACKT_Shaders\SSS_Skin01.shader" />
+    <None Include="Assets\PACKT_Shaders\Unlit_wire.shader" />
+    <None Include="Assets\PACKT_Shaders\Unlit_wire_corn.shader" />
     <None Include="Assets\PACKT_Shaders\m_character.shader" />
     <None Include="Assets\PACKT_Shaders\testPart.shader" />
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Readme.txt" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />

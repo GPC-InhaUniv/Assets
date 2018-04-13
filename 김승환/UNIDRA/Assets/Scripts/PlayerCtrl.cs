@@ -14,8 +14,6 @@ public class PlayerCtrl : MonoBehaviour {
 		Walking();
 	}
 	
-	
-	
 	void Walking()
 	{
 		if (inputManager.Clicked()) {
