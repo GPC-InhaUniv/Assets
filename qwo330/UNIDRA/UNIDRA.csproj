@@ -95,6 +95,8 @@
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\SearchArea.cs" />
+    <Compile Include="Assets\Scripts\TargetCursor.cs" />
+    <Compile Include="Assets\Scripts\TitleSceneCtrl.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

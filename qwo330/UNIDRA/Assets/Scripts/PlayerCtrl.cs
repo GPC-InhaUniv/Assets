@@ -13,6 +13,12 @@ public class PlayerCtrl : MonoBehaviour {
     Transform attackTarget;
     public float attackRange = 1.5f;
 
+    public GameObject hitEffect;
+    TargetCursor targetCursor;
+
+    public AudioClip deathSeClip;
+    AudioSource deathSeAudio;
+
     enum State
     {
         Walking,
@@ -31,6 +37,13 @@ public class PlayerCtrl : MonoBehaviour {
         //inputManager = FindObjectOfType(typeof(InputManager)) as InputManager;
         //GameObject obj = GameObject.FindGameObjectWithTag("TagName");
         gameRuleCtrl = FindObjectOfType<GameRuleCtrl>();
+
+        targetCursor = FindObjectOfType<TargetCursor>();
+        targetCursor.SetPosition(transform.position);
+
+        deathSeAudio = gameObject.AddComponent<AudioSource>();
+        deathSeAudio.loop = false;
+        deathSeAudio.clip = deathSeClip;
 	}
 	
 	// Update is called once per frame
@@ -66,10 +79,15 @@ public class PlayerCtrl : MonoBehaviour {
     {
         status.died = true;
         gameRuleCtrl.GameOver();
+        deathSeAudio.Play();
     }
 
     void Damage(AttackArea.AttackInfo attackInfo)
     {
+        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity) as GameObject;
+        effect.transform.localPosition = transform.position + new Vector3(0.0f, 0.5f, 0.0f);
+        Destroy(effect, 0.3f);
+
         status.HP -= attackInfo.attackPower;
         if(status.HP <= 0)
         {
@@ -112,6 +130,7 @@ public class PlayerCtrl : MonoBehaviour {
                 if(hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                 {
                     SendMessage("SetDestination", hitInfo.point);
+                    targetCursor.SetPosition(hitInfo.point);
                 }
                 if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit"))
                 {
@@ -123,10 +142,14 @@ public class PlayerCtrl : MonoBehaviour {
                     if (distance < attackRange)
                     {
                         attackTarget = hitInfo.collider.transform;
+                        targetCursor.SetPosition(attackTarget.position);
                         ChangeState(State.Attacking);
                     }
                     else
+                    {
                         SendMessage("SetDestination", hitInfo.point);
+                        targetCursor.SetPosition(hitInfo.point);
+                    }
                 }
             }
         }

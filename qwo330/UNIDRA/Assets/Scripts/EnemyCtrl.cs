@@ -15,6 +15,7 @@ public class EnemyCtrl : MonoBehaviour {
     public Vector3 basePosition;
 
     public GameObject[] dropItemPrefabs = new GameObject[2];
+    public GameObject hitEffect;
 
     enum State
     {
@@ -26,6 +27,8 @@ public class EnemyCtrl : MonoBehaviour {
 
     State state = State.Walking;
     State nextState = State.Walking;
+
+    public AudioClip deathSeClip;
 
     // Use this for initialization
     void Start() {
@@ -158,10 +161,15 @@ public class EnemyCtrl : MonoBehaviour {
 
         if (gameObject.tag == "Boss")
             gameRuleCtrl.GameClear();
+        AudioSource.PlayClipAtPoint(deathSeClip, transform.position);
     }
 
     void Damage(AttackArea.AttackInfo attackInfo)
     {
+        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity) as GameObject;
+        effect.transform.localPosition = transform.position + new Vector3(0.0f, 0.5f, 0.0f);
+        Destroy(effect, 0.3f);
+
         status.HP -= attackInfo.attackPower;
         if (status.HP <= 0)
         {

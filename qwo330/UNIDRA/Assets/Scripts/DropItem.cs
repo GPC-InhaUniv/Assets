@@ -11,6 +11,7 @@ public class DropItem : MonoBehaviour {
     };
     public ItemKind kind;
 
+    public AudioClip itemSeClip;
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
@@ -18,6 +19,7 @@ public class DropItem : MonoBehaviour {
             CharacterStatus aStatus = other.GetComponent<CharacterStatus>();
             aStatus.GetItem(kind);
             Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(itemSeClip, transform.position);
         }
     }
 
