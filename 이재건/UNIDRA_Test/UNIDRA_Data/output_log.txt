@@ -1,0 +1,919 @@
+Initialize engine version: 5.6.5f1 (2cac56bf7bb6)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 765M (ID=0x11e2)
+    Vendor:   NVIDIA
+    VRAM:     1991 MB
+    Driver:   21.21.13.7270
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.223 seconds
+Platform assembly: C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\System.dll (this message is harmless)
+Initialize engine version: 5.6.5f1 (2cac56bf7bb6)
+GfxDevice: creating device client; threaded=1
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 765M (ID=0x11e2)
+    Vendor:   NVIDIA
+    VRAM:     1991 MB
+    Driver:   21.21.13.7270
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.091 seconds
+Platform assembly: C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Gaeguri\Desktop\UNIDRA_Test\UNIDRA_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 6.067844 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 22fc -> priority: 1 
+  Thread -> id: 1af4 -> priority: 1 
+<RI> Initialized touch support.
+UnloadTime: 4.287724 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2864 -> priority: 1 
+  Thread -> id: 285c -> priority: 1 
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.364973 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 812.
+Total: 1.142134 ms (FindLiveObjects: 0.103046 ms CreateObjectMapping: 0.071845 ms MarkObjects: 0.525086 ms  DeleteObjects: 0.440924 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.826015 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 812.
+Total: 1.218495 ms (FindLiveObjects: 0.097298 ms CreateObjectMapping: 0.078003 ms MarkObjects: 0.535349 ms  DeleteObjects: 0.507022 ms)
+
+Binding to local socket 0.0.0.0
+Sending NAT type detection request, local port 60655
+Returning nat detection result to the user
+setcamera 실행 완료
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+setcamera 실행 완료
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+setcamera 실행 완료
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+setcamera 실행 완료
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Sending RPC failed because 'GetItem' parameter 0 (DropItem.ItemKind) is not supported.
+ 
+(Filename:  Line: 486)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Sending RPC failed because 'GetItem' parameter 0 (DropItem.ItemKind) is not supported.
+ 
+(Filename:  Line: 486)
+
+Sending RPC failed because 'GetItem' parameter 0 (DropItem.ItemKind) is not supported.
+ 
+(Filename:  Line: 486)
+
+Sending RPC failed because 'GetItem' parameter 0 (DropItem.ItemKind) is not supported.
+ 
+(Filename:  Line: 486)
+
+Sending RPC failed because 'GetItem' parameter 0 (DropItem.ItemKind) is not supported.
+ 
+(Filename:  Line: 486)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Sending RPC failed because 'GetItem' parameter 0 (DropItem.ItemKind) is not supported.
+ 
+(Filename:  Line: 486)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Sending RPC failed because 'GetItem' parameter 0 (DropItem.ItemKind) is not supported.
+ 
+(Filename:  Line: 486)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+현재 kill warg count: 14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1716)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2518)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.183684 ms
+
+Unloading 473 unused Assets to reduce memory usage. Loaded Objects now: 302.
+Total: 2.166442 ms (FindLiveObjects: 0.061581 ms CreateObjectMapping: 0.078413 ms MarkObjects: 0.226620 ms  DeleteObjects: 1.799415 ms)
+
+UnloadTime: 3.514258 ms
+
+Unloading 473 unused Assets to reduce memory usage. Loaded Objects now: 302.
+Total: 2.219402 ms (FindLiveObjects: 0.064044 ms CreateObjectMapping: 0.052139 ms MarkObjects: 0.204861 ms  DeleteObjects: 1.897535 ms)
+
+The server has disconnected from the client. Most likely the server has shut down.
+ 
+(Filename:  Line: 776)
+
