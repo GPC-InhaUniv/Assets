@@ -5,10 +5,16 @@ using System.Collections;
 public class AttackArea : MonoBehaviour
 {
     CharacterStatus status;
+    public AudioClip hitSeClip;
+    AudioSource hitSeAudio;
 
     void Start()
     {
         status = transform.root.GetComponent <CharacterStatus> ();
+
+        hitSeAudio = gameObject.AddComponent<AudioSource>();
+        hitSeAudio.clip = hitSeClip;
+        hitSeAudio.loop = false;
     }
 
     public class AttackInfo
@@ -37,6 +43,7 @@ public class AttackArea : MonoBehaviour
     {
         other.SendMessage("Damage", GetAttackInfo());
         status.lastAttackTarget = other.transform.root.gameObject;
+        hitSeAudio.Play();
     }
 
     void OnAttack()

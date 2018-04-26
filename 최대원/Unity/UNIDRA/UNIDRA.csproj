@@ -81,17 +81,28 @@
     <Compile Include="Assets\Assets\Script\AttackArea.cs" />
     <Compile Include="Assets\Assets\Script\AttackAreaActivator.cs" />
     <Compile Include="Assets\Assets\Script\CharaAnimation.cs" />
+    <Compile Include="Assets\Assets\Script\CharaSynchronizer.cs" />
     <Compile Include="Assets\Assets\Script\CharacterMove.cs" />
     <Compile Include="Assets\Assets\Script\CharacterStatus.cs" />
+    <Compile Include="Assets\Assets\Script\CharacterStatusGui.cs" />
     <Compile Include="Assets\Assets\Script\DropItem.cs" />
     <Compile Include="Assets\Assets\Script\EnemyCtrl.cs" />
     <Compile Include="Assets\Assets\Script\EnemyGenerator.cs" />
     <Compile Include="Assets\Assets\Script\FollowCamera.cs" />
+    <Compile Include="Assets\Assets\Script\GameResultGui.cs" />
     <Compile Include="Assets\Assets\Script\GameRuleCtrl.cs" />
+    <Compile Include="Assets\Assets\Script\GameTimerGui.cs" />
     <Compile Include="Assets\Assets\Script\HitArea.cs" />
     <Compile Include="Assets\Assets\Script\InputManager.cs" />
+    <Compile Include="Assets\Assets\Script\Nameplate.cs" />
+    <Compile Include="Assets\Assets\Script\NetworkManager.cs" />
     <Compile Include="Assets\Assets\Script\PlayerCtrl.cs" />
     <Compile Include="Assets\Assets\Script\SearchArea.cs" />
+    <Compile Include="Assets\Assets\Script\TargetCursor.cs" />
+    <Compile Include="Assets\Assets\Script\TitleSceneCtrl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Assets\3D Assets\Ornamental Flower Set\Shaders\Transparent-BumpSpecNoCull.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
 public class PlayerCtrl : MonoBehaviour
 {
@@ -10,6 +11,18 @@ public class PlayerCtrl : MonoBehaviour
     InputManager inputManager;
     public float attackRange = 1.5f;
     GameRuleCtrl gameRuleCtrl;
+    public GameObject hitEffect;
+    TargetCursor targetCursor;
+    Transform playerTransform;
+    public AudioClip deadthSeClip;
+    AudioSource deathSeAudio;
+    public float playerMoveSpeed;
+    CharacterController characterController;
+    FollowCamera followCamera;
+    float rotationSpeed = 360.0f;
+    Vector3 velocity = Vector3.zero;
+    const float GravityPower = 9.8f;
+    Vector3 lookRotation;
 
     // 스테이트 종류.
     enum State
@@ -30,11 +43,22 @@ public class PlayerCtrl : MonoBehaviour
         charaAnimation = GetComponent<CharaAnimation>();
         inputManager = FindObjectOfType<InputManager>();
         gameRuleCtrl = FindObjectOfType<GameRuleCtrl>();
+        targetCursor = FindObjectOfType<TargetCursor>();
+        targetCursor.SetPosiotion(transform.position);
+        playerTransform = GetComponent<Transform>();
+        characterController = GetComponent<CharacterController>();
+        followCamera = FindObjectOfType<FollowCamera>();
+
+        deathSeAudio = gameObject.AddComponent<AudioSource>();
+        deathSeAudio.loop = false;
+        deathSeAudio.clip = deadthSeClip;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!GetComponent<NetworkView>().isMine) return;
+
         switch (state)
         {
             case State.Walking:
@@ -61,6 +85,17 @@ public class PlayerCtrl : MonoBehaviour
                     break;
             }
         }
+
+        //중력
+        velocity += Vector3.down * GravityPower * Time.deltaTime;
+        // 땅에 닿아 있다면 지면을 꽉 누른다.
+        // (유니티의 CharactorController 특성 때문에).
+        Vector3 snapGround = Vector3.zero;
+        if (characterController.isGrounded)
+        {
+            snapGround = Vector3.down;
+        }
+        characterController.Move(velocity * Time.deltaTime + snapGround);
     }
 
 
@@ -79,31 +114,11 @@ public class PlayerCtrl : MonoBehaviour
     {
         if (inputManager.Clicked())
         {
-            // RayCast로 대상물을 조사한다.
-            Ray ray = Camera.main.ScreenPointToRay(inputManager.GetCursorPosition());
-            RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo, RayCastMaxDistance, (1 << LayerMask.NameToLayer("Ground")) | (1 << LayerMask.NameToLayer("EnemyHit"))))
-            {
-                // 지면이 클릭되었다.
-                if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
-                    SendMessage("SetDestination", hitInfo.point);
-                // 적이 클릭되었다.
-                if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit"))
-                {
-                    // 수평 거리를 체크해서 공격할지 결정한다.
-                    Vector3 hitPoint = hitInfo.point;
-                    hitPoint.y = transform.position.y;
-                    float distance = Vector3.Distance(hitPoint, transform.position);
-                    if (distance < attackRange)
-                    {
-                        // 공격.
-                        attackTarget = hitInfo.collider.transform;
-                        ChangeState(State.Attacking);
-                    }
-                    else
-                        SendMessage("SetDestination", hitInfo.point);
-                }
-            }
+            ChangeState(State.Attacking);
+        }
+        else
+        {
+            playerMove();
         }
     }
 
@@ -112,13 +127,6 @@ public class PlayerCtrl : MonoBehaviour
     {
         StateStartCommon();
         status.attacking = true;
-
-        // 적 방향으로 돌아보게 한다.
-        Vector3 targetDirection = (attackTarget.position - transform.position).normalized;
-        SendMessage("SetDirection", targetDirection);
-
-        // 이동을 멈춘다.
-        SendMessage("StopMove");
     }
 
     // 공격 중 처리.
@@ -131,16 +139,40 @@ public class PlayerCtrl : MonoBehaviour
     void Died()
     {
         status.died = true;
-        gameRuleCtrl.gameOver = true;
+        //gameRuleCtrl.gameOver = true;
+        deathSeAudio.Play();
+        Invoke("DelayedDestroy", 8.0f);
+    }
+
+    void DelayedDestroy()
+    {
+        Network.Destroy(gameObject);
+        Network.RemoveRPCs(GetComponent<NetworkView>().viewID);
     }
 
     void Damage(AttackArea.AttackInfo attackInfo)
     {
-        status.HP -= attackInfo.attackPower;
-        if (status.HP <= 0)
+        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity) as GameObject;
+        effect.transform.localPosition = transform.position + new Vector3(0f, 0.5f, 0f);
+        Destroy(effect, 0.3f);
+
+        if (GetComponent<NetworkView>().isMine)
+        {
+            RpcDamageMine(attackInfo.attackPower);
+        }
+        else
+        {
+            GetComponent<NetworkView>().RPC("RpcDamageMine", GetComponent<NetworkView>().owner, attackInfo.attackPower);
+        }
+    }
+
+    [RPC]
+    void RpcDamageMine(int Damage)
+    {
+        status.HP -= Damage;
+        if(status.HP <= 0)
         {
             status.HP = 0;
-            // 체력이 0이므로 사망 스테이트로 전환한다.
             ChangeState(State.Died);
         }
     }
@@ -150,5 +182,30 @@ public class PlayerCtrl : MonoBehaviour
     {
         status.attacking = false;
         status.died = false;
+    }
+
+    private void OnNetworkInstantiate(NetworkMessageInfo info)
+    {
+        if (!GetComponent<NetworkView>().isMine)
+        {
+            CharacterMove move = GetComponent<CharacterMove>();
+            Destroy(move);
+
+            AttackArea[] attackAreas = GetComponentsInChildren<AttackArea>();
+            foreach (AttackArea attackArea in attackAreas)
+            {
+                Destroy(attackArea);
+            }
+
+            AttackAreaActivator attackAreaActivator = GetComponent<AttackAreaActivator>();
+            Destroy(attackAreaActivator);
+        }
+    }
+
+    private void playerMove()
+    {
+        lookRotation = inputManager.GetPlayerDiretion();
+        transform.rotation = Quaternion.LookRotation(lookRotation);
+        characterController.Move(lookRotation * playerMoveSpeed * Time.deltaTime);
     }
 }
