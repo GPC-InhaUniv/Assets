@@ -13,6 +13,11 @@ public class FollowCamera : MonoBehaviour {
 
     InputManager inputManager;
 
+    public void SetTarget(Transform target)
+    {
+        lookTarget = target;
+    }
+
 	// Use this for initialization
 	void Start () {
         inputManager = FindObjectOfType<InputManager>();

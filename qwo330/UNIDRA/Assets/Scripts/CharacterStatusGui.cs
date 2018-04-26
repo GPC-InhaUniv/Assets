@@ -29,11 +29,22 @@ public class CharacterStatusGui : MonoBehaviour
     {
         float x = baseWidth - playerLifeBarRect.width - playerStatusOffset.x;
         float y = playerStatusOffset.y;
-        DrawCharacterStatus(
-            x, y,
-            playerStatus,
-            playerLifeBarRect,
-            playerFrontLifeBarColor);
+        float delta_height = nameRect.height + playerLifeBarRect.height;
+        PlayerCtrl[] players = FindObjectsOfType<PlayerCtrl>() as PlayerCtrl[];
+
+        foreach (PlayerCtrl player in players)
+        {
+            CharacterStatus status = player.GetComponent<CharacterStatus>();
+            if(status != null)
+            {
+                DrawCharacterStatus(
+                    x, y,
+                    status,
+                    playerLifeBarRect,
+                    playerFrontLifeBarColor);
+                y += delta_height;
+            }
+        }
     }
     // 적 스테이터스 표시
     void DrawEnemyStatus()
@@ -75,19 +86,18 @@ public class CharacterStatusGui : MonoBehaviour
         }
     }
 
-    void Awake()
-    {
-        PlayerCtrl player_ctrl = FindObjectOfType(typeof(PlayerCtrl)) as PlayerCtrl;
-        playerStatus = player_ctrl.GetComponent<CharacterStatus>();
-    }
-
     void OnGUI()
     {
         // 해상도 대응
         GUI.matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.identity,
             new Vector3(Screen.width / baseWidth, Screen.height / baseHeight, 1f));
 
-        DrawPlayerStauts();
-        DrawEnemyStatus();
+        GameRuleCtrl gameRuleCtrl = FindObjectOfType(typeof(GameRuleCtrl)) as GameRuleCtrl;
+        if(gameRuleCtrl.player != null)
+        {
+            playerStatus = gameRuleCtrl.player.GetComponent<CharacterStatus>();
+            DrawPlayerStauts();
+            DrawEnemyStatus();
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class PlayerCtrl : MonoBehaviour {
 
@@ -18,6 +19,7 @@ public class PlayerCtrl : MonoBehaviour {
 
     public AudioClip deathSeClip;
     AudioSource deathSeAudio;
+    public new NetworkView networkView;
 
     enum State
     {
@@ -34,8 +36,6 @@ public class PlayerCtrl : MonoBehaviour {
         status = GetComponent<CharacterStatus>();
         charaAnimation = GetComponent<CharaAnimation>();
         inputManager = FindObjectOfType<InputManager>();
-        //inputManager = FindObjectOfType(typeof(InputManager)) as InputManager;
-        //GameObject obj = GameObject.FindGameObjectWithTag("TagName");
         gameRuleCtrl = FindObjectOfType<GameRuleCtrl>();
 
         targetCursor = FindObjectOfType<TargetCursor>();
@@ -44,10 +44,15 @@ public class PlayerCtrl : MonoBehaviour {
         deathSeAudio = gameObject.AddComponent<AudioSource>();
         deathSeAudio.loop = false;
         deathSeAudio.clip = deathSeClip;
-	}
+
+        //networkView = GetComponent<NetworkView>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        // 관리 오브젝트가 아니면 아무것도 하지 않는다.
+        if (!networkView.isMine) return;
+
         switch(state)
         {
             case State.Walking:
@@ -70,6 +75,25 @@ public class PlayerCtrl : MonoBehaviour {
         }
 	}
 
+    private void OnNetworkInstantiate(NetworkMessageInfo info)
+    {
+        networkView = GetComponent<NetworkView>();
+        if (!networkView.isMine)
+        {
+            CharacterMove move = GetComponent<CharacterMove>();
+            Destroy(move);
+
+            AttackArea[] attackAreas = GetComponentsInChildren<AttackArea>();
+            foreach (AttackArea attackArea in attackAreas)
+            {
+                Destroy(attackArea);
+            }
+
+            AttackAreaActivator attackAreaActivator = GetComponent<AttackAreaActivator>();
+            Destroy(attackAreaActivator);
+        }
+    }
+
     void ChangeState(State nextState)
     {
         this.nextState = nextState;
@@ -80,6 +104,13 @@ public class PlayerCtrl : MonoBehaviour {
         status.died = true;
         gameRuleCtrl.GameOver();
         deathSeAudio.Play();
+        Invoke("DelayedDestory", 8.0f);
+    }
+
+    void DelayedDestory()
+    {
+        Network.Destroy(gameObject);
+        Network.RemoveRPCs(networkView.viewID);
     }
 
     void Damage(AttackArea.AttackInfo attackInfo)
@@ -88,7 +119,16 @@ public class PlayerCtrl : MonoBehaviour {
         effect.transform.localPosition = transform.position + new Vector3(0.0f, 0.5f, 0.0f);
         Destroy(effect, 0.3f);
 
-        status.HP -= attackInfo.attackPower;
+        if (networkView.isMine)
+            DamageMine(attackInfo.attackPower);
+        else
+            networkView.RPC("DamageMine", networkView.owner, attackInfo.attackPower);
+    }
+
+    [RPC]
+    void DamageMine(int damage)
+    {
+        status.HP -= damage;
         if(status.HP <= 0)
         {
             status.HP = 0;

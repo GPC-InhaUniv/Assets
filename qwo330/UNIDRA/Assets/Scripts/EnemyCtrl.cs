@@ -29,6 +29,8 @@ public class EnemyCtrl : MonoBehaviour {
     State nextState = State.Walking;
 
     public AudioClip deathSeClip;
+    public AudioClip attackSeClip;
+    new NetworkView networkView;
 
     // Use this for initialization
     void Start() {
@@ -43,6 +45,9 @@ public class EnemyCtrl : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (!networkView.isMine)
+            return;
+
         switch (state)
         {
             case State.Walking: Walking(); break;
@@ -50,7 +55,7 @@ public class EnemyCtrl : MonoBehaviour {
             case State.Attacking: Attacking(); break;
         }
 
-        if(state != nextState)
+        if (state != nextState)
         {
             state = nextState;
             switch (state)
@@ -60,6 +65,25 @@ public class EnemyCtrl : MonoBehaviour {
                 case State.Attacking: AttackStart(); break;
                 case State.Died: Died(); break;
             }
+        }
+    }
+
+    private void OnNetworkInstantiate(NetworkMessageInfo info)
+    {
+        networkView = GetComponent<NetworkView>();
+        if (!networkView.isMine)
+        {
+            CharacterMove move = GetComponent<CharacterMove>();
+            Destroy(move);
+
+            AttackArea[] attackAreas = GetComponentsInChildren<AttackArea>();
+            foreach (AttackArea attackArea in attackAreas)
+            {
+                Destroy(attackArea);
+            }
+
+            AttackAreaActivator attackAreaActivator = GetComponent<AttackAreaActivator>();
+            Destroy(attackAreaActivator);
         }
     }
 
@@ -132,10 +156,11 @@ public class EnemyCtrl : MonoBehaviour {
 
         // 이동을 멈춘다.
         SendMessage("StopMove");
+        AudioSource.PlayClipAtPoint(attackSeClip, transform.position);
     }
     void Attacking()
     {
-        if(charaAnimation.IsAttacked())
+        if (charaAnimation.IsAttacked())
         {
             ChangeState(State.Walking);
             waitTime = Random.Range(waitBaseTime, waitBaseTime * 2.0f);
@@ -145,36 +170,44 @@ public class EnemyCtrl : MonoBehaviour {
 
     void DropItem()
     {
-        if(dropItemPrefabs.Length == 0)
-        {
+        if (dropItemPrefabs.Length == 0)
             return;
-        }
         GameObject dropItem = dropItemPrefabs[Random.Range(0, dropItemPrefabs.Length)];
-        Instantiate(dropItem, transform.position, Quaternion.identity);
+        Network.Instantiate(dropItem, transform.position, transform.rotation, 0);
     }
 
     void Died()
     {
         status.died = true;
         DropItem();
-        Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(deathSeClip, transform.position);
 
         if (gameObject.tag == "Boss")
             gameRuleCtrl.GameClear();
-        AudioSource.PlayClipAtPoint(deathSeClip, transform.position);
+
+        Network.Destroy(gameObject);
+        Network.RemoveRPCs(networkView.viewID);
     }
 
-    void Damage(AttackArea.AttackInfo attackInfo)
+void Damage(AttackArea.AttackInfo attackInfo)
     {
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity) as GameObject;
         effect.transform.localPosition = transform.position + new Vector3(0.0f, 0.5f, 0.0f);
         Destroy(effect, 0.3f);
 
-        status.HP -= attackInfo.attackPower;
-        if (status.HP <= 0)
+        if (networkView.isMine)
+            DamageMine(attackInfo.attackPower);
+        else
+            networkView.RPC("DamageMine", networkView.owner, attackInfo.attackPower);
+    }
+
+    [RPC]
+    void DamageMine(int damage)
+    {
+        status.HP -= damage;
+        if(status.HP <= 0)
         {
             status.HP = 0;
-            // 체력이 0이므로 사망 스테이트로 전환한다.
             ChangeState(State.Died);
         }
     }

@@ -18,6 +18,7 @@ public class CharacterStatus : MonoBehaviour {
     public string characterName = "Player";
     ParticleSystem powerUpEffect;
     
+    [RPC]
     public void GetItem(DropItem.ItemKind itemKind)
     {
         switch(itemKind)
@@ -30,6 +31,12 @@ public class CharacterStatus : MonoBehaviour {
                 HP = Mathf.Min(HP + MaxHP / 2, MaxHP);
                 break;
         }
+    }
+
+    [RPC]
+    public void SetName(string name)
+    {
+        characterName = name;
     }
 
     private void Start()

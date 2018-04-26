@@ -10,6 +10,8 @@ public class TitleSceneCtrl : MonoBehaviour {
     private void OnGUI()
     {
 
+        GUI.Button(new Rect(10, 10, 100, 60), "button");
+
         GUIStyle buttonStyle = new GUIStyle(GUI.skin.button);
 
         //해상도 대응
@@ -24,14 +26,4 @@ public class TitleSceneCtrl : MonoBehaviour {
             SceneManager.LoadScene("GameScene");
         }
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
