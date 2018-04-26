@@ -9,11 +9,27 @@ public class GameBossEmergenceGui : MonoBehaviour
     float baseHeight = 480f;
 
     public Texture2D bossEmergenceTexture;
- 
+    public AudioClip WarningClip;
+    AudioSource warningSoundSource;
+    bool warningSoundPlaying = false;
+
     void Awake()
     {
         gameRuleCtrl = GameObject.FindObjectOfType(typeof(GameRuleCtrl)) as GameRuleCtrl;
+        // 오디오 초기화.
+        warningSoundSource = gameObject.AddComponent<AudioSource>();
+        warningSoundSource.clip = WarningClip;
+        warningSoundSource.loop = false;
+        
     }
+    private void Update()
+    {
+        if (!warningSoundSource.isPlaying && gameRuleCtrl.bossEmergence&&!warningSoundPlaying)
+        {
+            warningSoundSource.Play();
+        }
+    }
+
 
     void OnGUI()
     {
@@ -41,17 +57,20 @@ public class GameBossEmergenceGui : MonoBehaviour
     IEnumerator ShowWarningText()
     {
         int count = 0;
-
-        while(true)
+       
+        while (true)
         {
             if (count > 3)
             {
+               
                 gameRuleCtrl.bossEmergence = false;
                 gameRuleCtrl.MainCamera.GetComponent<Camera>().enabled = true;
                 gameRuleCtrl.SubCamera.GetComponent<Camera>().enabled = false;
+                warningSoundSource.Stop();
                 yield break;
             }
-                count++;
+           
+            count++;
                 yield return new WaitForSeconds(1.0f);
          
         }
