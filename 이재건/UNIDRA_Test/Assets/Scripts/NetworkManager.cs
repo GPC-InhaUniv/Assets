@@ -10,7 +10,7 @@ public class NetworkManager : MonoBehaviour {
 	const string LocalServerIP = "127.0.0.1"; // 개발용.
 	const int ServerPort = 25000;
 	
-	string playerName;
+	public string playerName;
 	string gameServerName;
 	
 	void Start()

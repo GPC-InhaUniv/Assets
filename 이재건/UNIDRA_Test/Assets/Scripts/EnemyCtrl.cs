@@ -147,10 +147,12 @@ public class EnemyCtrl : MonoBehaviour
     // 추적 중.
     void Chasing()
     {
+        
+        if(attackTarget!=null)
         // 이동할 곳을 플레리어에 설정한다.
         SendMessage("SetDestination", attackTarget.position);
         // 2미터 이내로 접근하면 공격한다.
-        if (Vector3.Distance(attackTarget.position, transform.position) <= 2.0f)
+        if (Vector3.Distance(attackTarget.position, transform.position) <= 3.0f)
         {
             ChangeState(State.Attacking);
         }
@@ -195,15 +197,24 @@ public class EnemyCtrl : MonoBehaviour
 
     void Died()
     {
+      
         status.died = true;
         dropItem();
+        AudioSource.PlayClipAtPoint(deathSeClip, transform.position);
+        if (this.transform.root.tag == "Reptile")
+            return;
+
+
         gameRuleCtrl.GetComponent<NetworkView>().RPC("KillWargs", RPCMode.AllBuffered);
         //gameRuleCtrl.KillWargs();
-        AudioSource.PlayClipAtPoint(deathSeClip, transform.position);
+  
         if (gameObject.tag == "Boss")
         {
+            gameRuleCtrl.RealBoss=true;
             gameRuleCtrl.GameClear();
         }
+
+      
         Network.Destroy(gameObject);
         Network.RemoveRPCs(GetComponent<NetworkView>().viewID);
     }

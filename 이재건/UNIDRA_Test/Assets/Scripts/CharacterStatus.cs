@@ -8,9 +8,9 @@ public class CharacterStatus : MonoBehaviour
 
     //---------- 공격 장에서 사용한다. ----------
     // 체력.
-    public int HP = 300;
-    public int MaxHP = 300;
-
+    public int HP = 100;
+    public int MaxHP = 100;
+    public int Level = 1;
     // 공격력.
     public int Power = 10;
 
@@ -64,6 +64,7 @@ public class CharacterStatus : MonoBehaviour
     public void SetName(string name)
     {
         characterName = name;
+
     }
 
     void Update()

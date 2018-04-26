@@ -28,6 +28,7 @@ public class GameRuleCtrl : MonoBehaviour
     public GameObject MainCamera;
     public GameObject SubCamera;
 
+    public bool RealBoss = false;
 
     [RPC]
     public void SetCamera()
@@ -46,15 +47,42 @@ public class GameRuleCtrl : MonoBehaviour
         SubCamera.GetComponent<Camera>().enabled = true;
     }
 
+    [RPC]
+    public void SetRealBossEmergency()
+    {
+      
+    }
+
     public bool bossEmergence = false;
 
     public int KillWargCount = 0;
+    
+
 
     [RPC]
     public void KillWargs()
     {
         KillWargCount++;
+       
         Debug.Log("현재 kill warg count: "+KillWargCount);
+
+
+    
+        if (player != null&&KillWargCount % 3 == 0)
+        {
+            player.GetComponent<CharacterStatus>().Level++;
+            player.GetComponent<CharacterStatus>().MaxHP = 100 + player.GetComponent<CharacterStatus>().Level * 10;
+            player.GetComponent<CharacterStatus>().HP += player.GetComponent<CharacterStatus>().Level * 10;
+            player.GetComponent<CharacterStatus>().Power = player.GetComponent<CharacterStatus>().Level * 3 + 10;
+            NetworkManager networkManager = FindObjectOfType(typeof(NetworkManager)) as NetworkManager;
+            player.GetComponent<NetworkView>().RPC("SetName", RPCMode.AllBuffered, networkManager.GetPlayerName() + "\nLv:" + player.GetComponent<CharacterStatus>().Level);
+            player.GetComponent<ParticleSystem>().Play();
+
+
+        }
+
+
+
         if (KillWargCount == 10&&!bossEmergence)
         {
             GetComponent<NetworkView>().RPC("SetBossEmergency", RPCMode.AllBuffered);
@@ -77,9 +105,10 @@ public class GameRuleCtrl : MonoBehaviour
             followCamera.lookTarget=player.transform;
             // 이름 송신.
             NetworkManager networkManager = FindObjectOfType(typeof(NetworkManager)) as NetworkManager;
-            player.GetComponent<NetworkView>().RPC("SetName", RPCMode.AllBuffered, networkManager.GetPlayerName());
+            player.GetComponent<NetworkView>().RPC("SetName", RPCMode.AllBuffered, networkManager.GetPlayerName() + "\nLv:" + player.GetComponent<CharacterStatus>().Level);
             GetComponent<NetworkView>().RPC("SetCamera", RPCMode.AllBuffered);
         }
+      
 
         // 게임 종료 조건 성립 후 씬 전환.
         if (gameOver || gameClear)
