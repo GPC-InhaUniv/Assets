@@ -32,7 +32,6 @@ namespace Invaders
             Stream streamfirePlayer = Properties.Resources.sfx_wpn_cannon1;
             firePlayer.Stream = streamfirePlayer;
             string dir = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName.ToString() + @"\Resources\mazeOfMayonnaise.wav";
-            axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(PlayLoop);
             axWindowsMediaPlayer1.settings.autoStart = false;
             axWindowsMediaPlayer1.URL = dir;
             axWindowsMediaPlayer1.settings.volume = 100;
@@ -51,6 +50,7 @@ namespace Invaders
             animationTimer.Start();
             gameTimer.Start();
             axWindowsMediaPlayer1.Ctlcontrols.play();
+            axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(PlayLoop);
         }
         
         private void Game_Gameover(object sender, EventArgs e)
