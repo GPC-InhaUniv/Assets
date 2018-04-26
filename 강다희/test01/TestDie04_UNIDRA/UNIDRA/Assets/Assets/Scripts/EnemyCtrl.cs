@@ -198,8 +198,11 @@ public class EnemyCtrl : MonoBehaviour
     private void dropItem()
     {
         if (dropItemPrefab.Length == 0) { return; }
-        GameObject dropItem = dropItemPrefab[Random.Range(0, dropItemPrefab.Length)];
-        Network.Instantiate(dropItem, transform.position, transform.rotation, 0);
+        GameObject dropItem = dropItemPrefab[Random.Range(0, 3)];
+        if (Network.Instantiate(dropItem, transform.position, transform.rotation, 0))
+        {
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponentInChildren<TextMesh>().text = dropItem.ToString();
+        }
     }
 
     private void Died()
