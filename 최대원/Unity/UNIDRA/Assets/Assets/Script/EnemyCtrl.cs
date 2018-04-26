@@ -1,23 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
 public class EnemyCtrl : MonoBehaviour {
+
 	CharacterStatus status;
 	CharaAnimation charaAnimation;
     CharacterMove characterMove;
 	Transform attackTarget;
     GameRuleCtrl gameRuleCtrl;
+    public GameObject hitEffect;
 
-    // 대기 시간은 2초로 설정한다.
     public float waitBaseTime = 2.0f;
-    // 남은 대기 시간.
     float waitTime;
-    // 이동 범위 5미터.
     public float walkRange = 5.0f;
-    // 초기 위치를 저장해 둘 변수.
     public Vector3 basePosition;
-    // 복수의 아이템을 저장할 수 있는 배열로 한다.
     public GameObject[] dropItemPrefab;
+
+    public AudioClip deathSeClip;
 	
 	// 스테이트 종류.
 	enum State {
@@ -41,10 +41,18 @@ public class EnemyCtrl : MonoBehaviour {
         // 대기 시간.
         waitTime = waitBaseTime;
         gameRuleCtrl = FindObjectOfType<GameRuleCtrl>();
+
+
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (!GetComponent<NetworkView>().isMine)
+        {
+            return;
+        }
+
 		switch (state) {
 		case State.Walking:
 			Walking();
@@ -168,31 +176,49 @@ public class EnemyCtrl : MonoBehaviour {
     {
         if (dropItemPrefab.Length == 0) { return; }
         GameObject dropItem = dropItemPrefab[Random.Range(0, dropItemPrefab.Length)];
-        Instantiate(dropItem, transform.position, Quaternion.identity);
+        Network.Instantiate(dropItem, transform.position, Quaternion.identity, 0);
     }
 
     void Died()
 	{
         status.died = true;
         dropItem();
-        Destroy(gameObject);
-
+        AudioSource.PlayClipAtPoint(deathSeClip, transform.position);
         if(gameObject.tag == "Boss")
         {
             gameRuleCtrl.GameClear();
         }
+        Network.Destroy(gameObject);
+        Network.RemoveRPCs(GetComponent<NetworkView>().viewID);
     }
 	
 	void Damage(AttackArea.AttackInfo attackInfo)
 	{
-		status.HP -= attackInfo.attackPower;
-		if (status.HP <= 0) {
-			status.HP = 0;
-			// 체력이 0이므로 사망 스테이트로 전환한다.
-            ChangeState(State.Died);
-		}
+        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity) as GameObject;
+        effect.transform.localPosition = transform.position + new Vector3(0f, 0.5f, 0f);
+        Destroy(effect, 0.3f);
+
+        if (GetComponent<NetworkView>().isMine)
+        {
+            RpcDamageMine(attackInfo.attackPower);
+        }
+        else
+        {
+            GetComponent<NetworkView>().RPC("RpcDamageMine", GetComponent<NetworkView>().owner, attackInfo.attackPower);
+        }
 	}
 	
+    [RPC]
+    void RpcDamageMine(int damage)
+    {
+        status.HP -= damage;
+        if(status.HP <= 0)
+        {
+            status.HP = 0;
+            ChangeState(State.Died);
+        }
+    }
+
 	// 스테이트가 시작되기 전에 스테이터스를 초기화한다.
 	void StateStartCommon()
 	{
@@ -203,5 +229,24 @@ public class EnemyCtrl : MonoBehaviour {
     public void SetAttackTarget(Transform target)
     {
         attackTarget = target;
+    }
+
+    //네트워크
+    private void OnNetworkInstantiate(NetworkMessageInfo info)
+    {
+        if (!GetComponent<NetworkView>().isMine)
+        {
+            CharacterMove move = GetComponent<CharacterMove>();
+            Destroy(move);
+
+            AttackArea[] attackAreas = GetComponentsInChildren<AttackArea>();
+            foreach (AttackArea attackArea in attackAreas)
+            {
+                Destroy(attackArea);
+            }
+
+            AttackAreaActivator attackAreaActivator = GetComponent<AttackAreaActivator>();
+            Destroy(attackAreaActivator);
+        }
     }
 }
