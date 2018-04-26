@@ -35,12 +35,16 @@ public class InputManager : MonoBehaviour {
 	}
 	
 	// 클릭되었는가.
-	public bool Clicked()
+	public int Clicked()
 	{
-		if (!moved && Input.GetButtonUp("Fire1"))
-			return true;
-		else
-			return false;
+        if (!moved && Input.GetButtonUp("Fire1"))
+            return 1; // attack
+        else if (!moved && Input.GetButtonUp("Fire2"))
+            return 2; // rush
+        else if (!moved && Input.GetKeyDown(KeyCode.Alpha1))
+            return 11; // Whrilwind
+        else
+            return 0;
 	}	
 	
 	// 슬라이드할 때 커서 이동량.

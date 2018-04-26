@@ -53,6 +53,13 @@ public class EnemyGeneratorCtrl : MonoBehaviour
                     existEnemys[enemyCount] = Network.Instantiate(enemyPrefab, transform.position, transform.rotation, 0) as GameObject;
                     return;
                 }
+                if(gameRuleCtrl.RealBoss)
+                {
+                    existEnemys[enemyCount] = Network.Instantiate(enemyPrefab, transform.position, transform.rotation, 0) as GameObject;
+                    return;
+                }
+                    
+                ///aaa
             }
         }
 

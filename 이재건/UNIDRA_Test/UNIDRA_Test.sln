@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UNIDRA_Test", "UNIDRA_Test.csproj", "{F325D080-D426-3B69-E0D9-B53E71B9F920}"
 EndProject
 Global

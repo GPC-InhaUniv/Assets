@@ -20,7 +20,7 @@ public class Nameplate : MonoBehaviour {
             return;
 
 		if (textMesh.text != status.characterName)
-			textMesh.text = status.characterName;
+			textMesh.text = status.characterName ;
 		// 머리 위로 이동.
 		transform.position = status.transform.position + offset;
 		// 항상 카메라와 같은 방향으로. 

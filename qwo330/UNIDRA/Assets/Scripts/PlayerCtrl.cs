@@ -21,11 +21,17 @@ public class PlayerCtrl : MonoBehaviour {
     AudioSource deathSeAudio;
     public new NetworkView networkView;
 
+    public float rushSpeed = 0.1f;
+    public float rotSpeed = 10000.0f;
+    Vector3 destination;
+
     enum State
     {
         Walking,
         Attacking,
         Died,
+        Whirlwinding,
+        Rushing,
     };
 
     State state = State.Walking;
@@ -46,6 +52,7 @@ public class PlayerCtrl : MonoBehaviour {
         deathSeAudio.clip = deathSeClip;
 
         //networkView = GetComponent<NetworkView>();
+        destination = transform.position;
     }
 	
 	// Update is called once per frame
@@ -59,6 +66,10 @@ public class PlayerCtrl : MonoBehaviour {
                 Walking(); break;
             case State.Attacking:
                 Attacking(); break;
+            case State.Whirlwinding:
+                Whirlwinding(); break;
+            case State.Rushing:
+                Rushing(); break;
         }
         if(state != nextState)
         {
@@ -71,6 +82,10 @@ public class PlayerCtrl : MonoBehaviour {
                     AttackStart(); break;
                 case State.Died:
                     Died(); break;
+                case State.Whirlwinding:
+                    WhirlwindStart(); break;
+                case State.Rushing:
+                    RushStart(); break;
             }
         }
 	}
@@ -141,9 +156,8 @@ public class PlayerCtrl : MonoBehaviour {
         StateStartCommon();
         status.attacking = true;
 
-        Vector3 targetDirection = (attackTarget.position - transform.position).normalized;
+        targetDirection = (attackTarget.position - transform.position).normalized;
         SendMessage("SetDirection", targetDirection);
-
         SendMessage("StopMove");
     }
 
@@ -153,6 +167,37 @@ public class PlayerCtrl : MonoBehaviour {
             ChangeState(State.Walking);
     }
 
+    Vector3 targetDirection;
+    void RushStart()
+    {
+        StateStartCommon();
+        status.attacking = true;
+        targetDirection = (attackTarget.position - transform.position).normalized;
+        SendMessage("SetDirection", targetDirection);
+        SendMessage("StopMove");
+    }
+
+    void Rushing()
+    {
+        transform.Translate(targetDirection * rushSpeed * Time.deltaTime);
+        //transform.position = Vector3.MoveTowards(transform.position, transform.position + targetDirection, rushSpeed * Time.deltaTime);
+
+        Attacking();
+    }
+
+    void WhirlwindStart()
+    {
+        StateStartCommon();
+        status.attacking = true;
+        SendMessage("StopMove");
+    }
+
+    void Whirlwinding()
+    {
+        Attacking();
+        transform.RotateAround(transform.position, new Vector3(0, 300.0f, 0), rotSpeed * Time.deltaTime);
+    }
+
     void WalkStart()
     {
         StateStartCommon();
@@ -160,7 +205,7 @@ public class PlayerCtrl : MonoBehaviour {
 
     void Walking()
     {
-        if(inputManager.Clicked())
+        if(inputManager.Clicked() == 1) // 마우스 왼쪽
         {
             Ray ray = Camera.main.ScreenPointToRay(inputManager.GetCursorPosition());
             RaycastHit hitInfo;
@@ -192,6 +237,36 @@ public class PlayerCtrl : MonoBehaviour {
                     }
                 }
             }
+        }
+        else if(inputManager.Clicked() == 2) // 마우스 오른쪽
+        {
+            Ray ray = Camera.main.ScreenPointToRay(inputManager.GetCursorPosition());
+            RaycastHit hitInfo;
+            if (Physics.Raycast(ray, out hitInfo, RayCastMaxDistance,
+                1 << LayerMask.NameToLayer("Ground") | 1 << LayerMask.NameToLayer("EnemyHit")))
+            {
+                if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+                {
+                    SendMessage("SetDestination", hitInfo.point);
+                    targetCursor.SetPosition(hitInfo.point);
+                }
+                if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit"))
+                {
+                    // 수평 거리를 체크해서 공격할지 결정한다.
+                    Vector3 hitPoint = hitInfo.point;
+                    hitPoint.y = transform.position.y;
+                    float distance = Vector3.Distance(hitPoint, transform.position);
+
+
+                    attackTarget = hitInfo.collider.transform;
+                    targetCursor.SetPosition(attackTarget.position);
+                    ChangeState(State.Rushing);
+                }
+            }
+        }
+        else if(inputManager.Clicked() == 11) // 키보드 1
+        {
+            ChangeState(State.Whirlwinding);
         }
     }
 

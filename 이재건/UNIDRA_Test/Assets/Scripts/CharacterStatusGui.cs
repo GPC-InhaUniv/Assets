@@ -36,7 +36,7 @@ public class CharacterStatusGui : MonoBehaviour
         {
             CharacterStatus status = player.GetComponent<CharacterStatus>();
             if (status.HP == 0 && !status.died)
-                status.HP = 300;
+                status.HP = 100;
 
             if (status != null)
             {

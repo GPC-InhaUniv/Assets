@@ -45,24 +45,28 @@ public class AttackArea : MonoBehaviour
     // 맞았다.
     void OnTriggerEnter(Collider other)
     {
-        // 공격 당한 상대의 Damage 메시지를 보낸다.
-        other.SendMessage("Damage", GetAttackInfo());
-        status.lastAttackTarget = other.transform.root.gameObject;
-        // 오디오 재생.
-        hitSeAudio.Play();
+        //if (other.transform.root.tag =="Reptile"||other.tag== "Terrain")
+        //    return;
+
+            // 공격 당한 상대의 Damage 메시지를 보낸다.
+            other.SendMessage("Damage", GetAttackInfo());
+            status.lastAttackTarget = other.transform.root.gameObject;
+            // 오디오 재생.
+            hitSeAudio.Play();
+     
     }
 
 
     // 공격 판정을 유효로 한다.
     void OnAttack()
     {
-        GetComponent<Collider>().enabled = true;
+        GetComponent<SphereCollider>().enabled = true;
     }
 
 
     // 공격 판정을 무효로 한다.
     void OnAttackTermination()
     {
-        GetComponent<Collider>().enabled = true;
+        GetComponent<SphereCollider>().enabled = true;
     }
 }

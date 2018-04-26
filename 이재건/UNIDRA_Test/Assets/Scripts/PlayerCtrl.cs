@@ -37,7 +37,7 @@ public class PlayerCtrl : MonoBehaviour
         gameRuleCtrl = FindObjectOfType<GameRuleCtrl>();
         targetCursor = FindObjectOfType<TargetCursor>();
         targetCursor.SetPosition(transform.position);
-        status.HP = 300;
+        status.HP = 100;
     }
 
     // Update is called once per frame
