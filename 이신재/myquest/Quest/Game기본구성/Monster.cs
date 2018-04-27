@@ -10,8 +10,14 @@ namespace Quest
     
     abstract class Monster : Mover
     {
+        enum enumMonster
+        {
+            Teemo,
+            Yasuo,
+            Masterei,
+        }
         
-
+        
         private const int NearPlayerDistance = 25;
         private int hitPoints;
         public int HitPoints { get { return hitPoints; } }
@@ -46,10 +52,10 @@ namespace Quest
         protected enumDirection FindPlayerDirection(Point playerLocation)
         {
             enumDirection directionToMove;
-            if (playerLocation.X > location.X + 10) directionToMove = enumDirection.Right;
-            else if (playerLocation.X < location.X - 10) directionToMove = enumDirection.Left;
-            else if (playerLocation.Y < location.Y - 10) directionToMove = enumDirection.Up;
-            else directionToMove = enumDirection.Down;
+            if (playerLocation.X > location.X + 10) directionToMove = enumDirection.Right; 
+            else if (playerLocation.X < location.X - 10)  directionToMove = enumDirection.Left; 
+            else if (playerLocation.Y < location.Y - 10)  directionToMove = enumDirection.Up; 
+            else  directionToMove = enumDirection.Down; 
 
             return directionToMove;
         }

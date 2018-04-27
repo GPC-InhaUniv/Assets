@@ -12,13 +12,16 @@ namespace Quest
 {
     public partial class Form1 : Form
     {
-        Game game = new Game(new Rectangle(120, 20, 675, 280));
-       
-        private Random random = new Random();
+        Game game;
         
+        private Random random = new Random();
+        Control ItemControl;
+
         public Form1()
         {
             InitializeComponent();
+            game = new Game(new Rectangle(78,57,420,155));
+            game.NewLevel(random);
 
             pctsword.Visible = false;
             pctbow.Visible = false;
@@ -26,34 +29,25 @@ namespace Quest
             pctredpotion.Visible = false;
             pctbluepotion.Visible = false;
 
-            pctinvenaxe.Visible = false;
-            pctinvensword.Visible = false;
-            pctinvenbow.Visible = false;
-            pctinvenbluepotion.Visible = false;
-            pctinvenredpotion.Visible = false;
+            pctteemo.Visible = false;
+            pctyasuo.Visible = false;
+            pctmasterei.Visible = false;
 
-
-            
-
-
-        }
-        
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
-            game.NewLevel(random);
-            UpdateCharacters();
         }
 
         private void UpdateCharacters() //캐릭터 업데이트
         {
+            
             pctplayer.Location = game.PlayerLocation;
             txtplayerhp.Text = game.PlayerHitPoints.ToString();
+            
+
+            bool showTeemo = false;
+            bool showYasuo = false;
+            bool showMasterei = false;
 
             int monstersShown = 0;
-
-
+            
             foreach (Monster monster in game.Monsters) //Monsters에 null걸림
             {
                 if (monster is Teemo)
@@ -95,6 +89,45 @@ namespace Quest
 
                     }
                 }
+            }
+            
+            ItemControl = null;
+
+            switch (game.ItemInRoom.Name)
+            {
+                case "Sword":
+                    ItemControl = pctsword; break;
+                case "Bow":
+                    ItemControl = pctbow; break;
+                case "Axe":
+                    ItemControl = pctaxe; break;
+                case "RedPotion":
+                    ItemControl = pctredpotion; break;
+                case "BluePotion":
+                    ItemControl = pctbluepotion; break;
+            }
+
+            ItemControl.Visible = true;
+
+            ItemControl.Location = game.ItemInRoom.Location;
+            if(game.ItemInRoom.PickedUp)
+            {
+                ItemControl.Visible = false;
+            }
+            else
+            {
+                ItemControl.Visible = false;
+            }
+            if(game.PlayerHitPoints <=0)
+            {
+                MessageBox.Show("Game over...");
+                Application.Exit();
+            }
+            if (monstersShown < 1)
+            {
+                MessageBox.Show("Game Clear!!");
+                game.NewLevel(random);
+                UpdateCharacters();
             }
         }
        

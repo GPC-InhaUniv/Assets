@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\work\github\test\김승환\Invaders\Invaders\bin\Debug\Invaders.exe.config
 C:\work\github\test\김승환\Invaders\Invaders\bin\Debug\Invaders.exe
 C:\work\github\test\김승환\Invaders\Invaders\bin\Debug\Invaders.pdb
@@ -12,3 +13,20 @@ C:\work\github\test\김승환\Invaders\Invaders\obj\Debug\Invaders.csproj.Genera
 C:\work\github\test\김승환\Invaders\Invaders\obj\Debug\Invaders.csproj.CoreCompileInputs.cache
 C:\work\github\test\김승환\Invaders\Invaders\obj\Debug\Invaders.exe
 C:\work\github\test\김승환\Invaders\Invaders\obj\Debug\Invaders.pdb
+=======
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\bin\Debug\Invaders.exe.config
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\bin\Debug\Invaders.exe
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\bin\Debug\Invaders.pdb
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\bin\Debug\Interop.WMPLib.dll
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\obj\Debug\Invaders.csprojResolveAssemblyReference.cache
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\obj\Debug\Interop.WMPLib.dll
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\obj\Debug\Invaders.csproj.ResolveComReference.cache
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\obj\Debug\Invaders.Form1.resources
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\obj\Debug\Invaders.Properties.Resources.resources
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\obj\Debug\Invaders.csproj.GenerateResource.Cache
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\obj\Debug\Invaders.csproj.CoreCompileInputs.cache
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\obj\Debug\Invaders.exe
+C:\Users\HRD32122\Documents\github\Test\김승환\Invaders\Invaders\obj\Debug\Invaders.pdb
+>>>>>>> 2ea81776d7e39b50ffbff934c57c144f3c80e8db
