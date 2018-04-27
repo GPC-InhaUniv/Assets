@@ -21,7 +21,7 @@ public class PlayerCtrl : MonoBehaviour {
     AudioSource deathSeAudio;
     public new NetworkView networkView;
 
-    public float rushSpeed = 0.1f;
+    public float rushSpeed = 20.0f;
     public float rotSpeed = 10000.0f;
     Vector3 destination;
 
@@ -167,24 +167,6 @@ public class PlayerCtrl : MonoBehaviour {
             ChangeState(State.Walking);
     }
 
-    Vector3 targetDirection;
-    void RushStart()
-    {
-        StateStartCommon();
-        status.attacking = true;
-        targetDirection = (attackTarget.position - transform.position).normalized;
-        SendMessage("SetDirection", targetDirection);
-        SendMessage("StopMove");
-    }
-
-    void Rushing()
-    {
-        transform.Translate(targetDirection * rushSpeed * Time.deltaTime);
-        //transform.position = Vector3.MoveTowards(transform.position, transform.position + targetDirection, rushSpeed * Time.deltaTime);
-
-        Attacking();
-    }
-
     void WhirlwindStart()
     {
         StateStartCommon();
@@ -201,6 +183,31 @@ public class PlayerCtrl : MonoBehaviour {
     void WalkStart()
     {
         StateStartCommon();
+    }
+
+    Vector3 targetDirection;
+    void RushStart()
+    {
+        StateStartCommon();        
+        status.attacking = true;
+        startPosition = transform.position;
+        moveDistance = 0.0f;
+    }
+    public float rushMaxDistance = 5.0f;
+    public float moveDistance;
+    Vector3 startPosition;
+    
+
+    void Rushing()
+    {
+        moveDistance = Mathf.Abs(startPosition.z - transform.position.z);
+        if (rushMaxDistance > moveDistance)
+        {
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(targetDirection), 720.0f * Time.deltaTime);
+            transform.Translate(targetDirection * rushSpeed * Time.deltaTime, Space.World);
+        }
+        else
+            Attacking();
     }
 
     void Walking()
@@ -238,31 +245,47 @@ public class PlayerCtrl : MonoBehaviour {
                 }
             }
         }
-        else if(inputManager.Clicked() == 2) // 마우스 오른쪽
+        else if (inputManager.Clicked() == 2) // 마우스 오른쪽
         {
             Ray ray = Camera.main.ScreenPointToRay(inputManager.GetCursorPosition());
+            targetDirection = ray.direction;
+            //ChangeState(State.Rushing);
             RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo, RayCastMaxDistance,
-                1 << LayerMask.NameToLayer("Ground") | 1 << LayerMask.NameToLayer("EnemyHit")))
+            if (Physics.Raycast(ray, out hitInfo, RayCastMaxDistance, 1 << LayerMask.NameToLayer("EnemyHit")))
             {
-                if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
-                {
-                    SendMessage("SetDestination", hitInfo.point);
-                    targetCursor.SetPosition(hitInfo.point);
-                }
-                if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit"))
-                {
-                    // 수평 거리를 체크해서 공격할지 결정한다.
-                    Vector3 hitPoint = hitInfo.point;
-                    hitPoint.y = transform.position.y;
-                    float distance = Vector3.Distance(hitPoint, transform.position);
-
-
-                    attackTarget = hitInfo.collider.transform;
-                    targetCursor.SetPosition(attackTarget.position);
-                    ChangeState(State.Rushing);
-                }
+                targetDirection = (hitInfo.point - transform.position).normalized;
             }
+            ChangeState(State.Rushing);
+            Debug.Log(hitInfo);
+            //RaycastHit hitInfo;
+            //if (Physics.Raycast(ray, out hitInfo, RayCastMaxDistance,
+            //    1 << LayerMask.NameToLayer("Ground") | 1 << LayerMask.NameToLayer("EnemyHit")))
+            //{
+
+            //    targetDirection = (hitInfo.point - transform.position).;
+            //    targetDirection = 
+            //    transform.Rotate(targetDirection);
+            //    ChangeState(State.Rushing);
+            //}
+
+            //if (Physics.Raycast(ray, out hitInfo, RayCastMaxDistance,
+            //    1 << LayerMask.NameToLayer("Ground") | 1 << LayerMask.NameToLayer("EnemyHit")))
+            //{
+            //    if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            //    {
+            //        SendMessage("SetDestination", hitInfo.point);
+            //        targetDirection = hitInfo.point;
+            //        ChangeState(State.Rushing);
+            //    }
+            //    if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit"))
+            //    {
+            //        // 수평 거리를 체크해서 공격할지 결정한다.
+            //        targetDirection = hitInfo.point;
+            //        targetDirection.y = transform.position.y;
+            //        attackTarget = hitInfo.collider.transform;
+            //        ChangeState(State.Rushing);
+            //    }
+            //}
         }
         else if(inputManager.Clicked() == 11) // 키보드 1
         {
