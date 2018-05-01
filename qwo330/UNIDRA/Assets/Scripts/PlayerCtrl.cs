@@ -24,11 +24,11 @@ public class PlayerCtrl : MonoBehaviour {
     const float rushSpeed = 30.0f;
     const float rotSpeed = 10000.0f;
 
-    const float WhirlwindCooltime = 8.0f;
-    public float WhirlwindRemaintime = 0.0f;
+    const float whirlwindCooltime = 8.0f;
+    bool canWhirlwind = true;
 
-    const float RushCooltime = 5.0f;
-    public float RushRemainTime = 0.0f;
+    const float rushCooltime = 5.0f;
+    bool canRush = true;
 
     float rushMaxDistance = 5.0f;
     float moveDistance;
@@ -36,7 +36,8 @@ public class PlayerCtrl : MonoBehaviour {
     Vector3 startPosition;
     Vector3 destination;
 
-    public Sprite RushIcon, WhirlwindIcon;
+    public GameObject RushIcon, WhirlwindIcon;
+
 
     enum State
     {
@@ -49,6 +50,20 @@ public class PlayerCtrl : MonoBehaviour {
 
     State state = State.Walking;
     State nextState = State.Walking;
+
+    IEnumerator RushCooltime()
+    {
+        yield return new WaitForSeconds(rushCooltime);
+        RushIcon.SetActive(true);
+        canRush = true;
+    }
+
+    IEnumerator WhirlwindCooltime()
+    {
+        yield return new WaitForSeconds(whirlwindCooltime);
+        WhirlwindIcon.SetActive(true);
+        canWhirlwind = true;
+    }
 
     // Use this for initialization
     void Start () {
@@ -66,19 +81,15 @@ public class PlayerCtrl : MonoBehaviour {
 
         destination = transform.position;
 
+        RushIcon = GameObject.FindGameObjectWithTag("Rush");
+        WhirlwindIcon = GameObject.FindGameObjectWithTag("Whirlwind");
     }
 	
 	// Update is called once per frame
 	void Update () {
         // 관리 오브젝트가 아니면 아무것도 하지 않는다.
         if (!networkView.isMine) return;
-
-        if (WhirlwindRemaintime > 0) WhirlwindRemaintime -= Time.deltaTime;
-        else WhirlwindIcon = true;
-
-        if (RushRemainTime > 0) RushRemainTime -= Time.deltaTime;
-        else RushIcon.enabled = true; 
-
+        
         switch (state)
         {
             case State.Walking:
@@ -265,10 +276,8 @@ public class PlayerCtrl : MonoBehaviour {
         }
         else if (inputManager.Clicked() == 2) // 마우스 오른쪽
         {
-            if (RushRemainTime <= 0)
+            if (canRush)
             {
-                RushIcon.enabled = false;
-                RushRemainTime = RushCooltime;
                 Ray ray = Camera.main.ScreenPointToRay(inputManager.GetCursorPosition());
                 targetDirection = ray.direction;
                 RaycastHit hitInfo;
@@ -289,15 +298,19 @@ public class PlayerCtrl : MonoBehaviour {
                 targetDirection = (hitInfo.point - transform.position).normalized;
                 //targetDirection = (hitInfo.point - transform.position);
                 ChangeState(State.Rushing);
+                RushIcon.SetActive(false);
+                canRush = false;
+                StartCoroutine(RushCooltime());
             }
         }
         else if(inputManager.Clicked() == 11) // 키보드 1
         {
-            if (WhirlwindRemaintime <= 0)
+            if (canWhirlwind)
             {
-                WhirlwindRemaintime = WhirlwindCooltime;
-                WhirlwindIcon.enabled = false;
                 ChangeState(State.Whirlwinding);
+                WhirlwindIcon.SetActive(false);
+                canWhirlwind = false;
+                StartCoroutine(WhirlwindCooltime());
             }
         }
         
