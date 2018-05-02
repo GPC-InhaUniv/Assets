@@ -31,17 +31,49 @@ public class GameManager : MonoBehaviour {
     public Image LifeBar;
     public GameObject GameOverPanel;
 
+    public string userID;
+    public int characterType;
+
+    public GameDataCtrl gameData;
+    public Text playerName;
+    public SpriteRenderer playerHP;
+
     private void OnGUI()
     {
         GUI.Label(new Rect(8f, 8f, 128f, 48f), new GUIContent(playTime.ToString("0"), TimerIcon), TimerLabelStyle);
     }
 
+    private void Awake()
+    {
+        gameData = GameObject.FindWithTag("Data").GetComponent<GameDataCtrl>();
+        gameData.GetData(out userID, out characterType);
+
+        switch(characterType)
+        {
+            case 1:
+                Instantiate(Resources.Load("Prefabs\\Player1"));
+                break;
+            case 2:
+                Instantiate(Resources.Load("Prefabs\\Player2"));
+                Debug.Log(2);
+                break;
+            default:
+                Instantiate(Resources.Load("Prefabs\\Player1"));
+                break;
+        }
+    }
+
     // Use this for initialization
     void Start () {
         player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-        enemy = GameObject.FindWithTag("Enemy").GetComponent<EnemyController>();
         MaxLife = player.GetPlayerMaxLife();
-	}
+
+        enemy = GameObject.FindWithTag("Enemy").GetComponent<EnemyController>();
+        playerName = GameObject.FindWithTag("PlayerText").GetComponent<Text>();
+        playerName.text = userID;
+        playerHP = GameObject.FindWithTag("PlayerHP").GetComponent<SpriteRenderer>();
+        //playerHP.
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -58,6 +90,6 @@ public class GameManager : MonoBehaviour {
 
     public void StartNewGame()
     {
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("Login");
     }
 }
