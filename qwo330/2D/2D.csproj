@@ -78,14 +78,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\DiffusingFireCtrl.cs" />
-    <Compile Include="Assets\Script\EnemyController.cs" />
-    <Compile Include="Assets\Script\FireController.cs" />
-    <Compile Include="Assets\Script\GameDataCtrl.cs" />
-    <Compile Include="Assets\Script\GameManager.cs" />
-    <Compile Include="Assets\Script\LoginManager.cs" />
-    <Compile Include="Assets\Script\PlayerController.cs" />
-    <Compile Include="Assets\Script\UIMoveWithObject.cs" />
+    <Compile Include="Assets\2.Script\DiffusingFireCtrl.cs" />
+    <Compile Include="Assets\2.Script\DynamicGrid.cs" />
+    <Compile Include="Assets\2.Script\EnemyController.cs" />
+    <Compile Include="Assets\2.Script\FireController.cs" />
+    <Compile Include="Assets\2.Script\GameDataCtrl.cs" />
+    <Compile Include="Assets\2.Script\GameManager.cs" />
+    <Compile Include="Assets\2.Script\HealPotion.cs" />
+    <Compile Include="Assets\2.Script\LoginManager.cs" />
+    <Compile Include="Assets\2.Script\PlayerController.cs" />
+    <Compile Include="Assets\2.Script\UIMoveWithObject.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
