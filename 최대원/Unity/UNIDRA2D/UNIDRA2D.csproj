@@ -78,12 +78,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Asset\Script\CanvsaCtrl.cs" />
     <Compile Include="Assets\Asset\Script\EnemyController.cs" />
     <Compile Include="Assets\Asset\Script\ExplosionCtrl.cs" />
     <Compile Include="Assets\Asset\Script\FireController.cs" />
     <Compile Include="Assets\Asset\Script\GameOver.cs" />
+    <Compile Include="Assets\Asset\Script\MainSettingCtrl.cs" />
     <Compile Include="Assets\Asset\Script\PlayerController.cs" />
+    <Compile Include="Assets\Asset\Script\PlayerGeneratorCtrl.cs" />
     <Compile Include="Assets\Asset\Script\PlayerLifeCtrl.cs" />
+    <Compile Include="Assets\Asset\Script\PlayerNameTextCtrl.cs" />
+    <Compile Include="Assets\Asset\Script\TitleCtrl.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -6,8 +6,6 @@ public class PlayerLifeCtrl : MonoBehaviour
 {
     public int PlayerLifeNum;
     public Texture Heart;
-    public float HeartScaleX = 0.25f;
-    public float HeartScaleY = 0.25f;
 
     private void OnGUI()
     {
@@ -15,7 +13,7 @@ public class PlayerLifeCtrl : MonoBehaviour
         float posY = transform.position.y;
         for (int i = 0; i < PlayerLifeNum; i++)
         {
-            GUI.Label(new Rect(posX + (Heart.width * i), posY, Heart.width, Heart.height), new GUIContent(Heart));
+            GUI.Label(new Rect(posX + (Heart.width * i) + 25f, posY, 64f, 64f), new GUIContent(Heart));
         }
     }
 }
