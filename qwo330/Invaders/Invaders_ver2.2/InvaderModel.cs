@@ -2,32 +2,22 @@
 
 namespace Invaders
 {
-    class Invader
+    class InvaderModel // FlyWeight Parttern
     {
-        private const int HorizontalInterval = 10; // X
-        private const int VerticalInterval = 40; // Y
+        private const int HorizontalInterval = 40;
+        private const int VerticalInterval = 10;
 
         private Bitmap image;
+        public Bitmap Image { get { return image; } set { image = value; } }
 
-        private Point location;
-        public Point Location { get { return location; } set { location = value; } }
+        public Rectangle boundaries;
 
-        public ShipType InvaderType { get; private set; }
-
-        public Rectangle Area { get { return new Rectangle(location, image.Size); } }
-        private Rectangle boundaries;
-
-        public int Score { get { return (int)InvaderType; } }
-
-        public Invader(ShipType invaderType, Point location, Rectangle boundaries)
+        public InvaderModel(Rectangle boundaries)
         {
-            this.InvaderType = invaderType;
-            this.location = location;
             this.boundaries = boundaries;
-            image = Properties.Resources.bug1;
         }
 
-        public void Move(Direction direction)
+        public void Move(Direction direction, Point location)
         {
             switch (direction)
             {
@@ -43,9 +33,9 @@ namespace Invaders
             }
         }
 
-        public void Draw(Graphics g, int animationCell)
+        public void Draw(Graphics g, ShipType invaderType, int animationCell, Point location)
         {
-            InvaderImage(animationCell);
+            InvaderImage(invaderType, animationCell);
             if (image != null)
             {
                 image = new Bitmap(image, new Size(50, 40));
@@ -53,9 +43,9 @@ namespace Invaders
             }
         }
 
-        private void InvaderImage(int animationCell)
+        public void InvaderImage(ShipType invaderType, int animationCell)
         {
-            switch (InvaderType)
+            switch (invaderType)
             {
                 case ShipType.Bug:
                     switch (animationCell)

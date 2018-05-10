@@ -13,37 +13,11 @@ namespace Invaders
         Down
     }
 
-    enum ShipType
-    {   // name = score
-        Bug = 50,       
-        Saucer = 40,    
-        Satellite = 30, 
-        Spaceship = 20, 
-        Star = 10       
-    }
-
-    enum Col // y
-    {
-        First = -140,
-        Second = -70,
-        Third = 0,
-        Forth = 70,
-        Fifth = 140
-    }
-
-    enum InvaderRow // x
-    {
-        Bug = 50,       
-        Saucer = 110,    
-        Satellite = 170, 
-        Spaceship = 230, 
-        Star = 290      
-    }
-
     class Game
     {
         private const int MaxShot = 3;
         private const int MaxWave = 10;
+        private const int invaderTypeCount = 2;
 
         private int score = 0;
         public int Score {
@@ -57,7 +31,7 @@ namespace Invaders
         private int wave = 0;
         public int Wave { get { return wave; } private set { wave = value; } }
 
-        private int framesSkipped = 0;
+        //private int framesSkipped = 0;
         private bool lineChange = false;
 
         private Rectangle boundaries;
@@ -166,7 +140,6 @@ namespace Invaders
             if(invaderCols.Count() != 0)
                  ReturnFire(invaderCols.ElementAt(select).Last(), random);
 
-            // 나중에 CircleQueue에 함수로 구현할 것 // Delegate 사용해서 Pop, Draw
             for (int i = playerShots.Front; i != playerShots.Rear; i++, i %= playerShots.Size)
                 if (!playerShots.GetData(i).Move()) playerShots.Pop();
 
@@ -245,35 +218,40 @@ namespace Invaders
 
         private void CreateInvaders()
         {
-            invaders.Add(new Invader(ShipType.Bug, new Point(boundaries.Width / 2 + (int)Col.First, (int)InvaderRow.Bug), boundaries));
-            invaders.Add(new Invader(ShipType.Bug, new Point(boundaries.Width / 2 + (int)Col.Second, (int)InvaderRow.Bug), boundaries));
-            invaders.Add(new Invader(ShipType.Bug, new Point(boundaries.Width/2 + (int)Col.Third, (int)InvaderRow.Bug), boundaries));
-            invaders.Add(new Invader(ShipType.Bug, new Point(boundaries.Width / 2 + (int)Col.Forth, (int)InvaderRow.Bug), boundaries));
-            invaders.Add(new Invader(ShipType.Bug, new Point(boundaries.Width / 2 + (int)Col.Fifth, (int)InvaderRow.Bug), boundaries));
+            Invader factory = new Invader(boundaries);
+            for (int i = 1; i <= invaderTypeCount; i++)
+                for (int j = 0; j < invaderTypeCount; j++)
+                    invaders.Add(factory.InvaderFactory((ShipType)(i * 10), j));
 
-            invaders.Add(new Invader(ShipType.Saucer, new Point(boundaries.Width / 2 + (int)Col.First, (int)InvaderRow.Saucer), boundaries));
-            invaders.Add(new Invader(ShipType.Saucer, new Point(boundaries.Width / 2 + (int)Col.Second, (int)InvaderRow.Saucer), boundaries));
-            invaders.Add(new Invader(ShipType.Saucer, new Point(boundaries.Width / 2 + (int)Col.Third, (int)InvaderRow.Saucer), boundaries));
-            invaders.Add(new Invader(ShipType.Saucer, new Point(boundaries.Width / 2 + (int)Col.Forth, (int)InvaderRow.Saucer), boundaries));
-            invaders.Add(new Invader(ShipType.Saucer, new Point(boundaries.Width / 2 + (int)Col.Fifth, (int)InvaderRow.Saucer), boundaries));
+            //invaders.Add(new Invader(ShipType.Bug, new Point(boundaries.Width / 2 + (int)Col.First, (int)InvaderRow.Bug), boundaries));
+            //invaders.Add(new Invader(ShipType.Bug, new Point(boundaries.Width / 2 + (int)Col.Second, (int)InvaderRow.Bug), boundaries));
+            //invaders.Add(new Invader(ShipType.Bug, new Point(boundaries.Width/2 + (int)Col.Third, (int)InvaderRow.Bug), boundaries));
+            //invaders.Add(new Invader(ShipType.Bug, new Point(boundaries.Width / 2 + (int)Col.Forth, (int)InvaderRow.Bug), boundaries));
+            //invaders.Add(new Invader(ShipType.Bug, new Point(boundaries.Width / 2 + (int)Col.Fifth, (int)InvaderRow.Bug), boundaries));
 
-            invaders.Add(new Invader(ShipType.Satellite, new Point(boundaries.Width / 2 + (int)Col.First, (int)InvaderRow.Satellite), boundaries));
-            invaders.Add(new Invader(ShipType.Satellite, new Point(boundaries.Width / 2 + (int)Col.Second, (int)InvaderRow.Satellite), boundaries));
-            invaders.Add(new Invader(ShipType.Satellite, new Point(boundaries.Width / 2 + (int)Col.Third, (int)InvaderRow.Satellite), boundaries));
-            invaders.Add(new Invader(ShipType.Satellite, new Point(boundaries.Width / 2 + (int)Col.Forth, (int)InvaderRow.Satellite), boundaries));
-            invaders.Add(new Invader(ShipType.Satellite, new Point(boundaries.Width / 2 + (int)Col.Fifth, (int)InvaderRow.Satellite), boundaries));
+            //invaders.Add(new Invader(ShipType.Saucer, new Point(boundaries.Width / 2 + (int)Col.First, (int)InvaderRow.Saucer), boundaries));
+            //invaders.Add(new Invader(ShipType.Saucer, new Point(boundaries.Width / 2 + (int)Col.Second, (int)InvaderRow.Saucer), boundaries));
+            //invaders.Add(new Invader(ShipType.Saucer, new Point(boundaries.Width / 2 + (int)Col.Third, (int)InvaderRow.Saucer), boundaries));
+            //invaders.Add(new Invader(ShipType.Saucer, new Point(boundaries.Width / 2 + (int)Col.Forth, (int)InvaderRow.Saucer), boundaries));
+            //invaders.Add(new Invader(ShipType.Saucer, new Point(boundaries.Width / 2 + (int)Col.Fifth, (int)InvaderRow.Saucer), boundaries));
 
-            invaders.Add(new Invader(ShipType.Spaceship, new Point(boundaries.Width / 2 + (int)Col.First, (int)InvaderRow.Spaceship), boundaries));
-            invaders.Add(new Invader(ShipType.Spaceship, new Point(boundaries.Width / 2 + (int)Col.Second, (int)InvaderRow.Spaceship), boundaries));
-            invaders.Add(new Invader(ShipType.Spaceship, new Point(boundaries.Width / 2 + (int)Col.Third, (int)InvaderRow.Spaceship), boundaries));
-            invaders.Add(new Invader(ShipType.Spaceship, new Point(boundaries.Width / 2 + (int)Col.Forth, (int)InvaderRow.Spaceship), boundaries));
-            invaders.Add(new Invader(ShipType.Spaceship, new Point(boundaries.Width / 2 + (int)Col.Fifth, (int)InvaderRow.Spaceship), boundaries));
+            //invaders.Add(new Invader(ShipType.Satellite, new Point(boundaries.Width / 2 + (int)Col.First, (int)InvaderRow.Satellite), boundaries));
+            //invaders.Add(new Invader(ShipType.Satellite, new Point(boundaries.Width / 2 + (int)Col.Second, (int)InvaderRow.Satellite), boundaries));
+            //invaders.Add(new Invader(ShipType.Satellite, new Point(boundaries.Width / 2 + (int)Col.Third, (int)InvaderRow.Satellite), boundaries));
+            //invaders.Add(new Invader(ShipType.Satellite, new Point(boundaries.Width / 2 + (int)Col.Forth, (int)InvaderRow.Satellite), boundaries));
+            //invaders.Add(new Invader(ShipType.Satellite, new Point(boundaries.Width / 2 + (int)Col.Fifth, (int)InvaderRow.Satellite), boundaries));
 
-            invaders.Add(new Invader(ShipType.Star, new Point(boundaries.Width / 2 + (int)Col.First, (int)InvaderRow.Star), boundaries));
-            invaders.Add(new Invader(ShipType.Star, new Point(boundaries.Width / 2 + (int)Col.Second, (int)InvaderRow.Star), boundaries));
-            invaders.Add(new Invader(ShipType.Star, new Point(boundaries.Width / 2 + (int)Col.Third, (int)InvaderRow.Star), boundaries));
-            invaders.Add(new Invader(ShipType.Star, new Point(boundaries.Width / 2 + (int)Col.Forth, (int)InvaderRow.Star), boundaries));
-            invaders.Add(new Invader(ShipType.Star, new Point(boundaries.Width / 2 + (int)Col.Fifth, (int)InvaderRow.Star), boundaries));
+            //invaders.Add(new Invader(ShipType.Spaceship, new Point(boundaries.Width / 2 + (int)Col.First, (int)InvaderRow.Spaceship), boundaries));
+            //invaders.Add(new Invader(ShipType.Spaceship, new Point(boundaries.Width / 2 + (int)Col.Second, (int)InvaderRow.Spaceship), boundaries));
+            //invaders.Add(new Invader(ShipType.Spaceship, new Point(boundaries.Width / 2 + (int)Col.Third, (int)InvaderRow.Spaceship), boundaries));
+            //invaders.Add(new Invader(ShipType.Spaceship, new Point(boundaries.Width / 2 + (int)Col.Forth, (int)InvaderRow.Spaceship), boundaries));
+            //invaders.Add(new Invader(ShipType.Spaceship, new Point(boundaries.Width / 2 + (int)Col.Fifth, (int)InvaderRow.Spaceship), boundaries));
+
+            //invaders.Add(new Invader(ShipType.Star, new Point(boundaries.Width / 2 + (int)Col.First, (int)InvaderRow.Star), boundaries));
+            //invaders.Add(new Invader(ShipType.Star, new Point(boundaries.Width / 2 + (int)Col.Second, (int)InvaderRow.Star), boundaries));
+            //invaders.Add(new Invader(ShipType.Star, new Point(boundaries.Width / 2 + (int)Col.Third, (int)InvaderRow.Star), boundaries));
+            //invaders.Add(new Invader(ShipType.Star, new Point(boundaries.Width / 2 + (int)Col.Forth, (int)InvaderRow.Star), boundaries));
+            //invaders.Add(new Invader(ShipType.Star, new Point(boundaries.Width / 2 + (int)Col.Fifth, (int)InvaderRow.Star), boundaries));
         }
 
         public void NextWave()
