@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerState
+{
+    move,
+    damage,
+    die,
+}
+
 public class PlayerController : MonoBehaviour
 {
-    enum PlayerState
-    {
-        move,
-        damage,
-    }
-
+    
     public float moveStartDistance = 10f;
     public float moveForce = 150f;
     public float maxSpeed = 100f;
@@ -87,7 +89,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                playerState = PlayerState.damage;
+                playerState = PlayerState.die;
                 Instantiate(gameOverPrefeb);
 
                 explosionCtrlPrefeb.transform.position = gameObject.transform.position;
