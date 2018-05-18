@@ -15,25 +15,25 @@ Platform assembly: C:\0_Test\sourcetree\0_test\강다희\test01\TestDie04_UNIDRA
 Loading C:\0_Test\sourcetree\0_test\강다희\test01\TestDie04_UNIDRA\UNIDRA\UNIDRA_Die_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\0_Test\sourcetree\0_test\강다희\test01\TestDie04_UNIDRA\UNIDRA\UNIDRA_Die_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\0_Test\sourcetree\0_test\강다희\test01\TestDie04_UNIDRA\UNIDRA\UNIDRA_Die_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.131 seconds
+- Completed reload, in  0.025 seconds
 Platform assembly: C:\0_Test\sourcetree\0_test\강다희\test01\TestDie04_UNIDRA\UNIDRA\UNIDRA_Die_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\0_Test\sourcetree\0_test\강다희\test01\TestDie04_UNIDRA\UNIDRA\UNIDRA_Die_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.279482 ms
+UnloadTime: 2.131326 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 103c -> priority: 1 
-  Thread -> id: 3a38 -> priority: 1 
+  Thread -> id: 458 -> priority: 1 
+  Thread -> id: f38 -> priority: 1 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.339826 ms
+UnloadTime: 0.326902 ms
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1058.
-Total: 0.794449 ms (FindLiveObjects: 0.064620 ms CreateObjectMapping: 0.038772 ms MarkObjects: 0.357692 ms  DeleteObjects: 0.332224 ms)
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1060.
+Total: 0.783805 ms (FindLiveObjects: 0.078304 ms CreateObjectMapping: 0.041052 ms MarkObjects: 0.349709 ms  DeleteObjects: 0.313978 ms)
 
 Binding to local socket 0.0.0.0
-Sending NAT type detection request, local port 57076
+Sending NAT type detection request, local port 52605
 Returning nat detection result to the user
 NullReferenceException: Object reference not set to an instance of an object
   at PlayerCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
@@ -66,136 +66,22 @@ UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
 NullReferenceException: Object reference not set to an instance of an object
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyGeneratorCtrl:Generate()
-<Exec>c__Iterator0:MoveNext()
-UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyGeneratorCtrl:Generate()
-<Exec>c__Iterator0:MoveNext()
-UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyCtrl:dropItem()
-EnemyCtrl:Died()
-EnemyCtrl:Update()
- 
-(Filename:  Line: -1)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyGeneratorCtrl:Generate()
-<Exec>c__Iterator0:MoveNext()
-UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
   at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
   at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
+NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
 StartAttackHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyCtrl:dropItem()
-EnemyCtrl:Died()
-EnemyCtrl:Update()
- 
-(Filename:  Line: -1)
 
 EndAttackHit
  
@@ -210,6 +96,24 @@ EnemyGeneratorCtrl:Generate()
 UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
  
 (Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
+UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
+UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
+EnemyGeneratorCtrl:Generate()
+<Exec>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 NullReferenceException: Object reference not set to an instance of an object
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
@@ -239,6 +143,10 @@ StartAttackHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 NullReferenceException: Object reference not set to an instance of an object
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
@@ -247,9 +155,13 @@ NullReferenceException: Object reference not set to an instance of an object
  
 (Filename:  Line: -1)
 
-EndAttackHit
+NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
 StartAttackHit
  
@@ -258,14 +170,6 @@ StartAttackHit
 EndAttackHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
 
 StartAttackHit
  
@@ -309,11 +213,15 @@ EndAttackHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 NullReferenceException: Object reference not set to an instance of an object
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
@@ -327,69 +235,9 @@ UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
  
 (Filename:  Line: -1)
 
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
 EndAttackHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
 
 StartAttackHit
  
@@ -412,8 +260,50 @@ EndAttackHit
 NullReferenceException: Object reference not set to an instance of an object
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
   at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
   at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
+UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
+UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
+EnemyGeneratorCtrl:Generate()
+<Exec>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
  
 (Filename:  Line: -1)
 
@@ -460,16 +350,6 @@ EndAttackHit
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 NullReferenceException: Object reference not set to an instance of an object
-  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyGeneratorCtrl:Generate()
-<Exec>c__Iterator0:MoveNext()
-UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
   at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
@@ -484,114 +364,6 @@ StartAttackHit
 EndAttackHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyGeneratorCtrl:Generate()
-<Exec>c__Iterator0:MoveNext()
-UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyCtrl:dropItem()
-EnemyCtrl:Died()
-EnemyCtrl:Update()
- 
-(Filename:  Line: -1)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
 
 NullReferenceException: Object reference not set to an instance of an object
   at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
@@ -640,24 +412,20 @@ EndAttackHit
 NullReferenceException: Object reference not set to an instance of an object
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
 NullReferenceException: Object reference not set to an instance of an object
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
 StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -725,9 +493,35 @@ StartAttackHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 EndAttackHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
+UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
+UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
+EnemyGeneratorCtrl:Generate()
+<Exec>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
 StartAttackHit
  
@@ -746,6 +540,40 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename:  Line: -1)
 
 NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
+UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
+UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
+EnemyCtrl:dropItem()
+EnemyCtrl:Died()
+EnemyCtrl:Update()
+ 
+(Filename:  Line: -1)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
   at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
 UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
 UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
@@ -754,6 +582,18 @@ EnemyGeneratorCtrl:Generate()
 UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
  
 (Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 StartAttackHit
  
@@ -818,86 +658,6 @@ StartAttackHit
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 NullReferenceException: Object reference not set to an instance of an object
-  at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyCtrl:dropItem()
-EnemyCtrl:Died()
-EnemyCtrl:Update()
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyGeneratorCtrl:Generate()
-<Exec>c__Iterator0:MoveNext()
-UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
- 
-(Filename:  Line: -1)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
   at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
 UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
 UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
@@ -908,106 +668,6 @@ UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
 (Filename:  Line: -1)
 
 NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PlayerCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-GameRuleCtrl:Update()
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
   at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
 UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
 UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
@@ -1016,658 +676,6 @@ EnemyCtrl:Died()
 EnemyCtrl:Update()
  
 (Filename:  Line: -1)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyGeneratorCtrl:Generate()
-<Exec>c__Iterator0:MoveNext()
-UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyCtrl:dropItem()
-EnemyCtrl:Died()
-EnemyCtrl:Update()
- 
-(Filename:  Line: -1)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyGeneratorCtrl:Generate()
-<Exec>c__Iterator0:MoveNext()
-UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyCtrl:dropItem()
-EnemyCtrl:Died()
-EnemyCtrl:Update()
- 
-(Filename:  Line: -1)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyGeneratorCtrl:Generate()
-<Exec>c__Iterator0:MoveNext()
-UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
- 
-(Filename:  Line: -1)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyCtrl:dropItem()
-EnemyCtrl:Died()
-EnemyCtrl:Update()
- 
-(Filename:  Line: -1)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyCtrl:dropItem()
-EnemyCtrl:Died()
-EnemyCtrl:Update()
- 
-(Filename:  Line: -1)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyGeneratorCtrl:Generate()
-<Exec>c__Iterator0:MoveNext()
-UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyGeneratorCtrl:Generate()
-<Exec>c__Iterator0:MoveNext()
-UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyCtrl:dropItem()
-EnemyCtrl:Died()
-EnemyCtrl:Update()
- 
-(Filename:  Line: -1)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyGeneratorCtrl:Generate()
-<Exec>c__Iterator0:MoveNext()
-UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyCtrl:dropItem()
-EnemyCtrl:Died()
-EnemyCtrl:Update()
- 
-(Filename:  Line: -1)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyGeneratorCtrl:Generate()
-<Exec>c__Iterator0:MoveNext()
-UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
-UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
-UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
-EnemyCtrl:dropItem()
-EnemyCtrl:Died()
-EnemyCtrl:Update()
- 
-(Filename:  Line: -1)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 EndAttackHit
  
@@ -1710,108 +718,52 @@ UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
 (Filename:  Line: -1)
 
 NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+StartAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EndAttackHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
   at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
 UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
 UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
 EnemyGeneratorCtrl:Generate()
 <Exec>c__Iterator0:MoveNext()
 UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
@@ -1860,14 +812,6 @@ EndAttackHit
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
   at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
 UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
 UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
@@ -1887,59 +831,11 @@ UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
  
 (Filename:  Line: -1)
 
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
 NullReferenceException: Object reference not set to an instance of an object
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
   at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
   at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
@@ -1963,25 +859,37 @@ StartAttackHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
 NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
+  at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
+UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
+UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
+EnemyCtrl:dropItem()
+EnemyCtrl:Died()
+EnemyCtrl:Update()
  
 (Filename:  Line: -1)
 
 EndAttackHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
+UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
+UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
+EnemyGeneratorCtrl:Generate()
+<Exec>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
+  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
 StartAttackHit
  
@@ -2010,8 +918,8 @@ EndAttackHit
 NullReferenceException: Object reference not set to an instance of an object
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
@@ -2026,8 +934,8 @@ EndAttackHit
 NullReferenceException: Object reference not set to an instance of an object
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
@@ -2074,86 +982,6 @@ EndAttackHit
 NullReferenceException: Object reference not set to an instance of an object
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
   at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
   at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
   at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
  
@@ -2179,44 +1007,32 @@ StartAttackHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+NullReferenceException: Object reference not set to an instance of an object
+  at DropItem.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
+UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
+UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
+EnemyCtrl:dropItem()
+EnemyCtrl:Died()
+EnemyCtrl:Update()
+ 
+(Filename:  Line: -1)
+
 EndAttackHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at PlayerCtrl.Update () [0x00000] in <filename unknown>:0 
+  at EnemyCtrl.OnNetworkInstantiate (NetworkMessageInfo info) [0x00000] in <filename unknown>:0 
+UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
+UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32)
+EnemyGeneratorCtrl:Generate()
+<Exec>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
  
 (Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position, Single volume) [0x00000] in <filename unknown>:0 
-  at UnityEngine.AudioSource.PlayClipAtPoint (UnityEngine.AudioClip clip, Vector3 position) [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.AttackStart () [0x00000] in <filename unknown>:0 
-  at EnemyCtrl.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-StartAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-EndAttackHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 DisconnectedFromServer: Disconnected
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-UnloadTime: 4.112512 ms
+UnloadTime: 3.169431 ms
