@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EXSpaceShooter", "EXSpaceShooter.csproj", "{75245FBF-C282-5824-35C2-3D5D64EF13D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EXSpaceShooter.Editor", "EXSpaceShooter.Editor.csproj", "{77C41DB7-E1BD-7DC5-67E7-27D7221C3FB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75245FBF-C282-5824-35C2-3D5D64EF13D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75245FBF-C282-5824-35C2-3D5D64EF13D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75245FBF-C282-5824-35C2-3D5D64EF13D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75245FBF-C282-5824-35C2-3D5D64EF13D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77C41DB7-E1BD-7DC5-67E7-27D7221C3FB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77C41DB7-E1BD-7DC5-67E7-27D7221C3FB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77C41DB7-E1BD-7DC5-67E7-27D7221C3FB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77C41DB7-E1BD-7DC5-67E7-27D7221C3FB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
