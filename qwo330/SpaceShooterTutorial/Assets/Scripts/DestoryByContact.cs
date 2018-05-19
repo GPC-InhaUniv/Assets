@@ -7,6 +7,15 @@ public class DestoryByContact : MonoBehaviour {
     public GameObject explosion;
     public GameObject playerExplosion;
 
+    GameController gameController;
+    public int scoreValue = 10;
+
+    private void Start()
+    {
+        gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+        if (gameController == null) Debug.Log("GameController를 찾을 수 없습니다.");
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "BackGround") return;
@@ -16,8 +25,9 @@ public class DestoryByContact : MonoBehaviour {
         if(other.tag == "Player")
         {
             Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-            GameController.GameOver();
+            gameController.GameOver();
         }
+        gameController.AddScore(scoreValue);
         Destroy(other.gameObject);
         Destroy(this.gameObject);
     }
