@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -12,17 +13,39 @@ public class GameController : MonoBehaviour {
     public float startWait = 1f;
     public float waveWait = 4f;
 
+    public GUIText scoreText;
+    public GUIText restartText;
+    public GUIText gameOverText;
+
     int AsteroidNumber;
+    int score;
+    bool gameOver;
+    bool reStart;
 
     // Use this for initialization
     void Start () {
+        score = 0;
+        gameOver = false;
+        reStart = false;
+        restartText.text = "";
+        gameOverText.text = "";
+
+        UpdateScore();
         StartCoroutine(SpawnWaves());
 	}
+
+   void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("Game");
+        }
+    }
 
     IEnumerator SpawnWaves()
     {
         yield return new WaitForSeconds(startWait);
-        while(true)
+        while (true)
         {
             for (int i = 0; i < hazardCount; i++)
             {
@@ -43,11 +66,30 @@ public class GameController : MonoBehaviour {
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
+            
+            if(gameOver)
+            {
+                restartText.text = "Press 'R' for ReStart";
+                reStart = true;
+                break;
+            }
         }
     }
 
-    public static void GameOver()
+    public void AddScore(int newScoreValue)
     {
+        score += newScoreValue;
+        UpdateScore();
+    }
 
+    void UpdateScore()
+    {
+        scoreText.text = "Score : " + score;
+    }
+
+    public void GameOver()
+    {
+        gameOverText.text = "Game Over!";
+        gameOver = true;
     }
 }
