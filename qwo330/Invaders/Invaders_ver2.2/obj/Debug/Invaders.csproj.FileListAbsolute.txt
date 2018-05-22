@@ -1,0 +1,10 @@
+D:\InhaUniv\Test\qwo330\Invaders\Invaders_ver2.1\bin\Debug\Invaders.exe.config
+D:\InhaUniv\Test\qwo330\Invaders\Invaders_ver2.1\bin\Debug\Invaders.exe
+D:\InhaUniv\Test\qwo330\Invaders\Invaders_ver2.1\bin\Debug\Invaders.pdb
+D:\InhaUniv\Test\qwo330\Invaders\Invaders_ver2.1\obj\Debug\Invaders.csprojResolveAssemblyReference.cache
+D:\InhaUniv\Test\qwo330\Invaders\Invaders_ver2.1\obj\Debug\Invaders.Form1.resources
+D:\InhaUniv\Test\qwo330\Invaders\Invaders_ver2.1\obj\Debug\Invaders.Properties.Resources.resources
+D:\InhaUniv\Test\qwo330\Invaders\Invaders_ver2.1\obj\Debug\Invaders.csproj.GenerateResource.Cache
+D:\InhaUniv\Test\qwo330\Invaders\Invaders_ver2.1\obj\Debug\Invaders.csproj.CoreCompileInputs.cache
+D:\InhaUniv\Test\qwo330\Invaders\Invaders_ver2.1\obj\Debug\Invaders.exe
+D:\InhaUniv\Test\qwo330\Invaders\Invaders_ver2.1\obj\Debug\Invaders.pdb

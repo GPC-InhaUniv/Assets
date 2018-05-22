@@ -22,7 +22,9 @@ public class PlayerCtrl : MonoBehaviour
     float rotationSpeed = 360.0f;
     Vector3 velocity = Vector3.zero;
     const float GravityPower = 9.8f;
-    Vector3 lookRotation;
+    Vector3 playerLookRotation;
+    Vector3 cameraLookRotation;
+    Rigidbody rigidbody;
 
     // 스테이트 종류.
     enum State
@@ -48,6 +50,8 @@ public class PlayerCtrl : MonoBehaviour
         playerTransform = GetComponent<Transform>();
         characterController = GetComponent<CharacterController>();
         followCamera = FindObjectOfType<FollowCamera>();
+        rigidbody = GetComponent<Rigidbody>();
+
 
         deathSeAudio = gameObject.AddComponent<AudioSource>();
         deathSeAudio.loop = false;
@@ -204,8 +208,10 @@ public class PlayerCtrl : MonoBehaviour
 
     private void playerMove()
     {
-        lookRotation = inputManager.GetPlayerDiretion();
-        transform.rotation = Quaternion.LookRotation(lookRotation);
-        characterController.Move(lookRotation * playerMoveSpeed * Time.deltaTime);
+        playerLookRotation = inputManager.GetPlayerDiretion();
+        cameraLookRotation = new Vector3(0, followCamera.transform.rotation.y,0);
+
+        transform.localRotation = Quaternion.LookRotation(cameraLookRotation);
+        characterController.Move(playerLookRotation * playerMoveSpeed * Time.deltaTime);
     }
 }

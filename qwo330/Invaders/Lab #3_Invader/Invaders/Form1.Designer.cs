@@ -109,7 +109,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(881, 563);
+            this.ClientSize = new System.Drawing.Size(881, 961);
             this.Controls.Add(this.Stage);
             this.Controls.Add(this.Life);
             this.Controls.Add(this.gameOverr);

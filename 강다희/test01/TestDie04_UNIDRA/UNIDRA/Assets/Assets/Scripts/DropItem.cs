@@ -43,24 +43,27 @@ public class DropItem : MonoBehaviour
     // 아이템 획득 처리.
     public void GetItemOnNetwork(NetworkViewID viewId)
     {
-        // 픽업 플래그.
-        if (isPickedUp)
-            return;
-        isPickedUp = true;
+        if (gameObject.tag != "butter")
+        {
+            // 픽업 플래그.
+            if (isPickedUp)
+                return;
+            isPickedUp = true;
 
-        // 픽업한 Player를 찾는다.
-        NetworkView player = NetworkView.Find(viewId);
-        if (player == null)
-            return;
+            // 픽업한 Player를 찾는다.
+            NetworkView player = NetworkView.Find(viewId);
+            if (player == null)
+                return;
 
-        // 픽업한 플레이어에게 아이템을 준다.
-        if (player.isMine)
-            player.SendMessage("GetItem", kind);
-        else
-            player.GetComponent<NetworkView>().RPC("GetItem", player.owner, kind);
+            // 픽업한 플레이어에게 아이템을 준다.
+            if (player.isMine)
+                player.SendMessage("GetItem", kind);
+            else
+                player.GetComponent<NetworkView>().RPC("GetItem", player.owner, kind);
 
-        Network.Destroy(gameObject);
-        Network.RemoveRPCs(networkView.viewID);
+            Network.Destroy(gameObject);
+            Network.RemoveRPCs(networkView.viewID);
+        }
     }
 
     private void OnNetworkInstantiate(NetworkMessageInfo info)

@@ -12,7 +12,7 @@ public class PlayerCtrl : MonoBehaviour {
     CharacterStatus status;
     CharaAnimation charaAnimation;
     Transform attackTarget;
-    public float attackRange = 1.5f;
+    const float attackRange = 1.5f;
 
     public GameObject hitEffect;
     TargetCursor targetCursor;
@@ -21,9 +21,23 @@ public class PlayerCtrl : MonoBehaviour {
     AudioSource deathSeAudio;
     public new NetworkView networkView;
 
-    public float rushSpeed = 0.1f;
-    public float rotSpeed = 10000.0f;
+    const float rushSpeed = 30.0f;
+    const float rotSpeed = 10000.0f;
+
+    const float whirlwindCooltime = 8.0f;
+    bool canWhirlwind = true;
+
+    const float rushCooltime = 5.0f;
+    bool canRush = true;
+
+    float rushMaxDistance = 5.0f;
+    float moveDistance;
+
+    Vector3 startPosition;
     Vector3 destination;
+
+    public GameObject RushIcon, WhirlwindIcon;
+
 
     enum State
     {
@@ -36,6 +50,20 @@ public class PlayerCtrl : MonoBehaviour {
 
     State state = State.Walking;
     State nextState = State.Walking;
+
+    IEnumerator RushCooltime()
+    {
+        yield return new WaitForSeconds(rushCooltime);
+        RushIcon.SetActive(true);
+        canRush = true;
+    }
+
+    IEnumerator WhirlwindCooltime()
+    {
+        yield return new WaitForSeconds(whirlwindCooltime);
+        WhirlwindIcon.SetActive(true);
+        canWhirlwind = true;
+    }
 
     // Use this for initialization
     void Start () {
@@ -51,16 +79,18 @@ public class PlayerCtrl : MonoBehaviour {
         deathSeAudio.loop = false;
         deathSeAudio.clip = deathSeClip;
 
-        //networkView = GetComponent<NetworkView>();
         destination = transform.position;
+
+        RushIcon = GameObject.FindGameObjectWithTag("Rush");
+        WhirlwindIcon = GameObject.FindGameObjectWithTag("Whirlwind");
     }
 	
 	// Update is called once per frame
 	void Update () {
         // 관리 오브젝트가 아니면 아무것도 하지 않는다.
         if (!networkView.isMine) return;
-
-        switch(state)
+        
+        switch (state)
         {
             case State.Walking:
                 Walking(); break;
@@ -167,24 +197,6 @@ public class PlayerCtrl : MonoBehaviour {
             ChangeState(State.Walking);
     }
 
-    Vector3 targetDirection;
-    void RushStart()
-    {
-        StateStartCommon();
-        status.attacking = true;
-        targetDirection = (attackTarget.position - transform.position).normalized;
-        SendMessage("SetDirection", targetDirection);
-        SendMessage("StopMove");
-    }
-
-    void Rushing()
-    {
-        transform.Translate(targetDirection * rushSpeed * Time.deltaTime);
-        //transform.position = Vector3.MoveTowards(transform.position, transform.position + targetDirection, rushSpeed * Time.deltaTime);
-
-        Attacking();
-    }
-
     void WhirlwindStart()
     {
         StateStartCommon();
@@ -196,6 +208,30 @@ public class PlayerCtrl : MonoBehaviour {
     {
         Attacking();
         transform.RotateAround(transform.position, new Vector3(0, 300.0f, 0), rotSpeed * Time.deltaTime);
+    }
+
+    Vector3 targetDirection;
+    void RushStart()
+    {
+        StateStartCommon();        
+        status.attacking = true;
+        startPosition = transform.position;
+        moveDistance = 0.0f;
+    }
+
+    void Rushing()
+    {
+        moveDistance = Vector3.Distance(startPosition, transform.position);
+        if (rushMaxDistance > moveDistance)
+        {
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(new Vector3(targetDirection.x, 0, targetDirection.z)), 720.0f * Time.deltaTime);
+            transform.Translate(targetDirection * rushSpeed * Time.deltaTime, Space.World);
+            //transform.Translate(targetDirection.normalized * rushSpeed * Time.deltaTime, Space.World);
+        }
+        else
+        {
+            Attacking();
+        }
     }
 
     void WalkStart()
@@ -238,36 +274,46 @@ public class PlayerCtrl : MonoBehaviour {
                 }
             }
         }
-        else if(inputManager.Clicked() == 2) // 마우스 오른쪽
+        else if (inputManager.Clicked() == 2) // 마우스 오른쪽
         {
-            Ray ray = Camera.main.ScreenPointToRay(inputManager.GetCursorPosition());
-            RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo, RayCastMaxDistance,
-                1 << LayerMask.NameToLayer("Ground") | 1 << LayerMask.NameToLayer("EnemyHit")))
+            if (canRush)
             {
-                if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+                Ray ray = Camera.main.ScreenPointToRay(inputManager.GetCursorPosition());
+                targetDirection = ray.direction;
+                RaycastHit hitInfo;
+                if (Physics.Raycast(ray, out hitInfo, RayCastMaxDistance, 1 << LayerMask.NameToLayer("Ground") | 1 << LayerMask.NameToLayer("EnemyHit")))
                 {
-                    SendMessage("SetDestination", hitInfo.point);
-                    targetCursor.SetPosition(hitInfo.point);
+                    if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit"))
+                    {
+                        Debug.Log(hitInfo.transform.name);
+                        attackTarget = hitInfo.collider.transform;
+                        targetCursor.SetPosition(attackTarget.position);
+                    }
+                    else if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+                    {
+                        Debug.Log(hitInfo.transform.name);
+                        targetCursor.SetPosition(hitInfo.point);
+                    }
                 }
-                if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit"))
-                {
-                    // 수평 거리를 체크해서 공격할지 결정한다.
-                    Vector3 hitPoint = hitInfo.point;
-                    hitPoint.y = transform.position.y;
-                    float distance = Vector3.Distance(hitPoint, transform.position);
-
-
-                    attackTarget = hitInfo.collider.transform;
-                    targetCursor.SetPosition(attackTarget.position);
-                    ChangeState(State.Rushing);
-                }
+                targetDirection = (hitInfo.point - transform.position).normalized;
+                //targetDirection = (hitInfo.point - transform.position);
+                ChangeState(State.Rushing);
+                RushIcon.SetActive(false);
+                canRush = false;
+                StartCoroutine(RushCooltime());
             }
         }
         else if(inputManager.Clicked() == 11) // 키보드 1
         {
-            ChangeState(State.Whirlwinding);
+            if (canWhirlwind)
+            {
+                ChangeState(State.Whirlwinding);
+                WhirlwindIcon.SetActive(false);
+                canWhirlwind = false;
+                StartCoroutine(WhirlwindCooltime());
+            }
         }
+        
     }
 
     void StateStartCommon()
