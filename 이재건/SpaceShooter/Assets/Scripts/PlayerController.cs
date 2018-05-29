@@ -17,8 +17,10 @@ public class PlayerController : MonoBehaviour {
     public float fireRate = 0.5f;
     public float nextFire = 0.0f;
     public AudioSource audio;
+    public Mover m;
     private void Start()
     {
+        m = new Mover();
         rb = GetComponent<Rigidbody>();
         audio = GetComponent<AudioSource>();
     }
